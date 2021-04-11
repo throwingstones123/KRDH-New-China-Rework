@@ -1,0 +1,1623 @@
+# LIANGGUANG CIVIL WAR PORT BY ASHTAK
+
+event = {
+id = 152000
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = { 
+}
+
+name = "EVT_152000_NAME"
+desc = "EVT_152000_DESC"
+picture = "china"
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "EVT_152000_actionnameA"
+command = { }
+}
+
+action = {
+name = "EVT_152000_actionnameB"
+command = { type = trigger which = 152001 }
+} 
+
+action = {
+name = "EVT_152000_actionnameC"
+command = { type = trigger which = 152002 }
+}
+}
+
+event = {
+id = 152001
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Briefly Introducing Liangguang"
+desc = "EVT_152001_DESC"#Liangguang, or Two Guangs, is a geographical term representing the provinces of Guangxi in the west and Guangdong in the east. The Viceroyalty of Liangguang was first created during the Ming Dynasty, but would be dissolved and reformed numerous times until its final dissolution in 1911. Its official name was the lengthy "Governor-General, Commander and Quartermaster, Supervisor of Waterways, and Inspector-General of the Two Expanses (Guangs) and Surrounding Areas.Guangdong province is one of the most wealthy and developed parts of China, with Guangzhou rivaling Shanghai, Nanjing, and Beijing. However, its recent history is marred with warfare and destruction, with the province losing Hong Kong, Macau, and Guangzhouwan to Western imperialists in the 19th century, while the Xinhai Revolution eventually brought further ruin by numerous wars between warlords and the turbulent rule of the Kuomintang. Since the failure of the Northern Expedition in 1926, the province has been governed Chen Jiongming and has seen a remarkable recovery and growth, developing a young provincial democracy in the process.\n\nGuangxi, meanwhile, has been ruled by Lu Rongting, who is seen as the quintessential warlord. The province has been highly militarized and its soldiers are well-known across China to be some of the best. However, this high level of militarization has been costly, and the wealthier Guangdong has been essentially keeping the Guangxi Army afloat, creating an interdependent relationship between the two provinces as Guangxi troops often supplement the smaller Guangdong Army.
+picture = "china"
+
+action = {
+name = "Governor Chen will see us through"
+command = { }
+}
+
+action = {
+name = "What about all these factions?"
+trigger = { NOT = { event = 152002 } }
+command = { }
+}
+}
+
+event = {
+id = 152002
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Factionalism in Liangguang"
+desc = "EVT_152002_DESC"
+picture = "china_rally"
+
+action = {
+name = "Governor Chen will see us through"
+command = { }
+}
+
+action = {
+name = "Tell me more about Liangguang."
+trigger = { NOT = { event = 152001 } }
+command = { }
+}
+}
+
+event = {
+id = 152011
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = { id = 152000 days = 4 }
+}
+
+name = "Governor Chen Addresses the Provincial Assembly"
+desc = "EVT_152003_DESC"
+picture = "china_rally"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Towards a Free China!"
+command = { type = dissent value = -3 }
+}
+}
+
+event = {
+id = 152012
+random = no
+country = UCH
+style = 2
+
+name = "Governor Chen Criticised in the Assembly"
+desc = "EVT_152012_DESC" #Chen Jiongming is a staunch believer in democracy and the Guangdong Provincial Assembly is one of the few truly democratic legislatures in Asia, let alone China. Of course, this means that the Assembly is not only a place to represent the people, debate and enact policy, but also criticise the government.\n\nWith recent decisions made by Chen Jiongming's government to seek support from the gentry to the detriment of his promised land reform, a socialist member of the Assembly was quick criticise the Governor's decision, calling him out on this contradictory decision. This has hurt the Governor's credibility in the eyes of the people and strengthened the radicals' popularity.
+picture = "China_Rally"
+
+action = {
+name = "Such is democracy."
+command = { type = dissent value = 2 }
+}
+}
+
+event = {
+id = 152013
+random = no
+country = UCH
+style = 2
+
+trigger = {
+event = { id = 152011 days = 20 }
+}
+
+name = "Peasants Request Financial Aid"
+desc = "EVT_152005_DESC"
+picture = "peasants"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Help them, of course."
+command = { type = dissent value = 2 }
+command = { type = money value = -75 }
+}
+
+action = {
+name = "An unfortunate impossibility."
+command = { type = dissent value = 10 }
+}
+}
+
+event = {
+id = 152014
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = { id = 152013 days = 35 }
+}
+
+name = "Merchant Bailouts?"
+desc = "EVT_152005_DESC"
+picture = "stockcrashrus"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Bail them out."
+command = { type = dissent value = -3 }
+command = { type = money value = -150 }
+}
+
+action = {
+name = "They can fend for themselves."
+command = { type = dissent value = 10 }
+}
+}
+
+event = {
+id = 152015
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = { id = 152000 days = 30 }
+}
+
+name = "Joint Military Exercises"
+desc = "EVT_152006_DESC"
+picture = "Chinese Infantry2"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Guangdong finances, Guangxi fights."
+command = { type = dissent value = -2 }
+command = { type = money value = -50 }
+}
+}
+
+event = {
+id = 152016
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = { id = 152015 days = 30 }
+}
+
+name = "Suppressing Illegal Gambling"
+desc = "EVT_152007_DESC"
+picture = "politics4"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "The ban on gambling remains."
+command = { type = dissent value = 3 }
+}
+
+action = {
+name = "Anti-gambling legislations are loosened."
+command = { type = dissent value = 6 }
+command = { type = money value = 150 }
+}
+}
+
+event = {
+id = 152017
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+random = 15
+OR = {
+war = { country = USA country = TEX }
+war = { country = USA country = CSA }
+war = { country = CSA country = TEX }
+war = { country = CAL country = TEX }
+war = { country = CAL country = CSA }
+war = { country = CAL country = USA }
+}
+}
+
+name = "America Brings Doubt"
+desc = "EVT_152008_DESC"
+picture = "us_election"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Time will tell."
+command = { type = dissent value = 2 }
+}
+}
+
+
+event = {
+id = 152018
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = { id = 152000 days = 11 }
+}
+
+name = "Anti-Concessionist Riots in Guangzhou"
+desc = "EVT_152009_DESC"
+picture = "riot3"
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Let's hope it doesn't escalate..."
+command = { type = dissent value = 5 }
+command = { type = event which =  152019 where = GER when = 2 }
+}
+}
+
+event = {
+id = 152019
+random = no
+country = GER
+style = 2
+
+name = "Anti-Concessionists Attack German Assets"
+desc = "EVT_152019_DESC" #With the former League of Eight Provinces in complete flames, the German presence in China is rapidly deteriorating. The AOG and Nanking-Kommission struggle to make sense out of the chaos as they are forced to retreat to their headquarters. To make things worse, we received reports in Guangzhou that rioters attacked the German quarters there, damaging assets and assaulting a German citizen. In response, the Admiralty is preparing to retaliate by sending a squadron of destroyers to attack Guangzhou and remind the Chinese that the German Empire will not tolerate such a blatant violation of international treaties.\n\nOf course, there is no real strategic or tactical value to such an attack on a defenceless city, but it would send a message and ensure that the Chinese people and the rest of the world do not forget that Germany is a world power.
+picture = "riot2"
+
+action = {
+name = "Launch a retaliatory strike."
+ai_chance = 80
+command = { type = event which = 152020 where = UCH  when = 2 }
+}
+
+action = {
+name = "We have bigger concerns."
+ai_chance = 20
+command = { type = dissent value = 0.5 }
+command = { type = event which =  152021 where = UCH when = 2 }
+}
+}
+
+event = {
+id = 152020
+random = no
+country = UCH
+style = 2
+
+name = "German Ships Bombard Guangzhou"
+desc = "EVT_152011_DESC"
+picture = "germancruisers"
+
+action = {
+name = "They will pay in time."
+command = { type = dissent value = 5 }
+command = { type = resource which = metal value = -30 }
+command = { type = resource which = oil value = -30 }
+command = { type = resource which = rare_materials value = -30 }
+}
+}
+
+event = {
+id = 152021
+random = no
+country = UCH
+style = 2
+
+name = "Silence from Qingdao"
+desc = "EVT_152012_DESC"
+picture = "germancruisers"
+
+action = {
+name = "A relief, to say the least."
+command = { type = dissent value = -1 }
+}
+}
+
+event = {
+id = 152026
+random = no
+country = UCH 
+style = 2
+save_date = yes
+
+trigger = {
+event = { id = 152016 days = 30 }
+}
+
+name = "Labour Dispute"
+desc = "EVT_152013_DESC"
+picture = "strike1"
+
+action = {
+name = "The settlement slightly favours the workers."
+command = { type = dissent value = -3 }
+}
+
+action = {
+name = "The compromise slightly favours the merchants."
+command = { type = dissent value = -1 }
+command = { type = money value = 50 }
+}
+}
+
+event = {
+id = 152027
+random = no
+country = UCH
+style = 2
+
+trigger = {
+event = { id = 152026 days = 30 }
+}
+
+name = "Guangzhou General Strike"
+desc = "EVT_152014_DESC"
+picture = "strike1925"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Negotiate with the strikers."
+command = { type = dissent value = -1 }
+command = { type = money value = -250 }
+command = { type = domestic which = political_left value = 1 } 
+}
+
+action = {
+name = "Send in the troops.."
+command = { type = dissent value = 6 }
+}
+}
+
+event = {
+id = 152029
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+day = 5
+month = november
+year = 1936
+}
+
+name = "Lu Rongting Dies"
+desc = "EVT_152015_DESC"
+picture = "Japan_state_funeral"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Worrying."
+command = { type = dissent value = 2 }
+command = { type = sleepminister which = 65324 }
+}
+}
+
+event = {
+id = 152030 
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = 152029 
+}
+
+name = "Ma Ji claims autonomy from Guangdong"
+desc = "Ma Ji, governor of Guangxi, has declared his province autonomous of Guangdong. For now they will cooperate, but will manage their own affairs."
+picture = "china_recapture"
+ 
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Damn"
+command = { type = removecore which = 1378 } #Guilin
+command = { type = removecore which = 1382 } #Hechi
+command = { type = removecore which = 1379 } #Nanning
+command = { type = removecore which = 1374 } #Pingxian
+command = { type = removecore which = 1383 } #Wuzhou
+command = { type = removecore which = 1377 } #Yulin
+command = { type = removecore which = 1381 } #Bose
+command = { type = removecore which = 1376 } #Debao 
+command = { type = removecore which = 1380 } #Liuzhou 
+command = { type = independence which = U69 value = 1 when = 0 }
+command = { type = secedeprovince which = U69 which = 1378 }
+command = { type = secedeprovince which = U69 which = 1382 }
+command = { type = secedeprovince which = U69 which = 1379 }
+command = { type = secedeprovince which = U69 which = 1374 }
+command = { type = secedeprovince which = U69 which = 1383 }
+command = { type = secedeprovince which = U69 which = 1377 }
+command = { type = secedeprovince which = U69 which = 1381 }
+command = { type = secedeprovince which = U69 which = 1376 }
+command = { type = secedeprovince which = U69 which = 1380 } 
+command = { type = trigger which = 152031 }
+command = { type = manpowerpool value = -30 }
+command = { type = access which = U69 }
+command = { type = relation which = U69 value = 50 }
+}
+}
+
+event = {
+id = 152031
+random = no
+country = U69
+style = 2
+
+
+name = "Guangxi Independent" 
+desc = "Remnants of the National Revolutionary Army have begun pouring over the border from Yunnan into Guangxi. Today marks the liberation of the Guangxi from Warlords and traitors." 
+picture = "ccip_gmd"
+
+
+action = {
+name = "For Ma Ji, son of General Lu!"
+command = { type = add_corps which = "Guangxi Army" value = land where = 1378 }
+command = { type = add_division which = "Guangxi Militia 1" value = militia when = 3 }
+command = { type = add_division which = "Guangxi Regulars 1" value = infantry when = 6 }
+command = { type = add_division which = "Guangxi Regulars 2" value = infantry when = 6 }
+command = { type = add_division which = "Guangxi Regulars 3" value = infantry when = 6 where = artillery }
+command = { type = add_division which = "Guangxi Cavalry 1" value = cavalry when = 6 }
+command = { type = supplies value = 120 }
+command = { type = manpowerpool value = 30 }
+command = { type = set_domestic which = democratic value = 2 }
+command = { type = set_domestic which = political_left value = 2 }
+command = { type = 	access which = UCH } 
+command = { type = relation which = UCH value = 50 }
+}
+}
+
+
+### Li Zongren's Invasion and the Liangguang Civil War 
+
+event = {
+id = 152032
+random = no
+country = U69 
+style = 2
+
+trigger = {
+event = { id = 152029 days = 4 }
+}
+
+name = "Li Zongren Invades!"
+desc = "EVT_152016_DESC"
+picture = "Chinese_Fighting"
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "We must hold off Li's invasion!"
+command = { type = addcore which = 1381 }
+command = { type = addcore which = 1376 }
+command = { type = independence which = U70 value = 1 when = 0 }
+command = { type = secedeprovince which = U70 value = 1381 }
+command = { type = secedeprovince which = U70 value = 1376 }
+command = { type = trigger which = 1928000 }
+}
+}
+
+event = {
+id = 1928000
+random = no
+country = U70 
+style = 2
+
+
+name = "The New Guangxi Clique" #move to RKMT folder when built 
+desc = "Remnants of the National Revolutionary Army have begun pouring over the border from Yunnan into Guangxi. Today marks the liberation of the Guangxi from Warlords and traitors." 
+picture = "ccip_gmd"
+
+
+action = {
+name = "Victory will be ours!"
+command = { type = set_domestic which = democratic value = 5 }
+command = { type = set_domestic which = political_left value = 1 }
+command = { type = add_corps which = "Guangxi Pacification Army" value = land where = 1381 }
+command = { type = add_division which = "1. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "2. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "3. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "4. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "5. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "6. Bubing Shi" value = infantry when = 6 where = artillery }
+command = { type = add_division value = cavalry when = 6 }
+command = { type = war which = U69 }
+command = { type = supplies value = 100 }
+command = { type = manpowerpool value = 20 }
+command = { type = addclaim which = 1369 }
+command = { type = addclaim which = 1381 }
+command = { type = addclaim which = 1376 }
+command = { type = addclaim which = 1382 }
+command = { type = addclaim which = 1379 }
+command = { type = addclaim which = 1374 }
+command = { type = addclaim which = 1380 }
+command = { type = addclaim which = 1378 }
+command = { type = addclaim which = 1383 }
+command = { type = addclaim which = 1377 }
+command = { type = addclaim which = 1368 }
+command = { type = addclaim which = 1373 }
+command = { type = addclaim which = 1370 }
+command = { type = addclaim which = 1375 }
+}
+}
+
+event = {
+id = 152033
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+war = { country = U69 country = U70 } 
+NOT = { atwar = UCH } 
+}
+
+name = "Li Zongren has invaded Guangxi province"
+desc = "Li Zongren, former warlord-turned-NRA Commander, has invaded our sibling province of Guangxi. Ma Ji's forces are struggling to repulse the invasion, and have called for us to aid them. Ma Ji may have declared his autonomy, but Li is guaranteed to set his sights on us as soon as he's done with Guangxi. Should we help them, or fortify Guangdong?"
+picture = "ccip_natarmy"
+
+date = { day = 0 month = november year = 1936 }
+offset = 4
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Ma Ji needs help; send reinforcements!"
+ai_chance = 60
+command = { type = war which = U70 }
+command = { type = trigger which = 152034 }
+command = { type = relation which = U69 value = 100 }
+}
+
+action_b = {
+name = "We must secure our own perimeter."
+ai_chance = 40
+command = { type = manpowerpool value = 10 }
+command = { type = dissent value = 10 } #You abandoned your allies in their hour of need! 
+command = { type = relation which = U69 value = -50 }
+command = { type = construct which = land_fort where = 1369 value = 1 }
+command = { type = add_corps which = "Citizens' Defense Force" value = land where = 1369 } #Temp Name 
+command = { type = add_division which = "I Local Garrison" value = garrison when = 3 }
+}
+}
+
+event = {
+id = 152034
+random = no
+country = U69
+style = 2
+save_date = yes
+
+
+name = "Guangdong supports us!"
+desc = "Governor Chen of Guangdong has agreed to support us in our defense against Li Zongren's invasion!"
+picture = "Chinese Calvary"
+
+
+action_a = {
+name = "Great!"
+command = { type = alliance which = UCH }
+}
+}
+
+event = {
+id = 152035 
+random = no
+country = U69 
+style = 2
+save_date = yes
+
+trigger = {
+event = 152032
+event = 1928000
+control = { province = 1381 data = U69 }
+control = { province = 1376 data = U69 }
+NOT = { exists = U70 } 
+}
+
+name = "Li Zongren Defeated!"
+desc = "EVT_152018_DESC"
+picture = "Chinese Trench"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Victory at a cost."
+command = { type = manpowerpool value = -20 } #Civilian casualties 
+command = { type = dissent value = 5 }
+command = { type = industrial_modifier which = total value = -10 }
+}
+}
+
+event = {
+id = 152036 
+random = no
+country = U70 
+style = 2
+save_date = yes
+
+trigger = {
+control = { province = 1378 data = U70 }
+control = { province = 1383 data = U70 }
+control = { province = 1380 data = U70 }
+NOT = { exists = U69 } 
+}
+
+name = "Guangxi Secured"
+desc = "EVT_152019_DESC"
+picture = "Chinese Infantry2"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "The first step toward the National Revolution"
+command = { type = manpowerpool value = -20 } #Civilian casualties 
+command = { type = dissent value = 5 }
+command = { type = industrial_modifier which = total value = -10 }
+command = { type = capital which = 1378 }
+command = { type = name where = U70 which = "New Guangxi Clique" }
+command = { type = add_division which = "1. Baojia Militia" value = militia when = 3 }
+command = { type = add_division which = "1. Guangxi Bubing Shi" value = infantry when = 6 where = artillery } #Survivors and Equipment of the Old Guangxi army pressed into New Guangxi's ranks 
+}
+}
+
+event = {
+id = 152037 
+random = no
+country = U70 
+style = 2
+
+trigger = {
+event = 152036
+NOT = { war = { country = U70 country = UCH } } 
+}
+
+name = "Press into Guangdong?"
+desc = "Now that Guangxi is secure, our forces are ready to push into Guangdong if we so desire. Our assault will be supported by the captured equipment and defectors from the Old Guangxi army. Of course, we could focus on building up Guangxi first."
+picture = "Chinese Anti-Tank"
+
+date = { day = 0 month = november year = 1936 }
+offset = 3
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "End the rule of Chen, the traitor warlord."
+ai_chance = 70
+command = { type = war which = UCH }
+}
+
+action_b = {
+name = "We will make our base in Guangxi first" #This route will have to be expanded 
+ai_chance = 30
+command = { type = dissent value = 5 } 
+command = { type = industrial_modifier which = total value = 3 }
+}
+}
+
+event = {
+id = 152038 
+random = no
+country = U70 
+style = 2
+
+trigger = {
+control = { province = 1369 data = U70 }
+NOT = { 
+exists = UCH 
+} 
+}
+
+name = "Guangdong has been liberated"
+desc = "Chen Jiongming has been put to flight, and the city of Canton is now in our hands. We are now in control of the entire Liangguang region."
+picture = "ccip_natarmy"
+
+date = { day = 0 month = november year = 1936 }
+offset = 3
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Guangzhou will be the new home of the national revolution!"
+ai_chance = 80
+command = { type = capital which = 1369 }
+command = { type = addcore which = 1369 }
+command = { type = addcore which = 1381 }
+command = { type = addcore which = 1376 }
+command = { type = addcore which = 1382 }
+command = { type = addcore which = 1379 }
+command = { type = addcore which = 1374 }
+command = { type = addcore which = 1380 }
+command = { type = addcore which = 1378 }
+command = { type = addcore which = 1383 }
+command = { type = addcore which = 1377 }
+command = { type = addcore which = 1368 }
+command = { type = addcore which = 1373 }
+command = { type = addcore which = 1370 }
+command = { type = addcore which = 1375 }
+
+}
+
+action_b = {
+name = "Establish Chen Mingshu as a puppet governor of Guangdong" 
+ai_chance = 20
+command = { type = addcore which = 1378 } #Guilin
+command = { type = addcore which = 1382 } #Hechi
+command = { type = addcore which = 1379 } #Nanning
+command = { type = addcore which = 1374 } #Pingxian
+command = { type = addcore which = 1383 } #Wuzhou
+command = { type = addcore which = 1377 } #Yulin
+command = { type = addcore which = 1381 } #Bose
+command = { type = addcore which = 1376 } #Debao 
+command = { type = addcore which = 1380 } #Liuzhou
+command = { type = independence which = UCH value = 1 when = 0 }
+command = { type = secedeprovince which = UCH value = 1369 }
+command = { type = secedeprovince which = UCH value = 1368 }
+command = { type = secedeprovince which = UCH value = 1373 }
+command = { type = secedeprovince which = UCH value = 1370 }
+command = { type = secedeprovince which = UCH value = 1375 }
+command = { type = removeclaim which = 1369 }
+command = { type = removeclaim which = 1368 }
+command = { type = removeclaim which = 1373 }
+command = { type = removeclaim which = 1370 }
+command = { type = removeclaim which = 1375 }
+command = { type = trigger which = 152066 }
+command = { type = make_puppet which = UCH }
+}
+}
+
+event = {
+id = 152066 
+random = no
+country = UCH 
+style = 2
+save_date = yes
+
+
+name = "Guangdong People's Government"
+desc = "Chen Mingshu has been placed in charge of Guangdong province, establishing a KMT puppet regime."
+picture = "ccip_fjsoviet"
+
+
+action = {
+name = "Glorious unity of the productive people!"
+command = { type = capital which = 1369 } #Canton
+command = { type = name where = UCH which = "Guangdong People's Government" }
+command = { type = flag_ext where = UCH which = "_pg" }
+command = { type = set_domestic which = democratic value = 7 }
+command = { type = set_domestic which = political_left value = 7 }
+command = { type = headofstate which = 65360 } #Chen Mingshu 
+command = { type = headofgovernment which = 65346 } #Ye Ju
+command = { type = add_corps which = "People's Revolutionary Army" value = land where = 1369 }
+command = { type = add_division which = "Guangdong Militia" value = militia when = 3 } 
+command = { type = add_division which = "1. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "2. Bubing Shi" value = infantry when = 6 }
+command = { type = alliance which = U70 } 
+command = { type = supplies value = 150 }
+command = { type = manpowerpool value = 100 }
+}
+}
+
+##Chen Mingshu's decision 
+
+event = {
+id = 152039
+random = no
+country = UCH
+style = 2
+
+trigger = {
+event = 152036 
+NOT = { 
+war = { country = UCH country = U70 } 
+event = 152037
+} 
+}
+
+name = "Chen Mingshu's Decision"#Chen Mingshu's Decision
+desc = "EVT_152027_DESC"#Up until now, the Productive People's Party, led by Chen Mingshu and representing the majority of members of the Kuomintang in Liangguang, has been collaborating with Chen Jiongming's big-tent republican coalition. The Nationalists were happy to help develop and participate in democratic institutions in order to protect their interests and legacy after the failed Northern Expedition. This was with the long-term goal of peacefully implementing Mínquán, Sun Yat-sen's Principle of popular government. Besides, Chen's Federalists protected them from Zhili and Qing retribution.\n\nLi Zongren's seizure of Guangxi has completely changed the situation. While Chen Mingshu hardly trusts the rightist warlord despite both being members of the KMT, a golden opportunity presents itself: If he could get rid of Chen Jiongming, Liangguang would be secured for the Nationalist Party without bloodshed. He remains hesitant to betray him, however, after over a decade of protection and cooperation. Still, the Party's Central Committee has hatched a plan: Seize key buildings in Guangzhou and force Chen Jiongming, who has strong misgivings about fighting in the city, to surrender.\n\nAll Chen Mingshu has to do is give the order.
+picture = "china_rally"
+
+action = {
+ai_chance = 90 
+name = "Li is but an untrustworthy bandit."
+command = { type = dissent value = -5 } 
+}
+
+action = {
+ai_chance = 10
+name = "Start the operation."#Start the operation.
+command = { type = event which = 152040 where = UCH when = 2 }
+}
+}
+
+event = {
+id = 152040
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "KMT Seizes Guangzhou"#KMT Seizes Guangzhou
+desc = "EVT_152028_DESC"#Early in the morning, under the cover of the general mobilization against Guangxi, armed members of the KMT began seizing key buildings around the city, including the Guangdong University and the Provincial Assembly Building. Soon, Chen Mingshu announced the formation of the Guangdong People's Government, the deposition of Chen Jiongming, and a call for peace with Guangxi province.\n\nAs expected, Chen Jiongming announced that, while he refused to recognize the new government, he refused to allow the city to suffer unnecessary and destruction. He and his close supporters left for Hong Kong later that day, leaving the city in the hands of the Nationalist Party.
+picture = "ccip_fjsoviet"
+
+action = {
+name = "Bloodshed avoided."#Bloodshed avoided.
+command = { type = dissent value = -2 }
+command = { type = name where = UCH which = "Guangdong People's Government" }
+command = { type = flag_ext where = UCH which = "_pg" }
+command = { type = set_domestic which = democratic value = 7 }
+command = { type = set_domestic which = political_left value = 7 }
+command = { type = headofstate which = 65360 } #Chen Mingshu 
+command = { type = headofgovernment which = 65346 } #Ye Ju
+command = { type = sleepevent which = 152037 } 
+command = { type = trigger which = 152041 }
+command = { type = trigger which = 152042 }
+command = { trigger = { OR = { exists = U70 exists = U87 } } type = event which = 152043 where = UCH when = 7 } }
+}
+}
+
+event = {
+id = 152041 
+random = no
+country = U87
+style = 2
+
+name = "Revolution in Guangzhou"
+desc = "Chen Mingshu, known Kuomintang supporter, has led a mostly bloodless coup in Canton. He has established what he calls a 'People's Government' in Guangdong province."
+picture = "ccip_fjsoviet"
+
+action = {
+name = "Interesting development"
+command = { } #Need to sleep events related to Chen in LKMT folder 
+}
+}
+
+event = {
+id = 152042 
+random = no
+country = U70
+style = 2
+
+name = "Revolution in Guangzhou"
+desc = "Chen Mingshu, known Kuomintang supporter, has led a mostly bloodless coup in Canton. He has established what he calls a 'People's Government' in Guangdong province."
+picture = "ccip_fjsoviet"
+
+action = {
+name = "Interesting development"
+command = { } 
+}
+}
+
+event = {
+id = 152043
+random = no
+country = UCH
+style = 2
+
+trigger = {
+NOT = { 
+atwar = UCH 
+} 
+}
+
+name = "The Direction of our People's Government"
+desc = "Now that we have established our People's Government in Guangdong, we must now decide our policy towards our fellow KMT remnants. The New Guangxi are ruthless and rife with rightists, but may have the strength needed to protect us from hostile incursion. Meanwhile Governor Chen Mingshu supports Madame Sun's Revolutionary faction in Jiangfu, but is wary of Chairman Wang Jingwei's increasingly authoritarian control over the Central Committee." 
+picture = "mayfourthkmt"
+
+action_a = {
+trigger = { exists = U87 NOT = { flag = LKMT_Wang } } 
+ai_chance = 40
+name = "Make overtures to the Central Committee in the Jiangfu Base Area"
+command = { type = dissent value = -2 } 
+command = { type = relation which = U70 value = -25 }
+command = { type = relation which = U87 value = 25 } #more on this later  
+}
+
+action_b = {
+trigger = { exists = U70 } 
+ai_chance = 60
+name = "Seek a summit with Li Zongren and the RKMT." 
+command = { type = event which = 152044 where = UCH when = 1 }
+command = { type = relation which = U87 value = -25 }
+}
+
+action_c = {
+ai_chance = 60
+name = "Our Republic can stand on its own!" 
+command = { type = dissent value = 2 } 
+command = { type = relation which = U70 value = -25 }
+command = { type = relation which = U87 value = -25 }
+}
+}
+
+event = {
+id = 152044
+random = no
+country = U70 
+style = 2
+
+name = "The Guangdong Government proposes a summit"
+desc = "Chen Mingshu has contacted us, claiming his government is interested in a summit with us to discuss a possible alliance/cooperation in the national Revolution." 
+picture = "ccip_fjsoviet"
+
+action_a = { 
+ai_chance = 60
+name = "We should see what they have to offer"
+command = { type = dissent value = -2 } 
+command = { type = event which = 152045 where = UCH when = 1 }
+command = { type = relation which = U87 value = -25 }
+}
+
+action_b = {
+ai_chance = 40
+name = "These leftists must be joking" 
+command = { type = relation which = UCH value = -25 }
+}
+}
+
+event = {
+id = 152045
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Provincial KMT Leader Meet"
+desc = "EVT_152045_DESC" #With Chen Mingshu as governor of Guangdong and Li Zongren having ousted the Old Guangxi Clique, the two governors have met to discuss the future of Liangguang. The two men are essentially members of the Kuomintang, but are aligned with different factions within the party. Chen is aligned with Soong's Revolutionary faction while Li is de facto leader of the right-wing. While the two have differing views on how to proceed with the National Revolution, they both agree that they must form a unified government to secure the Party's position in southern China and have asked its members in the two provinces to attend the summit to decide on a this alliance.
+picture = "china_rally"
+
+action_a = { 
+ai_chance = 90
+name = "Offer an equal partnership alliance"
+command = { type = dissent value = -2 } 
+command = { type = trigger which = 152046 }
+}
+
+action_b = {
+ai_chance = 10
+name = "Offer to submit and become a protectorate of New Guangxi clique" 
+command = { type = dissent value = 15 } 
+command = { type = trigger which = 152047 }
+}
+
+action_c = {
+trigger = { ai = no } 
+ai_chance = 100
+name = "Propose a joint government out of Guangzhou" 
+command = { type = dissent value = 15 } 
+command = { type = trigger which = 152050 }
+}
+}
+
+event = {
+id = 152046
+random = no
+country = U70
+style = 2
+save_date = yes
+
+name = "Guangdong proposes alliance"
+desc = "The Guangdong government has proposed that we form a mutual alliance against all foes - an equal partnership where we recognize Chen Mingshu's governorship and work with them to accomplish the National Revolution."
+picture = "china_rally"
+
+action_a = { 
+ai_chance = 70
+name = "Sounds like a plan"
+command = { type = alliance which = UCH } 
+}
+
+action_b = {
+ai_chance = 30
+name = "Demand nothing less than total submission to the true Kuomintang!" 
+command = { type = dissent value = 5 } 
+command = { type = trigger which = 152048 }
+}
+}
+
+event = {
+id = 152047
+random = no
+country = U70
+style = 2
+save_date = yes
+
+name = "Guangdong accepts suzerainity"
+desc = "The Guangdong government offers to become our protectorate."
+picture = "china_rally"
+
+action_a = { 
+ai_chance = 70
+name = "Sounds like a plan"
+command = { type = make_puppet which = UCH }
+command = { type = trigger which = 152038  }
+}
+
+action_b = {
+trigger = { ai = no } 
+ai_chance = 30
+name = "Annex the rest of Liangguang into our territory" 
+command = { type = inherit which = UCH } 
+}
+}
+
+event = {
+id = 152048
+random = no
+country = UCH 
+style = 2
+save_date = yes
+
+name = "Li Zongren demands our submission!"
+desc = "The RKMT have said in no uncertain terms that we must either submit or face destruction at the hands of the New Guangxi Clique's armies."
+picture = "ccip_gmd"
+
+action_a = { 
+ai_chance = 50
+name = "We have no other choice..."
+command = { type = trigger which = 152047  }
+}
+
+action_b = { 
+ai_chance = 50
+name = "Never!" 
+command = { type = dissent value = 15 }
+command = { type = trigger which = 152049  }
+}
+}
+
+event = {
+id = 152049
+random = no
+country = U70
+style = 2
+save_date = yes
+
+name = "Chen Mingshu refuses our demands"
+desc = "Chen Mingshu has thrown our demands back in our faces, saying he will never submit to such bullying."
+picture = "ccip_fjsoviet"
+
+action_a = { 
+ai_chance = 100
+name = "Then they have chosen death!"
+command = { type = war which = UCH }
+}
+
+action_b = { 
+ai_chance = 0
+name = "These negotiations were pointless anyway" 
+command = { type = dissent value = 5 }
+}
+}
+
+event = {
+id = 152050
+random = no
+country = U70
+style = 2
+save_date = yes
+
+name = "Guangdong proposes a joint government"
+desc = "I'm an AI - I can't read!" #Chen Mingshu has proposed a joint government. Instead of existing as distinct entities, we will form a united government in Liangguang where all parties are represented and will cooperate against all opposition moving forward. 
+picture = "china_rally"
+
+action_a = { 
+ai_chance = 50
+name = "This might work out to our advantage"
+command = { type = trigger which = 152051 }
+}
+
+action_b = {
+ai_chance = 50
+name = "Demand nothing less than total submission to the true Kuomintang!" 
+command = { type = dissent value = 5 } 
+command = { type = trigger which = 152048 }
+}
+}
+
+event = {
+id = 152051
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Li Zongren agrees to a joint government!"
+desc = "The New Guangxi Clique has agreed to form a joint-government with us. Their forces will join ours, and together we will establish a true Nationalist Republic in southern China!"
+picture = "china_rally"
+
+action_a = {
+trigger = { ai = no } 
+ai_chance = 100
+name = "People's Prosperity Forever!" 
+command = { type = inherit which = U70 } 
+command = { type = addcore which = 1378 } #Guilin
+command = { type = addcore which = 1382 } #Hechi
+command = { type = addcore which = 1379 } #Nanning
+command = { type = addcore which = 1374 } #Pingxian
+command = { type = addcore which = 1383 } #Wuzhou
+command = { type = addcore which = 1377 } #Yulin
+command = { type = addcore which = 1381 } #Bose
+command = { type = addcore which = 1376 } #Debao 
+command = { type = addcore which = 1380 } #Liuzhou
+command = { type = name where = UCH which = "Liangguang People's Government" }
+command = { type = add_corps which = "People's Revolutionary Army" value = land where = 1369 }
+command = { type = add_division which = "1. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "2. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "3. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "4. Bubing Shi" value = infantry when = 6 where = artillery }
+command = { type = add_division value = cavalry when = 6 }
+}
+}
+
+##Second Guangxi Civil War##
+
+event = {
+id = 152052
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Lu Ronting's Funeral"#Lu Ronting's Funeral
+desc = "EVT_152029_DESC"#Governor-General Chen Jiongming has been invited to former governor Lu Ronting's funeral as a guest of honour by the leadership of Guangxi. A traditional affair, Chen accepted the offer, hoping to foster greater unity between the two provinces in such trying times.
+picture = "Republican China"
+
+action = {
+name = "A show of unity."#A show of unity.
+command = { type = dissent value = -3 }
+}
+}
+
+event = {
+id = 152053
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = { id = 152052 days = 20 }
+}
+
+name = "Guarding the Body"#Guarding the Body
+desc = "EVT_152030_DESC"#As part of Chinese funeral traditions, Lu Rongting's body is on display at the former governor's residence, with family and close friends watching over the deceased. While Governor-General Chen and some close associates were part of the guard for the day, unknown assailants approached him, brandishing handguns. A firefight quickly ensued.
+picture = "assassinationofker"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 30
+name = "The entourage is gunned down."#The entourage is gunned down.
+command = { type = event which = 152054 where = UCH when = 1 }
+command = { type = sleepminister which = 65321 }
+}
+
+action = {
+ai_chance = 70
+name = "The assailants fail and lay dead."#The assailants fail and lay dead.
+command = { type = event which = 152055 where = UCH when = 7 }
+}
+}
+
+event = {
+id = 152054
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Assassination of Chen Jiongming"#Assassination of Chen Jiongming
+desc = "EVT_152031_DESC"#Unable to react in time, Governor-General Chen Jiongming and his associates were gunned down by assassins under orders from Governor Ma Ji of Guangxi. News reached Guangdong quickly as Guangxi rapidly mobilised against them, but a question remains in the minds of the eastern province's leadership: Who will succeed Chen Jiongming as governor of Guangdong?\n\nChen Mingshu is an estranged member of the Chinese Nationalist Party, or Kuomintang. While not opposed to the KMT in Fujian, he resents Wang Jingwei's authoritarian leadership of the party, being a more genuine believer in democracy than a number of party members.\n\nChen Lianbo is head of the Merchant Corps, the militia of the Chinese merchant class of Guangzhou. He has been an early opponent to the late Chen Jiongming's more socialistic and populist policies and wishes to protect the merchants' interests in the region first and foremost.
+picture = "assassinationofker"
+
+action_a = {
+ai_chance = 50
+name = "Chen Mingshu"#Chen Mingshu
+command = { type = name where = UCH which = "Guangdong People's Government" }
+command = { type = flag_ext where = UCH which = "_pg" }
+command = { type = set_domestic which = democratic value = 7 }
+command = { type = set_domestic which = political_left value = 7 }
+command = { type = headofstate which = 65360 } #Chen Mingshu 
+command = { type = headofgovernment which = 65346 } #Ye Ju 
+command = { type = trigger which = 152041 }
+command = { type = trigger which = 152042 }
+command = { type = war which = U69 } #TEMP 
+command = { type = trigger which = 152057 }
+}
+
+action_b = {
+ai_chance = 50 
+name = "Chen Liaobo"#Chen Liaobo
+command = { type = headofstate which = 65381 }
+command = { type = set_domestic which = democratic value = 9 }
+command = { type = set_domestic which = political_left value = 4 }
+command = { type = war which = U69 }
+command = { type = trigger which = 152057 }
+}
+}
+
+event = {
+id = 152055
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Failed Attempt on Governor Chen"#Failed Attempt on Governor Chen
+desc = ""#Reacting in time to their assailants, Chen Jiongming and his associates managed to escape unscathed. It was quickly realised that they were under Guangxi Governor Ma Ji and they quickly made their way out of Nanning. By the time they reached Guangdong, the Guangxi clique had already mobilised their armies, ready to take leadership of Liangguang by force. Upon his return, Governor-General Chen made an impromptu speech to the Guangdong Provincial Assembly, rallying them against the tyranical warlord of Guangxi and to defend their hard-earned liberties.
+picture = "assassinationofker"
+
+action = {
+name = "Ma Ji is certainly behind this!" #The Diarchy falls.
+command = { type = dissent value = 10 }
+}
+}
+
+event = {
+id = 152056
+random = no
+country = U69
+style = 2
+save_date = yes
+
+trigger = {
+event = 152055
+}
+
+name = "Failed Asassination Attempt on Chen Jiongming"
+desc = "Gunmen attempted to assassinate Governor Chen Jiongming of Guangdong. These assassins just may have been sent by our governor, Ma Ji, in a bid to take all of Liangguang for himself. With the failure of the assassination attempt, however, Guangdong is demanding an explanation." 
+picture = "assassinationofker"
+
+date = { day = 0 month = november year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 80
+name = "It's war with Guangdong!" 
+command = { type = war which = UCH }
+command = { type = trigger which = 152057 }
+}
+
+action = {
+ai_chance = 20
+name = "Offer a half hearted apology" 
+command = { type = event which = 152058 where = UCH when = 2 }
+}
+}
+
+
+event = {
+id = 152057
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "The Second Guangdong-Guangxi War"#The Second Guangdong-Guangxi War
+desc = "EVT_152032_DESC"#The Diarchy has fallen as the two provinces have been unable to settle their differences diplomatically. The new warlord of Guangxi is unwilling to recognise Guangdong's supremacy over Liangguang and his ambitions cannot coexist with the ideals of his eastern counterpart. Both cliques have now taken up arms; Liangguang's future will thus be settled on the battlefield.
+picture = "Chinese Dug-in"
+
+action = {
+name = "Guangdong will prevail!"
+command = { type = supplies value = 100 }
+command = { type = manpowerpool value = 20 }
+}
+}
+
+event = {
+id = 152058
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Reckoning with Guangxi"
+desc = "We can see now that Ma Ji is willing to do whatever it takes to gain power in Liangguang. Army leaders and Governor Chen seem to both agree that we need to deal with this problem immediately before Guangxi has a chance to mobilize against us in force." 
+picture = "china_rally"
+
+
+action_a = {
+ai_chance = 60
+name = "It's war!" 
+command = { type = war which = U69 }
+command = { type = trigger which = 152057 }
+}
+
+action = {
+ai_chance = 40
+name = "Demand Ma Ji submit to the central Liangguang government in Guangzhou!" 
+command = { type = trigger which = 152059 }
+}
+}
+
+event = {
+id = 152059
+random = no
+country = U69 
+style = 2
+save_date = yes
+
+name = "Chen Jiongming demands our submission!"
+desc = "Guangzhou demands we submit now to the Liangguang central government, giving Chen Jiongming's regime administration over both Guangdong and Guangxi once more."
+picture = "Chinese Calvary"
+
+action_a = { 
+trigger = { ai = yes } 
+ai_chance = 10
+name = "We have no other choice..."
+command = { type = trigger which = 152060 }
+
+}
+
+action_b = { 
+ai_chance = 90
+name = "Never! War with Guangdong!" 
+command = { type = war which = UCH }
+command = { type = trigger which = 152057 }
+}
+}
+
+event = {
+id = 152060
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+name = "Ma Ji stands down"
+desc = "Ma Ji has agreed to stand down, allowing a peaceful reunification of Liangguang."
+picture = "china_rally"
+
+action_a = {
+name = "Great!" 
+command = { type = inherit which = U69 } 
+command = { type = addcore which = 1378 } #Guilin
+command = { type = addcore which = 1382 } #Hechi
+command = { type = addcore which = 1379 } #Nanning
+command = { type = addcore which = 1374 } #Pingxian
+command = { type = addcore which = 1383 } #Wuzhou
+command = { type = addcore which = 1377 } #Yulin
+command = { type = addcore which = 1381 } #Bose
+command = { type = addcore which = 1376 } #Debao 
+command = { type = addcore which = 1380 } #Liuzhou
+command = { type = add_corps which = "Guangxi Army" value = land where = 1247 }
+command = { type = add_division which = "Guangxi Militia 1" value = militia when = 4 }
+command = { type = add_division which = "Guangxi Regulars 1" value = infantry when = 7 }
+command = { type = add_division which = "Guangxi Regulars 2" value = infantry when = 7 where = artillery }
+command = { type = add_division which = "Guangxi Cavalry 2" value = cavalry when = 6 } #keep in case 
+}
+}
+
+event = {
+id = 152061
+random = no
+country = U69
+style = 2
+save_date = yes
+
+trigger = {
+event = 152057
+control = { province = 1369 data = U69 }
+NOT = {
+exists = UCH 
+}
+}
+
+name = "Ma Ji Secures Lianggang"#Ma Ji Secures Lianggang
+desc = "EVT_152033_DESC"#The warlord of Guangxi is victorious over the Guangdong rebels. With the two Guangs secured, Ma Ji is now able to push his ambitions towards the rest of southern China and beyond.
+picture = "china_rally"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Guangxi's power grows."#Guangxi's power grows.
+command = { type = country which = UCH }
+command = { type = trigger which = 152062 }
+}
+}
+
+event = {
+id = 152062
+random = no
+country = UCH
+style = 2
+
+name = "Guangxi Clique rises again"
+desc = "We have successfully established our regime over all of Liangguang."
+
+action = {
+name = "Guangxi Clique is calling the shots now"#Guangxi's power grows.
+command = { type = name where = UCH which = "Guangxi Clique" }
+command = { type = flag_ext where = UCH which = "_gx" }
+command = { type = set_domestic which = democratic value = 2 }
+command = { type = set_domestic which = political_left value = 2 }
+command = { type = headofstate which = 65363 }
+command = { type = headofgovernment which = 65364 }
+}
+}
+
+event = {
+id = 152063
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+headofstate = 65321 #Chen Jiongming
+event = 152057
+control = { province = 1369 data = UCH }
+control = { province = 1378 data = UCH }
+NOT = {
+exists = U69 
+}
+}
+
+name = "Chen Jiongming Secures Liangguang"#Chen Jiongming Secures Liangguang
+desc = "EVT_152036_DESC"#Despite internal opposition and the revolt of the Guangxi Clique, Chen Jiongming has remained at the head of Liangguang. With his rule and popularity more secure than ever, he will have the ability to push further towards his ideals should the situation in the rest of the region allow it: A federal and truly democratic China.
+picture = "china_rally"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Chen will free China!"#Chen will free China!
+command = { type = addcore which = 1378 } #Guilin
+command = { type = addcore which = 1382 } #Hechi
+command = { type = addcore which = 1379 } #Nanning
+command = { type = addcore which = 1374 } #Pingxian
+command = { type = addcore which = 1383 } #Wuzhou
+command = { type = addcore which = 1377 } #Yulin
+command = { type = addcore which = 1381 } #Bose
+command = { type = addcore which = 1376 } #Debao 
+command = { type = addcore which = 1380 } #Liuzhou
+}
+}
+
+event = {
+id = 152064
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = {
+event = 152054
+event = 152057
+headofstate = 65381 #Chen Lianbo
+control = { province = 1369 data = UCH }
+control = { province = 1378 data = UCH }
+NOT = {
+exists = U69 
+}
+}
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+name = "Chen Lianbo Secures Liangguang"#Chen Lianbo Secures Liangguang
+desc = "EVT_152034_DESC"#The head of the Merchant Corps, Chen Lianbo, has secured the General-Governorship of Liangguang after defeating the Guangxi rebels. Without a doubt, the new governor will focus on economic development and the protection of the Chinese merchants' interests in the region above all.
+picture = "china_rally"
+
+action = {
+name = "There is money to be made!"#Guangxi's power grows.
+command = { type = addcore which = 1378 } #Guilin
+command = { type = addcore which = 1382 } #Hechi
+command = { type = addcore which = 1379 } #Nanning
+command = { type = addcore which = 1374 } #Pingxian
+command = { type = addcore which = 1383 } #Wuzhou
+command = { type = addcore which = 1377 } #Yulin
+command = { type = addcore which = 1381 } #Bose
+command = { type = addcore which = 1376 } #Debao 
+command = { type = addcore which = 1380 } #Liuzhou
+}
+}
+
+event = {
+id = 152065
+random = no
+country = UCH
+style = 2
+save_date = yes
+
+trigger = { 
+OR = { exists = U70 exists = U87 }
+event = 152054 
+event = 152057
+headofstate = 65360 #Chen Mingshu
+control = { province = 1369 data = UCH }
+control = { province = 1378 data = UCH }
+NOT = {
+exists = U69 
+}
+}
+
+name = "Chen Mingshu Secures Liangguang"#Chen Mingshu Secures Liangguang
+desc = "EVT_152035_DESC"#Chen Mingshu, head of the Productive Peoples' Party and former Kuomintang member, has defeated the Guangxi rebels and secured control of Liangguang. As Governor-General, Chen will likely align the provinces towards the KMT in Fujian and is known to support Soong Ching-ling's faction there.
+picture = "china_rally"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action = {
+name = "Another victory for the KMT!"#Another victory for the KMT!
+command = { type = addcore which = 1378 } #Guilin
+command = { type = addcore which = 1382 } #Hechi
+command = { type = addcore which = 1379 } #Nanning
+command = { type = addcore which = 1374 } #Pingxian
+command = { type = addcore which = 1383 } #Wuzhou
+command = { type = addcore which = 1377 } #Yulin
+command = { type = addcore which = 1381 } #Bose
+command = { type = addcore which = 1376 } #Debao 
+command = { type = addcore which = 1380 } #Liuzhou
+command = { type = event which = 152043 where = UCH when = 7 }
+}
+}
+

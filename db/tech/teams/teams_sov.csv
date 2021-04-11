@@ -1,0 +1,79 @@
+SOV;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+3700;Tupolev OKB;T3714;5;1922;1949;aeronautics;bomber_design;munitions;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3701;Dmitry Grigorovich;T_UKR_Dmitry_Grigorovich;5;1930;1955;aeronautics;fighter_design;bomber_design;mechanics;munitions;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3702;Tupolev OKB;T3714;6;1949;1970;aeronautics;bomber_design;technical_efficiency;rocketry;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3703;Ilyushin OKB;T3709;6;1930;1947;aeronautics;fighter_design;bomber_design;general_equipment;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3704;Ilyushin OKB;T3709;6;1947;1970;aeronautics;bomber_design;mechanics;rocketry;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3705;Semyon Lavochkin;Semjon_Lawotschkin_KR_TT;6;1930;1945;aeronautics;fighter_design;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3706;Kamov-Mil OKB;Mil_KR_TT;7;1940;1970;aeronautics;electronics;munitions;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3707;Yakovlev OKB;T3718;7;1934;1970;aeronautics;fighter_design;mechanics;technical_efficiency;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3708;Lavochkin-Gurevich OKB;T_SOV_MiG;7;1945;1970;aeronautics;fighter_design;general_equipment;rocketry;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3709;Vladimir Vetchinkin;T_SOV_Vladimir_Vetchinkin;5;1930;1950;rocketry;aeronautics;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3710;Mikhail Tikhonravov;T_SOV_Mikhail_Tikhonravov;7;1945;1970;rocketry;aeronautics;chemistry;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3711;Kronshtadtskiy Sudoremontnyy Zavod;T11003;5;1858;1970;naval_engineering;naval_artillery;mechanics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3712;Vladimir Peregudov;T_SOV_Vladimir_Peregudov;5;1951;1968;naval_engineering;electronics;nuclear_engineering;technical_efficiency;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3713;Admiralteyskiy Sudostroitelnyy;T_RUS_Admiralty_Shipyard;5;1704;1970;naval_engineering;naval_artillery;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3714;TsKB Morskoy Tekhniki 'Rubin';T7209;5;1926;1970;naval_engineering;naval_artillery;submarine_design;chemistry;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3715;Chernomorskii Sudostroitelny Zavod;T3700;5;1911;1942;naval_engineering;naval_artillery;general_equipment;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3716;Chernomorskii Sudostroitelny Zavod;T_RUS_Nikolaev_Shipyard;5;1942;1970;naval_engineering;naval_artillery;carrier_design;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3717;Krasnoye Sormovo Zavod;T_SOV_Krasnoye_Sormovo;6;1849;1970;artillery;naval_engineering;submarine_design;technical_efficiency;vehicle_engineering;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3718;Izhorskiye Zavody;T_RUS_Izhora_Plants;5;1722;1970;mechanics;chemistry;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3719;Tulsky Oruzheiny Zavod;T_RUS_Tula_Arsenal;5;1712;1970;artillery;mechanics;general_equipment;munitions;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3720;Mashinostroitelny Zavod 'Barrikady';T3701;6;1914;1970;artillery;mechanics;electronics;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3721;Mikhail Loginov;T_SOV_Mikhail_Loginov;6;1937;1970;artillery;mechanics;munitions;training;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3722;Gosudarstvennyy Obukhovskiy Zavod;T_RUS_Obukhov_Plant;7;1863;1970;artillery;mechanics;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3723;AMO ZIL;T7233;5;1916;1970;mechanics;general_equipment;technical_efficiency;vehicle_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3724;Krasnyy Profintern;T_UKR_Kharkov_Locomotive1;6;1873;1942;mechanics;vehicle_engineering;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3725;Krasnyy Profintern;T_RUS_Uralvagonzavod;6;1942;1970;artillery;mechanics;technical_efficiency;vehicle_engineering;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3726;Krasnyy Putilovets;T3710;6;1872;1970;artillery;mechanics;munitions;vehicle_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3727;Grachev Avtomobilny Zavod;T_SOV_Vitaly_Andreevich_Grachev;7;1943;1970;mechanics;general_equipment;training;vehicle_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3728;Kharkovsky Parovozostroitelny Zavod;T_UKR_Kharkov_Locomotive;7;1896;1970;mechanics;technical_efficiency;vehicle_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3729;Chimkentskiy Khim-farm Zavod;T_SOV_Chimpharm;4;1882;1970;chemistry;medicine;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3730;NIFHI;T_SOV_Karpov_Institute;5;1918;1970;mathematics;chemistry;management;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3731;Bondyuzhskiy Khimicheskiy Zavod;T_RUS_Bondyuzhsky;6;1868;1970;chemistry;general_equipment;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3732;Kompaniya Transsibirskoy Magistrali;T13005;6;1916;1970;general_equipment;management;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3733;VMK Krasnyy Oktyabr;T_SOV_Krasny_Oktyabr;6;1897;1970;mechanics;management;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3734;Izhevskiy Oruzheynyy Zavod;T14704;7;1807;1970;artillery;mechanics;general_equipment;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3735;Vasiliy Nemchinov;T_SOV_Vasily_Nemchinov;8;1940;1965;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3736;Vladimir Streltsov;T_SOV_Vladimir_Streltsov;5;1944;1970;aeronautics;medicine;electronics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3737;Sergei Lebedev;T_RUS_Sergei_Lebedev;5;1942;1970;mathematics;mechanics;electronics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3738;Elektrosila;T_RUS_Siemens_Halske_Shukkert;5;1886;1970;mechanics;electronics;management;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3739;TsRL;T_RUS_ROBTiT;6;1908;1970;electronics;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3740;Pavel Oshchepkov;T_SOV_Pavel_Oshchepkov;6;1938;1970;mechanics;electronics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3741;Vladimir Kotelnikov;T_RUS_Vladimir_Kotelnikov;7;1933;1970;mathematics;mechanics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3742;Moskovskiy Gosudarstvennyy Universitet;T_RUS_Moskow_University;5;1930;1970;mathematics;chemistry;nuclear_physics;management;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3743;Abram Ioffe;T_RUS_Abram_Ioffe;7;1930;1960;mathematics;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3744;Igor Kurchatov;T_SOV_Igor_Kurchatov;5;1939;1945;nuclear_physics;nuclear_engineering;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3745;Igor Kurchatov;T_SOV_Igor_Kurchatov;7;1945;1970;nuclear_physics;nuclear_engineering;mathematics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3746;Ivan Dmitriev;T_SOV_Ivan_Nikolaevich_Dmitriev;4;1930;1948;aircraft_testing;large_taskforce_tactics;carrier_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3747;Nikolai Zarubin;T_SOV_Nikolai_Aleksandrovich_Zarubin;4;1930;1948;small_taskforce_tactics;centralized_execution;submarine_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3748;Voyenno-Morskaya Akademiya RKKA;T10402;5;1930;1970;naval_engineering;electronics;submarine_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3749;Lev Galler;T_SOV_Lev_Galler;5;1936;1949;naval_artillery;large_taskforce_tactics;centralized_execution;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3750;Yuri Rall;T_SOV_Yuri_Rall;5;1936;1951;naval_engineering;small_taskforce_tactics;decentralized_execution;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3751;Vasiliy Rakov;T_SOV_Vasily_Ivanovich_Rakov;5;1948;1970;aircraft_testing;piloting;large_taskforce_tactics;carrier_tactics;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3752;Serafim Chursin;T_SOV_Serafim_Evgenievich_Chursin;6;1948;1970;large_taskforce_tactics;small_taskforce_tactics;centralized_execution;submarine_tactics;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3753;Sergei Gorshkov;T_SOV_Sergei_Gorshkov;7;1951;1970;naval_artillery;large_taskforce_tactics;centralized_execution;decentralized_execution;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3754;Alexey Pankratiev;T_SOV_Alexey_Vasilyevich_Pankratiev;5;1918;1942;bomber_tactics;centralized_execution;piloting;mechanics;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3755;Aleksandr Kozhevnikov;T_SOV_Aleksandr_Timofeevich_Kozhevnikov;6;1930;1948;fighter_tactics;decentralized_execution;piloting;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3756;Aleksandr Lapchinskiy;T_SOV_Aleksandr_Lapchinsky;6;1924;1944;fighter_tactics;bomber_tactics;combined_arms_focus;aeronautics;training;management;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3757;Timofey Khryukin;T_SOV_Timofey_Hryukin;6;1942;1970;bomber_tactics;centralized_execution;piloting;combined_arms_focus;electronics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3758;Konstantin Vershinin;T_SOV_Konstantin_Vershinin;7;1944;1970;fighter_tactics;bomber_tactics;decentralized_execution;piloting;training;management;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3759;Aleksandr Pokryshkin;T_SOV_Alexander_Pokryshkin;8;1948;1970;fighter_tactics;piloting;individual_courage;technical_efficiency;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3760;Dmitriy Karbyshev;T_SOV_Dmitry_Karbyshev;6;1936;1945;centralized_execution;chemistry;general_equipment;training;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3761;Aleksey Proshlyakov;T_SOV_Aleksey_Proshlyakov;6;1945;1970;decentralized_execution;chemistry;general_equipment;training;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3762;Mikhail Frunze;kai_Tmikhfru;5;1930;1940;large_unit_tactics;centralized_execution;individual_courage;infantry_focus;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3763;Aleksandr Svechin;T_SOV_Aleksandr_Svechin;7;1930;1943;small_unit_tactics;decentralized_execution;combined_arms_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3764;Boris Shaposhnikov;Shap_KR_TT;6;1930;1943;large_unit_tactics;centralized_execution;large_unit_focus;training;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3765;Vasiliy Sokolovskiy;T_SOV_Vasiliy_Sokolovsky;7;1943;1968;large_unit_tactics;combined_arms_focus;large_unit_focus;training;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3766;Jerome Uborevich;T_SOV_Jerome_Uborevich2;5;1936;1952;small_unit_tactics;centralized_execution;decentralized_execution;combined_arms_focus;technical_efficiency;training;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3767;Vladimir Grendal;T_SOV_Vladimir_Grendal;5;1936;1950;large_unit_tactics;centralized_execution;individual_courage;infantry_focus;artillery;training;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3768;Vladimir Triandafillov;T_SOV_Vladimir_Triandafillov;6;1936;1952;large_unit_tactics;centralized_execution;individual_courage;combined_arms_focus;maneuver_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3769;Konstantin Kalinovskiy;T_SOV_Konstantin_Kalinovsky;7;1936;1952;decentralized_execution;combined_arms_focus;maneuver_tactics;blitzkrieg_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3770;Gennadiy Obaturov;T_SOV_Gennady_Obaturov;6;1952;1970;large_unit_tactics;small_unit_tactics;decentralized_execution;combined_arms_focus;maneuver_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3771;Aleksey Nesterenko;T_SOV_Aleksey_Ivanovich_Nesterenko;7;1953;1970;decentralized_execution;combined_arms_focus;rocketry;aeronautics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3772;Nikolai Denisevich;T_SOV_Nikolai_Yulianovich_Denisevich;4;1936;1945;marine_training;small_unit_tactics;infantry_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3773;Uchilishche Morskoy Pekhoty;MCC_KR_RUS_TT;5;1945;1970;marine_training;small_unit_tactics;combined_arms_focus;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3774;Mikhail Levandovskiy;T_SOV_Mikhail_Lewandowski;5;1936;1955;mountain_training;small_unit_tactics;maneuver_tactics;artillery;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3775;Vladikavkaz Pekhotnuyu Shkolu;T_RUS_Vladikavkaz_Infantry_School;6;1936;1970;mountain_training;small_unit_tactics;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3776;Pyotr P. Ivanov;T_SOV_Pyotr_Pavlovich_Ivanov;5;1936;1953;airborne_training;small_unit_tactics;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+3777;Vasiliy Margelov;T_SOV_Vasily_Margelov;7;1953;1970;airborne_training;small_unit_tactics;infantry_focus;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

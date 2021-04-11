@@ -1,0 +1,83 @@
+U74;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+605001;Head of State;Yan Xishan;1920;1964;1999;FA;Popular Figurehead;High;948;X
+605002;Head of Government;Yan Xishan;1920;1964;1999;FA;Corporate Suit;High;948;X
+605003;Foreign Minister;Wang Zuanxu;1933;1964;1999;PA;Iron Fisted Brute;High;L50323;X
+605004;Minister of Armament;Deng Xiaoping;1933;1964;1999;ML;laissez-faire capitalist;Low;M51038;x
+605005;Minister of Security;Qu Yangke;1933;1964;1999;PA;Prince of Terror;Medium;M503005;X
+605006;Head of Military Intelligence;Deng Xiaoping;1936;1964;1999;PA;Industrial Specialist;Medium;M51038;x
+605007;Chief of Staff;Yan Xishan;1933;1964;1999;FA;School of Defence;Medium;948;X
+605008;Chief of Army;Feng Yuxiang;1911;1964;1999;PA;Guns and Butter Doctrine;Medium;kaiserreich Feng Yuhsiang;X
+605009;Chief of Navy;Dmitrij Krolcheff;1933;1964;1999;PA;Base Control Doctrine;Medium;M503009;X
+605010;Chief of Air Force;Yan Xishan;1933;1964;1999;FA;Carpet Bombing Doctrine;Medium;948;X
+605011;Minister of Armament;Yan Xishan;1933;1964;1999;FA;Keynesian economy;Medium;948;X
+605012;Head of Military Intelligence;Deng Xiaoping;1936;1964;1999;NS;Industrial Specialist;Medium;M51038;x
+605013;Head of State;Feng Yuxiang;1936;1964;1999;PA;Barking Buffoon;Medium;kaiserreich Feng Yuhsiang;x
+605014;Head of Government;Deng Xiaoping;1936;1964;1999;PA;Corporate Suit;Medium;M51038;x
+605015;Head of State;Deng Xiaoping;1936;1964;1999;NS;Autocratic Charmer;High;M51038;X
+605016;Head of State;Feng Sizhi;1936;1970;1999;FA;Insignificant Layman;Medium;Feng Sizhi;X
+605017;Head of State;Xu Yongchang;1936;1970;1999;PA;Autocratic Charmer;High;M503104;X
+605018;Minister of Security;Wang Jingguo;1920;1964;1999;PA;Crooked Kleptocrat;Very High;L50314;X
+605019;Minister of Security;Li Mingzhong;1939;1970;1999;FA;Secret Police Chief;Medium;Li Mingzhong;X
+605020;Minister of Security;Sun Fulin;1936;1964;1999;PA;Efficient Sociopath;High;Sun Fulin;X
+605021;Minister of Security;Gao Hongwen;1945;1970;1999;PA;Man of the People;High;Gao Hongwen;X
+605022;Chief of Staff;Liu Yufen;1940;1964;1999;FA;School of Fire Support;Low;Liu Yufen;X
+605023;Head of Government;Yan Xishan;1920;1964;1999;PA;Old General;Very High;L50348;X
+605024;Chief of Army;Yang Aiyuan;1936;1964;1999;PA;Static Defence Doctrine;Very High;Yang Aiyuan;X
+605025;Chief of Army;Sun Chu;1941;1964;1999;FA;Elastic Defence Doctrine;High;Sun Chu;X
+605026;Chief of Army;Li Fuying;1943;1970;1999;FA;Decisive Battle Doctrine;Medium;L50174;X
+605027;Chief of Army;Zhou Dai;1938;1964;1999;PA;Decisive Battle Doctrine;Medium;Zhou Dai;X
+605028;Head of Military Intelligence;Yang Aiyuan;1936;1964;1999;PA;Logistics Specialist;Very High;Yang Aiyuan;X
+605029;Foreign Minister;Zhao Daiwen;1920;1964;1999;PA;Iron Fisted Brute;Very High;Zhao Daiwen;X
+605030;Head of Government;Zhao Daiwen;1920;1964;1999;PA;Silent Workhorse;Very High;Zhao Daiwen;X
+605031;Minister of Armament;Fu Zuoyi;1933;1964;1999;PA;Tank Proponent;Medium;L50085;X
+605032;Chief of Staff;Fu Zuoyi;1939;1964;1999;PA;School of Manoeuvre;Medium;L50085;X
+605033;Chief of Staff;Lü Ruji;1945;1970;1999;PA;School of Psychology;Medium;Lv RuJi;X
+605034;Head of Government;Feng Sizhi;1936;1970;1999;FA;Smiling Oilman;Medium;Feng Sizhi;X
+605035;Minister of Security;Zhang Peimei;1920;1964;1999;PA;Crime Fighter;High;Zhang Peimei;X
+605036;Minister of Security;Feng Sizhi;1936;1970;1999;FA;Silent Lawyer;Low;Feng Sizhi;X
+605037;Head of Military Intelligence;Shang Zhen;1933;1964;1999;PA;Political Specialist;High;M503006;X
+605038;Head of Government;Shang Zhen;1936;1970;1999;PA;Political Protege;Medium;M503006;X
+605039;Chief of Staff;Shi Jingting;1936;1964;1999;PA;School of Fire Support;Medium;Shi Jingting;X
+605040;Head of Military Intelligence;Feng Penzhu;1936;1964;1999;FA;Dismal Enigma;Medium;Feng Penzhu;X
+605041;Head of Military Intelligence;Zhang Yinwu;1936;1970;1999;FA;Naval Intelligence Specialist;Very High;L50020;X
+605042;Head of Military Intelligence;Zhao Chengshou;1936;1970;1999;FA;Logistics Specialist;Very High;L50021;X
+605043;Head of Military Intelligence;Nan Guixin;1936;1970;1999;PA;Political Specialist;Very High;Nan Guixin;X
+605044;Head of Military Intelligence;Ma Lingfu;1936;1970;1999;FA;Industrial Specialist;Medium;Ma Lingfu;X
+605045;Head of Military Intelligence;Fang Zhenwu;1936;1964;1999;PA;Technical Specialist;Very High;Fang Zhenwu1926;X
+605046;Head of State;Liang Huazhi;1943;1964;1999;FA;Autocratic Charmer;Very High;Liang Huazhi;X
+605047;Head of State;Wang Jingguo;1936;1970;1999;FA;Ruthless Powermonger;Very High;L50314;X
+605048;Head of Government;Liang Huazhi;1945;1964;1999;FA;Ambitious Union Boss;Very High;Liang Huazhi;X
+605049;Head of Government;Yang Aiyuan;1936;1970;1999;FA;Flamboyant Tough Guy;Very High;Yang Aiyuan;X
+605050;Head of Government;Li Peiji;1936;1970;1999;FA;Naive Optimist;Medium;Li Peiji;X
+605051;Chief of Army;Han Fuju;1941;1964;1999;FA;Static Defence Doctrine;Low;Han Fuju;X
+605052;Minister of Security;Liang Huazhi;1936;1964;1999;PA;Man of the People;Very High;Liang Huazhi;X
+605053;Minister of Security;Go Jin;1936;1970;1999;FA;Secret Police Chief;High;Go Jin;X
+605054;Minister of Security;Zhang Huizhao;1936;1970;1999;FA;Compassionate Gentleman;High;Zhang Huizhao;X
+605055;Chief of Staff;Guo Zongfen;1937;1964;1999;PA;School of Defence;Very High;Guo Zongfen;X
+605056;Chief of Staff;Du Kun;1940;1970;1999;PA;School of Defence;High;Du Kun;X
+605057;Foreign Minister;Jia Jingde;1940;1964;1999;PA;Great Compromiser;Very High;Jia Jingde;X
+605058;Foreign Minister;Wen Shouquan;1936;1970;1999;PA;Biased Intellectual;Very High;Wen Shouquan;X
+605059;Foreign Minister;Nan Guixin;1936;1970;1999;PA;Ideological Crusader;Very High;Nan Guixin;X
+605060;Foreign Minister;Su Tiren;1936;1970;1999;FA;The Cloak N Dagger Schemer;Medium;Su Tiren;X
+605061;Foreign Minister;Shang Zhen;1936;1970;1999;PA;General Staffer;High;M503006;X
+605062;Minister of Armament;Xu Yongchang;1938;1964;1999;PA;Resource Industrialist;High;M503104;X
+605063;Minister of Armament;Tian Rubi;1939;1970;1999;FA;Laissez-Faire Capitalist;Low;Tian Rubi;X
+605064;Head of Government;Xu Yongchang;1936;1970;1999;PA;Ambitious Union Boss;High;M503104;X
+605065;Head of Government;Wen Shouquan;1936;1970;1999;PA;Corporate Suit;Very High;Wen Shouquan;X
+605066;Head of Government;Feng Xi;1936;1970;1999;FA;Smiling Oilman;High;Feng Xi;X
+605067;Chief of Army;Yan Xishan;1920;1964;1999;PA;Guns and Butter Doctrine;Very High;L50348;X
+605068;Chief of Army;Xu Yongchang;1943;1970;1999;PA;Armoured Spearhead Doctrine;High;M503104;X
+605069;Chief of Army;Wen Shouquan;1936;1970;1999;PA;Elastic Defence Doctrine;Very High;Wen Shouquan;X
+605070;Chief of Army;Shang Zhen;1936;1970;1999;PA;Guns and Butter Doctrine;Very High;M503006;X
+605071;Chief of Navy;Yan Xishan;1920;1964;1999;PA;Base Control Doctrine;Very High;L50348;X
+605072;Chief of Air Force;Shen Dexie;1936;1964;1999;PA;Air Superiority Doctrine;High;Shen Dexie;X
+605073;Chief of Staff;Yao Yijie;1936;1970;1999;FA;School of Psychology;High;Yao Yijie;X
+605074;Chief of Air Force;Chin Kuo-yong;1936;1970;1999;PA;Carpet Bombing Doctrine;High;Chin Kuo-yong;X
+605075;Chief of Air Force;Pan Shizhong;1936;1970;1999;PA;Army Aviation Doctrine;High;Pan Shizhong;X
+605076;Minister of Armament;Pan Shizhong;1936;1970;1999;PA;Air Superiority Proponent;High;Pan Shizhong;X
+605077;Chief of Staff;Cao Haosen;1936;1964;1999;PA;School of Defence;High;Cao Haosen1926;X
+605078;Minister of Armament;Tong Linge;1936;1970;1999;PA;Infantry Proponent;Very High;Tong Linge;X
+605079;Minister of Armament;Zhu Shouguang;1920;1964;1999;PA;Administrative Genius;High;Zhu Shouguang;X
+605080;Minister of Armament;Chin Kuo-yong;1936;1970;1999;FA;Air to Ground Proponent;High;Chin Kuo-yong;X
+605081;Chief of Staff;Zhu Shouguang;1920;1964;1999;PA;School of Psychology;High;Zhu Shouguang;X

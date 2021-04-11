@@ -1,0 +1,85 @@
+CGX;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+502084;Chief of Navy;Su Zushan;1920;1964;1999;FA;Indirect Approach Doctrine;Very High;Su Zushan;X
+502001;Head of State;Sun Chuanfang;1920;1964;1999;FA;Barking Buffoon;Very High;Sun Chuanfang;X
+502002;Head of Government;Sun Chuanfang;1920;1964;1999;FA;Flamboyant Tough Guy;Very High;Sun Chuanfang;X
+502094;Chief of Army;Sun Chuanfang;1920;1964;1999;FA;Elastic Defence Doctrine;Very High;Sun Chuanfang;X
+502003;Foreign Minister;He Fengshang;1936;1964;1999;PA;Biased Intellectual;High;kaiserreich hefengshang;X
+502004;Minister of Armament;John Rabe;1936;1964;1999;PA;Laissez-Faire Capitalist;High;Kaiserreich JohnRabe;X
+502005;Minister of Security;Lei Zhong;1936;1964;1999;PA;Man of the People;Medium;M502005;X
+502009;Chief of Navy;Hellmuth von Mucke;1936;1964;1999;PA;Base Control Doctrine;High;Kaiserreich vonMucke;X
+502011;Chief of Air Force;Wang Shuming;1936;1964;1999;PA;Air Superiority Doctrine;Medium;M502010;X
+502015;Minister of Armament;Yu Hanmou;1936;1964;1999;PA;Infantry Proponent;Medium;M502004;X
+502016;Chief of Navy;Bai Chongxi;1936;1964;1999;PA;Indirect Approach Doctrine;Medium;M502007;X
+502017;Minister of Armament;Chu Chia-hua;1936;1964;1999;PA;Theoretical Scientist;Medium;Kaiserreich ChuChiaHua;X
+502019;Chief of Army;Alexander von Falkenhausen;1936;1964;1999;PA;Elastic Defence Doctrine;High;L50304;X
+502020;Chief of Staff;Hellmuth von Mucke;1938;1964;1999;PA;School of Psychology;High;Kaiserreich vonMucke;X
+502021;Head of State;Qi Xieyuan;1930;1964;1999;FA;Ruthless Powermonger;High;M52017;X
+502022;Head of Government;Chen Gongbo;1930;1964;1999;FA;Political Protege;High;M52014;X
+502023;Foreign Minister;Zhou Fohai;1936;1964;1999;FA;Biased Intellectual;High;Zhou Fohai;X
+502024;Chief of Staff;Qi Xieyuan;1930;1964;1999;FA;School of Fire Support;Medium;M52017;X
+502025;Chief of Army;Bao Wenyue;1930;1964;1999;FA;Static Defence Doctrine;Medium;M52018;X
+502026;Chief of Navy;Ren Yuandao;1930;1964;1999;FA;Open Seas Doctrine;Medium;M52019;X
+502027;Chief of Air Force;Chen Changchu;1930;1964;1999;FA;Army Aviation Doctrine;Medium;M52020;X
+502028;Minister of Armament;Zhou Fohai;1936;1964;1999;FA;Resource Industrialist;High;Zhou Fohai;X
+502087;Chief of Staff;Wan Hongtu ;1936;1964;1999;PA;School of Defence;High;Wan Hongtu ;X
+502086;Minister of Armament;Wan Hongtu ;1936;1964;1999;PA;Military Entrepreneur;High;Wan Hongtu ;X
+502088;Chief of Army;Chen Dengke;1936;1964;1999;PA;Guns and Butter Doctrine;High;Chen Dengke;X
+502089;Minister of Security;Zhao Zhengping;1936;1946;1999;PA;Media Magnate;High;Zhao Zhengping;X
+502090;Chief of Staff;Jin Zhenzhong;1936;1964;1999;FA;School of Psychology;High;Jin Zhenzhong;X
+502091;Minister of Security;Jin Zhenzhong;1936;1964;1999;FA;Health and Safety;High;Jin Zhenzhong;X
+502092;Chief of Army;Chen Tiaoyuan;1936;1964;1999;PA;Doctrine of Autonomy;High;Chen_Tiaoyuan;X
+502093;Minister of Security;Chen Tiaoyuan;1936;1964;1999;PA;Crime Fighter;High;Chen_Tiaoyuan;X
+502029;Foreign Minister;Wang Kemin;1936;1964;1999;FA;Apologetic Clerk;Medium;Kaiserreich Wang Kemin;X
+502030;Head of Military Intelligence;Han Mudi;1936;1964;1999;PA;Technical Specialist;High;Kaiserreich Han Mudi;X
+502033;Minister of Armament;Feng Ru;1936;1964;1999;PA;Air Superiority Proponent;Medium;M750060;X
+502034;Chief of Air Force;Feng Ru;1936;1964;1999;PA;Air Superiority Doctrine;Medium;M750060;X
+502035;Minister of Security;Chen Taoyi;1936;1964;1999;PA;Secret Police Chief;Medium;Chen Taoyi;X
+502036;Chief of Staff;Fang Benren;1936;1964;1999;PA;School of Mass Combat;Medium;Fang Benren;X
+502037;Chief of Staff;Ge Jingen;1936;1964;1999;PA;School of Manoeuvre;Very High;Ge Jingen;X
+502038;Chief of Air Force;Ge Jingen;1936;1964;1999;PA;Aviation Organizer;Very High;Ge Jingen;X
+502039;Minister of Armament;Ge Jingen;1936;1964;1999;PA;Construction Magnate;Very High;Ge Jingen;X
+502040;Chief of Staff;Jiang Zungui;1936;1964;1999;PA;Guerilla Warfare Doctrine;Very High;Jiang Zungui;X
+502041;Chief of Air Force;Chen Qixia;1936;1964;1999;PA;Vertical Envelopment Doctrine;Very High;Chen Qixia;X
+502042;Minister of Armament;Chen Yuguang;1936;1964;1999;ML;Industrial Chemist;Very High;Chen Yuguang;X
+502043;Minister of Security;Jiang Zungui;1936;1964;1999;PA;Media Magnate;High;Jiang Zungui;X
+502044;Chief of Army;Li Erkang;1936;1964;1999;PA;Elastic Defence Doctrine;High;Li Erkang;X
+502045;Chief of Navy;Li Shijia;1936;1964;1999;PA;Open Seas Doctrine;High;Li Shijia;X
+502046;Chief of Staff;Lin Wei;1936;1964;1999;PA;Commando Doctrine Staff;High;Lin Wei;X
+502047;Chief of Staff;Liu Zongji;1936;1964;1999;PA;School of Fire Support;High;Liu Zongji;X
+502048;Chief of Staff;Lu Xingbang;1936;1964;1999;PA;School of Psychology;High;Lu Xingbang;X
+502049;Chief of Army;Ma Baohang;1936;1964;1999;PA;Armoured Spearhead Doctrine;High;Ma Baohang;X
+502050;Foreign Minister;Ma Yuren;1936;1964;1999;PA;The Cloak N Dagger Schemer;High;Ma Yuren;X
+502051;Chief of Army;Ma Yuren;1936;1964;1999;PA;Static Defence Doctrine;High;Ma Yuren;X
+502052;Minister of Armament;Pan Guogang;1936;1937;1999;PA;Construction Magnate;Very High;Pan Guogang;X
+502053;Chief of Army;Pan Guogang;1936;1937;1999;PA;Guns and Butter Doctrine;Very High;Pan Guogang;X
+502054;Chief of Army;Qian Zongze;1936;1940;1999;PA;Guns and Butter Doctrine;High;Qian Zongze;X
+502055;Minister of Armament;Qian Zongze;1936;1940;1999;PA;Military Entrepreneur;High;Qian Zongze;X
+502056;Minister of Armament;Tang Erhe;1936;1940;1999;PA;Industrial Chemist;Medium;Tang Erhe;X
+502057;Minister of Security;Tang Erhe;1936;1940;1999;PA;Health and Safety;Medium;Tang Erhe;X
+502058;Head of Government;Tian Wenbing;1936;1964;1999;FA;Pragmatic Statesman;High;Tian Wenbing;X
+502059;Chief of Staff;Wang Geng;1936;1964;1999;PA;School of Manoeuvre;Very High;Wang Geng;X
+502060;Chief of Navy;Wu Shouting;1936;1964;1999;PA;Decisive Battle Doctrine;High;Wu Shouting;X
+502061;Chief of Navy;Wu Zhennan;1936;1964;1999;PA;Decisive Battle Doctrine;High;Wu Zhennan;X
+502062;Chief of Staff;Xie Hongxun;1936;1964;1999;PA;School of Mass Combat;High;Xie Hongxun;X
+502063;Foreign Minister;Xu Dingkang;1936;1938;1999;PA;General Staffer;Very High;Xu Dingkang;X
+502064;Minister of Security;Xu Dingkang;1936;1938;1999;PA;Crime Fighter;Very High;Xu Dingkang;X
+502065;Chief of Air Force;Xu Huansheng;1936;1964;1999;PA;Carpet Bombing Doctrine;High;Xu Huansheng;X
+502066;Chief of Army;Xu Peigen;1936;1964;1999;PA;Static Defence Doctrine;High;Xu Peigen;X
+502067;Chief of Air Force;Xu Peigen;1936;1964;1999;PA;Aviation Organizer;High;Xu Peigen;X
+502068;Minister of Security;Xu Shiying;1936;1964;1999;PA;Compassionate Gentleman;Very High;Xu Shiying;X
+502069;Chief of Navy;Xu Zushan;1936;1964;1999;PA;Indirect Approach Doctrine;High;Xu Zushan;X
+502070;Chief of Navy;Yang Shuzhuang;1936;1964;1999;PA;Base Control Doctrine;High;Yang Shuzhuang;X
+502071;Head of Government;Yang Wenkai;1920;1964;1999;PA;Silent Workhorse;Very High;Yang Wenkai;X
+502081;Minister of Armament;Yang Wenkai;1920;1964;1999;PA;Military Entrepreneur;Very High;Yang Wenkai;X
+502082;Minister of Armament;Ding Wenjiang;1920;1964;1999;SC;Construction Magnate;Very High;Ding Wenjiang;X
+502083;Head of Military Intelligence;Ding Wenjiang;1920;1964;1999;SC;Technical Specialist;Very High;Ding Wenjiang;X
+502072;Minister of Armament;Yin Ruli;1936;1940;1999;PA;Bank President;High;Yin Ruli;X
+502073;Minister of Security;Yin Ruli;1936;1940;1999;PA;Silent Lawyer;High;Yin Ruli;X
+502074;Foreign Minister;Yuan Guanlan;1936;1940;1999;PA;Biased Intellectual;High;Yuan Guanlan;X
+502075;Chief of Air Force;Zeng Yijing;1936;1964;1999;PA;Naval Aviation Doctrine;High;Zeng Yijing;X
+502076;Chief of Army;Zhang Pei;1936;1964;1999;PA;Doctrine of Autonomy;High;Zhang Pei;X
+502077;Chief of Army;Zhang Taiyan;1936;1937;1999;PA;Doctrine of Autonomy;High;Zhang Taiyan;X
+502078;Minister of Armament;Zhang Xinyi;1936;1964;1999;PA;Administrative Genius;High;Zhang Xinyi;X
+502079;Chief of Army;Zhou Fengqi;1936;1964;1999;FA;Decisive Battle Doctrine;High;Zhou Fengqi;X
+502080;Minister of Security;Zhou Fengqi;1936;1964;1999;FA;Prince of Terror;High;Zhou Fengqi;X

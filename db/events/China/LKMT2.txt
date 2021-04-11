@@ -1,0 +1,865 @@
+#Starting Congress 
+
+event = {
+id = 1949000 
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+}
+
+name = "The Third National Congress of the Chinese Kuomintang"
+desc = "TEMP"
+style = 2
+picture = "mayfourthkmt"
+
+date = { day = 0 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "The Three Principles we use to found our Party, and our Republic!" #TEMP 
+command = { type = local_setflag which = LKMT_Congress1 } #for later CSP event 
+}
+}
+
+event = {
+id = 1949001
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+local_flag = LKMT_Congress1 
+}
+
+name = "Approach to the Jiangxi-Fujian Base Area"
+desc = "TEMP"
+style = 2
+picture = "china_rally"
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 30
+name = "Utilize the CSP to creat mass movements among the local peasantry"
+command = { type = dissent value = -1 } #CSP riles up locals, upsets landowners, but peasants given some more control over their lives
+command = { type = domestic which = free_market value = -1 } #CSP implement their policies
+command = { type = domestic which = freedom value = -1 }
+command = { type = local_setflag which = LKMT_CSP1 } #for later CSP event 
+command = { type = local_setflag which = LKMT_Mass } 
+command = { type = manpowerpool value = 15 } #locals mobilized 
+#anti-landlord purge events go here 
+}
+
+action_b = {
+ai_chance = 50
+name = "Cooperate with the local leadership and landlords - they have all the connections with the populace"
+command = { type = dissent value = -5 }
+command = { type = money value = 50 }
+command = { type = domestic which = free_market value = -1 } #
+command = { type = manpowerpool value = 5 } 
+command = { type = local_setflag which = LKMT_Mod } 
+}
+
+action_c = {
+ai_chance = 20
+name = "The Party will install direct military control over the region!"
+command = { type = dissent value = 15 }
+command = { type = domestic which = free_market value = -2 }
+command = { type = domestic which = freedom value = -3 }
+command = { type = local_setflag which = LKMT_DICT } 
+}
+}
+
+event = {
+id = 1949002
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+local_flag = LKMT_Congress1 
+}
+
+name = "Approach to the other KMT Remnants"
+desc = "TEMP" 
+style = 2
+picture = "ccip_the_ghosts_of_the_northern_expedition"
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 50
+name = "They should submit to the Party Central Committee!"
+command = { type = dissent value = 3 } #CSP riles up locals, upsets landowners, but peasants given some more control over their lives
+command = { type = relation which = U70 value = -40 }
+command = { type = relation which = CYN value = -20 }
+command = { type = local_setflag which = LKMT_Hardline } 
+}
+
+action_b = {
+ai_chance = 20
+name = "Promote a United Front among the various KMT remnant parties in China"
+command = { type = dissent value = -1 }
+command = { type = local_setflag which = LKMT_UF1 } 
+}
+
+action_c = {
+ai_chance = 30
+name = "Negotiate with our brothers to promote Party Unity"
+command = { type = dissent value = -2 }
+command = { type = local_setflag which = LKMT_Reconc } 
+command = { type = relation which = U70 value = 10 }
+command = { type = relation which = CYN value = 10 }
+}
+}
+
+event = {
+id = 1949003
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+local_flag = LKMT_Congress1 
+}
+
+name = "Policy towards the Internationale"
+desc = "TEMP" 
+style = 2
+picture = "internationale"
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 90
+name = "The Internationale can aid our revolutionary struggle"
+command = { type = relation which = GER value = -50 }
+command = { type = relation which = CAN value = -25 }
+command = { type = relation which = VIC value = -25 }
+command = { trigger = { exists = U70 } type = relation which = U70 value = -20 }
+command = { trigger = { exists = FRA } type = trigger which = 1949004 }
+command = { trigger = { NOT = { exists = FRA atwar = ENG } exists = ENG } type = trigger which = 1949005 }
+}
+
+action_b = {
+ai_chance = 10
+name = "We shall liberate China on our own!"
+command = { type = relation which = FRA value = -10 }
+command = { type = relation which = ENG value = -10 }
+}
+}
+
+event = {
+id = 1949004
+random = no
+country = FRA
+
+name = "Kuomintang Revolution in China"
+desc = "We have been contacted by elements of the Left Wing KMT in China - they want us to support their struggle against the German-backed cliques and warlords in their country, in order to support "
+style = 2
+picture = "Chinese Infantry2"
+
+action_a = {
+name = "We shall give whatever aid our revolutionary comrades in China require!"
+ai_chance = 80
+command = { type = supplies value = -500 }
+command = { type = relation which = CGX value = -20 }
+command = { type = trigger which = 1949006 }
+}
+
+action_b = {
+name = "The Chinese revolution failed before - why would it be different this time?"
+ai_chance = 20
+command = { type = relation which = U87 value = -30 }
+command = { type = dissent value = 4 }
+}
+}
+
+event = {
+id = 1949005
+random = no
+country = ENG
+
+name = "Kuomintang Revolution in China"
+desc = "We have been contacted by elements of the Left Wing KMT in China - they want us to support their struggle against the German-backed cliques and warlords in their country, in order to support "
+style = 2
+picture = "Chinese Infantry2"
+
+action_a = {
+name = "We shall give whatever aid our revolutionary comrades in China require!"
+ai_chance = 80
+command = { type = supplies value = -500 }
+command = { type = relation which = CGX value = -20 }
+command = { type = trigger which = 1949006 }
+}
+
+action_b = {
+name = "The Chinese revolution failed before - why would it be different this time?"
+ai_chance = 20
+command = { type = relation which = U87 value = -30 }
+command = { type = dissent value = 4 }
+}
+}
+
+event = {
+id = 1949006
+random = no
+country = U87
+
+name = "The Internationale supports us!"
+desc = "The Internationale has agreed to support us - they will begin sending supplies and advisors to China" #TEMP 
+style = 2
+picture = "soviet_reinforcments" #Temp 
+
+action_a = {
+name = "Great!" 
+command = { type = event which = 1949007 where = U87 when = 50  } #travel time 
+command = { type = setflag which = LKMT_INT_SUPPORT }
+}
+}
+
+event = {
+id = 1949007
+random = no
+country = U87
+
+name = "Internationale support arrives"
+desc = "Internationale support has arrived in China, after MN Roy" #TEMP 
+style = 2
+picture = "u-boat" #Temp 
+
+action_a = {
+name = "Welcome! Let us show you around..." 
+command = { type = supplies value = 500 }
+#more advisors 
+}
+}
+
+event = {
+id = 1949008
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+local_flag = LKMT_Congress1 
+event = 1949003
+event = 1949002
+event = 1949001
+}
+
+name = "Party Leadership"
+desc = "TEMP" 
+style = 2
+picture = "mayfourthkmt"
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+trigger = {
+AND = {
+OR = {
+local_flag = LKMT_Mass
+local_flag = LKMT_DICT
+}
+OR = {
+local_flag = LKMT_Hardline
+local_flag = LKMT_UF1
+}
+}
+}
+ai_chance = 50
+name = "Wang Jingwei will reorganize our Party as Interim President"
+command = { type = headofstate which = 1250041 } #Wang Jingwei
+command = { type = trigger which = 1949009}
+command = { type = setflag which = LKMT_Wang }
+command = { type = set_domestic which = democratic value = 5 }
+command = { type = set_domestic which = political_left value = 8 }
+}
+
+action_b = {
+trigger = {
+AND = {
+OR = {
+local_flag = LKMT_Mod 
+local_flag = LKMT_Mass
+}
+OR = {
+local_flag = LKMT_Hardline  
+local_flag = LKMT_UF1
+}
+}
+}
+ai_chance = 50
+name = "Madame Sun will lead our revolutionary struggle as Interim President"
+command = { type = headofstate which = 1250069 } #Madame Sun 
+command = { type = trigger which = 1949009}
+command = { type = setflag which = LKMT_Soong }
+command = { type = set_domestic which = democratic value = 8 }
+command = { type = set_domestic which = political_left value = 8 }
+}
+
+action_c = {
+trigger = {
+AND = {
+OR = {
+local_flag = LKMT_Mass
+local_flag = LKMT_Mod
+}
+OR = {
+local_flag = LKMT_Reconc 
+local_flag = LKMT_UF1
+}
+}
+}
+ai_chance = 50
+name = "Sun Fo's moderate approach earns him the Interim Presidency"
+command = { type = headofstate which = 1250001 } #Sun Fo
+command = { type = trigger which = 1949009}
+command = { type = setflag which = LKMT_Sun }
+command = { type = set_domestic which = democratic value = 7 }
+command = { type = set_domestic which = political_left value = 6 }
+}
+}
+
+event = {
+id = 1949009
+random = no
+country = U87
+
+name = "Interim Premier"
+desc = "TEMP"
+style = 2
+picture = "China_rally"
+
+action_a = {
+trigger = { 
+NOT = {
+flag = LKMT_Wang
+}
+}
+name = "Wang Jingwei has proven his dedication more than once"
+ai_chance = 80
+command = { type = headofgovernment which = 1250054 }
+command = { type = local_clrflag which = LKMT_Congress1 }
+}
+
+action_b = {
+trigger = { 
+flag = LKMT_Wang
+}
+name = "Wang Jingwei nominates his Reorganizationist ally, Chen Gongbo"
+ai_chance = 40
+command = { type = headofgovernment which = 12500576 }
+command = { type = local_clrflag which = LKMT_Congress1 }
+}
+
+action_c = {
+name = "The elder statesman, Lin Boqu, can offer his wisdom"
+ai_chance = 20
+command = { type = headofgovernment which = 12500577 }
+command = { type = local_clrflag which = LKMT_Congress1 }
+}
+
+action_d = {
+trigger = { 
+OR = {
+flag = LKMT_Soong
+flag = LKMT_Wang
+}
+}
+name = "Sun Fo, son of the Guofu, offers his moderation"
+ai_chance = 20
+command = { type = headofgovernment which = 1250040 }
+command = { type = local_clrflag which = LKMT_Congress1 }
+}
+}
+
+##To declare war on Nanjing or wait...
+
+event = {
+id = 1949010 
+picture = "Chinese Calvary"
+country = U87
+style = 2
+
+trigger = {
+event = 1949000
+NOT = { atwar = U87 }
+}
+
+date = { day = 1 month = january year = 1936 }
+offset = 7
+deathdate = { day = 1 month = december year = 1960 }
+
+name = "Liberation War against the Nanjing Clique" #TEMP 
+desc = "Now that we have established our insurgent zone, the question now is when to begin our liberation war against the concessionists in Nanjing. With the chaos of the immediate aftermath of the LEP, some say now is the best time to strike while Nanjing is weak and disorganized. Others suggest we are not yet ready for open warfare, and some additional preparations are in order to ensure our success. Of course, this will give our enemies time to prepare as well..."
+
+action_a = {
+ai_chance = 60
+name = "We are not ready to fight Nanjing - we must make additional preparations"
+command = { type = setflag which = LKMT_CGX_WAIT }
+command = { type = dissent value = -1 }
+}
+action_b = {
+ai_chance = 40
+name = "What better time than now? Onwards, to victory!" #TEMP 
+command = { type = war which = CGX }
+}
+}
+
+##Buildup events
+
+event = {
+id = 1949011  #FIX ME - need to find a way to let Nanjing Keep Firepower Focus while letting LKMT choose theirs 
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+event = 1949010  
+}
+
+name = "Reforming the National Revolutionary Army"
+desc = "TEMP"
+style = 2
+picture = "mayfourth3"
+
+date = { day = 0 month = january year = 1936 }
+offset = 30
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 30
+name = "A Peoples' Army of Red Militias"
+command = { type = deactivate which = 6010 }
+command = { type = deactivate which = 6020 }
+command = { type = activate which = 6570 }
+command = { type = gain_tech which = 6570 }
+command = { type = gain_tech which = 6300 } #People's army
+command = { type = manpowerpool value = 75 } #Increase volunteer pool  
+command = { type = add_division which = "1. Red Guards" value = militia when = 4 }
+command = { type = add_division which = "2. Red Guards" value = militia when = 4 }
+command = { type = setflag which = LKMT_CSP2 } #CSP organize militias 
+}
+
+action_b = {
+trigger = {
+AND = { 
+OR = {
+exists = FRA
+exists = ENG
+}
+flag = LKMT_INT_SUPPORT
+}
+}
+ai_chance = 20
+name = "Have Internationale military advisors train us in their model"
+command = { type = dissent value = -2 }
+command = { type = deactivate which = 6010 }
+command = { type = deactivate which = 6020 }
+command = { type = activate which = 6560 } #Defensive Focus
+command = { type = gain_tech which = 6560 }
+command = { type = gain_tech which = 6030 }
+command = { type = supplies value = 300 } #Internationale provides arms, ammo, and equipment
+command = { type = manpowerpool value = 50 }
+}
+
+action_c = {
+trigger = {
+AND = { 
+OR = {
+exists = SOV
+exists = RUS
+}
+event = 749989
+}
+NOT = {
+flag = RUS_TSAR
+flag = RUS_MIL #no Right Wing Governments in Russia
+}
+}
+ai_chance = 30
+name = "Look to Russia for inspiration"
+command = { trigger = { NOT = { event =  758450 } } type = activate which = 6010 } #Firepower Focus 
+command = { trigger = { NOT = { event =  758450 } } type = gain_tech which = 6010 }
+command = { trigger = { NOT = { event =  758450 } } type = gain_tech which = 6020 }
+command = { trigger = { event =  758450 } type = deactivate which = 6010 }
+command = { trigger = { event =  758450 } type = deactivate which = 6020 }
+command = { trigger = { event =  758450 } type = activate which = 6210 } #Mobility Focus 
+command = { trigger = { event =  758450 } type = gain_tech which = 6210 }
+command = { trigger = { event =  758450 } type = gain_tech which = 6220 }
+command = { type = relation which = RUS value = 25 }
+}
+
+action_d = {
+ai_chance = 20
+name = "Focus on infiltration and assault tactics to break through the enemy lines"
+command = { type = deactivate which = 6010 }
+command = { type = deactivate which = 6020 }
+command = { type = activate which = 6390 } #Light Infantry
+command = { type = gain_tech which = 6390 }
+command = { type = gain_tech which = 6400 } #Grand Battle Plan
+command = { type = money value = -50 }
+command = { type = supplies value = 100 } #Arrange for purchase of necessary equipment 
+}
+}
+
+event = {
+id = 1949012 
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+local_flag = LKMT_CSP1 
+}
+
+name = "The Landlord Problem" 
+desc = "TEMP"
+style = 2
+picture = "Fang Zhimin"
+
+date = { day = 0 month = january year = 1936 }
+offset = 14
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 20
+name = "All these landowners are enemies of the people!"
+command = { type = dissent value = 10 } 
+command = { type = money value = 100 } #assets seized 
+command = { type = manpowerpool value = -5 } #A lot of bloodletting
+command = { type = domestic which = free_market value = -2 } #CSP implement their policies
+command = { type = domestic which = freedom value = -1 }
+command = { type = local_setflag which = LKMT_CSP_Land } #for later CSP event 
+}
+
+action_b = {
+ai_chance = 70
+name = "Redistribute the largest lots but leave small landowners alone"
+command = { type = dissent value = -3 } #the worst of the landlords are dealt with, satisfying peasants and smaller landowners alike. 
+command = { type = money value = 50 }
+command = { type = domestic which = free_market value = -1 } #
+command = { type = manpowerpool value = -2 } #purges
+}
+
+action_c = {
+ai_chance = 10
+name = "This is too radical - respect the existing land holdings"
+command = { type = dissent value = 7 } #peasants are mad 
+command = { type = domestic which = free_market value = 1 }
+command = { type = domestic which = freedom value = 1 }
+}
+}
+
+event = {
+id = 1949013
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+local_flag = LKMT_DICT
+}
+
+name = "Three/Seven Strategy"
+desc = "We will nationalize everything - promote political indoctrination at all levels of society, and mobilize all resources for military use. Even break up graves for infrastructure." #Temp
+style = 2
+picture = "Chinese Infantry"
+
+date = { day = 0 month = january year = 1936 }
+offset = 14
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 80
+name = "Desperate times call for desperate measures"
+command = { type = dissent value = 10 } #none of the locals are happy
+command = { type = manpowerpool value = 25 } #New militias raised 
+command = { type = domestic which = free_market value = -1 } #CSP implement their policies
+command = { type = domestic which = freedom value = -1 }
+command = { type = add_division which = "1. Baojia Force" value = militia when = 4 }
+command = { type = construct which = infrastructure where = 1352 value = 10 } #graves broken up to make roads 
+command = { type = construct which = infrastructure where = 1349 value = 10 }
+command = { type = construct which = infrastructure where = 1359 value = 10 }
+command = { type = construct which = infrastructure where = 1360 value = 10 }
+command = { type = construct which = infrastructure where = 1354 value = 10 }
+command = { type = construct which = infrastructure where = 1355 value = 10 }
+command = { type = free_ic value = 7 } #Resources Allocated to the War Effort 
+
+}
+
+action_b = {
+ai_chance = 20
+name = "Never - this is too much"
+command = { type = dissent value = -3 } #the worst of the landlords are dealt with, satisfying peasants and smaller landowners alike. 
+command = { type = money value = 50 } #you keep some of the seized assets - consider changing 
+command = { type = domestic which = freedom value = 1 }
+}
+}
+
+event = {
+id = 1949014
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+NOT = { 
+local_flag = LKMT_CSP1 
+local_flag = LKMT_DICT 
+}
+}
+
+name = "Equalization of Land Lights" 
+desc = "TEMP"
+style = 2
+picture = "Fang Zhimin"
+
+date = { day = 0 month = january year = 1936 }
+offset = 14
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 20
+name = "Seize only LEP Assets and leave small property owners alone"
+command = { type = money value = 50 } #assets seized 
+command = { type = domestic which = free_market value = -1 }
+command = { type = industrial_modifier which = IC value = 2 }
+}
+
+action_b = {
+ai_chance = 70
+name = "Embark on a program of nationalization and land redstribution!"
+command = { type = dissent value = 5 } #Radical! 
+command = { type = money value = 100 }
+command = { type = industrial_modifier which = IC value = 5 }
+command = { type = domestic which = free_market value = -2 }
+}
+
+action_c = {
+ai_chance = 10
+name = "This is too radical - respect private propety rights"
+command = { type = dissent value = -2 } 
+command = { type = domestic which = free_market value = 1 }
+}
+}
+
+event = {
+id = 1949015
+random = no
+country = U87
+
+trigger = {
+NOT = {
+atwar = U87
+ispuppet = U87
+}
+flag = LKMT_CGX_WAIT
+}
+
+name = "Defensive Strategy"
+desc = "We may seem secure, but in truth we are assailed from all sides. What shall we do? Build fortifications? Or raise new units?" #Temp
+style = 2
+picture = "Chinese Trench"
+
+date = { day = 0 month = january year = 1936 }
+offset = 7
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 50
+name = "Raise new units to patrol the frontiers"
+command = { type = manpowerpool value = 10 } #New militias raised 
+command = { type = add_corps which = "1. Regional Defense Army" value = land where = 1355 } #TEMP 
+command = { type = add_division which = "1. Baojia Force" value = militia when = 4 }
+command = { type = add_division which = "2. Baojia Force" value = militia when = 4 }
+command = { type = add_corps which = "2. Regional Defense Army" value = land where = 1359 } #TEMP 
+command = { type = add_division which = "1. Baojia Force" value = militia when = 4 }
+}
+
+action_b = {
+ai_chance = 50
+name = "Build new fortifications to secure our positions"
+command = { type = dissent value = -2 } #People feel more secure
+ #you keep some of the seized assets - consider changing 
+command = { type = manpowerpool value = -10 }
+command = { type = construct which = land_fort where = 1355 value = 2 } 
+command = { type = construct which = land_fort where = 1354 value = 2 }
+command = { type = construct which = land_fort where = 1359 value = 2 }
+command = { type = construct which = land_fort where = 1352 value = 1 }
+command = { type = add_corps which = "1. Regional Defense Force" value = land where = 1355 } #Temp Name 
+command = { type = add_division which = "I Local Garrison" value = garrison when = 4 }
+command = { type = add_corps which = "2. Regional Defense Force" value = land where = 1359 } #Temp Name 
+command = { type = add_division which = "II Local Garrison" value = garrison when = 4 }
+}
+}
+
+event = {
+id = 1949016 
+picture = "Chinese_Fighting"
+country = U87
+style = 2
+
+trigger = {
+AND = {
+flag = LKMT_CGX_WAIT
+event = 1949010
+event = 1949007
+event = 1949002 
+exists = CGX
+}
+NOT = { atwar = U87 } 
+}
+
+date = { day = 1 month = january year = 1936 }
+offset = 7
+deathdate = { day = 1 month = december year = 1960 }
+
+name = "Liberation War against the Nanjing Clique" #TEMP 
+desc = "Now that we have fully established our base area in the Jiangxi-Fujian region, we may be able to start taking the fight to the concessionist Qi Xieyuan in Nanjing. The liberation of China begins here!"
+
+action_a = {
+ai_chance = 100
+name = "For the Nation, Democracy, and the Peoples' Welfare - attack!"
+command = { type = war which = CGX }
+}
+action_b = {
+ai_chance = 0
+name = "We cannot do anything right now..." #Why not? 
+command = { type = dissent value = 5 }
+}
+}
+
+##Captures##
+
+event = {
+id = 1949017
+picture = "Chinese_Fighting"
+country = U87
+style = 2
+
+trigger = {
+control = { province = 1369 data = U87 }
+}
+
+date = { day = 1 month = january year = 1936 }
+offset = 7
+deathdate = { day = 1 month = december year = 1960 }
+
+name = "Guangzhou taken" #TEMP 
+desc = "The National Revolutionary Army has liberated the city of Guangzhou! At last, Canton is free from Warlord occupation!"
+
+action_a = {
+ai_chance = 50
+name = "It shall be the new capital of the Republic!" 
+command = { type = capital which =  1369 } #Guangzhou
+}
+action_b = {
+ai_chance = 50
+name = "Liberation for Canton!" 
+command = { } 
+}
+}
+
+event = {
+id = 1949018
+picture = "Chinese_Fighting" #TEMP 
+country = U87
+style = 2
+
+trigger = {
+control = { province = 1337 data = U87 } #Nanjing 
+}
+
+date = { day = 1 month = january year = 1936 }
+offset = 7
+deathdate = { day = 1 month = december year = 1960 }
+
+name = "Nanjing taken" #TEMP 
+desc = "The National Revolutionary Army has liberated the historic capital of Nanking! At last, the Southern Capital is free from Warlord occupation!"
+
+action_a = {
+ai_chance = 50
+name = "It shall be the new capital of the Republic!" 
+command = { type = capital which =  1337 } #Nanjing 
+}
+action_b = {
+ai_chance = 50
+name = "Liberation for Nanking!" 
+command = { } 
+}
+}
+
+event = {
+id = 1949019
+picture = "Chinese_Fighting"
+country = U87
+style = 2
+
+trigger = {
+control = { province = 1317 data = U87 }
+}
+
+date = { day = 1 month = january year = 1936 }
+offset = 7
+deathdate = { day = 1 month = december year = 1960 }
+
+name = "Wuhan taken" #TEMP 
+desc = "The National Revolutionary Army has liberated the city of Hankow! At last,  the three cities of Wuhan is free from Warlord occupation!"
+
+action_a = {
+ai_chance = 50
+name = "It shall be the new capital of the Republic!" 
+command = { type = capital which =  1317 } #Hankow/Wuhan 
+}
+action_b = {
+ai_chance = 50
+name = "Liberation for Hankow!" 
+command = { } 
+}
+}
+
+##
+
+
+

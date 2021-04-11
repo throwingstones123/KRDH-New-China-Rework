@@ -1,0 +1,524 @@
+##################
+#### Greece
+##################
+
+event = {
+id = 966600
+picture = "ocupation"
+country = GRE
+style = 2
+
+trigger = {
+control = { province = 364 data = GRE }
+control = { province = 365 data = GRE }
+control = { province = 366 data = GRE }
+}
+
+name = "Macedonia Regained"
+desc = "Our glorious army has successfully reconquered southern Macedonia, which we lost to Bulgaria after the Weltkrieg. The entire nation rejoices as proper Greek territory returns to us."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "Macedonia is ours!"
+command = { type = addcore which = 364 }
+command = { type = addcore which = 365 }
+command = { type = addcore which = 366 }
+command = { type = dissent value = -2 }
+}
+}
+
+event = {
+id = 966601
+picture = "ocupation"
+country = GRE
+style = 2
+
+trigger = {
+control = { province = 371 data = GRE }
+}
+
+name = "Kefalonia regained"
+desc = "Our armed forces have succesfully regained control over the island of Kefalonia, which was lost to Austria-Hungary after our defeat in the Weltkrieg."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "Kefalonia is ours!"
+command = { type = addcore which = 371 }
+command = { type = dissent value = -1 }
+}
+}
+
+event = {
+id = 966602
+picture = "ocupation"
+country = GRE
+style = 2
+
+trigger = {
+control = { province = 381 data = GRE }
+control = { province = 383 data = GRE }
+control = { province = 378 data = GRE }
+}
+
+name = "Aegean Islands Regained"
+desc = "Our combined naval and ground forces have gained control over the chain of islands in the Aegean Sea, which were occupied by the decadent Ottoman Empire since the end of the Weltkrieg."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "The Aegean Sea belongs to the Greeks!"
+command = { type = addcore which = 381 }
+command = { type = addcore which = 383 }
+command = { type = addcore which = 378 }
+command = { type = addcore which = 379 }
+command = { type = dissent value = -1 }
+}
+}
+
+event = {
+id = 966622
+picture = "ocupation"
+country = GRE
+style = 2
+
+trigger = {
+control = { province = 380 data = GRE }
+control = { province = 382 data = GRE }
+
+}
+
+name = "Crete Regained"
+desc = "Our combined naval and ground forces have gained control over Crete, which our proud nation was forced to cede to the hungry German Empire after our defeat in the Weltkrieg."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "Crete is ours!"
+command = { type = addcore which = 380 }
+command = { type = addcore which = 382 }
+command = { type = dissent value = -1 }
+}
+}
+
+
+
+####################
+#### Poland
+####################
+
+event = {
+id = 966610
+picture = "militaryparade1"
+style = 2
+tag = { POL U00 }
+
+trigger = {
+control = { province = 222 data = -1 }
+control = { province = 225 data = -1 }
+control = { province = 224 data = -1 }
+control = { province = 164 data = -1 }
+control = { province = 168 data = -1 }
+}
+
+name = "Western Poland Regained"
+desc = "Territories which our proud nation was forced to cede during the first and second partition of Poland to the Kingdom of Prussia have been regained."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "A great day for the fatherland"
+command = { type = addcore which = 221 }
+command = { type = addcore which = 168 }
+command = { type = addcore which = 203 }
+command = { type = addcore which = 164 }
+command = { type = addcore which = 224 }
+command = { type = addcore which = 225 }
+command = { type = addcore which = 222 }
+command = { type = addcore which = 226 }
+command = { type = addcore which = 181 }
+command = { type = addcore which = 161 }
+command = { trigger = { country = POL } type = waketeam which = 2708 when = 1 } #Stocznia Gdynia
+command = { trigger = { country = POL } type = waketeam which = 2709 when = 1 } #Stocznia Gdanska
+command = { trigger = { country = POL } type = waketeam which = 2717 when = 1 } #H. Cegielski - Poznan S.A.
+command = { trigger = { country = POL } type = waketeam which = 2728 when = 1 } #Huta Pokój
+command = { trigger = { country = POL } type = sleepteam which = 2735 when = 1 } #Stefan Frankowski
+command = { trigger = { country = POL } type = sleepteam which = 2736 when = 1 } #Witold Zajaczkowski
+command = { trigger = { country = POL } type = waketeam which = 2737 when = 1 } #Szkola Podchorazych Marynarki Wojennej
+command = { trigger = { country = POL } type = waketeam which = 2738 when = 1 } #Eugeniusz Plawski
+command = { trigger = { country = POL } type = waketeam which = 2740 when = 1 } #Jerzy Swirski
+command = { trigger = { country = POL } type = waketeam which = 2741 when = 1 } #Boleslaw Romanowski
+command = { trigger = { country = POL } type = waketeam which = 2742 when = 1 } #Józef Bartosik
+command = { type = dissent value = -1 }
+}
+}
+
+event = {
+id = 966611
+picture = "militaryparade1"
+style = 2
+tag = { POL U00 }
+
+trigger = {
+control = { province = 252 data = -1 }
+control = { province = 255 data = -1 }
+control = { province = 253 data = -1 }
+control = { province = 247 data = -1 }
+control = { province = 251 data = -1 }
+}
+
+name = "Brest Litovsk Voivodeship Regained"
+desc = "Our ground forces have successfully regained control over provinces we were forced to cede to the Russian Empire after the third partition of Poland."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "A great day for the fatherland"
+command = { type = addcore which = 252 }
+command = { type = addcore which = 253 }
+command = { type = addcore which = 255 }
+command = { type = addcore which = 247 }
+command = { type = addcore which = 251 }
+command = { type = addcore which = 248 }
+command = { type = dissent value = -1 }
+}
+}
+
+event = {
+id = 966612
+picture = "militaryparade1"
+style = 2
+tag = { POL U00 }
+
+trigger = {
+control = { province = 244 data = -1 }
+control = { province = 245 data = -1 }
+control = { province = 249 data = -1 }
+}
+
+name = "Wolyn Voivodeship Regained"
+desc = "Our ground forces have succesfully regained control over provinces we were forced to cede to the Russian Empire after the third partition of Poland."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "A great day for the fatherland"
+command = { type = addcore which = 244 }
+command = { type = addcore which = 245 }
+command = { type = addcore which = 249 }
+command = { type = dissent value = -2 }
+}
+}
+
+event = {
+id = 966613
+picture = "militaryparade1"
+style = 2
+tag = { POL U00 }
+
+trigger = {
+control = { province = 235 data = -1 }
+control = { province = 237 data = -1 }
+control = { province = 242 data = -1 }
+}
+
+name = "Galicia and Lodomeria Regained"
+desc = "Territories which our proud nation was forced to cede during the first partition of Poland to the Habsburg Monarchy have been regained."
+
+date = { day = 1 month = january year = 1936 }
+offset = 2
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "Galicia and Lodomeria are ours!"
+command = { type = addcore which = 235 }
+command = { type = addcore which = 236 }
+command = { type = addcore which = 237 }
+command = { type = addcore which = 239 }
+command = { type = addcore which = 241 }
+command = { type = addcore which = 242 }
+command = { type = addcore which = 240 }
+command = { type = addcore which = 238 }
+command = { type = addcore which = 300 }
+command = { type = addcore which = 301 }
+command = { trigger = { country = POL } type = waketeam which = 2716 when = 1 } #Huta Stalowa Wola
+command = { trigger = { country = POL } type = waketeam which = 2718 when = 1 } #Fabryka Lokomotyw w Chrzanowie
+command = { trigger = { country = POL } type = waketeam which = 2724 when = 1 } #Fabryki Maszyn i Wagonów L. Zieleniewski
+command = { trigger = { country = POL } type = waketeam which = 2729 when = 1 } #Polmin
+command = { trigger = { country = POL } type = waketeam which = 2730 when = 1 } #Eugeniusz Kwiatkowski
+command = { trigger = { country = POL } type = waketeam which = 2734 when = 1 } #Stanislaw Ulam
+command = { trigger = { country = POL } type = waketeam which = 2739 when = 1 } #Karol Trzasko-Durski
+command = { trigger = { country = POL } type = waketeam which = 2746 when = 1 } #Stanislaw Jasinski
+command = { trigger = { country = POL } type = wakeleader which = 8400 } #Grudzinski
+command = { trigger = { country = POL } type = wakeleader which = 8401 } #Halka-Ledóchowski
+command = { trigger = { country = POL } type = wakeleader which = 8402 } #Korytowski
+command = { trigger = { country = POL } type = wakeleader which = 8403 } #Kodrebski
+command = { trigger = { country = POL } type = wakeleader which = 8404 } #Morgenstern-Podjazd
+command = { trigger = { country = POL } type = wakeleader which = 8405 } #Trzasko-Durski
+command = { trigger = { country = POL } type = wakeleader which = 8406 } #Ziembicki
+command = { trigger = { country = POL } type = wakeleader which = 8407 } #Domes
+command = { trigger = { country = POL } type = wakeleader which = 8408 } #Florer
+command = { trigger = { country = POL } type = wakeleader which = 8409 } #Jasinski
+command = { trigger = { country = POL } type = wakeleader which = 8410 } #Kalkus
+command = { trigger = { country = POL } type = wakeleader which = 8411 } #Prauss
+command = { trigger = { country = POL } type = wakeleader which = 8412 } #Serednicki
+command = { trigger = { country = POL } type = wakeleader which = 8413 } #Stec
+command = { trigger = { country = POL } type = wakeleader which = 8414 } #Torun
+command = { trigger = { country = POL } type = wakeleader which = 8415 } #Trzasko-Durski
+command = { trigger = { country = POL } type = wakeleader which = 8416 } #Abraham
+command = { trigger = { country = POL } type = wakeleader which = 8417 } #Brzoza-Brzezina
+command = { trigger = { country = POL } type = wakeleader which = 8418 } #Chrusciel
+command = { trigger = { country = POL } type = wakeleader which = 8419 } #Czuma
+command = { trigger = { country = POL } type = wakeleader which = 8420 } #Endel-Ragis
+command = { trigger = { country = POL } type = wakeleader which = 8421 } #Epler
+command = { trigger = { country = POL } type = wakeleader which = 8422 } #Fieldorf
+command = { trigger = { country = POL } type = wakeleader which = 8423 } #Haller von Hallenburg
+command = { trigger = { country = POL } type = wakeleader which = 8424 } #Klimecki
+command = { trigger = { country = POL } type = wakeleader which = 8425 } #Komorowski
+command = { trigger = { country = POL } type = wakeleader which = 8426 } #Kutrzeba
+command = { trigger = { country = POL } type = wakeleader which = 8427 } #Litwinowicz
+command = { trigger = { country = POL } type = wakeleader which = 8428 } #Mazurkiewicz
+command = { trigger = { country = POL } type = wakeleader which = 8429 } #Odzierzynski
+command = { trigger = { country = POL } type = wakeleader which = 8430 } #Porwit
+command = { trigger = { country = POL } type = wakeleader which = 8431 } #Rola-Zymierski
+command = { trigger = { country = POL } type = wakeleader which = 8432 } #Segda
+command = { trigger = { country = POL } type = wakeleader which = 8433 } #Wieronski
+command = { trigger = { country = POL } type = wakeleader which = 8434 } #Wlad
+command = { trigger = { country = POL } type = wakeleader which = 8435 } #Zagórski
+command = { trigger = { country = POL } type = wakeminister which = 13500 } #Wanda Wasilewska
+command = { trigger = { country = POL } type = wakeminister which = 13501 }
+command = { trigger = { country = POL } type = wakeminister which = 13502 }
+command = { trigger = { country = POL } type = wakeminister which = 13503 } #Stanislaw Kot
+command = { trigger = { country = POL } type = wakeminister which = 13504 }
+command = { trigger = { country = POL } type = wakeminister which = 13505 }
+command = { trigger = { country = POL } type = wakeminister which = 13506 } #Aleksander Skrzynski
+command = { trigger = { country = POL } type = wakeminister which = 13507 }
+command = { trigger = { country = POL } type = wakeminister which = 13508 } #Kazimierz Switalski
+command = { trigger = { country = POL } type = wakeminister which = 13509 }
+command = { trigger = { country = POL } type = wakeminister which = 13510 }
+command = { trigger = { country = POL } type = wakeminister which = 13511 } #Dorota Kluszynska
+command = { trigger = { country = POL } type = wakeminister which = 13512 }
+command = { trigger = { country = POL } type = wakeminister which = 13513 } #Wladyslaw Kiernik
+command = { trigger = { country = POL } type = wakeminister which = 13514 } #Stanislaw Pilat
+command = { trigger = { country = POL } type = wakeminister which = 13515 } #Kazimierz Bartel
+command = { trigger = { country = POL } type = wakeminister which = 13516 }
+command = { trigger = { country = POL } type = wakeminister which = 13517 } #Zygmunt Biluchowski
+command = { trigger = { country = POL } type = wakeminister which = 13518 } #Tadeusz Sedzimir
+command = { trigger = { country = POL } type = wakeminister which = 13519 } #Eugeniusz Kwiatkowski
+command = { trigger = { country = POL } type = wakeminister which = 13520 } #Zygmunt Zulawski
+command = { trigger = { country = POL } type = wakeminister which = 13521 } #Marian Dabrowski
+command = { trigger = { country = POL } type = wakeminister which = 13522 } #Jan Mazurkiewicz
+command = { trigger = { country = POL } type = wakeminister which = 13523 } #Marian Porwit
+command = { trigger = { country = POL } type = wakeminister which = 13524 }
+command = { trigger = { country = POL } type = wakeminister which = 13525 }
+command = { trigger = { country = POL } type = wakeminister which = 13526 } #Tadeusz Kutrzeba
+command = { trigger = { country = POL } type = wakeminister which = 13527 }
+command = { trigger = { country = POL } type = wakeminister which = 13528 }
+command = { trigger = { country = POL } type = wakeminister which = 13529 } #Roman Odzierzynski
+command = { trigger = { country = POL } type = wakeminister which = 13530 }
+command = { trigger = { country = POL } type = wakeminister which = 13531 } #Ottokar Brzoza-Brzezina
+command = { trigger = { country = POL } type = wakeminister which = 13532 }
+command = { trigger = { country = POL } type = wakeminister which = 13533 }
+command = { trigger = { country = POL } type = wakeminister which = 13534 } #Michal Rola-Zymierski
+command = { trigger = { country = POL } type = wakeminister which = 13535 }
+command = { trigger = { country = POL } type = wakeminister which = 13536 }
+command = { trigger = { country = POL } type = wakeminister which = 13537 } #Aleksander Litwinowicz
+command = { trigger = { country = POL } type = wakeminister which = 13538 }
+command = { trigger = { country = POL } type = wakeminister which = 13539 }
+command = { trigger = { country = POL } type = wakeminister which = 13540 } #Roman Abraham
+command = { trigger = { country = POL } type = wakeminister which = 13541 } #Józef Haller von Hallenburg
+command = { trigger = { country = POL } type = wakeminister which = 13542 }
+command = { trigger = { country = POL } type = wakeminister which = 13543 } #Karol Korytowski
+command = { trigger = { country = POL } type = wakeminister which = 13544 } #Tadeusz Morgenstern-Podjazd
+command = { trigger = { country = POL } type = wakeminister which = 13545 }
+command = { trigger = { country = POL } type = wakeminister which = 13546 } #Stanislaw Jasinski
+command = { trigger = { country = POL } type = wakeminister which = 13547 } #Wladyslaw Torun
+command = { trigger = { country = POL } type = wakeminister which = 13548 }
+command = { trigger = { country = POL } type = wakeminister which = 13549 } #Karol Trzasko-Durski
+command = { trigger = { country = POL } type = wakeminister which = 13550 }
+command = { trigger = { country = POL } type = wakeminister which = 13551 }
+command = { trigger = { country = POL } type = wakeminister which = 13552 } #Aleksander Serednicki
+command = { trigger = { country = POL } type = wakeminister which = 13553 } #Stefan Stec
+command = { trigger = { country = POL } type = wakeminister which = 13554 }
+command = { type = dissent value = -2 }
+}
+}
+
+######################
+#### Spain
+######################
+
+event = {
+id = 966620
+picture = "ocupation"
+country = EUS
+persistent = yes
+style = 2
+
+trigger = {
+atwar = no
+NOT = {
+exists = SPA
+exists = SPR
+}
+control = { province = 460 data = EUS }
+NOT = {
+core = { province = 460 data = EUS }
+}
+}
+
+name = "The Spanish People Accept Carlist Rule"
+desc = "The Spanish people have adjusted to us as expected, and we no longer face partisans except for in the major labour areas and in the wild and untamed forests."
+
+date = { day = 1 month = january year = 1936 }
+offset = 50
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "Good!"
+command = { type = addcore which = 444 }
+command = { type = addcore which = 451 }
+command = { type = addcore which = 441 }
+command = { type = addcore which = 453 }
+command = { type = addcore which = 466 }
+command = { type = addcore which = 456 }
+command = { type = addcore which = 460 }
+command = { type = addcore which = 457 }
+command = { type = addcore which = 458 }
+command = { type = addcore which = 472 }
+command = { type = addcore which = 474 }
+command = { type = addcore which = 471 }
+command = { type = addcore which = 470 }
+command = { type = addcore which = 467 }
+command = { type = addcore which = 463 }
+command = { type = addcore which = 468 }
+command = { type = addcore which = 464 }
+command = { type = addcore which = 461 }
+command = { type = addcore which = 348 }
+command = { type = addcore which = 440 }
+command = { type = addcore which = 438 }
+command = { type = addcore which = 436 }
+command = { type = addcore which = 442 }
+command = { type = addcore which = 443 }
+command = { type = addcore which = 457 }
+command = { type = addcore which = 437 }
+command = { type = addcore which = 439 }
+command = { type = addcore which = 452 }
+command = { type = addcore which = 447 }
+command = { type = addcore which = 990 }
+command = { type = addcore which = 991 }
+command = { type = addcore which = 469 }
+command = { type = addcore which = 455 }
+command = { type = addcore which = 448 }
+command = { type = addcore which = 449 }
+command = { type = addcore which = 446 }
+command = { type = addcore which = 462 }
+command = { type = addcore which = 445 }
+command = { type = addcore which = 459 }
+command = { type = addcore which = 473 }
+command = { type = addcore which = 465 }
+command = { type = addcore which = 454 }
+command = { type = addcore which = 450 }
+command = { type = addcore which = 475 }
+command = { type = dissent value = -3 }
+}
+}
+
+event = {
+id = 966621
+picture = "ocupation"
+country = SPR
+persistent = yes
+style = 2
+
+trigger = {
+atwar = no
+NOT = {
+exists = SPA
+exists = EUS
+}
+control = { province = 460 data = SPR }
+NOT = {
+core = { province = 460 data = SPR }
+}
+}
+
+name = "The Spanish People Accept Syndicalist Rule"
+desc = "The Trade Unions control all of Spain and the people now accept it. There are still Reactionaries hiding in the forests and the mountains, fighting against Syndicalist rule but they will soon learn better."
+
+date = { day = 1 month = january year = 1936 }
+offset = 50
+deathdate = { day = 1 month = december year = 1963 }
+
+action_a = {
+name = "Good!"
+command = { type = waketeam which =  3906 } #Naval de Sestao
+command = { type = waketeam which =  3908 } #Compañia Euskalduna
+command = { type = waketeam which =  3911 } #Fábrica de Armas de A Coruña
+command = { type = waketeam which =  3914 } #Fábrica de Armas de Trubia
+command = { type = waketeam which =  3920 } #Altos Hornos de Vizcaya
+command = { type = waketeam which =  3933 } #Kepa Ordoki
+command = { type = addcore which = 444 }
+command = { type = addcore which = 451 }
+command = { type = addcore which = 441 }
+command = { type = addcore which = 453 }
+command = { type = addcore which = 466 }
+command = { type = addcore which = 456 }
+command = { type = addcore which = 460 }
+command = { type = addcore which = 457 }
+command = { type = addcore which = 458 }
+command = { type = addcore which = 472 }
+command = { type = addcore which = 474 }
+command = { type = addcore which = 471 }
+command = { type = addcore which = 470 }
+command = { type = addcore which = 467 }
+command = { type = addcore which = 463 }
+command = { type = addcore which = 468 }
+command = { type = addcore which = 464 }
+command = { type = addcore which = 461 }
+command = { type = addcore which = 348 }
+command = { type = addcore which = 440 }
+command = { type = addcore which = 438 }
+command = { type = addcore which = 436 }
+command = { type = addcore which = 442 }
+command = { type = addcore which = 443 }
+command = { type = addcore which = 457 }
+command = { type = addcore which = 437 }
+command = { type = addcore which = 439 }
+command = { type = addcore which = 452 }
+command = { type = addcore which = 447 }
+command = { type = addcore which = 990 }
+command = { type = addcore which = 991 }
+command = { type = addcore which = 469 }
+command = { type = addcore which = 455 }
+command = { type = addcore which = 448 }
+command = { type = addcore which = 449 }
+command = { type = addcore which = 446 }
+command = { type = addcore which = 462 }
+command = { type = addcore which = 445 }
+command = { type = addcore which = 459 }
+command = { type = addcore which = 473 }
+command = { type = addcore which = 465 }
+command = { type = addcore which = 454 }
+command = { type = addcore which = 450 }
+command = { type = addcore which = 475 }
+command = { type = dissent value = -3 }
+}
+}
+
+

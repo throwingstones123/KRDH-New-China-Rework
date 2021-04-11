@@ -1,0 +1,49 @@
+#Austria 1939 Build Order
+
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 		= 560 
+	max_batch_war 		= 680 
+	max_batch_home_front 	= 380
+
+	#### Divisions etc...
+	infantry 			= 30
+	cavalry 			= 10
+	motorized 			= 6
+	mechanized 			= 2
+	light_armor 		= 0
+	armor 				= 6
+	paratrooper 		= 0
+	marine 				= 0
+	bergsjaeger 		= 6
+	garrison			= 2
+   	hq 					= 4
+	militia 			= 0
+	d_01 				= 3          #  Light Infantry
+#				69 %
+	interceptor 		= 6
+	multi_role 			= 2
+	cas 				= 0
+	strategic_bomber 	= 0
+	tactical_bomber 	= 4
+	naval_bomber 		= 2
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#				14 %
+	battleship 			= 2
+	carrier 			= 0
+	escort_carrier		= 0
+	destroyer 			= 6
+	light_cruiser 		= 4
+	heavy_cruiser 		= 3
+	battlecruiser 		= 0
+	submarine 			= 0
+	nuclear_submarine 	= 0
+	transports 			= 2
+#				17 %
+
+}

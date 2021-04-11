@@ -1,0 +1,46 @@
+# Canada 1939 Build by Kibbles
+
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	relative_build_scheme 	= no
+
+	#### Divisions etc...
+	infantry 		= 15
+	cavalry 		= 0
+	motorized 		= 8
+	mechanized 		= 3
+	light_armor 	= 0
+	armor 			= 6
+	paratrooper 	= 0
+	marine 			= 6
+	bergsjaeger 	= 0
+	garrison		= 1
+  	hq 				= 4
+	militia 		= 0
+	d_01			= 0        #  Light Infantry
+#					43 %
+	interceptor 		= 6
+	multi_role 			= 0
+	cas 				= 0
+	strategic_bomber 	= 0
+	tactical_bomber 	= 3
+	naval_bomber 		= 3
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#					12 %
+	battleship 			= 1
+	carrier 			= 0
+	light_carrier		= 4
+	escort_carrier		= 2
+	destroyer 			= 11
+	light_cruiser 		= 8
+	heavy_cruiser 		= 5
+	battlecruiser 		= 0
+	submarine 			= 6
+	nuclear_submarine 	= 0
+	transports 			= 8
+#					45 %
+}

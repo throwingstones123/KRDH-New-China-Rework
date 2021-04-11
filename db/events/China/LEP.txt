@@ -1,0 +1,814 @@
+### NANJING ###
+
+event = {
+id = 140000
+random = no
+country = CGX
+style = 2
+
+trigger = {
+ai = no
+}
+
+name = "The Southern Zhili Clique" 
+desc = "EVT_140000_DESC" #Nominally under the control of the Xuangtong Emperor's government in Beijing, the reality in Southeastern China is much different than that of the northern provinces. Sun Chuanfang rules his now League of Eight Provinces to extend Zhili - and thus Qing - rule throughout southern China, particularly the former Kuomintang territories of Guangxi, Guangdong, and Hunan. While pledging fealty to Beijing, the alliance between Sun and the Zhili-run Qing government to the north is significantly strained. Rivalry between the two Zhili factions has existed for years, but as of late Sun Chuanfang has made many independent concessions and agreements to the German AOG in exchange for military and industrial support, which has led Sun's Southern Zhili to become defacto autonomous from the North. These concessions, however, combined with the rampant corruption have made Sun very unpopular in LEP territory, particularly with the anti-concessionists supported by Chen Tiaoyuan, governor of Anhui. Sun also has to contend with KMT remnants being housed in Tang Jiyao's Yunnan clique to the west, which may be itching to reclaim their base in the South and launch another revolution. Rumor also has it that other KMT remnants still fester within our own provinces, and are organizing a revolt of their own. Ambition and intrigue are about in the League and threaten its integrity - some say Sun and the Southern Zhili's days are numbered before the inevitable overcomes them...
+picture = "China" #Temp
+ 
+date = { day = 1 month = january year = 1936 }
+
+action_a = {
+name = "How long will the Tiger Smile?" 
+command = { }
+}
+}
+
+event = {
+id = 140001
+random = no
+country = CGX
+style = 2
+
+trigger = {
+ai = no
+}
+
+name = "The AOG" 
+desc = "EVT_140001_DESC" #The Allgemeine Ostasiatische Gesellschaft (AOG) is a joint-stock company that administers the Kaiserreich's concessions in China. While they do not officially control much territory of their own, they hold an incredible amount of influence in the League of Eight Provinces in particular. The AOG provides military and infrastructure support to Sun Chuanfang's Southern Zhili government, as well as runs much of its banking and industry. Thanks to this position, the AOG is able to frequently twist the arm of Sun Chuanfang's government, and more than a few AOG officials take part in the corruption that is rampant in the warlord regime. Sun's collaboration with the AOG has made him a very unpopular figure in his own realm, and his Clique more or less relies on the AOG to keep itself running. Even if Sun were to fall, it is likely the AOG will find a new puppet to support, in the name of maintaining their - and Germany's - own financial, industrial, military, and political interests in China.
+picture = "China_Army" #Temp
+ 
+date = { day = 3 month = january year = 1936 }
+
+action_a = {
+name = "The people may hate us, but have you seen the profits!?" 
+command = { type = dissent value = 5 }
+}
+}
+
+
+event = {
+id = 140019 #goofed up here
+random = no
+country = CGX
+picture = "Chinese Infantry Trainfull"
+style = 2
+
+trigger = {
+NOT = {
+atwar = CGX
+}
+}
+
+date = { day = 15 month = january year = 1936 }
+
+name = "The AOG wants to buy the railroads"
+desc = "The AOG has approached Sun Chuanfang about purchasing several 'struggling' rail lines throughout the LEP. This will give them effective control over rail travel and transport throughout the region, forcing local Chinese to go through them and pay their rates. The financial benefit may be worth the inevitable discontent, however."
+
+action_a = {
+name = "It's an offer we can't refuse!"
+ai_chance = 99
+command = { type = setflag which = CGX_Railway_Buy }
+command = { type = money value = 300 }
+command = { type = dissent value = 15 }
+command = { type = construct which = ic where = -1 value = 1 } #
+command = { type = construct which = infrastructure where = -1 value = 3 } #AOG finances refurbishments
+command = { type = construct which = infrastructure where = -1 value = 3 }  
+}
+
+action_b = {
+ai_chance = 1
+name = "We need those lines in Chinese hands"
+command = { type = setflag which = CGX_Railway_No } #This will need to become its own route 
+command = { type = relation which = GER value = -10 }
+command = { type = dissent value = -5 }
+}
+}
+
+event = {
+id = 140002
+random = no
+country = CGX
+picture = "Chinese Workforce"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+NOT = {
+atwar = CGX
+}
+}
+
+date = { day = 15 month = january year = 1936 }
+offset =  3
+deathdate = { day = 29 month = december year = 1938 }
+
+name = "The people protest the AOG buyout of the railways"
+desc = "We are receiving reports across the entire LEP that demonstrations are being held to protest the AOG's purchase of the railways, declaring it a step too far. Railroad workers are holding impromptu strikes and anti-Concessionists are holding rallies decrying the Zhili and all collaborators. Riots are also being reported in major population centers."
+
+action_a = {
+name = "Suppress these riots!"
+ai_chance = 80
+command = { type = dissent value = 10 }
+command = { type = manpowerpool value = -3 } #Crackdown
+}
+
+action_b = {
+ai_chance = 20
+name = "Discuss the matter with local administrators to quell the outrage"
+command = { type = setflag which = CGX_Chen_Sun } #for future use?
+command = { type = relation which = GER value = -5 }
+command = { type = dissent value = -2 }
+}
+}
+
+event = {
+id = 140003
+country = CGX
+picture = "Burning"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140002
+NOT = {
+atwar = CGX
+}
+}
+
+name = "The Burning of the Head-Office"
+desc = "At 21:15 last night, a Guilin fire station received an alarm call that the Head-Office, the assembly location of the Board of Directors, was ablaze. A Chinese anti-Concessionist and Nationalist by the name of Lee-Hom Ren was arrested at the scene of the blaze two hours later. There was a warrant out for his arrest, and after three hours of enhanced interogation he confessed to the arson."
+
+date = { day = 20 month = january year = 1936 }
+offset =  3
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "This Is an anti-Concessionist Outrage!"
+command = { type = dissent value = 3 }
+}
+}
+
+event = {
+id = 140004
+random = no
+country = CGX
+picture = "Chinese Benz"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140003
+NOT = {
+atwar = CGX
+}
+}
+
+date = { day = 20 month = january year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
+
+name = "The AOG demands accountability"
+desc = "AOG officials have approached Sun Chuanfang demanding answers for the incident in Guilin. They demand Sun get his provinces in order, lest the AOG take control of the situation to restore order themselves."
+
+action_a = {
+name = "Concede to the AOG and cooperate to bring the perpetrators to justice"
+ai_chance = 90
+command = { type = dissent value = 10 }
+command = { type = manpowerpool value = -1 } #Crackdown
+}
+
+action_b = {
+ai_chance = 10
+name = "Rebuke the AOG - we can handle our own affairs"
+command = { type = setflag which = Sun_AOGKill } #for future use?
+command = { type = relation which = GER value = -5 }
+command = { type = dissent value = -2 }
+}
+}
+
+event = {
+id = 140005
+country = CGX
+picture = "assassinationofker"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140003
+NOT = {
+atwar = CGX
+}
+}
+
+name = "Sun Chuanfang Assassinated!"
+desc = "This morning, Sun Chuanfang was leaving the administrative offices of the AOG after a meeting when a lone assassin, Shi Jianqiao, daughter of an officer whom Sun had executed in the Fengtian Wars, gunned down the Smiling Tiger in broad daylight. His last words were complaining of his breakfast before succumbing to his wounds."
+
+date = { day = 0 month = february year = 1936 }
+offset =  3
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "The Tiger is dead!"
+command = { type = dissent value = 20 }
+command = { type = sleepminister which = 502001}
+command = { type = sleepminister which = 502002 }
+command = { type = headofstate which = 502021 }
+}
+}
+
+event = {
+id = 140006
+country = CGX
+picture = "Chinese Workforce"
+style = 2
+
+trigger = {
+event = 90520
+}
+
+name = "Black Monday Woes"
+desc = "Black Monday has affected both Chinese and AOG-owned businesses severely. Unemployment spreads across the LEP and financial burdens worsen. The people will not be able to sustain this for long."
+
+date = { day = 0 month = february year = 1936 }
+offset = 10
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "This isn't good."
+command = { type = dissent value = 5 }
+command = { type = industrial_modifier which = total value = -2 }
+command = { type = money value = -200 }
+}
+}
+
+event = {
+id = 140007
+country = CGX
+picture = "Chinese Benz2"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140002
+event = 140020
+NOT = {
+atwar = CGX
+flag = CGX_Chen_Sun
+}
+}
+
+name = "Anhui Province secedes from the League"
+desc = "We have received a cable from Anhui Province, declaring that Chen Tiaoyuan will no longer support the Nanjing Clique's practice of 'illegal concessions' in China and will cooperate no further. They have essentially declared secession from the League."
+
+date = { day = 0 month = february year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "That rascal will pay for his insolence"
+command = { type = dissent value = 5 }
+command = { type = removecore which = 1344 }
+command = { type = removecore which = 1340 }
+command = { type = removecore which = 1343 }
+command = { type = removecore which = 1339 }
+command = { type = independence which = U66 value = 1 when = 0 }
+command = { type = secedeprovince which = U66 value = 1344 }
+command = { type = secedeprovince which = U66 value = 1340 }
+command = { type = secedeprovince which = U66 value = 1343 }
+command = { type = secedeprovince which = U66 value = 1339 }
+command = { type = addclaim which = 1344 }
+command = { type = addclaim which = 1340 }
+command = { type = addclaim which = 1343 }
+command = { type = addclaim which = 1339 }
+command = { type = manpowerpool value = -60 }
+command = { type = trigger which = 140008 }
+}
+}
+
+event = {
+id = 140008
+country = U66
+picture = "Chinese Calvary2"
+style = 2
+
+name = "Anhui Independent"
+desc = "The Anhui clique declares it independence"
+
+action_a = {
+name = "Down with Concessions!"
+command = { type = add_division value = cavalry when = 6 } #TEMP
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_division value = militia when = 4 }
+command = { type = supplies value = 150 }
+command = { type = manpowerpool value = 50 }
+}
+}
+
+event = {
+id = 140009
+random = no
+country = U66
+picture = "china_recapture"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140005
+event = 140020
+}
+
+date = { day = 20 month = january year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
+
+name = "Sun Chuanfang is dead"
+desc = "Sun Chuanfang was assassinated today in Nanjing. While the exact motives are a mystery, the role of his former superior-turned-subordinate Qi Xieyuan is highly suspect."
+
+action_a = {
+name = "Condemn Qi Xieyuan's blatant grab for power!"
+ai_chance = 100
+command = { type = dissent value = -2 }
+command = { type = relation which = GER value = -5 }
+command = { type = trigger which = 140010 }
+}
+
+action_b = {
+ai_chance = 0
+name = "We need more time"
+command = { type = dissent value = 5 }
+command = { type = setflag which = LEP_Collapse }
+}
+}
+
+
+
+
+event = {
+id = 140010
+country = CGX
+picture = "Chinese Officers"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140005
+NOT = {
+atwar = CGX
+}
+}
+
+name = "Chen Tiaoyuan blames Qi Xieyuan for the assassination"
+desc = "Chen Tiaoyuan has publicly denounced Qi Xieyuan, who assumed the position held by the late Sun Chuanfang as leader of the Southern Zhili clique. He accuses Qi of using the situation to opportunistically seize power for himself, and implied he may have had a hand in Sun's death."
+
+date = { day = 0 month = february year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "Chen's words are dangerous...for him"
+command = { type = dissent value = 2 }
+command = { type = event which = 140011 where = U66 when = 2  }
+}
+}
+
+event = {
+id = 140011
+country = U66
+picture = "Chinese Calvary"
+style = 2
+
+trigger = {
+event = 90520
+}
+
+name = "Down with the Nanjing"
+desc = "Qi Xieyuan's actions are intolerable, and he threatens to drag us into more humiliation. To save the Zhili, we must end his regime - down with the Nanjing Clique!"
+
+action_a = {
+name = "Down with Concessions!"
+command = { type = war which = CGX }
+command = { type = manpowerpool value = 10 }
+command = { type = setflag which = LEP_Collapse }
+}
+}
+
+event = {
+id = 140012
+country = CGX
+picture = "Chinese Crossroad"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140005
+event = 140020
+}
+
+name = "Chen Jiongming declares the Guangdong and Guangxi autonomous"
+desc = "Chen Jiongming has declared that the assemblies in Guangdong and Guangxi will no longer cooperate with the League, and that they will manage their own affairs from now on."
+
+date = { day = 0 month = february year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "That man has a history of trouble."
+command = { type = dissent value = -2 } #leaving, and not as harsh as Chen's proclamations
+command = { type = removecore which = 1369 }
+command = { type = removecore which = 1381 }
+command = { type = removecore which = 1376 }
+command = { type = removecore which = 1382 }
+command = { type = removecore which = 1379 }
+command = { type = removecore which = 1374 }
+command = { type = removecore which = 1380 }
+command = { type = removecore which = 1378 }
+command = { type = removecore which = 1383 }
+command = { type = removecore which = 1377 }
+command = { type = removecore which = 1368 }
+command = { type = removecore which = 1373 }
+command = { type = removecore which = 1370 }
+command = { type = removecore which = 1375 }
+command = { type = independence which = UCH value = 1 when = 0 }
+command = { type = secedeprovince which = UCH value = 1369 }
+command = { type = secedeprovince which = UCH value = 1381 }
+command = { type = secedeprovince which = UCH value = 1376 }
+command = { type = secedeprovince which = UCH value = 1382 }
+command = { type = secedeprovince which = UCH value = 1379 }
+command = { type = secedeprovince which = UCH value = 1374 }
+command = { type = secedeprovince which = UCH value = 1380 }
+command = { type = secedeprovince which = UCH value = 1378 }
+command = { type = secedeprovince which = UCH value = 1383 }
+command = { type = secedeprovince which = UCH value = 1377 }
+command = { type = secedeprovince which = UCH value = 1368 }
+command = { type = secedeprovince which = UCH value = 1373 }
+command = { type = secedeprovince which = UCH value = 1370 }
+command = { type = secedeprovince which = UCH value = 1375 }
+command = { type = addclaim which = 1369 }
+command = { type = addclaim which = 1381 }
+command = { type = addclaim which = 1376 }
+command = { type = addclaim which = 1382 }
+command = { type = addclaim which = 1379 }
+command = { type = addclaim which = 1374 }
+command = { type = addclaim which = 1380 }
+command = { type = addclaim which = 1378 }
+command = { type = addclaim which = 1383 }
+command = { type = addclaim which = 1377 }
+command = { type = addclaim which = 1368 }
+command = { type = addclaim which = 1373 }
+command = { type = addclaim which = 1370 }
+command = { type = addclaim which = 1375 }
+command = { type = manpowerpool value = -150 }
+command = { type = trigger which = 140013 }
+}
+}
+
+event = {
+id = 140013
+country = UCH
+picture = "Chinese Calvary2"
+style = 2
+
+trigger = {
+event = 90520
+}
+
+name = "The Liangguang Clique"
+desc = "The Liangguang clique declares it independence - Federalists rule!"
+
+date = { day = 0 month = february year = 1936 }
+offset = 10
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "Hopefully we can make our dreams a reality"
+command = { type = set_domestic which = democratic value = 6 }
+command = { type = set_domestic which = political_left value = 8 }
+command = { type = headofstate which = 65321 }
+command = { type = headofgovernment which = 65324 } #Lu Rongting 
+command = { type = add_division value = militia when = 4 } #TEMP
+command = { type = add_division value = militia when = 4 }
+command = { type = add_division value = infantry when = 7 where = artillery }
+command = { type = add_division value = cavalry when = 6 }
+command = { type = add_division value = cavalry when = 6 }
+command = { type = supplies value = 200 }
+command = { type = manpowerpool value = 50 }
+}
+}
+
+event = {
+id = 140014
+country = CGX
+picture = "Chinese_Fighting"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140005
+event = 140020
+}
+
+name = "Hunan Province secedes from the League"
+desc = "Hunan province has wired us declaring independence. Another member of the League lost."
+
+date = { day = 0 month = february year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "They will be brought into fold...eventually!"
+command = { type = dissent value = -2 } #leaving, and not as harsh as Chen's proclamations
+command = { type = removecore which = 1308 }
+command = { type = removecore which = 1310 }
+command = { type = removecore which = 1311 }
+command = { type = removecore which = 1309 }
+command = { type = removecore which = 1312 }
+command = { type = removecore which = 1307 }
+command = { type = removecore which = 1301 }
+command = { type = removecore which = 1306 }
+command = { type = independence which = U67 value = 1 when = 0 }
+command = { type = secedeprovince which = U67 value = 1308 }
+command = { type = secedeprovince which = U67 value = 1306 }
+command = { type = secedeprovince which = U67 value = 1310 }
+command = { type = secedeprovince which = U67 value = 1311 }
+command = { type = secedeprovince which = U67 value = 1309 }
+command = { type = secedeprovince which = U67 value = 1312 }
+command = { type = secedeprovince which = U67 value = 1307 }
+command = { type = secedeprovince which = U67 value = 1301 }
+command = { type = addclaim which = 1308 }
+command = { type = addclaim which = 1311 }
+command = { type = addclaim which = 1306 }
+command = { type = addclaim which = 1310 }
+command = { type = addclaim which = 1309 }
+command = { type = addclaim which = 1312 }
+command = { type = addclaim which = 1307 }
+command = { type = addclaim which = 1301 }
+command = { type = manpowerpool value = -40 }
+command = { type = trigger which = 140015 }
+}
+}
+
+event = {
+id = 140015
+country = U67
+picture = "Chinese Calvary2"
+style = 2
+
+trigger = {
+event = 90520
+}
+
+name = "Independent Hunan"
+desc = "Hunan has seceded. No one cares, probably"
+
+date = { day = 0 month = february year = 1936 }
+offset = 10
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "I hear the food's great"
+command = { type = add_division value = militia when = 4 } #TEMP
+command = { type = add_division value = militia when = 4 }
+command = { type = add_division value = cavalry when = 6 }
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_division value = infantry when = 8 }
+command = { type = supplies value = 100 }
+command = { type = manpowerpool value = 20 }
+}
+}
+
+event = {
+id = 140016
+country = CGX
+picture = "Chinese Trench"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140005
+event = 140020
+}
+
+name = "The Jiangxi-Fujian Rebellion"
+desc = "A spectre from the past has come to haunt us - we have received reports that KMT remnants have emerged in Jiangxi and Fujian provinces, and are rapidly seizing control of highland towns and villages. A most dangerous development." #probably want to change that first line to something more Chinese
+
+date = { day = 0 month = february year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "We will destroy them again!"
+command = { type = dissent value = -2 } #leaving, and not as harsh as Chen's proclamations
+command = { type = removecore which = 1352 }
+command = { type = removecore which = 1349 }
+command = { type = removecore which = 1359 }
+command = { type = removecore which = 1360 }
+command = { type = removecore which = 1354 }
+command = { type = removecore which = 1356 }
+command = { type = independence which = U87 value = 1 when = 0 }
+command = { type = secedeprovince which = U87 value = 1352 }
+command = { type = secedeprovince which = U87 value = 1356 }
+command = { type = secedeprovince which = U87 value = 1349 }
+command = { type = secedeprovince which = U87 value = 1359 }
+command = { type = secedeprovince which = U87 value = 1360 }
+command = { type = secedeprovince which = U87 value = 1354 }
+command = { type = secedeprovince which = U87 value = 1355 }
+command = { type = addclaim which = 1352 }
+command = { type = addclaim which = 1349 }
+command = { type = addclaim which = 1356 }
+command = { type = addclaim which = 1359 }
+command = { type = addclaim which = 1360 }
+command = { type = addclaim which = 1354 }
+command = { type = addclaim which = 1355 }
+command = { type = manpowerpool value = -50 }
+command = { type = trigger which = 140017 }
+}
+}
+
+event = {
+id = 140017
+country = U87
+picture = "Chinese Calvary2"
+style = 2
+
+trigger = {
+event = 90520
+}
+
+name = "The KMT rises again"
+desc = "The Left-Kuomintang has emerged in Jiangxi-Fujian"
+
+date = { day = 0 month = february year = 1936 }
+offset = 10
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "Three Principles forever!"
+command = { type = set_domestic which = democratic value = 6 }
+command = { type = set_domestic which = political_left value = 8 }
+command = { type = headofstate which = 1250069 } #Madame Sun 
+command = { type = headofgovernment which = 1250054 } #Wang Jingwei
+command = { type = foreignminister which = 12500542 } #Lin Boqu
+command = { type = armamentminister which = 12500573 } #Ma Kun/Morris Two-Gun Cohen 
+command = { type = ministerofsecurity which = 12500572 } #Zhou Fohai 
+command = { type = ministerofintelligence which = 12500574 } #Dai Li 
+command = { type = chiefofstaff which = 12500497 } #Li Jishen 
+command = { type = add_corps which = "NRA - Ganzhou" value = land where = 1354 } #TEMP 
+command = { type = add_division value = militia when = 4 } #TEMP
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_division value = cavalry when = 6 }
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_corps which = "NRA - Nanchang" value = land where = 1352 } #TEMP 
+command = { type = add_division value = militia when = 4 } #TEMP
+command = { type = add_division value = infantry when = 8 }
+command = { type = add_division value = infantry when = 8 }
+command = { type = supplies value = 100 }
+command = { type = manpowerpool value = 150 }
+command = { type = addclaim which = 1314 }
+command = { type = addclaim which = 1315 }
+command = { type = addclaim which = 1313 }
+command = { type = addclaim which = 1310 }
+command = { type = addclaim which = 1301 }
+command = { type = addclaim which = 1304 }
+command = { type = addclaim which = 1307 }
+command = { type = addclaim which = 1309 }
+command = { type = addclaim which = 1312 }
+command = { type = addclaim which = 1306 }
+command = { type = addclaim which = 1305 }
+command = { type = addclaim which = 1378 }
+command = { type = addclaim which = 1380 }
+command = { type = addclaim which = 1382 }
+command = { type = addclaim which = 1381 }
+command = { type = addclaim which = 1383 }
+command = { type = addclaim which = 1379 }
+command = { type = addclaim which = 1376 }
+command = { type = addclaim which = 1377 }
+command = { type = addclaim which = 1374 }
+command = { type = addclaim which = 1318 }
+command = { type = addclaim which = 1353 }
+command = { type = addclaim which = 1308 }
+command = { type = addclaim which = 1355 }
+command = { type = addclaim which = 1311 }
+command = { type = addclaim which = 1354 }
+command = { type = addclaim which = 1368 }
+command = { type = addclaim which = 1369 }
+command = { type = addclaim which = 1373 }
+command = { type = addclaim which = 1370 }
+command = { type = addclaim which = 1375 }
+command = { type = addclaim which = 1356 }
+command = { type = addclaim which = 1349 }
+command = { type = addclaim which = 1359 }
+command = { type = addclaim which = 1360 }
+command = { type = addclaim which = 1352 }
+command = { type = addclaim which = 1357 }
+command = { type = addclaim which = 1350 }
+command = { type = addclaim which = 1351 }
+command = { type = addclaim which = 1348 }
+command = { type = addclaim which = 1347 }
+}
+}
+
+event = {
+id = 140018
+country = CGX
+picture = "China_Reunited"
+style = 2
+
+trigger = {
+AND = {
+exists = U66
+exists = UCH
+exists = U67
+exists = U87
+}
+}
+
+name = "The League of Eight Provinces has Collapsed"
+desc = "It should be painfully obvious about now that the League has entered collapse."
+
+date = { day = 0 month = february year = 1936 }
+offset =  1
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "Woe be unto us"
+command = { type = dissent value = 2 }
+command = { type = name where = CGX which = "" } #reset name
+command = { type = add_corps which = "Nanjing Army" value = land where = 1337 }
+command = { type = add_division which = "AOG militia" value = militia when = 3 }
+command = { type = add_division which = "1. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "2. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "3. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "4. Bubing Shi" value = infantry when = 6 }
+command = { type = add_division which = "5. Bubing Shi" value = infantry when = 6 where = artillery }
+command = { type = add_division which = "Company Cavalry" value = cavalry when = 6 }
+command = { type = add_division which = "Nanjing Garrison" value = garrison when = 3 }
+
+}
+}
+
+### Army Defections 
+
+event = {
+id = 140020
+country = CGX
+picture = "Chinese Infantry"
+style = 2
+
+trigger = {
+flag =  CGX_Railway_Buy 
+event = 140002
+}
+
+name = "Army defections!"
+desc = "We have received reports of mass army defections across the League of Eight Provinces as regional governors recall their forces."
+
+date = { day = 0 month = february year = 1936 }
+offset =  1
+deathdate = { day = 29 month = december year = 1938 }
+
+action_a = {
+name = "This can't be good"
+command = { type = dissent value = 2 }
+command = { type = remove_division which = 22400 value = 2 } #Literally their entire OOB 
+command = { type = remove_division which = 22400 value = 3 } 
+command = { type = remove_division which = 22400 value = 4 } 
+command = { type = remove_division which = 22400 value = 6	}
+command = { type = remove_division which = 22400 value = 7	}
+command = { type = remove_division which = 22400 value = 8	}  
+command = { type = remove_division which = 22400 value = 10 }
+command = { type = remove_division which = 22400 value = 11 }
+command = { type = remove_division which = 22400 value = 12 }
+command = { type = remove_division which = 22400 value = 14	}
+command = { type = remove_division which = 22400 value = 15	}
+command = { type = remove_division which = 22400 value = 16	} 
+command = { type = remove_division which = 22400 value = 18	}
+command = { type = remove_division which = 22400 value = 20	}
+command = { type = remove_division which = 22400 value = 21	}
+command = { type = remove_division which = 22400 value = 22	}
+command = { type = remove_division which = 22400 value = 23	}
+command = { type = remove_division which = 22400 value = 25	}
+command = { type = remove_division which = 22400 value = 26	}
+command = { type = remove_division which = 22400 value = 27 }
+command = { type = remove_division which = 22400 value = 28 }
+command = { type = remove_division which = 22400 value = 30 }
+command = { type = remove_division which = 22400 value = 32 }
+command = { type = remove_division which = 22400 value = 33 } 
+command = { type = remove_division which = 22400 value = 35 } 
+command = { type = remove_division which = 22000 value = 21 } 
+command = { type = remove_division which = 22000 value = 68	}
+command = { type = remove_division which = 22000 value = 193 }
+command = { type = remove_division which = 22000 value = 216 }
+command = { type = remove_division which = 22000 value = 107 }
+command = { type = remove_division which = 22000 value = 7 }
+command = { type = remove_division which = 22000 value = 37 }
+command = { type = remove_division which = 22000 value = 88 } 
+command = { type = remove_division which = 22000 value = 162 } 
+command = { type = remove_division which = 22000 value = 39 } 
+command = { type = remove_division which = 22000 value = 63 } 
+}
+}
+
+
+

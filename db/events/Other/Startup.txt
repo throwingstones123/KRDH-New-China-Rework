@@ -1,0 +1,58 @@
+event = {
+id = 135459
+picture = "Kaiserreich"
+style = 1
+
+trigger = { ai = no }
+
+date = { day = 2 month = january year = 1936 }
+
+name = "EVT_135459_NAME" #Kaiserreich: Legacy of the Weltkrieg
+desc = "EVT_135459_DESC" #see event_text.csv
+
+action_a = {
+name = "EVT_135459_ACTIONA" #Viva la Kaiserreich Team!
+command = { type = trigger which = 135463 }
+}
+}
+
+event = {
+id = 135463
+picture = "specialthanks"
+style = 1
+
+name = "EVT_135463_NAME" #Special Thanks To:
+desc = "EVT_135463_DESC" #see event_text.csv
+
+action_a = {
+name = "EVT_135463_ACTIONA" #On the Shoulders of Giants
+command = {  }
+}
+}
+
+event = {
+id = 135462
+picture = "Kaiserreich"
+style = 1
+
+trigger = { 
+	ai = no
+	exists = ALI 
+}
+
+date = { day = 1 month = january year = 1936 }
+offset = 10
+deathdate = { day = 1 month = december year = 1963 }
+
+name = "EVT_135462_NAME" #A UFO! Wait, it's the KLOTW Mod Team!
+desc = "EVT_135462_DESC" #see event_text.csv
+
+action_a = {
+	name = "EVT_135462_ACTIONA" #Great mod!
+	command = { type = dissent value = -1 }
+	}
+action_b = {
+	name = "EVT_135462_ACTIONB" #Greatest mod! I Love Kaiserreich!
+	command = { type = dissent value = -30 }
+	}
+}

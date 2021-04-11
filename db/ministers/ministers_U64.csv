@@ -1,0 +1,70 @@
+U64;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+995100;Head of State;Yang Sen;1936;1964;1999;PA;Resigned Generalissimo;High;L50343;X
+995101;Head of Government;Yang Sen;1936;1964;1999;PA;Political Protege;Very High;L50343;X
+995102;Foreign Minister;Wang Zuanxu;1933;1964;1999;PA;Iron Fisted Brute;High;L50323;X
+995103;Minister of Armament;Gao Enhong;1936;1964;1999;PA;Resource Industrialist;Medium;9534;X
+995104;Minister of Security;Gao Lingwei;1936;1964;1999;PA;Compassionate Gentleman;Medium;9521;X
+995105;Head of Military Intelligence;Yang Sen;1936;1964;1999;PA;Political Specialist;High;L50343;X
+995106;Chief of Staff;Zhang Shaozeng;1936;1964;1999;PA;School of Psychology;High;9526;X
+995107;Chief of Army;Zhang Shaozeng;1936;1964;1999;PA;Decisive Battle Doctrine;Medium;9526;X
+995108;Chief of Navy;Du Xigui;1936;1964;1999;PA;Decisive Naval Battle Doctrine;Medium;9535;X
+995109;Head of State;Cao Kun;1936;1964;1999;ST;Autocratic Charmer;High;9531;X
+995110;Head of Government;Gao Lingwei;1936;1964;1999;PA;Political Protege;Very High;9521;X
+995112;Head of State;Sun Chuanfang;1936;1964;1999;PA;Autocratic Charmer;Medium;9536;X
+995113;Chief of Army;Sun Chuanfang;1936;1964;1999;PA;Decisive Battle Doctrine;Low;9536;X
+995114;Head of Government;Du Xigui;1936;1964;1999;PA;Old Admiral;High;9535;X
+995115;Foreign Minister;Gao Lingwei;1936;1964;1999;PA;Biased Intellectual;High;9521;X
+995116;Minister of Armament;Liu Enyuan;1936;1964;1999;PA;Military Entrepreneur;Medium;9537;X
+995117;Minister of Armament;Wu Yulin;1936;1964;1999;PA;Battle Fleet Proponent;High;9538;X
+995118;Minister of Armament;Gao Lingwei;1936;1964;1999;PA;Resource Industrialist;Medium;9521;X
+995119;Minister of Armament;Zhang Yinghua;1936;1964;1999;PA;Administrative Genius;Medium;9539;X
+995120;Minister of Security;Deng Xihou;1936;1964;1999;PA;Prince of Terror;Medium;9540;X
+995121;Minister of Security;Wang Tan;1936;1964;1999;PA;Crime Fighter;Low;9532;X
+995122;Head of Military Intelligence;Wu Peifu;1936;1964;1999;PA;Logistics Specialist;High;9529;X
+995123;Chief of Staff;Wu Peifu;1936;1964;1999;PA;School of Manoeuvre;High;9529;X
+995124;Chief of Army;Wu Peifu;1936;1964;1999;PA;School of Defence;Medium;9529;X
+995125;Chief of Staff;Wang Tan;1936;1964;1999;PA;School of Mass Combat;Medium;9532;X
+995126;Chief of Army;Wang Tan;1936;1964;1999;PA;Guns and Butter Doctrine;Medium;9532;X
+995127;Chief of Staff;Lu Jin;1936;1964;1999;PA;School of Defence;Medium;9533;X
+995128;Chief of Army;Lu Jin;1936;1964;1999;PA;Static Defence Doctrine;High;9533;X
+995129;Chief of Navy;Li Dingxin;1936;1964;1999;PA;Decisive Naval Battle Doctrine;High;9464;X
+995130;Chief of Navy;Wu Yulin;1936;1964;1999;PA;Open Seas Doctrine;Medium;9538;X
+995131;Chief of Air Force;Yang Sen;1936;1964;1999;PA;Army Aviation Doctrine;Medium;L50343;X
+995132;Chief of Air Force;Wang Chengbin;1936;1964;1999;PA;Carpet Bombing Doctrine;Medium;9541;X
+995133;Head of State;Deng Xihou;1936;1970;1999;PA;Pig-headed Isolationist;High;Deng Xihou;X
+995134;Minister of Armament;Liu Xiang;1936;1964;1999;PA;Tank Proponent;High;Liu Xiang;X
+995135;Chief of Staff;Liu Xiang;1936;1964;1999;PA;School of Manoeuvre;High;Liu Xiang;X
+995136;Chief of Army;Liu Xiang;1936;1964;1999;PA;Armoured Spearhead Doctrine;High;Liu Xiang;X
+995137;Minister of Armament;Liu Wenhui;1936;1964;1999;FA;Air to Ground Proponent;Medium;M501004;x
+995138;Chief of Air Force;Liu Wenhui;1936;1964;1999;FA;Army Aviation Doctrine;Medium;M501004;x
+995139;Head of Military Intelligence;Liu Wenhui;1936;1964;1999;FA;Logistics Specialist;Medium;M501004;x
+995140;Minister of Security;Luo Ruiqing;1936;1964;1999;SC;Man of the People;High;Luo Ruiqing;X
+995141;Minister of Armament;Luo Ruiqing;1936;1964;1999;SC;Military Entrepreneur;High;Luo Ruiqing;X
+995142;Chief of Staff;Luo Ruiqing;1936;1964;1999;SC;School of Mass Combat;High;Luo Ruiqing;X
+995143;Chief of Staff;Teng Hsi-hou;1936;1964;1999;PA;School of Fire Support;Medium;Deng Xihou;X
+995144;Foreign Minister;Tian Songyao;1936;1964;1999;PA;The Cloak N Dagger Schemer;High;Tian Songyao;X
+995145;Minister of Security;Tian Songyao;1936;1964;1999;PA;Back Stabber;High;Tian Songyao;X
+995146;Chief of Staff;Chen Yi;1936;1964;1999;SC;School of Defence;High;Chen Yi;X
+995147;Chief of Army;Chen Yi;1936;1964;1999;SC;Static Defence Doctrine;High;Chen Yi;X
+995148;Head of Military Intelligence;Wang Mingzhang;1936;1964;1999;PA;Dismal Enigma;Very High;Wang Mingzhang;X
+995149;Minister of Security;Wang Mingzhang;1936;1964;1999;PA;Compassionate Gentleman;Very High;Wang Mingzhang;X
+995150;Minister of Armament;Sun Yuanliang;1936;1964;1999;PA;Laissez-Faire Capitalist;Medium;Sun Yuanliang;X
+995151;Chief of Army;Sun Yuanliang;1936;1964;1999;PA;Decisive Battle Doctrine;Medium;Sun Yuanliang;X
+995152;Head of Government;Wang Zuanxu;1936;1964;1999;FA;Old General;High;L50323;X
+995153;Head of Government;Xiong Kewu;1936;1964;1999;FA;Naive Optimist;High;Xiong Kewu;X
+995154;Head of State;Xiong Kewu;1920;1964;1999;PA;Resigned Generalissimo;High;Xiong Kewu;X
+995155;Chief of Staff;Xiong Kewu;1936;1970;1999;PA;School of Defence;Very High;Xiong Kewu;X
+995156;Chief of Army;Xiong Kewu;1936;1970;1999;PA;Guns and Butter Doctrine;High;Xiong Kewu;X
+995157;Foreign Minister;Dan Maoxin;1936;1970;1999;FA;Biased Intellectual;High;Dan Maoxin;X
+995158;Head of Government;Dan Maoxin;1936;1964;1999;FA;Flamboyant Tough Guy;Medium;Dan Maoxin;X
+995159;Minister of Armament;Deng Xihou;1936;1970;1999;PA;Administrative Genius;High;Deng Xihou;X
+995160;Chief of Army;Yang Sen;1936;1964;1999;PA;Armoured Spearhead Doctrine;High;L50343;X
+995161;Minister of Security;Tang Shizun;1936;1970;1999;FA;Prince of Terror;Very High;Tang Shizun;X
+995162;Chief of Army;Tang Shizun;1936;1970;1999;FA;Static Defence Doctrine;High;Tang Shizun;X
+995163;Minister of Security;Pan Wenhua;1936;1970;1999;PA;Crooked Kleptocrat;High;Pan Wenhua;X
+995164;Head of Military Intelligence;Guo Rudong;1936;1970;1999;FA;Industrial Specialist;Medium;Guo Rudong;X
+995165;Chief of Staff;Liu Bocheng;1945;1970;1999;PA;School of Manoeuvre;High;Liu Bocheng;X
+995166;Head of State;Liu Wenhui;1936;1970;1999;FA;Weary Stiffneck;High;M501004;X
+995167;Chief of Army;Wang Lingji;1936;1970;1999;FA;Decisive Battle Doctrine;High;Wang Lingji;X
+995168;Minister of Armament;Yang Shukan;1936;1970;1999;PA;Resource Industrialist;High;Yang Shukan;X

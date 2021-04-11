@@ -1,0 +1,102 @@
+U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+1250054;Head of Government;Wang Jingwei;1936;1970;1999;LWR;Old General;High;Kaiserreich Wang Jingwei;X
+1250001;Head of State;Sun Fo;1936;1970;1999;SL;Benevolent Gentleman;High;CHISunfo;X
+1250494;Head of Military Intelligence;He Zhonghan;1936;1970;1999;LE;Logistics Specialist;High;M52084;X
+1250040;Head of Government;Sun Fo;1936;1970;1999;SL;Political Protege;High;CHISunfo;X
+1250041;Head of State;Wang Jingwei;1936;1970;1999;LWR;Die-hard Reformer;High;M52041;X
+1250061;Chief of Staff;Wang Jingwei;1936;1970;1999;LWR;School of Fire Support;High;CHIWangjing;X
+1250069;Head of State;Soong Qingling;1936;1970;1999;SD;Madame Sun;High;CHIMadame;X
+1250129;Head of Government;Soong Qingling;1936;1970;1999;SD;Flamboyant Tough Guy;High;CHIMadame;X
+1250538;Head of Government;Li Dazhao;1936;1970;1999;LE;Flamboyant Tough Guy;High;Li_Dazhao;X
+1250130;Head of State;Chen Geng;1936;1970;1999;LE;Weary Stiffneck;High;CYN_geng;X
+1250154;Head of Government;Chen Geng;1936;1970;1999;LE;Happy Amateur;High;CYN_geng;X
+1250553;Head of Government;Shao Shiping;1936;1970;1999;LE;Reformist Soldierhog;High;Shao_Shiping;X
+12500164;Chief of Army;Chen Geng;1936;1970;1999;LE;Elastic Defence Doctrine;High;CYN_geng;X
+12500166;Chief of Staff;Chen Geng;1936;1970;1999;LE;School of Fire Support;;CYN_geng;X
+12500536;Chief of Staff;Jiang Xianyun;1936;1970;1999;LE;Commando Doctrine Staff;High;Jiang_Xianyun;X
+12500167;Head of Government;Zhou Fohai;1933;1964;1999;LWR;Political Protege;Very High;8142;X
+12500212;Minister of Armament;Chen Gongbo;1936;1970;1999;LWR;Mixed Economy;;M52014;X
+12500213;Chief of Navy;Chen Jiliang;1936;1970;1999;LWR;Decisive Naval Battle Doctrine;High;M52103;X
+12500544;Chief of Navy;Lin Zun;1936;1970;1999;LWR;Indirect Approach Doctrine;High;Lin_Zun;X
+12500550;Chief of Navy;Pan Wenzhi;1936;1970;1999;LWR;Base Control Doctrine;High;Pan_Wenzhi;X
+12500215;Head of Government;Chiang Ching-kuo;1936;1970;1999;SD;Political Protege;High;M52055;X
+12500492;Minister of Security;Chiang Ching-kuo;1936;1970;1999;SD;Man of the People;High;M52055;X
+12500493;Minister of Armament;Chiang Ching-kuo;1936;1970;1999;SD;Construction Magnate;High;M52055;X
+12500559;Minister of Armament;Xiang Jingyu;1936;1970;1999;SD;Administrative Genius;High;Xiang_Jingyu;X
+12500495;Head of Government;Li Jishen;1936;1970;1999;SD;Old General;High;L502003;X
+12500496;Chief of Army;Li Jishen;1936;1970;1999;SD;Decisive Battle Doctrine;High;L502003;X
+12500562;Chief of Army;Yan Lisan;1936;1970;1999;LWR;Decisive Battle Doctrine;High;Yan_Lisan;X
+12500497;Chief of Staff;Li Jishen;1936;1970;1999;SD;School of Mass Combat;High;L502003;X
+12500498;Head of Government;Li Liejun;1936;1970;1999;SL;Old General;High;Li Liejun;X
+12500499;Head of Military Intelligence;Li Liejun;1936;1970;1999;SL;Logistics Specialist;High;Li Liejun;X
+12500547;Head of Military Intelligence;Mao Renfeng;1936;1970;1999;ST;Logistics Specialist;High;M52080;X
+12500548;Minister of Security;Mao Renfeng;1936;1970;1999;ST;Secret Police Chief;;M52080;X
+12500500;Chief of Staff;Li Liejun;1936;1970;1999;SL;School of Fire Support;High;Li Liejun;X
+12500501;Chief of Army;Li Liejun;1936;1970;1999;SL;Guns and Butter Doctrine;High;Li Liejun;X
+12500502;Chief of Army;Liao Yaoxiang;1936;1970;1999;LWR;Guns and Butter Doctrine;High;L50195;X
+12500503ft;Liao Zhongkai;1936;1970;1999;LWR;Silent Workhorse;High;CHIZhongkai;X
+12500539;Head of Government;Li Fuchun;1936;1970;1999;LWR;Silent Workhorse;High;Li_Fuchun;X
+12500504;Minister of Armament;Liao Zhongkai;1936;1970;1999;LWR;Resource Industrialist;High;CHIZhongkai;X
+12500566;Minister of Armament;Zeng Zhongming;1936;1970;1999;LWR;Resource Industrialist;High;Zeng_Zhongming;X
+12500552;Minister of Armament;Ruan Xiaoxian;1936;1970;1999;LWR;Industrialiser;High;Ruan_Xiaoxian;X
+12500505;Head of Government;Wang Shijie;1936;1970;1999;SL;Happy Amateur;High;Wang Shijie;X
+12500530;Head of Government;Fang Junying;1936;1970;1999;SD;Happy Amateur;High;Fang_Junying;X
+12500531;Foreign Minister;Fang Shengtao;1936;1970;1999;LWR;General Staffer;High;Fang_Shengtao;X
+12500506;Foreign Minister;Wang Shijie;1936;1970;1999;SL;Biased Intellectual;High;Wang Shijie;X
+12500568;Foreign Minister;Zhang Qun;1936;1970;1999;SL;Apologetic Clerk;High;Zhang_Qun;X
+12500546;Foreign Minister;Liu Qingyang;1936;1970;1999;SD;Biased Intellectual;High;Liu_Qingyang;X
+12500507;Chief of Army;Wei Lihuang;1936;1970;1999;SD;Static Defence Doctrine;High;CHILihuang;X
+12500508;Chief of Army;Xu Tingyao;1936;1970;1999;SD;Armoured Spearhead Doctrine;High;M52098;X
+12500567;Chief of Army;Zeng Zhongsheng;1936;1970;1999;LE;Doctrine of Autonomy;High;Zeng_Zhongsheng;X
+12500509;Head of Military Intelligence;Yu Youren;1936;1970;1999;SD;Technical Specialist;High;CHIYouren;X
+12500572;Minister of Security;Zhou Fohai;1936;1970;1999;LWR;Crime Fighter;High;M750018;X
+12500573;Minister of Armament;Ma Kun;1936;1970;1999;LWR;Military Entrepreneur;High;Ma_Kun;X
+12500510;Foreign Minister;Yu Youren;1936;1970;1999;SD;Ideological Crusader;High;CHIYouren;X
+12500511;Foreign Minister;Zhou Fohai;1936;1970;1999;SD;The Cloak N Dagger Schemer;High;M750018;X
+12500554;Foreign Minister;Su Zhaozheng;1936;1970;1999;LE;The Cloak N Dagger Schemer;High;Su_Zhaozheng;X
+12500512;Minister of Armament;Zhou Fohai;1936;1970;1999;SD;Bank President;High;M750018;X
+12500557;Minister of Armament;Wang Rongbin;1936;1970;1999;SL;Submarine Proponent;High;Wang_Rongbin;X
+12500555;Minister of Armament;Sun Yueqi;1936;1970;1999;SD;Oil Baron;High;Sun_Yueqi;X
+12500570;Minister of Armament;Zhi Bingyuan;1936;1970;1999;SL;Theoretical Scientist;High;Zhi_Bingyuan;X
+12500513;Chief of Air Force;Zhou Zhirou;1936;1970;1999;SD;Air Superiority Doctrine;High;M501003;X
+12500543;Chief of Air Force;Lin Jilu;1936;1970;1999;LWR;Army Aviation Doctrine;High;Lin_Jilu;X
+12500534;Chief of Air Force;Huang Guangrui;1936;1970;1999;SD;Carpet Bombing Doctrine;High;Huang_Guangrui;X
+12500532;Chief of Air Force;Fang Ziyi;1936;1970;1999;LWR;Vertical Envelopment Doctrine;High;Fang_Ziyi;X
+12500514;Chief of Staff;Zhou Zhirou;1936;1970;1999;SD;School of Fire Support;High;M501003;X
+12500535;Chief of Staff;Jiang Bocheng;1936;1970;1999;LWR;School of Fire Support;High;Jiang_Bocheng;X
+12500517;Head of Government;Bai Wenwei;1936;1970;1999;SL;Naive Optimist;High;Bai_Wenwei;X
+12500518;Head of Government;Cai Hesen;1936;1970;1999;LWR;Ambitious Union Boss;High;Cai_Hesen;X
+12500519;Chief of Staff;Chen Keyu;1936;1970;1999;LWR;School of Defence;High;Chen_Keyu;X
+12500571;Chief of Staff;Zuo Quan;1936;1970;1999;LWR;Commando Doctrine Staff;High;Zuo_Quan;X
+12500556;Chief of Staff;Wang Hangong;1936;1970;1999;LWR;School of Psychology;High;Wang_Hangong;X
+12500520;Foreign Minister;Chen Youren;1936;1970;1999;SD;Ideological Crusader;High;Chen_Youren;X
+12500564;Foreign Minister;Yang Yongtai;1936;1970;1999;ST;Ideological Crusader;High;Yang_Yongtai;X
+12500569;Foreign Minister;Zhang Shenfu;1936;1970;1999;LWR;Ideological Crusader;High;Zhang_Shenfu;X
+12500565;Minister of Security;Zeng Xing;1936;1970;1999;LWR;Man of the People;High;Zeng_Xing;X
+12500529;Foreign Minister;Dong Biwu;1936;1970;1999;LE;Ideological Crusader;High;Dong_Biwu;X
+12500521;Minister of Armament;Chen Yun;1936;1970;1999;LE;Keynesian Economy;High;Chen_Yun;X
+12500540;Minister of Armament;Li Lisan;1936;1970;1999;ST;Planned Economy Proponent;High;Li_Lisan;X
+12500560;Minister of Armament;Xiong Shihui;1936;1970;1999;ST;Construction Magnate;High;Xiong_Shihui;X
+12500545;Minister of Armament;Liu Ding;1936;1970;1999;ST;Military Entrepreneur;High;Liu_Ding;X
+1250012500541;Chief of Staff;Li Youbang;1936;1970;1999;LWR;School of Mass Combat;High;Li_Youbang;X
+12500522;Minister of Security;Chih-Ping Chen;1936;1970;1999;ST;Efficient Sociopath;High;Chih-Ping_Chen;X
+12500537;Minister of Security;Lei Jingtian;1936;1970;1999;LWR;Efficient Sociopath;High;Lei_Jingtian;X
+12500563;Minister of Security;Yang Xingfo;1936;1970;1999;LWR;Compassionate Gentleman;High;Yang_Xingfo;X
+12500528;Minister of Security;Ding Mocun;1936;1970;1999;ST;Prince of Terror;High;Ding_Mocun;X
+12500523;Minister of Security;Chu Fucheng;1936;1970;1999;SD;Health and Safety;High;Chih-Ping_Chen;X
+12500549;Minister of Security;Mei Siping;1936;1970;1999;SD;Silent Lawyer;High;Mei_Siping;X
+12500526;Minister of Security;Deng Zhongxia;1936;1970;1999;LE;Crime Fighter;High;Deng_Zhongxia;X
+12500561;Minister of Security;Xu Qian;1936;1970;1999;SL;Crime Fighter;High;Xu_Qian;X
+12500533;Minister of Security;Hua Kezhi;1936;1970;1999;LE;Back Stabber;High;Hua_Kezhi;X
+12500524;Chief of Navy;Deng Zhaoxiang;1936;1970;1999;LWR;Open Seas Doctrine;High;Deng_Zhaoxiang;X
+12500527;Minister of Armament;Deng Zihui;1936;1970;1999;LE;Mixed Economy;High;Deng_Zihui;X
+12500515;Foreign Minister;Zhou Zhirou;1936;1970;1999;SD;Apologetic Clerk;High;M501003;X
+12500542;Foreign Minister;Lin Boqu;1936;1970;1999;LWR;Apologetic Clerk;High;Lin_Boqu;X
+12500558;Foreign Minister;Wu Tiecheng;1936;1970;1999;ST;Apologetic Clerk;High;Wu_Tiecheng;X
+12500551;Foreign Minister;Qu Qiubai;1936;1970;1999;LE;Apologetic Clerk;High;Qu_Qiubai;X
+12500516;Head of State;Chen Duxiu;1936;1970;1999;LE;Powerhungry Demagogue;High;Chen_Duxiu;X
+12500574;Head of Military Intelligence;Dai Li;1936;1970;1999;ST;Political Specialist;High;Dai Li;X
+12500575;Minister of Security;Dai Li;1936;1970;1999;ST;Secret Police Chief;High;Dai Li;X
+12500576;Head of Government;Chen Gongbo;1936;1970;1999;LWR;Pragmatic Statesman;High;M52014;X
+12500577;Head of Government;Lin Boqu;1936;1970;1999;LWR;Silent Workhorse;High;Lin_Boqu;X

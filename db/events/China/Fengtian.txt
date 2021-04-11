@@ -1,0 +1,1923 @@
+####################
+### Fengtien Republic events by thegreatplant - modified by Popper 
+### IDs 627060 - 627070 (alright they aren't all in this file)
+####################
+
+
+event = {
+id = 144000
+country = MAN
+style = 2
+picture = "TheBrotherhood"
+
+trigger = {
+atwar = JAP
+NOT = {
+war = { country = MAN country = CSX }
+event = 144018
+}
+}
+
+name = "Zhang Zuolin's decision"
+desc = "For years we have bent under the weight of Japanese control. Now the Japanese are at war and despite their promise to crush their enemies quickly and effortlessly their victory is far from assured. Amidst the chaos we may see a route to independence - we must make a decision with regards to our future!"
+
+date = { day = 0 month = november year = 1936 }
+offset = 15
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 30
+name = "We must continue our support the Japanese"
+trigger = {
+OR = {
+puppet = { country = MAN country = JAP  }
+alliance = { country = MAN country = JAP }
+}
+}
+command = { type = dissent value = 3 }
+}
+
+action_b = {
+ai_chance = 50
+name = "We must ally with Japan"
+trigger = {
+exists = JAP
+NOT = {
+ispuppet = MAN
+ispuppet = JAP
+flag = JAP_ISO
+government = communist
+war = { country = MAN country = JAP }
+alliance = { country = MAN country = JAP }
+alliance = { country = MAN country = RUS }
+alliance = { country = MAN country = SOV }
+alliance = { country = MAN country = FRA }
+alliance = { country = MAN country = USA }
+headofstate = 58012
+}
+}
+command = { type = dissent value = 3 }
+command = { type = event which = 144001 where = JAP when = 2  }
+}
+
+action_c = {
+ai_chance = 30
+name = "We must ally with Japan"
+trigger = {
+exists = JAP
+headofstate = 58012
+NOT = {
+ispuppet = MAN
+ispuppet = JAP
+flag = JAP_ISO
+government = communist
+war = { country = MAN country = JAP }
+alliance = { country = MAN country = JAP }
+alliance = { country = MAN country = RUS }
+alliance = { country = MAN country = SOV }
+alliance = { country = MAN country = FRA }
+alliance = { country = MAN country = USA }
+}
+}
+command = { type = dissent value = 3 }
+command = { type = event which = 144001 where = JAP when = 2  }
+}
+action_d = {
+ai_chance = 40
+name = "Japan is distracted - we must declare our independence!"
+trigger = {
+puppet = { country = MAN country = JAP  }
+alliance = { country = MAN country = JAP }
+atwar = Japan
+}
+command = { type = event which = 144002 where = JAP when = 3  }
+command = { type = relation which = JAP value = -150 }
+command = { trigger = { war = { country = GER country = JAP } } type = relation which = GER value = 100 } 
+command = { type = addcore which = 1240 }
+command = { type = addcore which = 1235 }
+command = { type = addcore which = 1236 }
+command = { type = addcore which = 1216 }
+}
+}
+
+event = {
+id = 144001
+random = no
+country = JAP
+style = 2
+picture = "diplomatic_campaign"
+
+name = "The Fengtian Clique wants to form an alliance"
+desc = "The government of the Fengtian Republic has annouced recently that they want to form an alliance with us in order to protect their independence in struggle against the remaining Chinese factions. What shall we do?"
+
+action_a = {
+ai_chance = 94
+name = "YES!"
+command = { type = alliance which = MAN }
+command = { type = relation which = MAN value = 100 }
+command = { type = dissent value = -3 }
+command = { type = domestic which = defense_lobby value = 1 }
+}
+
+action_b = {
+ai_chance = 5
+name = "Rather not."
+command = { type = dissent value = 1 }
+command = { type = relation which = MAN value = -100 }
+}
+}
+
+event = {
+id = 144002
+country = JAP
+style = 2
+picture = "Japan"
+
+name = "Zhang Zuolin's Betrayal"
+desc = "Zhang Zuolin has declared his independence and decided to back out of our alliance. How shall we react to this damnable betrayal ?"
+
+action_a = {
+ai_chance = 70
+name = "This changes nothing !"
+command = {  }
+}
+
+action_b = {
+ai_chance = 10
+name = "Maybe it is time to back down fully"
+trigger = { 
+war = { country = JAP country = GER } 
+NOT = { 
+alliance = { country = JAP country = FRA } 
+alliance = { country = JAP country = RUS } 
+alliance = { country = JAP country = SOV } 
+alliance = { country = JAP country = USA } 
+alliance = { country = JAP country = CAN } 
+} 
+}
+command = { type = trigger which = 144004 }
+command = { type = secedeprovince which = MAN value = 1240 }
+command = { type = secedeprovince which = MAN value = 1236 }
+command = { type = secedeprovince which = MAN value = 1235 }
+command = { type = secedeprovince which = MAN value = 1216 }
+command = { type = secedeprovince which = MAN value = 1239 }
+command = { type = secedeprovince which = MAN value = 1246 }
+command = { type = secedeprovince which = MAN value = 1247 }
+}
+
+action_c = {
+ai_chance = 30
+name = "Crush these ingrates!"
+command = { type = war which = MAN }
+}
+}
+
+event = {
+id = 144004
+country = GER
+style = 2
+picture = "Japan"
+
+name = "Japan seeks to negotiate"
+desc = "When Zhang Zueling switched sides in the war Japan decided that it had lost any grounds to continue fighting. They are proposing a peace deal."
+
+action_a = {
+ai_chance = 70
+name = "We never wanted this war to begin with"
+command = { type = event which = 144005 where = GER when = 3  }
+}
+
+action_b = {
+ai_chance = 30
+name = "We will finish what they started!"
+command = { type = dissent value = 3 }
+}
+}
+
+
+event = {
+id = 144005
+country = GER
+style = 2
+picture = "Japan"
+
+name = "Our negotiators are meeting with the Japanese"
+desc = "Our negotiation team is meeting with the Japanese envoy, how should we start the negotiations? Should we go easy and just get this war over as soon as possible or should we try to crush their spirit once and for all!"
+
+action_a = {
+ai_chance = 50
+name = "Go easy on them and make small demands"
+command = { type = trigger which = 144006 }
+}
+
+action_b = {
+ai_chance = 50
+name = "We must bring them to their knees!"
+command = { type = trigger which = 144007 }
+}
+}
+
+
+event = {
+id = 144006
+country = JAP
+style = 2
+picture = "Japan"
+
+name = "We have sat down at the table"
+desc = "When we offered a negotiated peace we thought the Germans would be fierce in their demands. However, they have come to the table wishing to talk sense."
+
+action_a = {
+ai_chance = 75
+name = "Peace with Honor!"
+command = { type = peace which = GER value = 0 }
+command = { type = peace which = CSX value = 0 }
+command = { type = money value = -250 } #minor reperations#
+command = { type = non_aggression which = JAP where = GER }
+command = { type = non_aggression which = JAP where = CSX }
+command = { type = secedeprovince which = MAN value = 1240 }
+command = { type = secedeprovince which = MAN value = 1236 }
+command = { type = secedeprovince which = MAN value = 1235 }
+command = { type = secedeprovince which = MAN value = 1216 }
+command = { type = secedeprovince which = MAN value = 1239 }
+command = { type = secedeprovince which = MAN value = 1246 }
+command = { type = secedeprovince which = MAN value = 1247 }
+command = { type = dissent value = 5 }
+}
+
+action_b = {
+ai_chance = 25
+name = "There will be no peace!"
+command = { type = dissent value = 2 }
+}
+}
+
+
+event = {
+id = 144007
+country = JAP
+style = 2
+picture = "Japan"
+
+name = "We have sat down at the table"
+desc = "We have sat down and the German's demands are unreasonable in any respect."
+
+action_a = {
+ai_chance = 25
+name = "We must have peace!"
+command = { type = peace which = GER value = 0 }
+command = { trigger = { alliance = { country = GER country = CSX } } type = peace which = CSX value = 0 } 
+command = { type = money value = -1000 }
+command = { type = non_aggression which = JAP where = GER }
+command = { type = non_aggression which = JAP where = CSX }
+command = { type = dissent value = 50 }
+command = { type = end_mastery which = PHI }
+command = { type = end_mastery which = PRI }
+command = { type = secedeprovince which = GER value = 1322 }
+command = { type = secedeprovince which = GER value = 1323 }
+command = { type = secedeprovince which = GER value = 1324 }
+command = { type = secedeprovince which = MAN value = 1240 }
+command = { type = secedeprovince which = MAN value = 1236 }
+command = { type = secedeprovince which = MAN value = 1235 }
+command = { type = secedeprovince which = MAN value = 1216 }
+command = { type = secedeprovince which = MAN value = 1239 }
+command = { type = secedeprovince which = MAN value = 1246 }
+command = { type = secedeprovince which = MAN value = 1247 }
+}
+
+action_b = {
+ai_chance = 75
+name = "NEVER!"
+command = { type = dissent value = -5 }
+}
+}
+
+
+####################
+### Kolchak breaks away -
+### will Zueling follow suit?
+####################
+
+event = {
+id = 144008
+country = MAN
+style = 2
+picture = "Chinese Officers"
+
+trigger = {
+exists = PRI
+flag = PRI_breaksaway # set by events in transamur.txt
+NOT = {
+ispuppet = PRI
+}
+puppet = { country = MAN country = JAP  }
+}
+
+name = "Kolchak has broken away from Japanese rule!"
+desc = "With Kolchak breaking away from the Japanese maybe we should consider our options. We could join him or we could maintain our relationship with Japan."
+
+date = { day = 0 month = january year = 1936 }
+offset = 20
+deathdate = { day = 29 month = january year = 1963 }
+
+action_a = {
+ai_chance = 40
+name = "Stay with Japan"
+command = { type = dissent value = 1 }
+command = { type = clrflag which = PRI_breaksaway }
+}
+
+action_b = {
+ai_chance = 60
+name = "Talk with Kolchak"
+command = { type = leave_alliance when = 1 }
+command = { type = peace which = PRI value = 1 }
+command = { type = end_puppet }
+command = { type = event which = 144009 where = PRI when = 1  }
+command = { type = clrflag which = PRI_breaksaway }
+command = { type = addcore which = 1240 }
+command = { type = addcore which = 1236 }
+command = { type = addcore which = 1235 }
+command = { type = addcore which = 1216 }
+command = { type = addcore which = 1219 }
+command = { trigger = { control = { province = 1239 data = JAP } } type = addcore which = 1239 }
+command = { trigger = { control = { province = 1246 data = JAP } } type = addcore which = 1246 }
+command = { trigger = { control = { province = 1247 data = JAP } } type = addcore which = 1247 }
+command = { type = trigger which = 144010 }
+}
+}
+
+
+event = {
+id = 144009
+country = PRI
+style = 2
+picture = "Chinese Officers"
+
+name = "Zhang Zuolin wishes to join us!"
+desc = "Almost as soon as we broke away from Japan the Fengtien approached us about an alliance! Together we shall have the power to overcome the Japanese."
+
+action_a = {
+ai_chance = 70
+name = "Accept"
+command = { type = alliance which = MAN }
+command = { type = relation which = MAN value = 150 }
+command = { type = relation which = JAP value = -100 }
+}
+
+action_b = {
+ai_chance = 30
+name = "Turn him down"
+command = { type = dissent value = 2 }
+command = { type = trigger which = 144013 }
+}
+}
+
+
+event = {
+id = 144010
+country = JAP
+style = 2
+picture = "Japan"
+
+name = "The Fengtian Split!"
+desc = "The Fengtian Republic has betrayed us - me must immediately remove all aid from his pitiful country, and perhaps teach him who are the real masters of Manchuria."
+
+action_a = {
+ai_chance = 40
+name = "Order the removal of support!"
+command = { type = manpowerpool value = 20 }
+command = { type = secedeprovince which = MAN value = 1240 }
+command = { type = secedeprovince which = MAN value = 1236 }
+command = { type = secedeprovince which = MAN value = 1235 }
+command = { type = secedeprovince which = MAN value = 1216 }
+command = { type = secedeprovince which = MAN value = 1239 }
+command = { type = secedeprovince which = MAN value = 1246 }
+command = { type = secedeprovince which = MAN value = 1247 }
+command = { type = trigger which = 144011 }
+}
+
+action_b = {
+ai_chance = 60
+name = "Crush these Ingrates!"
+command = { type = manpowerpool value = 20 }
+command = { type = secedeprovince which = MAN value = 1240 }
+command = { type = secedeprovince which = MAN value = 1236 }
+command = { type = secedeprovince which = MAN value = 1235 }
+command = { type = secedeprovince which = MAN value = 1216 }
+command = { type = secedeprovince which = MAN value = 1239 }
+command = { type = secedeprovince which = MAN value = 1246 }
+command = { type = secedeprovince which = MAN value = 1247 }
+command = { type = trigger which = 144011 }
+command = { type = war which = MAN }
+}
+}
+
+
+event = {
+id = 144011
+country = MAN
+style = 2
+picture = "Japan"
+
+name = "Japan has removed support from our country"
+desc = "Japan has ordered all development agencies, firms, and military aides to leave our country."
+
+action_a = {
+name = "Well what did you expect?"
+command = { type = sleepteam which = 6405 } #Yoshijiro Umezu
+command = { type = sleepteam which = 6400 } #South Manchuria Railway Co. 
+command = { type = sleepteam which = 6401 } #Manchurian Airways
+command = { type = sleepteam which = 6402 } #Manchuria Agricultural Development Organization
+command = { type = sleepteam which = 6408 } #Dowa Automobile Company
+command = { type = sleepteam which = 6409 } #Manchurian Industrial Development Organization
+command = { type = sleepleader which = 250008 }
+command = { type = sleepleader which = 250010 }
+command = { type = sleepleader which = 250011 }
+command = { type = sleepleader which = 250012 }
+command = { type = sleepleader which = 250018 }
+command = { type = sleepleader which = 250024 }
+command = { type = sleepleader which = 250027 }
+command = { type = sleepleader which = 250031 }
+command = { type = sleepleader which = 250033 }
+command = { type = addcore which = 1240 }
+command = { type = addcore which = 1236 }
+command = { type = addcore which = 1235 }
+command = { type = addcore which = 1216 }
+command = { type = addcore which = 1219 }
+command = { trigger = { control = { province = 1239 data = JAP } } type = addcore which = 1239 }
+command = { trigger = { control = { province = 1246 data = JAP } } type = addcore which = 1246 }
+command = { trigger = { control = { province = 1247 data = JAP } } type = addcore which = 1247 }
+command = { type = manpowerpool value = -20 }
+}
+}
+
+event = {
+id = 144013
+country = MAN
+style = 2
+picture = "Chinese Officers"
+
+name = "Kolchak has refused our offer"
+desc = "With Kolchak's refusal we are treading deep water... Japan may attack us if we don't find support soon."
+
+action_a = {
+ai_chance = 70
+name = "We will be independent no matter what!"
+command = { type = trigger which = 144016 }
+command = { type = addcore which = 1240 }
+command = { type = addcore which = 1235 }
+command = { type = addcore which = 1236 }
+command = { type = addcore which = 1216 }
+}
+
+action_c = {
+ai_chance = 30
+name = "Seek out old friends"
+trigger = {
+exists = CHC
+NOT = {
+ispuppet = CHC
+}
+}
+command = { type = event which = 144014 where = MAN when = 2  }
+}
+}
+
+event = {
+id = 144014
+country = MAN
+style = 2
+picture = "Chinese Officers"
+
+name = "Seeking allies"
+desc = "EVT_144024_DESC"
+
+action_a = {
+trigger = { exists = CHC } #Add something about no Shangqing Here
+ai_chance = 90
+name = "Approach our old friend, Zhang Zongchang!"
+command = { type = trigger which = 144025 }
+}
+
+action_b = {
+ai_chance = 10
+name = "This is pointless!"
+command = { type = dissent value = 3 }
+}
+
+action_c = {
+trigger = { NOT = { exists = CHC } exists = U74 }
+ai_chance = 50
+name = "The only choice is siding with Feng Yuxiang"
+command = { type = dissent value = 1 }
+}
+}
+
+
+event = {
+id = 144016
+country = JAP
+style = 2
+picture = "Japan"
+
+name = "Zhang Zueling has been left out to dry"
+desc = "Zhang Zueling has betrayed us and attempted to form alliances with his neighbors, but no one is stupid enough!"
+
+action_a = {
+ai_chance = 80
+name = "We cannot be made fools of"
+command = { type = war which = MAN }
+}
+
+action_b = {
+ai_chance = 20
+name = "We cannot risk further entaglements"
+command = { type = dissent value = 2 }
+command = { type = secedeprovince which = MAN value = 1240 }
+command = { type = secedeprovince which = MAN value = 1236 }
+command = { type = secedeprovince which = MAN value = 1235 }
+command = { type = secedeprovince which = MAN value = 1216 }
+command = { type = secedeprovince which = MAN value = 1239 }
+command = { type = secedeprovince which = MAN value = 1246 }
+command = { type = secedeprovince which = MAN value = 1247 }
+}
+}
+
+#############################################Popper's events, with some of Yuriswe's Events##################################################
+###############################################################################################################
+
+
+event = {
+id = 144017
+country = JAP
+style = 2
+picture = "Chinese Officers"
+
+trigger = { 
+puppet = { country = MAN country = JAP  }
+OR = {
+event = 751004
+event = 751005
+event = 144000
+event = 144008 
+event = 340071 
+event = 340087 #any reason has been given for Japan to begin to assess its puppets 
+}
+}
+
+
+date = { day = 0 month = may year = 1936 }
+offset = 90
+deathdate = { day = 29 month = january year = 1963 }
+
+name = "The Problem of Zhang Zuolin"
+desc = "As of late we have become suspicious of Zhang Zuolin - his increasing reluctance to follow our direction has become a great concern for our military officers in the Chinese theatre. Some are beginning to question whether or not he should even have a role in our designs for China moving forward."
+
+action_a = {
+ai_chance = 65
+name = "Arrange an accident for the Old Marshal"
+command = { type = setflag which = JAP_KILL_Zhang }
+}
+
+action_b = {
+ai_chance = 35
+name = "This is useless.."
+command = { type = dissent value = 3 }
+}
+}
+
+
+event = {
+id = 144018
+country = MAN
+style = 2
+picture = "minister_died"
+
+trigger = {
+flag = JAP_KILL_Zhang
+}
+
+date = { day = 0 month = january year = 1936 }
+offset = 10
+deathdate = { day = 29 month = december year = 1966 }
+
+name = "Death of Zhang Zuolin"
+desc = "Terrible news, our leader Zhang Zuolin died in a train accident at the outskirts of Shenyang. Following the accident, choas erupted as questions arose on who would take over as leader of our Republic."
+
+action_a = {
+name = "How could this happen..."
+command = { type = dissent value = 10 }
+command = { type = wakeminister which = 58058 }
+command = { type = wakeminister which = 58059 }
+command = { type = sleepminister which = 58001 }
+command = { type = sleepminister which = 58032 }
+command = { type = sleepminister which = 58032 }
+command = { type = sleepminister which = 58017 }
+command = { type = sleepteam which = 6442 }
+command = { type = sleepleader which = 250037 }
+command = { type = sleepevent which = 66704 } #sleep the original Fengtien events to avoid confusion
+command = { type = sleepevent which = 6627078 }
+command = { type = sleepevent which = 925045 }
+command = { type = sleepevent which = 627061 }
+command = { type = sleepevent which = 95048 }
+command = { type = sleepevent which = 95060 }
+command = { type = sleepevent which = 95051 }
+command = { type = sleepevent which = 95056 }
+command = { type = sleepevent which = 95053 }
+command = { type = clrflag which = JAP_KILL_Zhang  }
+command = { type = trigger which = 144020 }
+}
+}
+
+
+event = {
+id = 144019
+country = MAN
+style = 2
+picture = "China_Rally"
+
+trigger = {
+flag = MAN_puyi
+}
+
+date = { day = 1 month = January year = 1936 }
+offset =  5
+deathdate = { day = 29 month = december year = 1960 }
+
+name = "Great Empire of Manchuria"
+desc = "With the help of the Japanese the rule of Manchu Dynasty was able to reestablished in their homeland. We are confident that soon the time will come for revenge against the rebels in the south!"
+
+action_a = {
+name = "Rebirth of the Manchu Empire!"
+command = { type = headofstate which = 58058 } #Puyi
+command = { type = headofgovernment which = 58043 } #Japanese
+command = { type = name where = MAN which = "MAN_EMP_NAME"}
+command = { type = domestic which = interventionism value = 1 }
+command = { type = flag_ext where = MAN which = "_EMP" }
+command = { type = manpowerpool value = 30 }
+command = { type = add_division which = "Qi Jun" value = infantry when = 8 }
+command = { type = add_division which = "Qi Jun" value = infantry when = 8 }
+command = { type = add_division which = "Qi Jun" value = infantry when = 8 }
+command = { type = add_division which = "Qi Jun" value = infantry when = 8 }
+command = { type = add_division which = "Qi Jun" value = infantry when = 8 }
+command = { type = add_division value = light_cruiser when = 3 }
+command = { type = add_division value = destroyer when = 3 }
+command = { type = clrflag which = MAN_puyi }
+}
+}
+
+event = {
+id = 144020
+country = JAP
+style = 2
+picture = "ccip_natoff"
+
+
+name = "A New Direction in Manchuria"
+desc = "With the death of Zhang Zuolin, we have the opportunity to set a new direction in Manchuria. His son may make a more suitable puppet, although if he is deemed too risky, we may consider an alternate replacement."
+
+action_a = {
+trigger = { NOT = { exists = CSX } } 
+ai_chance = 95
+name = "Puyi has been exiled, and would make a more willing puppet."
+command = { type = setflag which = Man_puyi }
+
+}
+
+action_b = {
+ai_chance = 70
+name = "Zhang Xueliang is the man for us"
+command = { type = dissent value = 3 }
+command = { type = setflag which = Young_Marshal }
+}
+
+action_c = {
+ai_chance = 30
+name = "An entirely new, more loyal regime is necessary"
+command = { type = setflag which = MAN_REP }
+}
+}
+
+event = {
+id = 144022
+country = MAN
+style = 2
+picture = "Republican China"
+
+trigger = {
+flag = MAN_REP
+}
+
+date = { day = 1 month = January year = 1936 }
+offset =  5
+deathdate = { day = 29 month = december year = 1960 }
+
+name = "A new Republic"
+desc = "The Japanese have deposed Zhang Xueliang, the son of the late Zhang Zuolin, and have instituted a new regime, nominally a successor to the failed Republic of China."
+
+action_a = {
+name = "Sing a Song to the Auspicious Cloud!"
+command = { type = headofstate which = 58085 } #Puppet
+command = { type = headofgovernment which = 58043 } #Japanese
+command = { type = name where = MAN which = "Reformed Government of the Republic of China" }
+command = { type = domestic which = interventionism value = 1 }
+command = { type = flag_ext where = MAN which = "_REP" }
+command = { type = manpowerpool value = 30 }
+command = { type = sleepminister which = 58010 }
+command = { type = sleepminister which = 58012 }
+command = { type = sleepminister which = 58014 }
+command = { type = sleepminister which = 58023 }
+command = { type = sleepminister which = 58034 }
+command = { type = clrflag which = MAN_REP }
+}
+}
+
+event = {
+id = 144021
+country = MAN
+style = 2
+picture = "Zhang Xueliang"
+
+trigger = {
+flag = Young_Marshal
+}
+
+date = { day = 1 month = January year = 1936 }
+offset =  5
+deathdate = { day = 29 month = december year = 1960 }
+
+name = "The Young Marshal"
+desc = "The son proceeds from the father: after the death of our beloved leader, the Old Marshal Zhang Zuolin, his son, the Young Marshal, Zhang Xueliang has taken up his father's mantle as leader of the Fengtian Clique."
+
+action_a = {
+name = "Like Father, like Son!"
+command = { type = headofstate which = 58012 } #Zhang Xueliang
+command = { type = headofgovernment which = 58014 } #Zhang
+command = { type = domestic which = interventionism value = 1 }
+command = { type = manpowerpool value = 30 }
+}
+}
+
+event = {
+id = 144023
+country = MAN
+style = 2
+picture = "ccip_natoff"
+
+trigger = {
+flag = Young_Marshal
+headofstate = 58012
+puppet = { country = MAN country = JAP  }
+OR = {
+NOT = { 
+exists = CSX 
+}
+puppet = { country = CSX country = JAP  }
+}
+}
+
+name = "Zhang Xueliang's decision"
+desc = "Zhang Xueliang has secretly despised Japanese hegemony in the Fengtian Republic for years, and with Manchuria's immediate rivals dealt with he no longer sees any reason to continue suffering their meddling, and he yearns to throw off their yoke. The question is: when? "
+
+date = { day = 0 month = january year = 1937 }
+offset = 175
+deathdate = { day = 29 month = december year = 1945 }
+
+action_a = {
+ai_chance = 10
+name = "Japan's support is necessary"
+trigger = {
+OR = {
+puppet = { country = MAN country = JAP  }
+alliance = { country = MAN country = JAP }
+}
+}
+command = { type = dissent value = 3 }
+}
+
+action_b = {
+ai_chance = 90
+name = "Puppets no longer - we must declare independence!"
+trigger = {
+OR = {
+alliance = { country = MAN country = JAP }
+atwar = Japan
+}
+}
+command = { type = relation which = JAP value = -150 }
+command = { trigger = { war = { country = GER country = JAP } } type = relation which = GER value = 100 }
+command = { type = addcore which = 1240 }
+command = { type = addcore which = 1235 }
+command = { type = addcore which = 1236 }
+command = { type = addcore which = 1216 }
+command = { type = trigger which = 144010 }
+}
+}
+
+
+event = {
+id = 144024
+country = MAN
+style = 2
+picture = "Chinese Officers"
+
+trigger = {
+flag = Young_Marshal
+headofstate = 58012
+exists = CHC
+OR = { 
+war = { country = JAP country = MAN } 
+event = 144011
+}
+NOT = { 
+puppet = { country = MAN country = JAP  }
+alliance = { country = MAN country = CHC }
+alliance = { country = MAN country = U74 }
+exists = CSX
+#add flag about Shangqing here
+}
+}
+
+date = { day = 0 month = january year = 1937 }
+offset = 10
+deathdate = { day = 29 month = december year = 1945 }
+
+
+name = "Seeking allies"
+desc = "EVT_144024_DESC"
+
+action_a = {
+trigger = { exists = CHC } #Add something about no Shangqing Here
+ai_chance = 90
+name = "Approach our old friend, Zhang Zongchang!"
+command = { type = trigger which = 144025 }
+}
+
+action_b = {
+ai_chance = 10
+name = "This is pointless!"
+command = { type = dissent value = 3 }
+}
+
+action_c = {
+trigger = { NOT = { exists = CHC } exists = U74 }
+ai_chance = 50
+name = "The only choice is contacting Feng Yuxiang"
+command = { type = dissent value = 1 }
+command = { type = trigger which = 144028 }
+}
+}
+
+event = {
+id = 144025
+country = CHC
+style = 2
+picture = "Zhang Xueliang"
+
+
+name = "The Fengtian Republic calls on Zhang Zongchang"
+desc = "The Fengtian Republic has called on us for aid. Our glorious leader was, once upon a time, a dear friend of Zhang Xueliang, the son of the Old Marshal. Perhaps by joining with the Fengtian again, we may too enjoy the fruits of victory and enhance our own position in China."
+
+action_a = {
+trigger = { NOT = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 90
+name = "Yes!"
+command = { type = trigger which = 144026 }
+}
+
+action_b = {
+trigger = { NOT = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 10
+name = "This is pointless!"
+command = { type = relation which = MAN value = -50 }
+command = { type = dissent value = 3 }
+command = { type = trigger which = 144027 }
+}
+
+action_c = {
+trigger = { OR = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 70
+name = "Might be worth it!"
+command = { type = trigger which = 144026 }
+command = { type = dissent value = 3 }
+}
+
+action_d = {
+trigger = { OR = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 30
+name = "We will not be puppets of the Japanese!"
+command = { type = relation which = MAN value = -50 }
+command = { type = dissent value = 3 }
+command = { type = trigger which = 144027 }
+}
+}
+
+event = {
+id = 144026
+country = MAN
+style = 2
+picture = "Chinese Cavalry"
+
+
+name = "Zhang Zongchang Accepts!"
+desc = "Zhang Zongchang has accepted our call for aid and the Shandong Clique will join our struggle - our cause grows stronger!"
+
+action_a = {
+name = "China will grow Larger!"
+command = { type = alliance which = CHC }
+command = { type = access which = CHC }
+command = { trigger = { exists = U74 } type = trigger which = 144027 } #add Feng Yuxiang specific flag here in Trigger
+}
+}
+
+event = {
+id = 144027
+country = MAN
+style = 2
+picture = "ccip_beiyangarmy"
+
+
+name = "Seeking further allies"
+desc = "After contacting the Shandong Clique, we may consider finding further allies."
+
+action_a = {
+ai_chance = 90
+name = "Contact Feng Yuxiang, the Guominjun Warlord" #trigger to ensure that Feng Yuxiang is the warlord of Shaanxi 
+command = { type = trigger which = 144028 }
+}
+
+action_b = {
+ai_chance = 10
+name = "We need look no further!"
+command = { }
+}
+}
+
+event = {
+id = 144028
+country = U74
+style = 2
+picture = "Zhang Xueliang"
+
+
+name = "The Fengtian Republic calls on the Guominjun"
+desc = "The Fengtian Republic has requested our support. We had supported them before, particularly during the war against the Zhili in 1924 by seizing Peking. While the last Zhili war ended in disaster, with the Fengtian we may right what was once wronged."
+
+action_a = {
+trigger = { NOT = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 90
+name = "Yes!"
+command = { type = trigger which = 144026 }
+}
+
+action_b = {
+trigger = { NOT = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 10
+name = "This is pointless!"
+command = { type = relation which = MAN value = -50 }
+command = { type = dissent value = 3 }
+command = { type = trigger which = 144027 }
+}
+
+action_c = {
+trigger = { OR = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 70
+name = "We march with the Fengtian once more!"
+command = { type = dissent value = 5 }
+command = { type = trigger which = 144026 }
+}
+
+action_d = {
+trigger = { OR = { alliance = { country = JAP country = MAN } puppet = { country = MAN country = JAP  } } } 
+ai_chance = 30
+name = "We will not be puppets of the Japanese!"
+command = { type = relation which = MAN value = -50 }
+command = { type = dissent value = -3 }
+}
+}
+
+event = {
+id = 144030
+country = MAN
+style = 2
+picture = "Chinese Infantry2"
+
+
+name = "The Guominjun Support us!"
+desc = "The Guominjun have pledged their support for our cause! Their armies will join ours in a united front!"
+
+action_a = {
+name = "China will grow Larger!"
+command = { type = alliance which = U74 }
+command = { type = access which = U74 }
+
+}
+}
+
+
+
+
+###TO ADD##
+#Zhang Xueliang resisting Japanese hegemony, independently
+#Independent Manchuria (NOT under Puyi) attempting to wrangle control of China
+#Manchuria agreeing to go along with Japanese invasion of the Qing, and being granted Qing territory (if this is not already the case)
+#The Young Marshal escapes to the KMT?
+#Zhang Zongchang slept for MAN in .eug file (all cabinet positions) 
+
+event = {
+id = 144031
+country = MAN
+style = 2
+picture = "China_Reunited"
+
+trigger = {
+control = { province = 1247 data = MAN }
+control = { province = 1337 data = MAN }
+control = { province = 1338 data = MAN }
+control = { province = 1369 data = MAN }
+control = { province = 1390 data = MAN }
+control = { province = 1281 data = MAN }
+control = { province = 1208 data = MAN }
+control = { province = 1289 data = MAN }
+NOT = {
+exists = CHC
+exists = CYN
+exists = CSX
+exists = CGX
+exists = CXB
+}
+}
+
+date = { day = 0 month = january year = 1936 }
+offset =  10
+deathdate = { day = 29 month = december year = 1963 }
+
+name = "China reunited!"
+desc = "We had to fight fiercely on the battlefields and in the conference rooms but we have reached our goal. China is now reunited and stronger than ever! The last hundred years was just a nightmare! Time for a big festival to celebrate becoming a Great Power!"
+
+action_a = {
+name = "China forever!"
+command = { type = dissent value = 5 }
+command = { type = free_ic value = -7 }
+command = { type = industrial_modifier which = total value = -10 }
+command = { type = waketeam which = 6445 } #Huangpu Military Academy
+command = { type = waketeam which = 6437 } #Tianjin Naval Academy
+command = { type = waketeam which = 6428 when = 1 } #Hoff Lu
+command = { type = waketeam which = 6405 when = 1 } #CSIST
+command = { trigger = { NOT = { ispuppet = MAN } } type = name where = MAN which = MAN_UNI_NAME }
+command = { type = flag_ext where = MAN which = "_REP" }
+command = { type = manpowerpool value = 200 }
+command = { type = supplies value = 2500 }
+command = { type = addcore which = 1259 }
+command = { type = addcore which = 1255 }
+command = { type = addcore which = 1260 }
+command = { type = addcore which = 1367 }
+command = { type = addcore which = 1338 }
+command = { type = addcore which = 1358 }
+command = { type = addcore which = 1371 }
+command = { type = addcore which = 1346 }
+command = { type = addcore which = 1372 }
+command = { type = addcore which = 1269 }
+command = { type = addcore which = 1271 }
+command = { type = addcore which = 1256 }
+command = { type = addcore which = 1263 }
+command = { type = addcore which = 1257 }
+command = { type = addcore which = 1258 }
+command = { type = addcore which = 1321 }
+command = { type = addcore which = 1323 }
+command = { type = addcore which = 1238 }
+command = { type = addcore which = 1333 }
+command = { type = addcore which = 1342 }
+command = { type = addcore which = 1345 }
+command = { type = addcore which = 1239 }
+command = { type = addcore which = 1343 }
+command = { type = addcore which = 1337 }
+command = { type = addcore which = 1334 }
+command = { type = addcore which = 1336 }
+command = { type = addcore which = 1335 }
+command = { type = addcore which = 1339 }
+command = { type = addcore which = 1246 }
+command = { type = addcore which = 1247 }
+command = { type = addcore which = 1251 }
+command = { type = addcore which = 1242 }
+command = { type = addcore which = 1254 }
+command = { type = addcore which = 1332 }
+command = { type = addcore which = 1252 }
+command = { type = addcore which = 1253 }
+command = { type = addcore which = 1248 }
+command = { type = addcore which = 1249 }
+command = { type = addcore which = 1250 }
+command = { type = addcore which = 1327 }
+command = { type = addcore which = 1243 }
+command = { type = addcore which = 1244 }
+command = { type = addcore which = 1329 }
+command = { type = addcore which = 1330 }
+command = { type = addcore which = 1340 }
+command = { type = addcore which = 1341 }
+command = { type = addcore which = 1319 }
+command = { type = addcore which = 1324 }
+command = { type = addcore which = 1322 }
+command = { type = addcore which = 1320 }
+command = { type = addcore which = 1325 }
+command = { type = addcore which = 1316 }
+command = { type = addcore which = 1326 }
+command = { type = addcore which = 1317 }
+command = { type = addcore which = 1344 }
+command = { type = addcore which = 1378 }
+command = { type = addcore which = 1360 }
+command = { type = addcore which = 1301 }
+command = { type = addcore which = 1304 }
+command = { type = addcore which = 1305 }
+command = { type = addcore which = 1306 }
+command = { type = addcore which = 1307 }
+command = { type = addcore which = 1308 }
+command = { type = addcore which = 1309 }
+command = { type = addcore which = 1310 }
+command = { type = addcore which = 1311 }
+command = { type = addcore which = 1312 }
+command = { type = addcore which = 1313 }
+command = { type = addcore which = 1314 }
+command = { type = addcore which = 1315 }
+command = { type = addcore which = 1318 }
+command = { type = addcore which = 1347 }
+command = { type = addcore which = 1348 }
+command = { type = addcore which = 1349 }
+command = { type = addcore which = 1350 }
+command = { type = addcore which = 1351 }
+command = { type = addcore which = 1352 }
+command = { type = addcore which = 1353 }
+command = { type = addcore which = 1354 }
+command = { type = addcore which = 1355 }
+command = { type = addcore which = 1356 }
+command = { type = addcore which = 1357 }
+command = { type = addcore which = 1359 }
+command = { type = addcore which = 1368 }
+command = { type = addcore which = 1369 }
+command = { type = addcore which = 1370 }
+command = { type = addcore which = 1373 }
+command = { type = addcore which = 1374 }
+command = { type = addcore which = 1375 }
+command = { type = addcore which = 1376 }
+command = { type = addcore which = 1377 }
+command = { type = addcore which = 1379 }
+command = { type = addcore which = 1380 }
+command = { type = addcore which = 1381 }
+command = { type = addcore which = 1382 }
+command = { type = addcore which = 1383 }
+command = { type = addcore which = 1389 }
+command = { type = addcore which = 1390 }
+command = { type = addcore which = 1384 }
+command = { type = addcore which = 1385 }
+command = { type = addcore which = 1387 }
+command = { type = addcore which = 1386 }
+command = { type = addcore which = 1388 }
+command = { type = addcore which = 1292 }
+command = { type = addcore which = 1293 }
+command = { type = addcore which = 1291 }
+command = { type = addcore which = 1300 }
+command = { type = addcore which = 1303 }
+command = { type = addcore which = 1261 }
+command = { type = addcore which = 1262 }
+command = { type = addcore which = 1296 }
+command = { type = addcore which = 1297 }
+command = { type = addcore which = 1298 }
+command = { type = addcore which = 1299 }
+command = { type = addcore which = 1302 }
+command = { type = addcore which = 1267 }
+command = { type = addcore which = 1241 }
+command = { type = addcore which = 1245 }
+command = { type = addcore which = 1328 }
+command = { type = addcore which = 1331 }
+command = { type = addcore which = 1365 }
+command = { type = addcore which = 1368 }
+command = { type = addcore which = 1361 }
+command = { type = addcore which = 1362 }
+command = { type = addcore which = 1363 }
+command = { type = addcore which = 1364 }
+command = { type = addcore which = 1268 }
+command = { type = addcore which = 1270 }
+command = { type = addcore which = 1264 }
+command = { type = addcore which = 1272 }
+command = { type = addcore which = 1265 }
+command = { type = addcore which = 1266 }
+command = { type = addcore which = 1283 }
+command = { type = addcore which = 1284 }
+command = { type = addcore which = 1285 }
+command = { type = addcore which = 1273 }
+command = { type = addcore which = 1279 }
+command = { type = addcore which = 1280 }
+command = { type = addcore which = 1281 }
+command = { type = addcore which = 1277 }
+command = { type = addcore which = 1274 }
+command = { type = addcore which = 1275 }
+command = { type = addcore which = 1282 }
+command = { type = addcore which = 1276 }
+command = { type = addcore which = 1219 }
+command = { type = addcore which = 1294 }
+command = { type = addcore which = 1286 }
+command = { type = addcore which = 1287 }
+command = { type = addcore which = 1288 }
+command = { type = addcore which = 1289 }
+command = { type = addcore which = 1278 }
+command = { type = addcore which = 1295 }
+command = { type = addcore which = 1290 }
+}
+}
+
+
+event = {
+id = 144032
+random = no
+country = MAN
+style = 2
+
+trigger = {
+NOT = {
+atwar = MAN
+}
+owned = { province = 1208 data = MAN }
+control = { province = 1208 data = MAN }
+owned = { province = 1247 data = MAN }
+control = { province = 1247 data = MAN }
+owned = { province = 1337 data = MAN }
+control = { province = 1337 data = MAN }
+}
+
+date = { day = 0 month = january year = 1936 }
+offset = 15
+deathdate = { day = 29 month = december year = 1963 }
+
+name = "The capital"
+desc = "With the ousting of the Manchurian Qing dynasty from Peking, administrating from Changchun has become a bore. Where shall our newly restored Republic settle?"
+picture = "peking"
+
+action_a = {
+ai_chance = 25
+name = "We should stay in Changchun"
+command = { type = capital which = 1208 }
+}
+
+action_b = {
+ai_chance = 25
+name = "Beijing is our new capital"
+command = { type = capital which = 1247 }
+}
+
+action_c = {
+ai_chance = 25
+name = "Nanjing is our new capital"
+command = { type = capital which = 1337 }
+}
+}
+
+##Reactions to a future Fengtian-Japan War
+
+event = {
+id = 144033
+country = CHC
+style = 2
+picture = "ccip_beiyangarmy"
+
+trigger = {
+event = 144026
+war = { country = JAP country = MAN } 
+OR = {
+alliance = { country = MAN country = CHC }
+alliance = { country = JAP country = CHC }
+}
+NOT = { 
+puppet = { country = MAN country = JAP  }
+exists = CSX
+}
+}
+
+date = { day = 0 month = january year = 1936 }
+offset = 2
+deathdate = { day = 29 month = december year = 1945 }
+
+
+name = "The Fengtian are at war with Japan"
+desc = "The Fengtian clique is at War with Japan, throwing our allegiances into question."
+
+action_a = {
+name = "We need to see how this unfolds"
+command = { type = leave_alliance when = 1 }
+command = { trigger = { war = { country = MAN country = CHC } } type = peace which = MAN value = 0 }
+command = { trigger = { war = { country = JAP country = CHC } } type = peace which = JAP value = 0 }
+command = { type = event which = 144035 where = CHC when = 7  }
+}
+}
+
+event = {
+id = 144034
+country = U74
+style = 2
+picture = "ccip_beiyangarmy"
+
+trigger = {
+war = { country = JAP country = MAN } 
+event = 144030
+OR = {
+alliance = { country = MAN country = U74 }
+alliance = { country = JAP country = U74 }
+}
+NOT = { 
+puppet = { country = MAN country = JAP  }
+exists = CSX
+}
+}
+
+date = { day = 0 month = january year = 1936 }
+offset = 2
+deathdate = { day = 29 month = december year = 1945 }
+
+
+name = "The Fengtian are at war with Japan"
+desc = "The Fengtian clique is at War with Japan, throwing our allegiances into question."
+
+action_a = {
+name = "We need to see how this unfolds"
+command = { type = leave_alliance when = 1 }
+command = { trigger = { war = { country = MAN country = U74 } } type = peace which = MAN value = 0 }
+command = { trigger = { war = { country = JAP country = U74 } } type = peace which = JAP value = 0 }
+command = { type = event which = 144036 where = U74 when = 7  }
+}
+}
+
+event = {
+id = 144035
+random = no
+country = CHC
+style = 2
+
+name = "Choosing sides in the Fengtian-Japan War"
+desc = "With the ongoing Fengtian-Japanese war, our loyalties are now in question. Do we side with the Fengtian Clique in their rebellion, or assist Japan instead in subduing them?"
+picture = "Chinese Trench"
+
+action_a = {
+ai_chance = 90
+name = "We shall stick with our Fengtian comrades!"
+command = { type = war which = JAP }
+command = { type = trigger which = 144037 }
+command = { type = relation which = JAP value = -100 }
+command = { trigger = { NOT = { event = 144041 } } type = sleepevent which = 144041 }
+command = { type = sleepevent which = 144042 }
+}
+
+action_b = {
+ai_chance = 8
+name = "We need to maintain our support from Japan!"
+command = { type = relation which = MAN value = -200 }
+command = { type = war which = MAN }
+command = { type = trigger which = 144039 }
+command = { trigger = { NOT = { event = 144041 } } type = sleepevent which = 144041 }
+command = { type = sleepevent which = 144042 }
+}
+
+action_c = {
+trigger = { flag = CHC_BRIBE } 
+ai_chance = 50
+name = "The Japanese payments have swayed our point of view"
+command = { type = war which = MAN }
+command = { type = relation which = MAN value = -200 }
+command = { type = trigger which = 144039 }
+}
+
+action_d = {
+ai_chance = 2
+name = "We must stay neutral"
+command = { type = dissent value = 3 }
+command = { type = relation which = MAN value = -100 }
+command = { type = relation which = JAP value = -100 }
+command = { trigger = { NOT = { event = 144041 } } type = sleepevent which = 144041 }
+command = { type = sleepevent which = 144042 }
+}
+}
+
+event = {
+id = 144036
+random = no
+country = U74
+style = 2
+
+name = "Choosing sides in the Fengtian-Japan War"
+desc = "With the ongoing Fengtian-Japanese war, our loyalties are now in question. Do we side with the Fengtian Clique in their rebellion, or assist Japan instead in subduing them?"
+picture = "Chinese Trench"
+
+action_a = {
+ai_chance = 40
+name = "We shall stick with our Fengtian comrades!"
+command = { type = war which = JAP }
+command = { type = trigger which = 144038 }
+command = { type = relation which = JAP value = -100 }
+command = { trigger = { NOT = { event = 144041 } } type = sleepevent which = 144041 }
+command = { type = sleepevent which = 144043 }
+}
+
+action_b = {
+ai_chance = 50
+name = "We need to maintain our support from Japan!"
+command = { type = war which = MAN }
+command = { type = trigger which = 144040 }
+command = { type = relation which = MAN value = -200 }
+command = { trigger = { NOT = { event = 144041 } } type = sleepevent which = 144041 }
+command = { type = sleepevent which = 144043 }
+}
+
+action_c = {
+trigger = { flag = U74_BRIBE } 
+ai_chance = 80
+name = "The Japanese payments have swayed our point of view"
+command = { type = war which = MAN }
+command = { type = trigger which = 144040 }
+command = { type = relation which = MAN value = -200 }
+}
+
+action_d = {
+ai_chance = 2
+name = "We must stay neutral"
+command = { type = dissent value = 3 }
+command = { type = relation which = MAN value = -100 }
+command = { type = relation which = JAP value = -100 }
+command = { trigger = { NOT = { event = 144041 } } type = sleepevent which = 144041 }
+command = { type = sleepevent which = 144043 }
+}
+}
+
+event = {
+id = 144037
+country = MAN
+style = 2
+picture = "ccip_beiyangarmy"
+
+name = "The Shandong Clique will side with us in this war!"
+desc = "Zhang Zongchang has declared for the Fengtian against Japan! Hurrah!"
+
+action_a = {
+name = "Welcome back!"
+command = { type = alliance which = CHC }
+}
+}
+
+event = {
+id = 144038
+country = MAN
+style = 2
+picture = "ccip_beiyangarmy"
+
+name = "The Guominjun will side with us in this war!"
+desc = "Feng Yuxiang has declared for the Fengtian against Japan! Hurrah!"
+
+action_a = {
+name = "Welcome back!"
+command = { type = alliance which = U74 }
+}
+}
+
+event = {
+id = 144039
+country = MAN
+style = 2
+picture = "Chinese Calvary2"
+
+name = "The Shandong Clique has betrayed us!"
+desc = "Zhang Zongchang has betrayed us - he will support Japan instead!"
+
+action_a = {
+name = "TRAITOR!"
+command = { type = dissent value = 5 }
+command = { type = sleepminister which = 58008 }
+command = { type = sleepminister which = 58033 }
+command = { type = sleepminister which = 58015 }
+}
+}
+
+event = {
+id = 144040
+country = MAN
+style = 2
+picture = "Chinese Calvary2"
+
+name = "The Guominjun has betrayed us!"
+desc = "Feng Yuxiang, doing what he does best, has backstabbed us!"
+
+action_a = {
+name = "TRAITOR!"
+command = { type = dissent value = 5 }
+}
+}
+
+##Japan tries to sway the warlords
+
+event = {
+id = 144041
+random = no
+country = JAP
+style = 2
+
+trigger = {
+war = { country = JAP country = MAN }
+NOT = {  puppet = { country = MAN country = JAP  } }
+OR = { 
+event = 144033
+event = 144034
+}
+}
+
+date = { day = 0 month = january year = 1936 }
+offset = 2
+deathdate = { day = 29 month = december year = 1963 }
+
+name = "Paying off the Warlords"
+desc = "Before they split from our Empire, the Fengtian Clique sought the loyalty of two other warlord factions: Zhang Zongchang's Shandong Clique and the Guominjun under Feng Yuxiang. For now they remain neutral in our war with the Fengtian, but they may be swayed to our cause if given...incentive."
+picture = "Chinese Calvary"
+
+action_a = {
+ai_chance = 90
+name = "Make them an offer"
+command = { trigger = { event = 144033 } type = event which = 144042 where = CHC when = 2  }
+command = { trigger = { event = 144034 } type = event which = 144043 where = U74 when = 2  }
+command = { type = money value = -200 } #$100 each 
+}
+
+action_b = {
+ai_chance = 10
+name = "Warlords are useless!"
+command = { type = dissent value = -2 }
+}
+}
+
+event = {
+id = 144042
+random = no
+country = CHC
+style = 2
+
+name = "The Japanese have approached us with an offer: they will offer us a generous sum of money in exchange for us either joining the war against the Fengtian, or at least staying neutral. Shall we accept this bribe, or should we turn them away?"
+desc = "The "
+picture = "Japan_Occupation5"
+
+action_a = {
+ai_chance = 10
+name = "Accept this bribe!"
+command = { type = setflag which = CHC_BRIBE }
+command = { type = money value = 100 } 
+command = { type = relation which = MAN value = -50 }
+command = { type = relation which = JAP value = 20 }
+}
+
+action_b = {
+ai_chance = 90
+name = "We reject such a partly sum!"
+command = { type = dissent value = -2 }
+command = { type = relation which = MAN value = 100 }
+command = { type = relation which = JAP value = -20 }
+}
+}
+
+event = {
+id = 144043
+random = no
+country = U74
+style = 2
+
+name = "The Japanese have approached us with an offer: they will offer us a generous sum of money in exchange for us either joining the war against the Fengtian, or at least staying neutral. Shall we accept these thirty pieces of silver, or should we turn them away?"
+desc = "The "
+picture = "Japan_Occupation5"
+
+action_a = {
+ai_chance = 60
+name = "We side with the strongest!"
+command = { type = setflag which = U74_BRIBE }
+command = { type = money value = 100 } 
+command = { type = relation which = MAN value = -50 }
+command = { type = relation which = JAP value = 20 }
+}
+
+action_b = {
+ai_chance = 40
+name = "We reject such a partly sum!"
+command = { type = dissent value = -2 }
+command = { type = relation which = MAN value = 50 }
+command = { type = relation which = JAP value = -20 }
+}
+}
+
+###Post-War
+
+event = {
+id = 144044
+country = MAN
+style = 2
+picture = "China_Reunited"
+
+trigger = {
+OR = { 
+alliance = { country = MAN country = CHC }
+alliance = { country = MAN country = U74 } 
+}
+NOT = { 
+exists = CSX
+atwar = MAN
+}
+}
+
+date = { day = 0 month = january year = 1936 }
+offset = 30
+deathdate = { day = 29 month = december year = 1945 }
+
+
+name = "Unifying our Front"
+desc = "With the Qing dealt with and Northern China secure, it may be time for us to attempt to unify our front. As of right now we are several Warlord factions in loose association. Consolidating all our factions into one united front will greatly improve our chances at victory and reunification in the South."
+
+action_a = {
+trigger = { AND = { exists = CHC exists = U74 } } #Add something about no Shangqing Here
+ai_chance = 90
+name = "Demand they join with us!"
+command = { type = trigger which = 144045 }
+command = { type = trigger which = 144046 }
+}
+
+action_b = {
+ai_chance = 10
+name = "They can remain independent...for now"
+command = { type = dissent value = 3 }
+}
+} 
+
+event = {
+id = 144045
+random = no
+country = CHC
+style = 2
+
+name = "The Fengtian Republic has demanded that we unify with them to form a united front against the Southern Warlord cliques and the Japanese. This will require us giving up our independence, but we may be part of a glorious future for China."
+desc = "The "
+picture = "Republican China"
+
+action_a = {
+ai_chance = 60
+name = "We unite, for the Republic!"
+command = { type = trigger which = 144047 }
+command = { type = relation which = MAN value = 200 }
+}
+
+action_b = {
+ai_chance = 40
+name = "We reject - our lands are our own!"
+command = { type = dissent value = 2 }
+command = { type = relation which = MAN value = -50 }
+command = { type = trigger which = 144048 }
+command = { type = leave_alliance when = 1 }
+}
+}
+
+event = {
+id = 144046
+random = no
+country = U74
+style = 2
+
+name = "The Fengtian Republic has demanded that we unify with them to form a united front against the Southern Warlord cliques and the Japanese. This will require us giving up our independence, but we may be part of a glorious future for China."
+desc = "The "
+picture = "Republican China"
+
+action_a = {
+ai_chance = 60
+name = "We unite, for the Republic!"
+command = { type = trigger which = 144049 }
+command = { type = relation which = MAN value = 200 }
+}
+
+action_b = {
+ai_chance = 40
+name = "We reject - our lands are our own!"
+command = { type = dissent value = 2 }
+command = { type = relation which = MAN value = -50 }
+command = { type = trigger which = 144050 }
+command = { type = leave_alliance when = 1 }
+}
+}
+
+event = {
+id = 144047
+random = no
+country = MAN
+style = 2
+
+name = "The Shandong will confederate!"
+desc = "The Shandong Clique will confederate with us"
+picture = "Republican China"
+
+action_a = {
+ai_chance = 99
+name = "We unite for the Republic!"
+command = { type = trigger which = 144051 }
+command = { type = inherit which = CHC }
+}
+
+action_b = {
+ai_chance = 1
+name = "Puppet them instead!"
+command = { type = dissent value = 2 }
+command = { type = relation which = CHC value = -10 }
+command = { type = make_puppet which = CHC }
+}
+}
+
+event = {
+id = 144048
+random = no
+country = MAN
+style = 2
+
+name = "The Guominjun will integrate!"
+desc = "Feng Yuxiang and the Guominjun will confederate with us"
+picture = "Republican China"
+
+action_a = {
+ai_chance = 99
+name = "We unite for the Republic!"
+command = { type = trigger which = 144052 }
+command = { type = inherit which = U74 }
+}
+
+action_b = {
+ai_chance = 1
+name = "Puppet them instead!"
+command = { type = dissent value = 2 }
+command = { type = relation which = U74 value = -10 }
+command = { type = make_puppet which = U74 }
+}
+}
+
+event = {
+id = 144049
+random = no
+country = MAN
+style = 2
+
+name = "The Shandong refuse to integrate!"
+desc = "The Shandong clique has refused our demand that they integrate to form our Republic!"
+picture = "Chinese Cavalry"
+
+action_a = {
+ai_chance = 50
+name = "Fools! We will make you join by force!"
+command = { type = war which = CHC }
+}
+
+action_b = {
+ai_chance = 50
+name = "Leave them alone...for now"
+command = { type = dissent value = 10 }
+}
+}
+
+event = {
+id = 144050
+random = no
+country = MAN
+style = 2
+
+name = "The Guominjun refuse to integrate!"
+desc = "The Guominjun have refused our demand that they integrate to form our Republic!"
+picture = "Chinese Cavalry"
+
+action_a = {
+ai_chance = 50
+name = "Fools! We will make you join by force!"
+command = { type = war which = U74 }
+}
+
+action_b = {
+ai_chance = 50
+name = "Leave them alone...for now"
+command = { type = dissent value = 10 }
+}
+}
+
+event = {
+id = 144051
+random = no
+country = MAN
+style = 2
+
+name = "Zhang Zongchang's role in the new government"
+desc = "Now that Zhang Zongchang's clique has folded into our Republic, we must decide what to do with him."
+picture = "Chinese Officers" #Temp
+
+action_a = {
+ai_chance = 99
+name = "Give him a cabinet post!"
+command = { trigger = { headofstate = 58012 } type = trigger which = 144053 }
+command = { type = wakeminister which = 58033 }
+command = { type = wakeminister which = 58015 }
+command = { type = wakeminister which = 58008 }
+command = { type = chiefofstaff which = 58033 }
+}
+
+action_b = {
+ai_chance = 1
+name = "He gets nothing!"
+command = { type = dissent value = 2 }
+}
+}
+
+event = {
+id = 144052
+random = no
+country = MAN
+style = 2
+
+name = "Feng Yuxiang's role in the new government"
+desc = "Now that the Guominjun have folded into our Republic, we must decide what to do with their leader, Feng Yuxiang."
+picture = "Chinese Officers" #Temp
+
+action_a = {
+ai_chance = 80
+name = "Give him a cabinet post to satisfy him"
+command = { type = wakeminister which = 58036 }
+command = { type = wakeminister which = 58005 }
+command = { type = chiefofarmy which = 58036 }
+command = { type = ministerofsecurity which = 58005 }
+}
+
+action_b = {
+ai_chance = 20
+name = "He cannot be trusted - depose him!"
+command = { type = dissent value = 2 }
+}
+}
+
+event = {
+id = 144053
+random = no
+country = MAN
+style = 2
+
+name = "A Partnership with 72 Cannon Zhang?"
+desc = "Zhang Zongchang and Zhang Xueliang were once great friends. They would often indulge in so much debauchery together, but both proved themselves more than capable generals together. Now in a united front, the two may decide to cooperate even further to unite China in their image."
+picture = "Chinese Anti-Tank" #Temp
+
+action_a = {
+ai_chance = 80
+name = "Zhang Zongchang's loyalty shall be rewarded!"
+command = { type = headofgovernment which = 58015 }
+command = { type = sleepminister which = 58014 } #to ensure that Zhang Zongchang stays HoG 
+}
+
+action_b = {
+ai_chance = 20
+name = "Someone like him...rather not"
+command = { type = dissent value = 2 }
+}
+}
+
+event = {
+id = 144054
+random = no
+country = MAN
+style = 2
+
+trigger = {
+NOT = {
+atwar = MAN
+exists = CSX
+}
+OR = {
+AND = { 
+event = 144047
+event = 144048
+}
+AND = {
+owned = { province = 1330 data = MAN }
+control = { province = 1330 data = MAN }
+owned = { province = 1252 data = MAN }
+control = { province = 1252 data = MAN }
+owned = { province = 1247 data = MAN }
+control = { province = 1247 data = MAN }
+} 
+}
+}
+
+date = { day = 0 month = january year = 1936 }
+offset = 10
+deathdate = { day = 29 month = december year = 1963 }
+
+name = "The Republic restored in the North"
+desc = "With the Northern Warlords now united under our Republic, we can now make a serious claim to reuniting all of China under our banner."
+picture = "peking"
+
+action_a = {
+name = "How bright is the Auspicious Cloud!"
+command = { trigger = { headofstate = 58012 } type = flag_ext where = MAN which = "_REP" }
+command = { trigger = { NOT = { headofstate = 58012 } } type = flag_ext where = MAN which = "_BEI" }
+}
+}
+
+
+
+###ENSURE THAT ALL REFERENCES TO ZHANG ZONGCHANG AND FENG YUXIANG MENTION THE FLAG THAT WILL INDICATE THEIR EXISTENCE
+###In Feng Yuxiang's case, it would be a flag indicating his coup against Yan Xishan. In Zhang Zongchang's case, it would be a NOT if Shangqing is a thing instead 

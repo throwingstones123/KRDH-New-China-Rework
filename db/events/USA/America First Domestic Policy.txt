@@ -1,0 +1,2906 @@
+########################################
+#### America First Domestic Policy
+########################################
+## Event # 90824 81130-81153
+#90824	TEX	Foundation of the Union State
+#81130	TEX	Where Will We Govern From?
+#81138	TEX	Rebirth of the Country
+#81139	TEX	The American Union State Youth
+#81140	TEX	The American Union Constitution
+#81141	TEX	American Union War Industry
+#81143	TEX	The CSA Escapes to France
+#81144	TEX	Long and the PSA Leadership
+#81145	TEX	US Government in Exile
+#81146	TEX	The Beacon of the New America  - Part 1
+#81147	TEX	Share Our Wealth
+#81148	TEX	The Poll Tax
+#81149	TEX	Long's Tariff
+#81150	TEX	American Union Recession
+#81151	TEX	Show Trials
+#81152	TEX	Political Opposition
+#81153	TEX	Extremists Move to Depose Long
+#81154	TEX	The Industrial Security Act
+#81155	TEX	Industrial Decentralization Act
+#81156	TEX	Industrial Resources
+#81157	TEX	Old Southern Money
+#81158	TEX	The Grand Council of the America First Union Party
+#81159	TEX	The House of Representatives and the House of Corporations
+#81160	TEX	The Supreme Court
+#81161	TEX	The 1940 elections
+#81162	TEX	The Grand Council of the America First Union Party
+#81163	TEX	The New Congress - 1940 elections
+#81164	TEX	The Supreme Court - 1940 elections
+#81165	TEX	Lindbergh's faction wins
+#81166	TEX	Long's and Smith's faction wins
+#81167	TEX	Father Coughlin's faction wins
+#81168	TEX	Pelley's faction wins
+#81169	TEX	No consensun reached
+#81170	TEX A New Flag?
+#81171  TEX Officer Integration 
+#81172	TEX	AUS Oil Company
+#81173	TEX	The Beacon of the New America - Part 2
+#81174	TEX	Black ACW Veterans Protest Poll Tax
+#81175	TEX	Ku Klux Klan March in Washington
+#81176	TEX	Fate of the AUS Youth Foundation
+#81177	TEX	Ingalls Shipbuilding - trigged by Foreign Policy event 91723
+#81178	TEX	Newport News Shipbuilding - trigged by Foreign Policy event 91723
+
+### IMPORTANT FLAGS
+#	END_ACW 	- THE ACW IS OVER
+#			Basic flag used to prevent some events from firing
+#			if ACW is still going on.
+#	AUS_YOUTH 	- Pelley'S YOUTH PROGRAM APPROVED (NEW FLAG)
+#			Put in vanilla KR event that fires usually during ACW.
+#			I intend for this to be used to increase Pelley's
+#			power base if he launches his coup or is elected
+#			just incase player wants to go dictatorship route
+#	AUS_WEALTH 	- SHARE THE WEALTH
+#			Signifies that Long has passed his Share The Wealth program.
+#			This is one of several issues extremists and business forces
+#			oppose vehemently.
+#	LONG_TARIFF 	- LONGS TARRIF
+#			Only currently used by one event, activated if tarrif
+#			is passed. Might be room for expansion later 
+#	NO_IND_SEC_ACT 	- INDUSTRIAL SECURITY ACT NOT PASSED
+#			This flag is from the vanilla KR, but never used.
+#			I intend to change that. Not passing the ISA should have
+#			long term consequences, generally negative but perhaps
+#			positive if Long can rally the unions to his cause somehow
+#	LONG_EXILE 	- AMERICAN LEFTISTS EXILED 
+#			Flag activated if player decides to exile instead of hang
+#			the CSA leadership that has not escaped the country. Unsure
+#			if the flag is currently used elsewhere. Not used here.
+#			Could possibly be useful later, however. Either for leftist
+#			insurrections or some sort of agreement between Long and left.
+#	AUS_DEC_IND 	- INDUSTRIAL DECENTRALIZATION ACT
+#			Flag from very interesting event. Not used at all in vanilla KR.
+#			The IDA dismantles a few factories in the rust belt if passed.
+#			Vanilla KR offered no motivation for the player to do this beyond
+#			flavor. I intend to use this flag to prevent trouble later on if
+#			the IDA is passed, particularly in a war versus syndies if the
+#			unions havent been defeated or reconciled with. Compare with ISA
+#	Election Flags	- VARIOUS ELECTION FLAGS
+#			Used to calculate winner of elections due to three tier system.
+#			Flags removed following end of election. I intend to re-use some
+#			of these same flags for future elections but generally they are
+#			not used outside of them.
+#	AUS_YOUTH 	- Pelley'S YOUTH PROGRAM APPROVED (NEW FLAG)
+#			Vanilla KR event that fires usually during ACW.
+#			I intend for this to be used to increase Pelley's
+#			power base if he launches his coup or is elected
+#			just incase player wants to go dictatorship route
+#	AUS_BLACK_UNITS - BLACK UNITS APPROVED (NEW FLAG)
+#			New flag activated by vanilla event in ACW event file
+#			If the player or AI chooses to allow blacks to fight for the AUS
+#			this flag is activated and may affect internal politics.
+#			Black veterans may push more strongly for civil rights reform.
+
+event = {
+id = 90824
+random = no
+country = TEX
+style = 2
+
+trigger = {
+exists = TEX
+NOT = {
+event = 81161 #The 1940 elections
+}
+}
+
+name = "Foundation of the Union State"
+desc = "NEW ORLEANS. Our beloved leader, Huey Long, today addressed the nation, proclaiming the inauguration of a New Union State over America, which will organise the productive and social resources of the nation, end social conflict, maintain peace and order, and eliminate all enemies of the Republic.  This bold new iniative shall be headed by..."
+picture = "hueylong"
+
+date = { day = 1 month = september year = 1936 }
+offset = 3
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance =  25
+name = "Charles Lindbergh - A popular man of the people"
+command = { type = set_domestic which = democratic value = 6 }
+command = { type = set_domestic which = political_left value = 3 }
+command = { type = set_domestic	which = freedom value = 7 } #new																
+command = { type = set_domestic which = defense_lobby value = 4 }
+command = { type = set_domestic which = interventionism value = 3 }
+command = { type = headofstate which = 571002 } #Huey Long
+command = { type = headofgovernment which = 571008 } #Charles Lindbergh
+command = { type = foreignminister which = 571014 } #Joseph P. Kennedy - Lindbergh faction
+command = { type = armamentminister which = 571023 } #Lawrence Dennis - Long/Smith faction
+command = { type = ministerofsecurity which = 571035 } #William Bell Riley - Coughlin faction
+command = { type = ministerofintelligence which = 571039 } #Gerald K. Smith - Long/Smith faction
+command = { type = chiefofstaff which = 571048 } #Lee O. Willard
+command = { type = chiefofarmy which = 571052 } #R.J. Stockman
+command = { type = chiefofnavy which = 571054 } #William Halsey
+command = { type = chiefofair which = 571057 } #Nathan B. Forrest III
+command = { type = dissent value = -5 }
+command = { type = manpowerpool value = 25 }
+command = { type = ai which = "kaiserreich/TEX.ai" }
+}
+action_b = {
+ai_chance =  25
+name = "Gerald L. K. Smith will overhaul the economic and political system"
+command = { type = set_domestic which = democratic value = 5 }
+command = { type = set_domestic which = political_left value = 2 }
+command = { type = set_domestic	which = freedom value = 5 }
+command = { type = domestic	which = free_market value = -1 }
+command = { type = set_domestic which = defense_lobby value = 6 }
+command = { type = set_domestic which = interventionism value = 2 }
+command = { type = headofstate which = 571002 } #Huey Long
+command = { type = headofgovernment which = 571009 } #Gerald K. Smith
+command = { type = foreignminister which = 571015 } #Father Charles Coughlin - Coughlin faction
+command = { type = armamentminister which = 571021 } #Henry Ford - Lindbergh faction
+command = { type = ministerofsecurity which = 571026 } #Prescott Sheldon Bush - Pelley faction
+command = { type = ministerofintelligence which = 571039 } #Gerald K. Smith - Long/Smith faction
+command = { type = chiefofstaff which = 571048} #Larry K. Arnold
+command = { type = chiefofarmy which = 571050 } #George S. Patton
+command = { type = chiefofnavy which = 571054 } #William Halsey
+command = { type = chiefofair which = 571061 } #Charles Lindbergh - Lindbergh faction
+command = { type = manpowerpool value = 50 }
+command = { type = ai which = "kaiserreich/TEX.ai" }
+}
+action_c = {
+ai_chance =  25
+name = "Father Charles Coughlin will promote a paternal corporate state"
+command = { type = set_domestic which = democratic value = 4 }
+command = { type = set_domestic which = political_left value = 2 }
+command = { type = set_domestic	which = freedom value = 4 }
+command = { type = domestic	which = free_market value = -2 }
+command = { type = set_domestic which = defense_lobby value = 6 }
+command = { type = set_domestic which = interventionism value = 3 }
+command = { type = headofstate which = 571001 } #Huey Long
+command = { type = headofgovernment which = 571010 } #Father Charles Coughlin
+command = { type = foreignminister which = 571015 } #Father Charles Coughlin -  Coughlin faction
+command = { type = armamentminister which = 571023 } #Lawrence Dennis - Long/Smith faction
+command = { type = ministerofsecurity which = 571028 } #William Dudley Pelley - Pelley faction
+command = { type = ministerofintelligence which = 571043 } #George Sylvester Viereck - Pelley faction
+command = { type = chiefofstaff which = 571047}  #George S. Patton
+command = { type = chiefofarmy which = 571050 } #George S. Patton
+command = { type = chiefofnavy which = 571054 } #William Halsey
+command = { type = chiefofair which = 571058 } #Curtis 'Bombs Away' LeMay
+command = { type = dissent value = 5  }
+command = { type = manpowerpool value = 100 }
+command = { type = ai which = "kaiserreich/TEX.ai" }
+}
+action_d = {
+ai_chance =  25
+name = "William Dudley Pelley will root out sedition and enemies of the Republic!"
+command = { type = set_domestic which = democratic value = 2 }
+command = { type = set_domestic which = political_left value = 1 }
+command = { type = set_domestic	which = freedom value = 2 }
+command = { type = domestic	which = free_market value = -3 }
+command = { type = set_domestic which = defense_lobby value = 7 }
+command = { type = set_domestic which = interventionism value = 5 }
+command = { type = domestic which = professional_army value = 1 }																 
+command = { type = headofstate which = 571001 } #Huey Long
+command = { type = headofgovernment which = 571011  } #William Dudley Pelley
+command = { type = foreignminister which = 571019 } #H. L. Mencken - Pelley facion
+command = { type = armamentminister which = 571023 } #Lawrence Dennis - Long/Smith faction
+command = { type = ministerofsecurity which = 571035 }  #William Bell Riley - Coughlin faction
+command = { type = ministerofintelligence which = 571039 } #Gerald K. Smith - Long/Smith faction
+command = { type = chiefofstaff which = 571047}  #George S. Patton
+command = { type = chiefofarmy which = 571050 } #George S. Patton
+command = { type = chiefofnavy which = 571054 } #William Halsey
+command = { type = chiefofair which = 571058 } #Curtis 'Bombs Away' LeMay
+command = { type = dissent value = 10 }
+command = { type = manpowerpool value = 120 }
+command = { type = ai which = "kaiserreich/TEX.ai" }
+}
+}
+
+event = {
+id = 81130
+random = no
+country = TEX
+trigger = {
+flag = END_ACW
+control = { province = 1809 data = TEX }
+}
+name = "Where Will We Govern From?"
+desc = "With the end of the Civil War, we should decide where our capital will be.  Will it be moved back to Washington?"
+style = 2
+picture = "us_election"					   
+date = { day = 1 month = january year = 1937 }
+offset = 55
+deathdate = { day = 29 month = december year = 1960 }
+
+action_a = {
+name = "Washington is a corrupt city."
+ai_chance = 50
+command = { type = supplies value = 1000 }
+}
+
+action_b = {
+name = "Washington has been cleansed of the Corruption."
+ai_chance = 50
+command = { type = capital which = 1809 }
+command = { type = addcore which = 1809 }										 
+command = { type = dissent value = -1 }
+}
+}
+
+
+##################
+# reforms #
+##################
+
+### Long and the US reconstruction
+event = {
+id = 81138
+random = no
+country = TEX
+trigger = {
+flag = END_ACW
+}
+
+decision_trigger = {
+atwar = no
+}
+
+decision = {
+flag = END_ACW
+}
+
+name = "Rebuilding America"
+desc = "After the devestation of the American Civil War, Long and the America First Party were hoping to rebuild America stronger than before. The Syndicalist threat was still present around the world and a strong America was needed to meet that threat. Due to the war there was a significant labour shortage and tough decisions would be needed to get the country back on its feet."
+style = 2
+picture = "America First1"
+decision_picture = "decision_new_deal"
+date = { day = 1 month = january year = 1937 }
+offset = 55
+deathdate = { day = 29 month = december year = 1960 }
+
+action_a = {
+name = "Conscript the labour required"
+ai_chance = 50
+command = { type = dissent value = 8 }
+command = { type = manpowerpool value = -125 }
+command = { type = domestic which = free_market value = -2 }
+command = { type = metalpool value  = -2000 }
+command = { type = energypool value = -6000 }
+command = { type = oilpool value = -1000 }
+command = { type = supplies value = -1500 }
+command = { type = building_prod_mod which = IC value = 5 }
+}
+action_b = {
+name = "The corporations can handle this"
+ai_chance = 50
+trigger = { OR = {
+ai = no
+headofgovernment = 571008 #Charles Lindbergh
+incabinet = 571021 #Henry Ford
+domestic = { type = free_market value = 7 }
+NOT = { domestic = { type = defense_lobby value = 7 } }
+} }												   
+command = { type = dissent value = 1 }
+command = { type = domestic which = free_market value = 2 }
+command = { type = money value = -1000 }
+command = { type = research_mod value = 2 }
+command = { type = building_prod_mod which = IC value = 5 }
+command = { type = peacetime_ic_mod value = 5 } # 65 + 5 = 70																	 
+}
+}
+
+
+
+event = {
+id = 81139
+random = no
+country = TEX
+style = 2
+
+name = "The American Union State Youth"
+desc = "William Dudley Pelley has submitted a plan to start a Youth Foundation in the AUS and is looking for approval. The Foundation would show Adolescents the purpose of America First and to teach them discipline above all things and loyalty to the New State. We're in need of new recruits, and Willam Dudley Pelley's Youth Foundation may be part of the solution."
+#picture = "TEX_Youth"
+
+date = { day = 1 month = january year = 1937 }
+offset = 20
+deathdate = { day = 29 month = december year = 1949 }
+
+action_a = {
+ai_chance =  75
+name = "Let Pelley have his Daycare"
+command = { type = relative_manpower value = 5 }
+command = { type = manpowerpool value = 50 }
+command = { type = setflag which = AUS_YOUTH } #NEW FLAG											
+}
+action_b = {
+ai_chance =  25
+name = "We dont feel comfortable about this..."
+command = { }
+}
+}
+
+### The New Constitution
+event = {
+id = 81140
+random = no
+country = TEX
+trigger = {
+flag = END_ACW
+OR = {
+headofstate = 571001
+headofstate = 571002
+}
+}
+style = 2
+
+name = "The American Union Constitution"
+desc = "The end of the Civil War and the AUS victory meant a new era for America. A new constitution would be drafted to ensure that the American Union State was on par with that of the founding fathers and that America would be strong and ever vigilante against the enemies of the American way of life."
+picture = "diplomatic_campaign"
+
+date = { day = 1 month = january year = 1937 }
+offset = 35
+deathdate = { day = 29 month = december year= 1963 }
+
+action_a = {
+name = "Sign the document."
+command = { type = dissent value = -1 }
+command = { type = trigger which = 81158 } #The Grand Council of the America First Union Party
+}
+}
+
+### American Union State Total War
+event = {
+id = 81141
+random = no
+country = TEX
+trigger = {
+atwar = yes
+}
+
+name = "American Union War Industry"
+desc = "Long was opposed to converting all the American Union industry to the war effort. The people were important to Long but the needs of the industry may be more important."
+style = 2
+
+date = { day = 1 month = september year = 1936 }
+offset = 10
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Total war it is."
+ai_chance = 90
+command = { type = construct which = IC where = 1946 value = 2 }
+command = { type = construct which = IC where = 1959 value = 1 } #was 2 for -4, changed 1 to Augusta
+command = { type = construct which = IC where = -4 value = 1 }
+command = { type = industrial_modifier which = total value = 4 }
+command = { type = domestic which = defense_lobby value = 2 }
+command = { type = domestic which = free_market value = -1 }
+command = { type = dissent value = 5 }
+}
+action_b = {
+name = "Butter before guns."
+ai_chance = 10
+command = { type = industrial_modifier which = supplies value = 8 }
+command = { type = domestic which = free_market value = 1 }
+command = { type = domestic which = defense_lobby value = -1 }
+command = { type = manpowerpool value = 10 }
+command = { type = relative_manpower value = 1 } #new												 
+command = { type = dissent value = -1 }
+}
+}
+### Reed escapes to France
+event = {
+id = 81143
+random = no
+country = TEX
+
+trigger = {
+flag = END_ACW
+flag = ACW_CSA
+NOT = {
+exists = CSA
+}
+exists = FRA
+}
+name = "The CSA Escapes to France"
+desc = "Reed and the CSA leadership were forced to flee to the Commune of France to escape the wrath of the victorious American Union State."
+style = 2
+
+date = { day = 1 month = january year = 1937 }
+offset = 15
+deathdate = { day = 29 month = december year = 1954 }
+
+action_a = {
+name = "He better not return"
+command = { type = dissent value = 1 }
+command = { type = relation which = FRA value = -25 }
+}
+}
+
+### Punish the PSA leaders
+event = {
+id = 81144
+random = no
+country = TEX
+
+trigger = {
+flag = END_ACW
+flag = ACW_CAL
+owned = { province = 1888 data = TEX }
+control = { province = 1888 data = TEX }
+NOT = {
+exists = CAL
+}
+}
+name = "Long and the PSA Leadership"
+desc = "After the end of the civil war, the question of the PSA leadership was put before Long. The insolence of the PSA leadership needed to be punished but it could alienate the west coast and cause further problems. If the PSA leadership was removed, the industry of the west coast would be available but the expertise of the pacific industries would be diminished."
+style = 2
+
+date = { day = 1 month = january year = 1937 }
+offset = 15
+deathdate = { day = 29 month = december year = 1954 }
+
+action_a = {
+name = "Hang them all"
+ai_chance = 55
+trigger = { OR = {
+ai = no
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571010 #Father Charles Coughlin
+NOT = { domestic = { type = freedom value = 5 } }
+year = 1941
+} }
+command = { type = domestic which = freedom value = -1 }													
+command = { type = dissent value = 10 }
+command = { type = industrial_modifier which = total value = 2 }
+command = { type = peacetime_ic_mod value = 10 }
+command = { type = supplies which = 500 }
+}
+action_b = {
+name = "Amnesty it is"
+ai_chance = 45
+ai_chance = 50 #45
+trigger = { OR = {
+ai = no
+headofgovernment = 571008 #Charles Lindbergh
+domestic = { type = freedom value = 5 }
+} }
+command = { type = domestic which = freedom value = 1 }											   
+command = { type = research_mod value = 2 }
+command = { type = dissent value = 2 }
+}
+}
+
+### US government in exile
+event = {
+id = 81145
+random = no
+country = TEX
+
+trigger = {
+flag = END_ACW
+flag = ACW_AUS
+flag = ACW_CSA
+NOT = {
+war = { country = TEX country = CAN }
+flag = ACW_junta
+exists = USA
+}
+}
+
+name = "US Government in Exile"
+desc = "The victory of America First over the US government has forced them to flee from the country to Canada. The government has vowed to keep on fighting but without a firm power base there is very little chance of making a difference."
+style = 2
+
+date = { day = 1 month = january year = 1937 }
+offset = 15
+deathdate = { day = 29 month = december year = 1954 }
+
+action_a = {
+name = "Ha."
+command = { type = dissent value = -1 }
+command = { type = relation which = CAN value = -25 }
+command = { type = trigger which = 909015 }
+}
+}
+
+### The Beacon of the New America (NOW PART 1 OF 2 with 81173)
+event = {
+id = 81146
+random = no
+country = TEX
+trigger = {
+atwar = no
+event = 81138
+control = { province = 1931 data = TEX } #New Orleans
+}
+
+decision_trigger = {
+money = 500
+supplies = 2500
+control = { province = 1931 data = TEX } #New Orleans
+}
+
+decision = {
+event = 81138
+control = { province = 1931 data = TEX } #New Orleans
+}
+
+name = "The Beacon of the New America"
+desc = "EVT_81146_TEXT"
+#Huey Long wanted to show the world that the old and corrupt America was gone. He chose to make his hometown, New Orleans, the beacon of the new America. 
+#The city would undergo a massive transformation, new streets, industry and buildings making it the most modern city in the Americas, with a massive shipyard and airport that would make it the hub of trade and commerce in the south. 
+#The new shipyards would also become the birthplace of the new US navy to safeguard America's future. 
+#But in a time of national recovery, it would also be very expensive, and some critics were wary of all the attention this one city would recieve after all the damage suffered nationwide.
+style = 2
+picture = "aus_new_orleans"
+decision_picture = "decision_new_orleans"						 
+
+date = { day = 1 month = january year = 1937 }
+offset = 20
+deathdate = { day = 29 month = december year = 1954 }
+
+action_a = {
+name = "No expense will stop this"
+ai_chance = 99
+command = { type = manpowerpool value = -5 }
+command = { type = free_money value = -5 }
+command = { type = free_supplies value = -10 }
+command = { type = money value = -500 }
+command = { type = supplies value = -2500 }
+command = { type = metalpool value = -2500 }
+command = { type = rarematerialspool value = -500 }
+command = { type = event which = 81173 where = TEX when = 1801 }
+command = { type = dissent value = 3 }								  
+}
+action_b = {
+name = "A pipe dream in the end"
+ai_chance = 5
+command = { }
+}
+}
+
+### Share our wealth
+event = {
+id = 81147
+random = no
+country = TEX
+
+trigger = {
+atwar = no
+event = 81138
+OR = {
+headofstate = 571001
+headofstate = 571002
+}
+NOT = {
+dissent = 20
+}
+}
+
+decision_trigger = {
+atwar = no
+NOT = {
+dissent = 15
+}
+}
+
+decision = {
+atwar = no
+event = 81138
+OR = {
+headofstate = 571001
+headofstate = 571002
+}
+NOT = {
+dissent = 20
+}
+}
+
+name = "Share Our Wealth"
+desc = "Long's plan was to make every man a king. He would tax those who were holders of excessive wealth and use the money to provide public works projects and social services to all Americans. Extreme members of the party saw this as nothing more than a socialist betrayal and threatened trouble against Long if he proceeded."
+style = 2
+picture = "Huey"
+decision_picture = "decision_share_the_wealth"
+
+date = { day = 1 month = january year = 1937 }
+offset = 10
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Proceed with the plan."
+ai_chance = 75
+trigger = { OR = {
+ai = no
+headofgovernment = 571009 #Gerald K. Smith
+incabinet = 571023 #Lawrence Dennis
+domestic = { type = political_left value = 3 } 
+domestic = { type = democratic value = 6 } 
+NOT = { domestic = { type = free_market value = 7 } }
+} }
+command = { type = domestic which = free_market value = -2 }
+command = { type = domestic which = political_left value = 1 }
+command = { type = peacetime_ic_mod value = -3 } #new
+command = { type = industrial_modifier which = total value = -3 } #new (economic disruption, taxes)
+command = { type = industrial_modifier which = money value = 6 } #new (use this instead of free_money?)
+command = { type = free_money value = 3 } #5, changed to 4 with ic_eff money command
+command = { type = money value = 1500 }
+command = { type = dissent value = 3 }
+command = { type = setflag which = AUS_WEALTH }
+}
+action_b = {
+name = "We need the extremists"
+ai_chance = 25
+trigger = { OR = {
+ai = no
+headofgovernment = 571011 #William Pelley
+NOT = { domestic = { type = democratic value = 3 } }
+NOT = { domestic = { type = free_market value = 7 } }
+} }
+command = { type = domestic which = free_market value = 1 }
+#command = { type = domestic which = freedom value = 1 }
+command = { type = domestic which = political_left value = -1 }
+command = { type = dissent value = 2 } #betrayal!
+}
+}
+
+### Extremists make trouble
+event = {
+id = 81148
+random = no
+country = TEX
+
+trigger = {
+event = 81140
+OR = {
+headofstate = 571001
+headofstate = 571002
+}
+}
+
+name = "The Poll Tax"
+desc = "Long wished to abolish the Poll Tax to reduce the racial tensions of the south. His proposal was met with immediate condemnation by the extremists within his party. Pelley and others denounced Long as trying to destroy the sacred institutions of the South. Long retorted that racist and sacred were two different things and rallied the people against what he saw as an evil institution."
+style = 2
+picture = "hueylong"
+
+date = { day = 21 month = january year = 1940 }
+offset = 60
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Abolish the damn thing."
+ai_chance = 65
+trigger = { OR = {
+ai = no
+headofgovernment = 571004 #Charles Lindbergh
+headofgovernment = 571010 #Father Charles Coughlin
+domestic = { type = democratic value = 5 } 
+domestic = { type = freedom value = 7 } 
+} }
+command = { type = domestic which = democratic value = 1 }
+command = { type = domestic which = freedom value = 1 }
+#command = { type = domestic which = political_left value = 1 } #be very wary about this since AUS straddles the center
+command = { type = money value = -50 }
+command = { type = dissent value = 3 } #extremists unhappy!
+command = { type = setflag which = AUS_NO_POLL_TAX }
+}
+action_b = {
+name = "No. We need to maintain the party."
+ai_chance = 35
+trigger = { OR = {
+ai = no
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571009 #Gerald K. Smith
+NOT = { domestic = { type = democratic value = 5 } }
+NOT = { domestic = { type = freedom value = 7 } }
+} }
+command = { type = domestic which = political_left value = -1 }
+command = { type = money value = 15 }
+command = { type = dissent value = 1 } #betrayal!
+}
+}
+
+### Long's Tariff
+event = {
+id = 81149
+random = no
+country = TEX
+
+trigger = {
+event = 81138
+OR = {
+headofstate = 571001
+headofstate = 571002
+}
+}
+
+name = "Long's Tariff"
+desc = "To encourage the expansion of American industry, Long planned on implementing a hefty tariff on imported goods. He was warned that the tariff may be worse for the economy in the end."
+style = 2
+picture = "America First1"
+
+date = { day = 28 month = january year = 1939 }
+offset = 30
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Implement the tariff"
+ai_chance = 55
+command = { type = domestic which = free_market value = -1 }
+command = { type = building_prod_mod which = IC value = 5 }
+command = { type = peacetime_ic_mod value = 2 } #new
+command = { type = industrial_modifier which = supplies value = 2 } #new
+command = { type = dissent value = 2 } #5
+command = { type = money value = 100 }
+command = { type = setflag which = LONG_TARIFF }
+}
+action_b = {
+name = "We can do without this"
+ai_chance = 45
+command = { type = domestic which = free_market value = 1 }
+command = { type = dissent value = 3 } #-1 (betrayal!)
+}
+}
+
+### Tariff causes economy to slow
+event = {
+id = 81150
+random = no
+country = TEX
+trigger = {
+event = 81149
+flag = LONG_TARIFF
+random = 75
+}
+
+name = "American Union Recession"
+desc = "Long's tariff had initially helped build a greater reliance on American industry but it was unsustainable in the long run. The American Union State fell into recession and unemployment began to rise."
+style = 2
+picture = "Depression1"
+
+date = { day = 11 month = november year = 1939 }
+offset = 51
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Damn."
+#command = { type = industrial_modifier which = total value = -5 } #-5
+command = { type = peacetime_ic_mod value = -5 } #new
+#command = { type = industrial_modifier which = supplies value = -2 } #new
+command = { type = money value = -250 }
+command = { type = dissent value = 6 }
+}
+}
+
+### The Show Trials
+event = {
+id = 81151
+random = no
+country = TEX
+trigger = {
+flag = END_ACW
+}
+name = "Show Trials"
+desc = "American socialism had been defeated and now Long was going to make them pay the price. Socialists, Anarchists, and anyone who had supported the CSA had been subject to prosecution by the American Union State. Minute Men began rounding up members of the left and special tribunals were setup. These were nothing more than show trials that humiliated and lambasted the accused."
+style = 2
+
+date = { day = 1 month = january year = 1937 }
+offset = 113
+deathdate = { day = 29 month = december year = 1954 }
+
+action = {
+name = "Hang them all!"
+ai_chance = 50
+trigger = { OR = {
+ai = no
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571010 #Father Charles Coughlin
+NOT = { domestic = { type = freedom value = 5 } }
+year = 1941
+} }
+command = { type = dissent value = 5 }
+command = { type = domestic which = freedom value = -1 }
+command = { type = domestic which = political_left value = -1 }
+command = { type = relation which = ENG value = -25 }
+command = { type = relation which = FRA value = -25 }
+}
+action = {
+name = "Exile the bastards"
+ai_chance = 50
+trigger = { OR = {
+ai = no
+headofgovernment = 571008 #Charles Lindbergh
+domestic = { type = freedom value = 5 }
+NOT = { year = 1940 }
+} }
+command = { type = dissent value = 1 }
+command = { type = domestic which = freedom value = 1 }
+#command = { type = domestic which = political_left value = 1 } #be very wary about this since AUS straddles the center
+command = { type = setflag which = LONG_EXILE }
+}
+}
+
+### The Long Night
+event = {
+id = 81152
+random = no
+country = TEX
+trigger = {
+event = 81151
+not = {
+domestic = { type = freedom value = 3 }
+}
+}
+name = "Political Opposition"
+desc = "Once the left wing enemies of the American Union State were purged many of the moderates came under suspicion. Many were unconcerned but some of the more extreme members of the government saw the moderates as being not loyal enough and a quiet opposition within the American Union State. The suggestion was made that anyone who had their loyalty in question should be arrested."
+style = 2
+picture = "America First2"
+
+date = { day = 1 month = january year = 1936 }
+offset = 115
+deathdate = { day = 29 month = december year = 1954 }
+
+action_a = {
+name = "A harsh but necessary step"
+ai_chance = 50 #45
+trigger = { OR = {
+ai = no
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571010 #Father Charles Coughlin
+NOT = { domestic = { type = democratic value = 5 } }
+NOT = { domestic = { type = freedom value = 2 } }
+} }
+command = { type = dissent value = 2 }
+command = { type = money value = 250 }
+command = { type = domestic which = political_left value = -1 } #moved, was +1 in other choice
+command = { type = domestic which = freedom value = -2 }
+command = { type = setflag which = AUS_MODERATES_PURGED }
+}
+action_b = {
+name = "This is too extreme"
+ai_chance = 50 #55
+trigger = { OR = {
+ai = no
+headofgovernment = 571008 #Charles Lindbergh
+domestic = { type = freedom value = 2 }
+domestic = { type = democratic value = 5 }
+} }
+command = { type = dissent value = 5 }
+													   
+															  
+command = { type = domestic which = democratic value = 1 }
+command = { type = domestic which = freedom value = 1 }
+}
+}
+
+### Extremists move to depose Long
+event = {
+id = 81153
+random = no
+country = TEX
+trigger = {
+flag = AUS_WEALTH
+flag = AUS_NO_POLL_TAX
+random = 50
+OR = {
+headofstate = 571001
+headofstate = 571002
+}
+OR = {
+flag = AUS_MODERATES_PURGED #NEW 
+flag = AUS_YOUTH #NEW 
+}
+}
+
+name = "Extremists Move to Depose Long"
+desc = "The rift between Long and Pelley had been growing since before the Civil War and when Long abolished the Poll Tax, Pelley moved against him. While in New Orleans, Long's compound was surrounded. He had few men but many of them were willing to die for Long and the American Union State."
+style = 2
+
+date = { day = 20 month = july year = 1940 }
+offset = 23
+deathdate = { day = 29 month = december year = 1950 }
+
+action_a = {
+name = "Pelley fails and is arrested"
+ai_chance = 70 #90
+command = { type = dissent value = 1 }
+command = { type = sleepminister which = 571005 } #William Pelley
+command = { type = sleepminister which = 571011 } #William Pelley
+command = { type = sleepminister which = 571028 } #William Pelley
+command = { type = sleepminister which = 571019 } #H.L. Mencken
+command = { type = sleepminister which = 571032 } #Gerald B. Winrod
+command = { type = sleepminister which = 571035 } #William Bell Riley
+command = { type = sleepminister which = 571040 } #Edwin Emerson
+command = { type = sleepminister which = 571043 } #George Sylvester Viereck
+command = { type = sleepminister which = 571046 } #Simon Emil Koedel
+command = { type = sleepminister which = 571095 } #Laura H. Ingalls
+command = { type = sleepleader which = 571059 } # Kunze
+command = { type = domestic which = political_left value = 1 } #be very wary about this since AUS straddles the center
+}
+
+action_b = {
+name = "Pelley succeeds and Long is dead!"
+ai_chance = 30 #10
+command = { type = dissent value = 15 }
+command = { type = sleepminister which = 571001 } #Huey Long
+command = { type = sleepminister which = 571002 } #Huey Long
+command = { type = headofstate which = 571005 } #William Pelley
+command = { type = headofgovernment which = 571011 } #William Pelley
+command = { type = foreignminister which = 571019 } #H.L. Mencken
+command = { type = ministerofsecurity which = 571032 } #Gerald B. Winrod
+command = { type = ministerofintelligence which = 571043 } #George Sylvester Viereck
+command = { type = set_domestic which = democratic value = 1 }
+command = { type = set_domestic which = political_left value = 1 }
+#Getting rid of share the wealth
+command = { type = peacetime_ic_mod value = 3 } #values match, undoes wealth event
+command = { type = industrial_modifier which = total value = 3 } #values match, undoes wealth event
+command = { type = industrial_modifier which = money value = -6 } #values match, undoes wealth event
+command = { type = free_money value = -3 } #values match, undoes wealth event
+command = { type = clrflag which = AUS_WEALTH }
+#other stuff
+command = { type = clrflag which = AUS_NO_POLL_TAX }
+command = { type = clrflag which = AUS_CIVIL_RIGHTS_1 }
+command = { type = flag_ext where = TEX which = "_pelley" }
+command = { type = name where = TEX which = "Commonwealth of America" }
+}
+}
+
+### The Industrial Security Act
+event = {
+id = 81154
+random = no
+country = TEX
+trigger = {
+flag = END_ACW
+event = 81138
+}
+name = "The Industrial Security Act"
+desc = "The Industrial Security Act was Long's answer to the trade unions of the north. The act would make any disruption of essential industries by work stoppages a conspiracy to commit industrial sabotage and would be punishable by imprisonment. The wording on the act was intentionally vague to give the President a highly effective means with which to defeat the unions."
+style = 2
+picture = "Factory"
+
+date = { day = 4 month = march year = 1939 }
+offset = 120
+deathdate = { day = 29 month = december year = 1954 }
+
+action_a = {
+name = "Pass the act"
+ai_chance = 75 #95
+command = { type = dissent value = 5 }
+command = { type = domestic which = political_left value = -1 }
+command = { type = industrial_modifier which = total value = 1 } #even newer
+command = { type = peacetime_ic_mod value = 2 } #new
+}
+action_b = {
+name = "This is too much"
+ai_chance = 25 #5
+command = { type = dissent value = -1 }
+command = { type = domestic which = freedom value = 1 }
+#command = { type = domestic which = political_left value = 1 } #this was enough to cause a swing to socdem
+command = { type = setflag which = NO_IND_SEC_ACT } 
+}
+}
+
+### Industrial Decentralization
+event = {
+id = 81155
+random = no
+country = TEX
+trigger = {
+event = 81154
+}
+name = "Industrial Decentralization Act"
+desc = "Long had seen the rust belt as being corrupted by the trade unions and socialists. The amount of industry in the rust belt had given the syndicates a large advantage against the former US government and Long wanted to ensure that this did not happen again. A plan was put forward to move the industry from the rust belt into the mid-west and south to defeat the corruption of the Rust Belt and further castrate the trade unions."
+style = 2
+picture = "industry"
+
+date = { day = 10 month = september year = 1939 }
+offset = 90
+deathdate = { day = 29 month = december year = 1960 }
+
+action_a = {
+name = "Pass the act"
+ai_chance = 75 #90
+command = { type = domestic which = free_market value = -2 }
+command = { type = construct which = IC where = 1845 value = -2 }
+command = { type = construct which = IC where = 1832 value = -2 }
+command = { type = construct which = IC where = 1842 value = -2 }
+command = { type = construct which = IC where = 1826 value = -2 }
+command = { type = building_prod_mod which = IC value = 5 }
+command = { type = energypool value = 1000 }
+command = { type = metalpool value = 750 }
+command = { type = oilpool value = 500 }
+command = { type = supplies value = 2000 }
+command = { type = rarematerialspool value = 500 }
+												
+command = { type = dissent value = 5 }
+command = { type = setflag which = AUS_DEC_IND }
+}
+action_b = {
+name = "We should avoid this."
+ai_chance = 25 #10
+command = { type = dissent value = -1 }
+}
+}
+
+### Industrial Reserves
+event = {
+id = 81156
+random = no
+country = TEX
+trigger = {
+exists = TEX
+}
+
+name = "Industrial Resources"
+desc = "The American Union State government has come into posession of resources that were left behind. They will help our government in the future."
+style = 2
+picture = "Captured_Supplies2"
+
+date = { day = 1 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Excellent"
+command = { type = supplies value = 4000 } #4500 
+command = { type = oilpool value = 2800 } #3000
+command = { type = metalpool value = 1500 } #2000
+command = { type = energypool value = 1800 } #2300 
+command = { type = rarematerialspool value = 750 } #1000 
+}
+}
+
+### Old Southern Money
+event = {
+id = 81157
+random = no
+country = TEX
+trigger = {
+event = 81156
+}
+
+name = "Old Southern Money"
+desc = "The old gentlemen and corporate barons of the South have thrown their significant monetary resources behind the new state."
+style = 2
+picture = "money_devaluation"
+
+date = { day = 1 month = january year = 1936 }
+offset = 5
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+name = "Outstanding"
+command = { type = money value = 500 }
+}
+}
+
+### The Grand Council of the America First Union Party
+event = {
+id = 81158
+random = no
+country = TEX
+style = 2
+
+name = "The Grand Council of the America First Union Party"
+desc = "The America First Union Party is the only party of the American Union State and is governed by the Grand Council of the America First Union Party. The council elects the Secretary of the America First Union Party who is the Head of the Government and the right hand of the Father of the Nation, Huey Long."
+picture = "huey"
+
+action_a = {
+name = "One country, one party."
+command = { type = trigger which = 81159 } #The House of Representatives and the House of Corporations
+}
+}
+
+### The House of Representatives and the House of Corporations
+event = {
+id = 81159
+random = no
+country = TEX
+style = 2
+
+name = "The House of Representatives and the House of Corporations"
+desc = "The Congress of American Union State has two chambers: the House of Representatives and the House of Corporations. Members of the House of Representatives are chosen on direct elections whereas those of the House of Corporations are chosen by interest groups, who also choose the Speaker of the House of Corporations (who acts as Minister of Armament)."
+picture = "politics4"
+
+action_a = {
+name = "A new Congress!"
+command = { type = trigger which = 81160 } #The Supreme Court
+}
+}
+
+### The Supreme Court
+event = {
+id = 81160
+random = no
+country = TEX
+style = 2
+
+name = "The Supreme Court"
+desc = "The Supreme Court represents the just system of the American Union State. Its duty is not only to charge and convict those guilty of treason and crime against the state, but also to review normal cases of national importance. The Chairman of the Supreme Court is the Minister of Security."
+picture = "politics5"
+
+action_a = {
+name = "Justice for all!"
+command = { }
+}
+}
+
+
+#The 1940 elections
+event = {
+id = 81161
+random = no
+country = TEX
+style = 2
+
+trigger = {
+flag = END_ACW
+event = 81130 # Where Will We Govern From?
+event = 81160 # The Supreme Court
+NOT = {
+government = communist
+headofstate = 571005 #Pelley is HOS (coup succeeded)
+}
+}
+
+date = { day = 0 month = march year = 1940 }
+offset = 10
+deathdate = { day = 29 month = december year = 1940 }
+
+name = "The 1940 elections"
+desc = "It is now time for the first free elections in the American Union State. The Grand Council of the America First Union Party, the House of Representatives, the House of Corporations and the Supreme Court will be renewed as from now on will happen once every 7 years. Let the elections begin!"
+picture = "America First1"
+
+action_a = {
+name = "We are a free country!"
+command = { type = dissent value = -1 }
+command = { type = trigger which = 81162 } #The Grand Council of the America First Union Party
+}
+}
+
+#The Grand Council of the America First Union Party
+event = {
+id = 81162
+random = no
+country = TEX
+style = 2
+
+name = "The Grand Council of the America First Union Party"
+desc = "The America First Union Party must choose its direction. Lindbergh wants a more open and democratic country, Long and Smith are concentrated on the economic development of the nation, Coughlin want to focus on the internal affairs of the country. Pelley's militaristic rethoric is more interventionist."
+picture = "politics3"
+
+action_a = {
+name = "Lindbergh's faction will lead the party"
+ai_chance = 25
+command = { type = domestic which = democratic value = 1 }
+command = { type = domestic which = freedom value = 1 }
+command = { type = dissent value = -2 }
+command = { type = trigger which = 81163 } #The New Congress - 1940 elections
+command = { type = setflag which = AUS_LIND_1 }
+}
+
+action_b = {
+name = "Long's and Smith's faction will lead the party"
+ai_chance =	40
+command = { type = domestic which = free_market value = -1 }
+command = { type = dissent value = -1 }
+command = { type = trigger which = 81163 } #The New Congress - 1940 elections
+command = { type = setflag which = AUS_SMITH_1 }
+}
+
+action_c = {
+name = "Father Coughlin's faction will lead the party"
+ai_chance =	25
+command = { type = domestic which = interventionism value = -1 }
+command = { type = trigger which = 81163 } #The New Congress - 1940 elections
+command = { type = setflag which = AUS_COUGH_1 }
+}
+
+action_d = {
+ai_chance = 10
+name = "Pelley's faction will lead the party"
+trigger = {
+NOT= {
+event = 81153
+}
+}
+command = { type = domestic which = interventionism value = 1 }
+command = { type = trigger which = 81163 } #The New Congress - 1940 elections
+command = { type = setflag which = AUS_KUHN_1 }
+}
+}
+
+#The New Congress - 1940 elections
+event = {
+id = 81163
+random = no
+country = TEX
+style = 2
+
+name = "The New Congress - 1940 elections"
+desc = "The most important chamber of the new Congress is the House of Corporations. Which interest groups will gain the upper hand? Lindbergh wants to increase the infrastructure of the country, Long and Smith push for industrialization, Coughlin will let the country run itself while Pelley wants support for his militaristic ambitions."
+picture = "politics2"
+
+action_a = {
+name = "Lindbergh knows what's best for the country"
+ai_chance = 30
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = construct which = infrastructure where = -1 value = 10 }
+command = { type = supplies value = -1000 }
+command = { type = trigger which = 81164 } #The Supreme Court - 1940 elections
+command = { type = setflag which = AUS_LIND_2 }
+}
+action_b = {
+name = "Long and Smith knows what's best for the country"
+ai_chance =	30
+command = { type = construct which = ic where = -1 value = 1 }
+command = { type = construct which = ic where = -1 value = 1 }
+command = { type = domestic	which = free_market value = -1 }
+command = { type = trigger which = 81164 } #The Supreme Court - 1940 elections
+command = { type = setflag which = AUS_SMITH_2 }
+}
+action_c = {
+name = "Father Coughlin knows what's best for the country"
+ai_chance =	20
+command = { type = dissent value = -2 }
+command = { type = domestic which = free_market value = 1 }
+command = { type = trigger which = 81164 } #The Supreme Court - 1940 elections
+command = { type = setflag which = AUS_COUGH_2 }
+}
+action_d = {
+ai_chance = 20
+name = "Pelley knows what's best for the country"
+trigger = {
+NOT= {
+event = 81153
+}
+}
+command = { type = domestic which = defense_lobby value = 1 }
+command = { type = manpowerpool value = 50 }
+command = { type = trigger which = 81164 } #The Supreme Court - 1940 elections
+command = { type = setflag which = AUS_KUHN_2 }
+}
+}
+
+#The Supreme Court
+event = {
+id = 81164
+random = no
+country = TEX
+style = 2
+
+name = "The Supreme Court - 1940 elections"
+desc = "How will justice be administered? Pelley wants to exterminate the traitors of the country, Coughlin wants to discriminate those who don't follow the true faith, Lindbergh wants a less oppressive system whereas Long and Smith are fine with the current one."
+picture = "politics1"
+
+action_a = {
+name = "Lindbergh's faction will bring justice!"
+ai_chance = 30
+command = { type = dissent value = -2 }
+command = { type = domestic which = freedom value = 1 }
+command = { type = setflag which = AUS_LIND_3 }
+}
+action_b = {
+name = "Long's and Smith's faction will bring justice!"
+ai_chance =	30
+command = { type = dissent value = -1 }
+command = { type = setflag which = AUS_SMITH_3 }
+}
+action_c = {
+name = "Father Coughlin's faction will bring justice!"
+ai_chance =	30
+command = { type = domestic which = freedom value = -1 }
+command = { type = dissent value = 2 }
+command = { type = setflag which = AUS_COUGH_3 }
+}
+action_d = {
+ai_chance = 10
+name = "Pelley's faction will bring justice!"
+trigger = {
+NOT= {
+event = 81153
+}
+}
+command = { type = domestic which = freedom value = -2 }
+command = { type = dissent value = 4 }
+command = { type = setflag which = AUS_KUHN_3 }
+}
+}
+
+#Lindbergh's faction wins
+event = {
+id = 81165
+random = no
+country = TEX
+style = 2
+
+trigger = {
+event = 81164 #The Supreme Court - 1940 elections
+NOT = {
+event = 81166	#Long's and Smith's faction wins
+event = 81167	#Father Coughlin's faction wins
+event = 81168	#Pelley's faction wins
+event = 81169	#No consensus reached
+}
+OR = {
+AND = {
+flag = AUS_LIND_1
+flag = AUS_LIND_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_LIND_1
+flag = AUS_LIND_2
+}
+AND = {
+flag = AUS_LIND_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_LIND_1
+flag = AUS_LIND_3
+}
+}
+}
+
+date = { day = 0 month = march year = 1940 }
+offset = 10
+deathdate = { day = 29 month = december year = 1940 }
+
+name = "Lindbergh's faction wins"
+desc = "The people expressed their support for Lindbergh's faction, it is time for a new government of the American Union State. Charles Lindbergh will be Secretary of the Party, Henry Ford the Speaker of the House of Corporations, and Keith Thompson the Chairman of the Supreme Court."
+picture = "Demonstrations"
+
+action_a = {
+name = "This is a true democracy!"
+command = { type = dissent value = -3 }
+command = { type = set_domestic which = democratic value = 6 }
+command = { type = set_domestic which = political_left value = 3 }
+command = { type = headofstate which = 571002 } #Huey Long
+command = { type = headofgovernment which = 571008 } #Charles Lindbergh
+command = { type = foreignminister which = 571014 } #Joseph P. Kennedy
+command = { type = armamentminister which = 571021 } #Henry Ford
+command = { type = ministerofsecurity which = 571038 } #H. Keith Thompson
+command = { type = ministerofintelligence which = 571044 } #Charles Sorensen
+command = { type = chiefofair which = 571061 } #Charles Lindbergh
+command = { type = clrflag which = AUS_LIND_1 }
+command = { type = clrflag which = AUS_LIND_2 }
+command = { type = clrflag which = AUS_LIND_3 }
+command = { type = clrflag which = AUS_SMITH_1 }
+command = { type = clrflag which = AUS_SMITH_2 }
+command = { type = clrflag which = AUS_SMITH_3 }
+command = { type = clrflag which = AUS_COUGH_1 }
+command = { type = clrflag which = AUS_COUGH_2 }
+command = { type = clrflag which = AUS_COUGH_3 }
+command = { type = clrflag which = AUS_KUHN_1 }
+command = { type = clrflag which = AUS_KUHN_2 }
+command = { type = clrflag which = AUS_KUHN_3 }
+}
+
+}
+
+#Long's and Smith's faction wins
+event = {
+id = 81166
+random = no
+country = TEX
+style = 2
+
+trigger = {
+event = 81164 #The Supreme Court - 1940 elections
+NOT = {
+event = 81165	#Lindbergh's faction wins
+event = 81167	#Father Coughlin's faction wins
+event = 81168	#Pelley's faction wins
+event = 81169	#No consensus reached
+}
+OR = {
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_SMITH_2
+flag = AUS_SMITH_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_SMITH_2
+}
+AND = {
+flag = AUS_SMITH_2
+flag = AUS_SMITH_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_SMITH_3
+}
+}
+}
+
+date = { day = 0 month = march year = 1940 }
+offset = 10
+deathdate = { day = 29 month = december year = 1940 }
+
+name = "Long's and Smith's faction wins"
+desc = "The people expressed their support for Long's and Smith's faction, it is time for a new government of the American Union State. Gerald Smith will be Secretary of the Party, Lawrence Dennis the Speaker of the House of Corporations, and Earl Williamson the Chairman of the Supreme Court."
+picture = "Demonstrations"
+
+action_a = {
+name = "This is a true democracy!"
+command = { type = dissent value = -2 }
+command = { type = set_domestic which = democratic value = 5 }
+command = { type = set_domestic which = political_left value = 3 }
+command = { type = headofstate which = 571002 } #Huey Long
+command = { type = headofgovernment which = 571009 } #Gerald K. Smith
+command = { type = foreignminister which = 571020 } #Oscar Allen
+command = { type = armamentminister which = 571023 } #Lawrence Dennis
+command = { type = ministerofsecurity which = 571034 } #Earl Williamson
+command = { type = ministerofintelligence which = 571039 } #Gerald K. Smith
+command = { type = clrflag which = AUS_LIND_1 }
+command = { type = clrflag which = AUS_LIND_2 }
+command = { type = clrflag which = AUS_LIND_3 }
+command = { type = clrflag which = AUS_SMITH_1 }
+command = { type = clrflag which = AUS_SMITH_2 }
+command = { type = clrflag which = AUS_SMITH_3 }
+command = { type = clrflag which = AUS_COUGH_1 }
+command = { type = clrflag which = AUS_COUGH_2 }
+command = { type = clrflag which = AUS_COUGH_3 }
+command = { type = clrflag which = AUS_KUHN_1 }
+command = { type = clrflag which = AUS_KUHN_2 }
+command = { type = clrflag which = AUS_KUHN_3 }
+}
+
+}
+
+#Father Coughlin's faction wins
+event = {
+id = 81167
+random = no
+country = TEX
+style = 2
+
+trigger = {
+event = 81164 #The Supreme Court - 1940 elections
+NOT = {
+event = 81165	#Lindbergh's faction wins
+event = 81166	#Long's and Smith's faction wins
+event = 81168	#Pelley's faction wins
+event = 81169	#No consensus reached
+}
+OR = {
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_COUGH_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_COUGH_2
+}
+AND = {
+flag = AUS_COUGH_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_COUGH_3
+}
+}
+}
+
+date = { day = 0 month = march year = 1940 }
+offset = 10
+deathdate = { day = 29 month = december year = 1940 }
+
+name = "Father Coughlin's faction wins"
+desc = "The people expressed their support for Coughlin's faction, it is time for a new government of the American Union State. Charles Coughlin will be Secretary of the Party, Prescott Sheldon Bush the Speaker of the House of Corporations, and William Bell Riley the Chairman of the Supreme Court."
+picture = "Demonstrations"
+
+action_a = {
+name = "This is a true democracy!"
+command = { type = dissent value = 2 }
+command = { type = set_domestic which = democratic value = 3 }
+command = { type = set_domestic which = political_left value = 2 }
+command = { type = headofstate which = 571001 } #Huey Long
+command = { type = headofgovernment which = 571010 } #Father Charles Coughlin
+command = { type = foreignminister which = 571015 } #Father Charles Coughlin
+command = { type = armamentminister which = 571026 } #Prescott Sheldon Bush
+command = { type = ministerofsecurity which = 571035 } #William Bell Riley
+command = { type = ministerofintelligence which = 571045 } #Francis Parker Yockey
+command = { type = clrflag which = AUS_LIND_1 }
+command = { type = clrflag which = AUS_LIND_2 }
+command = { type = clrflag which = AUS_LIND_3 }
+command = { type = clrflag which = AUS_SMITH_1 }
+command = { type = clrflag which = AUS_SMITH_2 }
+command = { type = clrflag which = AUS_SMITH_3 }
+command = { type = clrflag which = AUS_COUGH_1 }
+command = { type = clrflag which = AUS_COUGH_2 }
+command = { type = clrflag which = AUS_COUGH_3 }
+command = { type = clrflag which = AUS_KUHN_1 }
+command = { type = clrflag which = AUS_KUHN_2 }
+command = { type = clrflag which = AUS_KUHN_3 }
+}
+
+}
+
+#Pelley's faction wins
+event = {
+id = 81168
+random = no
+country = TEX
+style = 2
+
+trigger = {
+event = 81164 #The Supreme Court - 1940 elections
+NOT = {
+event = 81165	#Lindbergh's faction wins
+event = 81166	#Long's and Smith's faction wins
+event = 81167	#Father Coughlin's faction wins
+event = 81169	#No consensus reached
+}
+OR = {
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_KUHN_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_KUHN_2
+}
+AND = {
+flag = AUS_KUHN_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_KUHN_3
+}
+}
+}
+
+date = { day = 0 month = march year = 1940 }
+offset = 10
+deathdate = { day = 29 month = december year = 1940 }
+
+name = "Pelley's faction wins"
+desc = "The people expressed their support for Pelley's faction, it is time for a new government of the American Union State. William Pelley will be Secretary of the Party and Chairman of the Supreme Court and Prescott Bush will be the Speaker of the House of Corporations."
+picture = "Demonstrations"
+
+action_a = {
+name = "This is a true democracy!"
+command = { type = dissent value = 3 }
+command = { type = set_domestic which = democratic value = 2 }
+command = { type = set_domestic which = political_left value = 1 }
+command = { type = headofstate which = 571002 } #Huey Long
+command = { type = headofgovernment which = 571011  } #William Pelley
+command = { type = foreignminister which = 571019 } #H. L. Mencken
+command = { type = armamentminister which = 571026 } #Prescott Sheldon Bush
+command = { type = ministerofsecurity which = 571028 }  #William Pelley
+command = { type = ministerofintelligence which = 571043 } #George Sylvester Viereck
+command = { type = chiefofstaff which = 571047}  #George S. Patton
+command = { type = chiefofarmy which = 571050 } #George S. Patton
+command = { type = flag_ext where = TEX which = "_pelley" }
+command = { type = clrflag which = AUS_LIND_1 }
+command = { type = clrflag which = AUS_LIND_2 }
+command = { type = clrflag which = AUS_LIND_3 }
+command = { type = clrflag which = AUS_SMITH_1 }
+command = { type = clrflag which = AUS_SMITH_2 }
+command = { type = clrflag which = AUS_SMITH_3 }
+command = { type = clrflag which = AUS_COUGH_1 }
+command = { type = clrflag which = AUS_COUGH_2 }
+command = { type = clrflag which = AUS_COUGH_3 }
+command = { type = clrflag which = AUS_KUHN_1 }
+command = { type = clrflag which = AUS_KUHN_2 }
+command = { type = clrflag which = AUS_KUHN_3 }
+}
+
+}
+
+#No consensus reached
+event = {
+id = 81169
+random = no
+country = TEX
+style = 2
+
+trigger = {
+event = 81164 #The Supreme Court - 1940 elections
+NOT = {
+event = 81165	#Lindbergh's faction wins
+event = 81166	#Long's and Smith's faction wins
+event = 81167	#Father Coughlin's faction wins
+event = 81168	#Pelley's faction wins
+}
+OR = {
+AND = {
+flag = AUS_LIND_1
+flag = AUS_COUGH_2
+flag = AUS_SMITH_3
+}
+AND = {
+flag = AUS_LIND_1
+flag = AUS_SMITH_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_LIND_1
+flag = AUS_COUGH_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_LIND_1
+flag = AUS_KUHN_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_LIND_1
+flag = AUS_SMITH_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_LIND_1
+flag = AUS_KUHN_2
+flag = AUS_SMITH_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_COUGH_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_LIND_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_COUGH_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_KUHN_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_KUHN_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_SMITH_1
+flag = AUS_LIND_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_LIND_2
+flag = AUS_SMITH_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_SMITH_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_LIND_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_KUHN_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_KUHN_2
+flag = AUS_SMITH_3
+}
+AND = {
+flag = AUS_COUGH_1
+flag = AUS_SMITH_2
+flag = AUS_KUHN_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_LIND_2
+flag = AUS_SMITH_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_SMITH_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_LIND_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_COUGH_2
+flag = AUS_LIND_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_SMITH_2
+flag = AUS_COUGH_3
+}
+AND = {
+flag = AUS_KUHN_1
+flag = AUS_COUGH_2
+flag = AUS_SMITH_3
+}
+}
+}
+
+date = { day = 0 month = march year = 1940 }
+offset = 10
+deathdate = { day = 29 month = december year = 1940 }
+
+name = "No consensus reached"
+desc = "Unfortunately no consensus was reached on the direction in which the American Union State should head on. However, there are currently talks between factions and it is possible that an agreement between the two of them will be reached soon."
+picture = "Demonstrations"
+
+action_a = {
+name = "Lindbergh, Long, and Smith agree on a compromise"
+ai_chance = 50
+command = { type = set_domestic which = democratic value = 5 }
+command = { type = set_domestic which = political_left value = 3 }
+command = { type = headofstate which = 571002 } #Huey Long
+command = { type = headofgovernment which = 571008 } #Charles Lindbergh
+command = { type = foreignminister which = 571014 } #Joseph P. Kennedy
+command = { type = armamentminister which = 571023 } #Lawrence Dennis
+command = { type = ministerofsecurity which = 571034 } #Earl Williamson
+command = { type = ministerofintelligence which = 571039 } #Gerald K. Smith
+command = { type = chiefofair which = 571061 } #Charles Lindbergh
+command = { type = clrflag which = AUS_LIND_1 }
+command = { type = clrflag which = AUS_LIND_2 }
+command = { type = clrflag which = AUS_LIND_3 }
+command = { type = clrflag which = AUS_SMITH_1 }
+command = { type = clrflag which = AUS_SMITH_2 }
+command = { type = clrflag which = AUS_SMITH_3 }
+command = { type = clrflag which = AUS_COUGH_1 }
+command = { type = clrflag which = AUS_COUGH_2 }
+command = { type = clrflag which = AUS_COUGH_3 }
+command = { type = clrflag which = AUS_KUHN_1 }
+command = { type = clrflag which = AUS_KUHN_2 }
+command = { type = clrflag which = AUS_KUHN_3 }
+}
+action_b = {
+name = "Father Coughlin and Pelley agree on a compromise"
+ai_chance = 50
+trigger = {
+NOT= {
+event = 81153
+}
+}
+command = { type = set_domestic which = democratic value = 3 }
+command = { type = set_domestic which = political_left value = 2 }
+command = { type = headofstate which = 571001 } #Huey Long
+command = { type = headofgovernment which = 571011  } #William Pelley
+command = { type = foreignminister which = 571015 } #Father Charles Coughlin
+command = { type = armamentminister which = 571026 } #Prescott Sheldon Bush
+command = { type = ministerofsecurity which = 571028 }  #William Pelley
+command = { type = ministerofintelligence which = 571045 } #Francis Parker Yockey
+command = { type = chiefofstaff which = 571047}  #George S. Patton
+command = { type = chiefofarmy which = 571050 } #George S. Patton
+command = { type = clrflag which = AUS_LIND_1 }
+command = { type = clrflag which = AUS_LIND_2 }
+command = { type = clrflag which = AUS_LIND_3 }
+command = { type = clrflag which = AUS_SMITH_1 }
+command = { type = clrflag which = AUS_SMITH_2 }
+command = { type = clrflag which = AUS_SMITH_3 }
+command = { type = clrflag which = AUS_COUGH_1 }
+command = { type = clrflag which = AUS_COUGH_2 }
+command = { type = clrflag which = AUS_COUGH_3 }
+command = { type = clrflag which = AUS_KUHN_1 }
+command = { type = clrflag which = AUS_KUHN_2 }
+command = { type = clrflag which = AUS_KUHN_3 }
+}
+}
+
+
+
+
+event = {
+id = 81170
+random = no
+country = TEX
+style = 2
+
+trigger = {    NOT = { ispuppet = TEX } }
+
+date = { day = 0 month = march year = 1936 }
+offset = 30
+deathdate = { day = 29 month = december year = 1960 }
+
+name = "New flag for the Republic"
+desc = "While most of the troops of the American Union State are battling both the old regime and the Combined Syndicates under the eagle banner of the America First Party, some units, especially those raised on the deep south, have been flying their own colours. As this situation has come to the attention of president Long, a special comitee was raised to determine a single flag for all the forces of the Republic."
+picture = "aus_flag_event"
+
+action = {
+ai_chance = 25
+name = "Choose the 'Coast Guard' flag"
+command = { type = dissent value = -1 }
+command = { type = flag_ext where = TEX which = "_coast" }
+}
+action = {
+ai_chance = 25
+name = "Adopt the 'Saltire-and-star'"
+command = { type = dissent value = -1 }
+command = { type = flag_ext where = TEX which = "_saltire" }
+}
+action = {
+ai_chance = 25
+name = "The 'Sword-and-torch' flag"
+command = { type = dissent value = -1 }
+command = { type = flag_ext where = TEX which = "_sword" }
+}
+action = {
+ai_chance = 25
+name = "Keep using the current party banner"
+command = { type = dissent value = -1 }
+}
+}
+
+#Officer Reform
+event = {
+id = 81171
+random = no
+country = TEX
+style = 2
+picture = "american_officers"
+
+decision = {
+flag = END_ACW
+		  
+NOT = {
+ispuppet = TEX
+lost_national = { country = TEX value = 15 }
+exists = USA
+exists = CSA
+}
+}
+
+decision_trigger = {
+			  
+		  
+NOT = {
+ispuppet = TEX
+lost_national = { country = TEX value = 15 }
+exists = USA
+exists = CSA
+}
+}
+
+trigger = {
+flag = END_ACW
+atwar = no
+NOT = {
+ispuppet = TEX
+lost_national = { country = TEX value = 15 }
+exists = USA
+exists = CSA
+}
+}
+
+name = "Integration of the Federal Officer Corps"
+desc = "The American Union State has finally established itself as the legitimate successor to the old and corrupt Federal Republic. However, even though America was only saved from Syndicalist tyranny thanks to the prowess of our military, there are some who suggest we need to incorporate those who served on the Federal side in the Civil War. The Kingfish and his party must decide."
+decision_picture = "decision_acw_integrate_officers"
+
+date = { day = 0 month = may year = 1936 }
+offset = 30
+deathdate = { day = 29 month = december year = 1964 }
+
+action = {
+ai_chance = 100
+name = "Together we shall make America great again!"
+command = { type = dissent value = 5 }
+command = { type = supplies value = -1000 }
+command = { type = manpowerpool value = 2 }
+command = { type = money value = -250 }
+command = { type = wakeleader which = 571200 }
+command = { type = wakeleader which = 571201 }
+command = { type = wakeleader which = 571202 }
+command = { type = wakeleader which = 571203 }
+command = { type = wakeleader which = 571204 }
+command = { type = wakeleader which = 571205 }
+command = { type = wakeleader which = 571206 }
+command = { type = wakeleader which = 571207 }
+command = { type = wakeleader which = 571208 }
+command = { type = wakeleader which = 571209 }
+command = { type = wakeleader which = 571210 }
+command = { type = wakeleader which = 571211 }
+command = { type = wakeleader which = 571212 }
+command = { type = wakeleader which = 571213 }
+command = { type = wakeleader which = 571214 }
+command = { type = wakeleader which = 571215 }
+command = { type = wakeleader which = 571216 }
+command = { type = wakeleader which = 571217 }
+command = { type = wakeleader which = 571218 }
+command = { type = wakeleader which = 571219 }
+command = { type = wakeleader which = 571220 }
+command = { type = wakeleader which = 571221 }
+command = { type = wakeleader which = 571222 }
+command = { type = wakeleader which = 571223 }
+command = { type = wakeleader which = 571224 }
+command = { type = wakeleader which = 571225 }
+command = { type = wakeleader which = 571226 }
+command = { type = wakeleader which = 571227 }
+command = { type = wakeleader which = 571228 }
+command = { type = wakeleader which = 571229 }
+command = { type = wakeleader which = 571230 }
+command = { type = wakeleader which = 571231 }
+command = { type = wakeleader which = 571232 }
+command = { type = wakeleader which = 571233 }
+command = { type = wakeleader which = 571234 }
+command = { type = wakeleader which = 571235 }
+command = { type = wakeleader which = 571236 }
+command = { type = wakeleader which = 571237 }
+command = { type = wakeleader which = 571238 }
+command = { type = wakeleader which = 571239 }
+command = { type = wakeleader which = 571240 }
+command = { type = wakeleader which = 571241 }
+command = { type = wakeleader which = 571242 }
+command = { type = wakeleader which = 571243 }
+command = { type = wakeleader which = 571244 }
+command = { type = wakeleader which = 571245 }
+command = { type = wakeleader which = 571246 }
+command = { type = wakeleader which = 571247 }
+command = { type = wakeleader which = 571248 }
+command = { type = wakeleader which = 571249 }
+command = { type = wakeleader which = 571250 }
+command = { type = wakeleader which = 571251 }
+command = { type = wakeleader which = 571252 }
+command = { type = wakeleader which = 571253 }
+command = { type = wakeleader which = 571254 }
+command = { type = wakeleader which = 571255 }
+command = { type = wakeleader which = 571256 }
+command = { type = wakeleader which = 571257 }
+command = { type = wakeleader which = 571258 }
+command = { type = wakeleader which = 571259 }
+command = { type = wakeleader which = 571260 }
+command = { type = wakeleader which = 571261 }
+command = { type = wakeleader which = 571262 }
+command = { type = wakeleader which = 571263 }
+command = { type = wakeleader which = 571264 }
+command = { type = wakeleader which = 571265 }
+command = { type = wakeleader which = 571266 }
+command = { type = wakeleader which = 571267 }
+command = { type = wakeleader which = 571268 }
+command = { type = wakeleader which = 571269 }
+command = { type = wakeleader which = 571270 }
+command = { type = wakeleader which = 571271 }
+command = { type = wakeleader which = 571272 }
+command = { type = wakeleader which = 571273 }
+command = { type = wakeleader which = 571274 }
+command = { type = wakeleader which = 571275 }
+command = { type = wakeleader which = 571276 }
+command = { type = wakeleader which = 571277 }
+command = { type = wakeleader which = 571278 }
+command = { type = wakeleader which = 571279 }
+command = { type = wakeleader which = 571280 }
+command = { type = wakeleader which = 571281 }
+command = { type = wakeleader which = 571282 }
+command = { type = wakeleader which = 571283 }
+command = { type = wakeleader which = 571284 }
+command = { type = wakeleader which = 571285 }
+command = { type = wakeleader which = 571286 }
+command = { type = wakeleader which = 571287 }
+command = { type = wakeleader which = 571288 }
+command = { type = wakeleader which = 571289 }
+command = { type = wakeleader which = 571290 }
+command = { type = wakeleader which = 571291 }
+command = { type = wakeleader which = 571292 }
+command = { type = wakeleader which = 571293 }
+command = { type = wakeleader which = 571294 }
+command = { type = wakeleader which = 571295 }
+command = { type = wakeleader which = 571296 }
+command = { type = wakeleader which = 571297 }
+command = { type = wakeleader which = 571298 }
+command = { type = wakeleader which = 571299 }
+command = { type = wakeleader which = 571300 }
+command = { type = wakeleader which = 571301 }
+command = { type = wakeleader which = 571302 }
+command = { type = wakeleader which = 571303 }
+command = { type = wakeleader which = 571304 }
+command = { type = wakeleader which = 571305 }
+command = { type = wakeleader which = 571306 }
+command = { type = wakeleader which = 571307 }
+command = { type = wakeleader which = 571308 }
+command = { type = wakeleader which = 571309 }
+command = { type = wakeleader which = 571310 }
+command = { type = wakeleader which = 571311 }
+command = { type = wakeleader which = 571312 }
+command = { type = wakeleader which = 571313 }
+command = { type = wakeleader which = 571314 }
+command = { type = wakeleader which = 571315 }
+command = { type = wakeleader which = 571316 }
+command = { type = wakeleader which = 571317 }
+command = { type = wakeleader which = 571318 }
+command = { type = wakeleader which = 571319 }
+command = { type = wakeleader which = 571320 }
+command = { type = wakeleader which = 571321 }
+command = { type = wakeleader which = 571322 }
+command = { type = wakeleader which = 571323 }
+command = { type = wakeleader which = 571324 }
+command = { type = wakeleader which = 571325 }
+command = { type = wakeleader which = 571326 }
+command = { type = wakeleader which = 571327 }
+command = { type = wakeleader which = 571328 }
+command = { type = wakeleader which = 571329 }
+command = { type = wakeleader which = 571330 }
+command = { type = wakeleader which = 571331 }
+command = { type = wakeleader which = 571332 }
+command = { type = wakeleader which = 571333 }
+command = { type = wakeleader which = 571334 }
+command = { type = wakeleader which = 571335 }
+command = { type = wakeleader which = 571336 }
+command = { type = wakeleader which = 571337 }
+command = { type = wakeleader which = 571338 }
+command = { type = wakeleader which = 571339 }
+command = { type = wakeleader which = 571340 }
+command = { type = wakeleader which = 571341 }
+command = { type = wakeleader which = 571342 }
+command = { type = wakeleader which = 571343 }
+command = { type = wakeleader which = 571344 }
+command = { type = wakeleader which = 571345 }
+command = { type = wakeleader which = 571346 }
+command = { type = wakeleader which = 571347 }
+command = { type = wakeleader which = 571348 }
+command = { type = wakeleader which = 571349 }
+command = { type = wakeleader which = 571350 }
+command = { type = wakeleader which = 571351 }
+command = { type = wakeleader which = 571352 }
+command = { type = wakeleader which = 571353 }
+command = { type = wakeleader which = 571354 }
+command = { type = wakeleader which = 571355 }
+command = { type = wakeleader which = 571356 }
+command = { type = wakeleader which = 571357 }
+command = { type = wakeleader which = 571358 }
+command = { type = wakeleader which = 571359 }
+command = { type = wakeleader which = 571360 }
+command = { type = wakeleader which = 571361 }
+command = { type = wakeleader which = 571362 }
+command = { type = wakeleader which = 571363 }
+command = { type = wakeleader which = 571364 }
+command = { type = wakeleader which = 571365 }
+command = { type = wakeleader which = 571366 }
+command = { type = wakeleader which = 571367 }
+command = { type = wakeleader which = 571368 }
+command = { type = wakeleader which = 571369 }
+command = { type = wakeleader which = 571370 }
+command = { type = wakeleader which = 571371 }
+command = { type = wakeleader which = 571372 }
+command = { type = wakeleader which = 571373 }
+command = { type = wakeleader which = 571374 }
+command = { type = wakeleader which = 571375 }
+command = { type = wakeleader which = 571376 }
+command = { type = wakeleader which = 571377 }
+command = { type = wakeleader which = 571378 }
+command = { type = wakeleader which = 571379 }
+command = { type = wakeleader which = 571380 }
+command = { type = wakeleader which = 571381 }
+command = { type = wakeleader which = 571382 }
+command = { type = wakeleader which = 571383 }
+command = { type = wakeleader which = 571384 }
+command = { type = wakeleader which = 571385 }
+command = { type = wakeleader which = 571386 }
+command = { type = wakeleader which = 571387 }
+command = { type = wakeleader which = 571388 }
+command = { type = wakeleader which = 571389 }
+command = { type = wakeleader which = 571390 }
+command = { type = wakeleader which = 571391 }
+command = { type = wakeleader which = 571392 }
+command = { type = wakeleader which = 571393 }
+command = { type = wakeleader which = 571394 }
+command = { type = wakeleader which = 571395 }
+command = { type = wakeleader which = 571396 }
+command = { type = wakeleader which = 571397 }
+command = { type = wakeleader which = 571398 }
+command = { type = wakeleader which = 571399 }
+command = { type = wakeleader which = 571400 }
+command = { type = wakeleader which = 571401 }
+command = { type = wakeleader which = 571402 }
+command = { type = wakeleader which = 571403 }
+command = { type = wakeleader which = 571404 }
+command = { type = wakeleader which = 571405 }
+command = { type = wakeleader which = 571406 }
+command = { type = wakeleader which = 571407 }
+command = { type = wakeleader which = 571408 }
+command = { type = wakeleader which = 571409 }
+command = { type = wakeleader which = 571410 }
+command = { type = wakeleader which = 571411 }
+command = { type = wakeleader which = 571412 }
+command = { type = wakeleader which = 571413 }
+command = { type = wakeleader which = 571414 }
+command = { type = wakeleader which = 571415 }
+command = { type = wakeleader which = 571416 }
+command = { type = wakeleader which = 571417 }
+command = { type = wakeleader which = 571418 }
+command = { type = wakeleader which = 571419 }
+command = { type = wakeleader which = 571420 }
+command = { type = wakeleader which = 571421 }
+command = { type = wakeleader which = 571422 }
+command = { type = wakeleader which = 571423 }
+command = { type = wakeleader which = 571424 }
+command = { type = wakeleader which = 571425 }
+command = { type = wakeleader which = 571426 }
+command = { type = wakeleader which = 571427 }
+command = { type = wakeleader which = 571428 }
+command = { type = wakeleader which = 571429 }
+command = { type = wakeleader which = 571430 }
+command = { type = wakeleader which = 571431 }
+command = { type = wakeleader which = 571432 }
+command = { type = wakeleader which = 571433 }
+command = { type = wakeleader which = 571434 }
+command = { type = wakeleader which = 571435 }
+command = { type = wakeleader which = 571436 }
+command = { type = wakeleader which = 571437 }
+command = { type = wakeleader which = 571438 }
+command = { type = wakeleader which = 571439 }
+command = { type = wakeleader which = 571440 }
+command = { type = wakeleader which = 571441 }
+command = { type = wakeleader which = 571442 }
+command = { type = wakeleader which = 571443 }
+command = { type = wakeleader which = 571444 }
+command = { type = wakeleader which = 571445 }
+command = { type = wakeleader which = 571446 }
+command = { type = wakeleader which = 571447 }
+command = { type = wakeleader which = 571448 }
+command = { type = wakeleader which = 571449 }
+command = { type = wakeleader which = 571450 }
+command = { type = wakeleader which = 571451 }
+command = { type = wakeleader which = 571452 }
+command = { type = wakeleader which = 571453 }
+command = { type = wakeleader which = 571454 }
+command = { type = wakeleader which = 571455 }
+command = { type = wakeleader which = 571456 }
+command = { type = wakeleader which = 571457 }
+command = { type = wakeleader which = 571458 }
+command = { type = wakeleader which = 571459 }
+command = { type = wakeleader which = 571460 }
+command = { type = wakeleader which = 571461 }
+command = { type = wakeleader which = 571462 }
+command = { type = wakeleader which = 571463 }
+command = { type = wakeleader which = 571464 }
+command = { type = wakeleader which = 571465 }
+command = { type = wakeleader which = 571466 }
+command = { type = wakeleader which = 571467 }
+command = { type = wakeleader which = 571468 }
+command = { trigger = { NOT = { exists = CAL } } type = wakeleader which = 571469 } #Merrill
+command = { type = wakeleader which = 571470 }
+command = { type = wakeleader which = 571471 }
+command = { type = wakeleader which = 571472 }
+command = { type = wakeleader which = 571473 }
+command = { type = wakeleader which = 571474 }
+command = { type = wakeleader which = 571475 }
+command = { type = wakeleader which = 571476 }
+command = { type = wakeleader which = 571477 }
+command = { type = wakeleader which = 571478 }
+command = { type = wakeleader which = 571479 }
+command = { type = wakeleader which = 571480 }
+command = { type = wakeleader which = 571481 }
+command = { type = wakeleader which = 571482 }
+command = { type = wakeleader which = 571483 }
+command = { type = wakeleader which = 571484 }
+command = { type = wakeleader which = 571485 }
+command = { type = wakeleader which = 571486 }
+command = { type = wakeleader which = 571487 }
+command = { type = wakeleader which = 571488 }
+command = { type = wakeleader which = 571489 }
+command = { type = wakeleader which = 571490 }
+command = { trigger = { NOT = { exists = CAL } } type = wakeleader which = 571491 } # Patch
+command = { type = wakeleader which = 571492 }
+command = { type = wakeleader which = 571493 }
+command = { type = wakeleader which = 571494 }
+command = { type = wakeleader which = 571495 }
+command = { type = wakeleader which = 571496 }
+command = { type = wakeleader which = 571497 }
+command = { type = wakeleader which = 571498 }
+command = { type = wakeleader which = 571499 }
+command = { type = wakeleader which = 571500 }
+command = { type = wakeleader which = 571501 }
+command = { type = wakeleader which = 571502 }
+command = { type = wakeleader which = 571503 }
+command = { type = wakeleader which = 571504 }
+command = { type = wakeleader which = 571505 }
+command = { type = wakeleader which = 571506 }
+command = { type = wakeleader which = 571507 }
+command = { type = wakeleader which = 571508 }
+command = { type = wakeleader which = 571509 }
+command = { type = wakeleader which = 571510 }
+command = { type = wakeleader which = 571511 }
+command = { type = wakeleader which = 571512 }
+command = { type = wakeleader which = 571513 }
+command = { type = wakeleader which = 571514 }
+command = { type = wakeleader which = 571515 }
+command = { type = wakeleader which = 571516 }
+command = { type = wakeleader which = 571517 }
+command = { type = wakeleader which = 571518 }
+command = { type = wakeleader which = 571519 }
+command = { type = wakeleader which = 571520 }
+command = { type = wakeleader which = 571521 }
+command = { type = wakeleader which = 571522 }
+command = { type = wakeleader which = 571523 }
+command = { type = wakeleader which = 571524 }
+command = { type = wakeleader which = 571525 }
+command = { type = wakeleader which = 571526 }
+command = { type = wakeleader which = 571527 }
+command = { type = wakeleader which = 571528 }
+command = { trigger = { NOT = { exists = CAL } } type = wakeleader which = 571529 } #Short 
+command = { type = wakeleader which = 571530 }
+command = { type = wakeleader which = 571531 }
+command = { type = wakeleader which = 571532 }
+command = { type = wakeleader which = 571533 }
+command = { type = wakeleader which = 571534 }
+command = { type = wakeleader which = 571535 }
+command = { type = wakeleader which = 571536 }
+command = { type = wakeleader which = 571537 }
+command = { type = wakeleader which = 571538 }
+command = { type = wakeleader which = 571539 }
+command = { type = wakeleader which = 571540 }
+command = { trigger = { NOT = { exists = CAL } } type = wakeleader which = 571541 } #Stilwell
+command = { type = wakeleader which = 571542 }
+command = { type = wakeleader which = 571543 }
+command = { type = wakeleader which = 571544 }
+command = { type = wakeleader which = 571545 }
+command = { type = wakeleader which = 571546 }
+command = { type = wakeleader which = 571547 }
+command = { type = wakeleader which = 571548 }
+command = { type = wakeleader which = 571549 }
+command = { type = wakeleader which = 571550 }
+command = { type = wakeleader which = 571551 }
+command = { type = wakeleader which = 571552 }
+command = { type = wakeleader which = 571553 }
+command = { type = wakeleader which = 571554 }
+command = { type = wakeleader which = 571555 }
+command = { type = wakeleader which = 571556 }
+command = { type = wakeleader which = 571557 }
+command = { type = wakeleader which = 571558 }
+command = { type = wakeleader which = 571559 }
+command = { type = wakeleader which = 571560 }
+command = { type = wakeleader which = 571561 }
+command = { type = wakeleader which = 571562 }
+command = { type = wakeleader which = 571563 }
+command = { type = wakeleader which = 571564 }
+command = { type = wakeleader which = 571565 }
+command = { type = wakeleader which = 571566 }
+command = { type = wakeleader which = 571567 }
+command = { type = wakeleader which = 571568 }
+command = { type = wakeleader which = 571569 }
+command = { type = wakeleader which = 571570 }
+command = { type = wakeleader which = 571571 }
+command = { type = wakeleader which = 571572 }
+command = { type = wakeleader which = 571573 }
+command = { type = wakeleader which = 571574 }
+command = { type = wakeleader which = 571575 }
+command = { type = wakeleader which = 571576 }
+command = { type = wakeleader which = 571577 }
+command = { type = wakeleader which = 571578 }
+command = { type = wakeleader which = 571579 }
+command = { type = wakeleader which = 571580 }
+command = { type = wakeleader which = 571581 }
+command = { type = wakeleader which = 571582 }
+command = { type = wakeleader which = 571583 }
+command = { type = wakeleader which = 571584 }
+command = { type = wakeleader which = 571585 }
+command = { trigger = { NOT = { exists = CAL } } type = wakeleader which = 571586 } #Burke
+command = { type = wakeleader which = 571587 }
+command = { type = wakeleader which = 571588 }
+command = { type = wakeleader which = 571589 }
+command = { type = wakeleader which = 571590 }
+command = { type = wakeleader which = 571591 }
+command = { type = wakeleader which = 571592 }
+command = { type = wakeleader which = 571593 }
+command = { type = wakeleader which = 571594 }
+command = { type = wakeleader which = 571595 }
+command = { type = wakeleader which = 571596 }
+command = { type = wakeleader which = 571597 }
+command = { type = wakeleader which = 571598 }
+command = { type = wakeleader which = 571599 }
+command = { type = wakeleader which = 571600 }
+command = { type = wakeleader which = 571601 }
+command = { type = wakeleader which = 571602 }
+command = { type = wakeleader which = 571603 }
+command = { type = wakeleader which = 571604 }
+command = { type = wakeleader which = 571605 }
+command = { type = wakeleader which = 571606 }
+command = { type = wakeleader which = 571607 }
+command = { type = wakeleader which = 571608 }
+command = { type = wakeleader which = 571609 }
+command = { type = wakeleader which = 571610 }
+command = { type = wakeleader which = 571611 }
+command = { type = wakeleader which = 571612 }
+command = { type = wakeleader which = 571613 }
+command = { type = wakeleader which = 571614 }
+command = { type = wakeleader which = 571615 }
+command = { type = wakeleader which = 571616 }
+command = { type = wakeleader which = 571617 }
+command = { type = wakeleader which = 571618 }
+command = { type = wakeleader which = 571619 }
+command = { type = wakeleader which = 571620 }
+command = { type = wakeleader which = 571621 }
+command = { type = wakeleader which = 571622 }
+command = { type = wakeleader which = 571623 }
+command = { type = wakeleader which = 571624 }
+command = { type = wakeleader which = 571625 }
+command = { type = wakeleader which = 571626 }
+command = { type = wakeleader which = 571627 }
+command = { type = wakeleader which = 571628 }
+command = { type = wakeleader which = 571629 }
+command = { type = wakeleader which = 571630 }
+command = { type = wakeleader which = 571631 }
+command = { type = wakeleader which = 571632 }
+command = { type = wakeleader which = 571633 }
+command = { type = wakeleader which = 571634 }
+command = { type = wakeleader which = 571635 }
+command = { type = wakeleader which = 571636 }
+command = { type = wakeleader which = 571637 }
+command = { type = wakeleader which = 571638 }
+command = { type = wakeleader which = 571639 }
+command = { type = wakeleader which = 571640 }
+command = { type = wakeleader which = 571641 }
+command = { type = wakeleader which = 571642 }
+command = { type = wakeleader which = 571643 }
+command = { type = wakeleader which = 571644 }
+command = { type = wakeleader which = 571645 }
+command = { type = wakeleader which = 571646 }
+command = { type = wakeleader which = 571647 }
+command = { trigger = { NOT = { exists = CAL } } type = wakeleader which = 571648 } #Nimitz
+command = { type = wakeleader which = 571649 }
+command = { type = wakeleader which = 571650 }
+command = { type = wakeleader which = 571651 }
+command = { trigger = { NOT = { exists = CAL } } type = wakeleader which = 571652 } #Oldendorf
+command = { type = wakeleader which = 571653 }
+command = { type = wakeleader which = 571654 }
+command = { type = wakeleader which = 571655 }
+command = { type = wakeleader which = 571656 }
+command = { type = wakeleader which = 571657 }
+command = { type = wakeleader which = 571658 }
+command = { type = wakeleader which = 571659 }
+command = { type = wakeleader which = 571660 }
+command = { type = wakeleader which = 571661 }
+command = { type = wakeleader which = 571662 }
+command = { type = wakeleader which = 571663 }
+command = { type = wakeleader which = 571664 }
+command = { type = wakeleader which = 571665 }
+command = { type = wakeleader which = 571666 }
+command = { type = wakeleader which = 571667 }
+command = { type = wakeleader which = 571668 }
+command = { type = wakeleader which = 571669 }
+command = { type = wakeleader which = 571670 }
+command = { type = wakeleader which = 571671 }
+command = { type = wakeleader which = 571672 }
+command = { type = wakeleader which = 571673 }
+command = { type = wakeleader which = 571674 }
+command = { type = wakeleader which = 571675 }
+command = { type = wakeleader which = 571676 }
+command = { type = wakeleader which = 571677 }
+command = { type = wakeleader which = 571678 }
+command = { type = wakeleader which = 571679 }
+command = { type = wakeleader which = 571680 }
+command = { type = wakeleader which = 571681 }
+command = { type = wakeleader which = 571682 }
+command = { type = wakeleader which = 571683 }
+command = { type = wakeleader which = 571684 }
+command = { type = wakeleader which = 571685 }
+command = { type = wakeleader which = 571686 }
+command = { type = wakeleader which = 571687 }
+command = { type = wakeleader which = 571688 }
+command = { type = wakeleader which = 571689 }
+command = { type = wakeleader which = 571690 }
+command = { type = wakeleader which = 571691 }
+command = { type = wakeleader which = 571692 }
+command = { type = wakeleader which = 571693 }
+command = { type = wakeleader which = 571694 }
+command = { type = wakeleader which = 571695 }
+command = { type = wakeleader which = 571696 }
+command = { type = wakeleader which = 571697 }
+command = { type = wakeleader which = 571698 }
+command = { type = wakeleader which = 571699 }
+command = { type = wakeleader which = 571700 }
+command = { type = wakeleader which = 571701 }
+command = { type = wakeleader which = 571702 }
+command = { type = wakeleader which = 571703 }
+command = { type = wakeleader which = 571704 }
+command = { type = wakeleader which = 571705 }
+command = { type = wakeleader which = 571706 }
+command = { type = wakeleader which = 571707 }
+command = { type = wakeleader which = 571708 }
+command = { type = wakeleader which = 571709 }
+command = { type = wakeleader which = 571710 }
+command = { type = wakeleader which = 571711 }
+command = { type = wakeleader which = 571712 }
+command = { type = wakeleader which = 571713 }
+command = { type = wakeleader which = 571714 }
+command = { type = wakeleader which = 571715 }
+command = { type = wakeleader which = 571716 }
+command = { type = wakeleader which = 571717 }
+command = { type = wakeleader which = 571718 }
+command = { type = wakeleader which = 571719 }
+command = { type = wakeleader which = 571720 }
+command = { type = wakeleader which = 571721 }
+command = { type = wakeleader which = 571722 }
+command = { type = wakeleader which = 571723 }
+command = { type = wakeleader which = 571724 }
+command = { type = wakeleader which = 571725 }
+command = { type = wakeleader which = 571726 }
+command = { type = wakeleader which = 571727 }
+command = { type = wakeleader which = 571728 }
+command = { type = wakeleader which = 571729 }
+command = { type = wakeleader which = 571730 }
+command = { type = wakeleader which = 571731 }
+command = { type = wakeleader which = 571732 }
+command = { type = wakeleader which = 571733 }
+command = { type = wakeleader which = 571734 }
+command = { type = wakeleader which = 571735 }
+command = { type = wakeleader which = 571736 }
+command = { type = wakeleader which = 571737 }
+command = { type = wakeleader which = 571738 }
+command = { type = wakeleader which = 571739 }
+command = { type = wakeleader which = 571740 }
+command = { type = wakeleader which = 571741 }
+command = { type = wakeleader which = 571742 }
+command = { type = wakeleader which = 571743 }
+command = { type = wakeleader which = 571744 }
+command = { type = wakeleader which = 571745 }
+command = { type = wakeleader which = 571746 }
+command = { type = wakeleader which = 571747 }
+command = { type = wakeleader which = 571748 }
+command = { type = wakeleader which = 571749 }
+command = { type = wakeleader which = 571750 }
+command = { type = wakeleader which = 571751 }
+command = { type = wakeleader which = 571752 }
+command = { type = wakeleader which = 571753 }
+command = { type = wakeleader which = 571754 }
+command = { type = wakeleader which = 571755 }
+command = { type = wakeleader which = 571756 }
+command = { type = wakeleader which = 571757 }
+command = { type = wakeleader which = 571758 }
+command = { type = wakeleader which = 571759 }
+command = { type = wakeleader which = 571760 }
+command = { type = wakeleader which = 571761 }
+command = { type = wakeleader which = 571762 }
+command = { type = wakeleader which = 571763 }
+command = { type = wakeleader which = 571764 }
+command = { type = wakeleader which = 571765 }
+command = { type = wakeleader which = 571766 }
+command = { type = wakeleader which = 571767 }
+command = { type = wakeleader which = 571768 }
+command = { type = wakeleader which = 571769 }
+command = { type = wakeleader which = 571770 }
+command = { type = wakeleader which = 571771 }
+command = { type = wakeleader which = 571772 }
+command = { type = wakeleader which = 571773 }
+command = { type = wakeleader which = 571774 }
+command = { type = wakeleader which = 571775 }
+command = { type = wakeleader which = 571776 }
+command = { type = wakeleader which = 571777 }
+command = { type = wakeleader which = 571778 }
+command = { type = wakeleader which = 571779 }
+command = { type = wakeleader which = 571780 }
+}
+
+action = {
+ai_chance = 0
+name = "We cannot risk them tainting the American new order!"
+command = { type = dissent value = -2.5 }
+}
+}
+
+### The American Union Oil Company
+event = {
+id = 81172
+random = no
+country = TEX
+
+trigger = {
+flag = END_ACW
+atwar = no
+NOT = {
+dissent = 15
+exists = CSA
+exists = USA
+exists = CAL
+}
+}
+
+decision_trigger = {
+money = 250
+NOT = {
+dissent = 10
+}
+}
+
+decision = {
+NOT = {
+exists = CAL
+exists = USA
+exists = CSA
+}
+}
+
+
+name = "The American Union Oil Company"
+desc = "In the wake of the civil war, the massive oil industry of the United States has been subject to various levels of military control, prompting the creation of a new company to hold and manage these assets, to provide and process oil for the American Union State."
+style = 2
+picture = "venezuelan_oil"
+decision_picture = "decision_ersatz_conversion"
+
+date = { day = 7 month = june year = 1940 }
+offset = 33
+deathdate = { day = 29 month = december year = 1960 }
+
+action_a = {
+name = "Ensure that it is a state-run industry"
+ai_chance = 54 #60
+trigger = { OR = {
+ai = no
+headofgovernment = 571009 #Gerald K. Smith
+headofgovernment = 571011 #William Pelley
+NOT = { domestic = { type = free_market value = 6 } }
+} }
+command = { type = domestic which = free_market value = -1 }
+command = { type = waketeam which = 13827 when = 1 } #American Union Oil Company
+command = { type = money value = -500 }
+}
+action_b = {
+name = "Let it run as a private corporation"
+ai_chance = 44 #38
+trigger = { OR = {
+ai = no
+headofgovernment = 571004 #Charles Lindbergh
+headofgovernment = 571010 #Father Charles Coughlin
+domestic = { type = free_market value = 6 } 
+} }
+command = { type = domestic which = free_market value = 1 }
+command = { type = waketeam which = 13827 when = 1 } #American Union Oil Company
+command = { type = money value = -250 }
+command = { type = oilpool value = -1000 }
+}
+action_c = {
+name = "This was a bad idea"
+ai_chance = 2
+command = { type = money value = 100 }
+command = { type = oilpool value = 500 }
+command = { type = industrial_modifier which = oil value = 1 }
+}
+}
+
+### The Beacon of the New America
+event = {
+id = 81173
+random = no
+country = TEX
+#Triggered by 81146
+
+name = "New Orleans - Shining City of the AUS"
+desc = "It much took time and hard effort, but it has all paid off as New Orleans has been transformed into a shining symbol of the new prosperity of the American Union State."
+style = 2
+picture = "aus_new_orleans2"
+
+action_a = {
+name = "Amazing"
+command = { type = dissent value = -5 }
+command = { type = construct which = IC where = 1931 value = 6 }
+command = { type = construct which = naval_base where = 1931 value = 5 }
+command = { type = construct which = air_base where = 1931 value = 5 }
+command = { type = construct which = infrastructure where = 1931 value = 20 } 
+command = { type = construct which = flak where = 1931 value = 1 }
+command = { type = province_manpower which = 1931 value = 1 }
+command = { type = free_money value = 5 } #cancel penalty from event 81146
+command = { type = free_supplies value = 10 } #cancel penalty from event 81146
+}
+}
+
+### Black ACW Veterans Protest Lack of Reform
+event = {
+id = 81174
+random = no
+country = TEX
+
+trigger = {
+event = 81148
+flag = AUS_BLACK_UNITS
+NOT = {
+atwar = TEX
+flag = AUS_NO_POLL_TAX 
+government = communist
+}
+}
+
+name = "Black Veterans March Against the Poll Tax"
+desc = "Thousands of demonstrators today marched on the streets of the capital to protest the Poll Taxes Huey Long had earlier spoken out against. Most of the demonstrators were veterans of the civil war, most of them blacks especially affected by the institution."
+style = 2
+picture = "aus_black_soldiers"
+
+date = { day = 1 month = january year = 1940 }
+offset = 61
+deathdate = { day = 29 month = december year = 1955 }
+
+action = {
+name = "Get rid of the Poll Tax and examine further opportunities for reform"
+ai_chance = 5
+trigger = { 
+OR = {
+ai = no
+headofstate = 571001 #Long
+headofstate = 571002 #Long
+}
+}
+command = { type = domestic which = democratic value = 1 }
+command = { type = domestic which = freedom value = 1 }
+command = { type = domestic which = political_left value = 1 }
+command = { type = money value = -55 }
+command = { type = dissent value = 6 } #extremists very unhappy!
+command = { type = setflag which = AUS_NO_POLL_TAX }
+command = { type = setflag which = AUS_CIVIL_RIGHTS_1 }
+}
+action = {
+name = "Abolish the damned thing"
+ai_chance = 45
+trigger = { 
+OR = {
+ai = no
+headofstate = 571001 #Long
+headofstate = 571002 #Long
+}
+}
+command = { type = domestic which = democratic value = 1 }
+command = { type = domestic which = freedom value = 1 }
+command = { type = money value = -50 }
+command = { type = dissent value = 4 } #extremists unhappy!
+command = { type = setflag which = AUS_NO_POLL_TAX }
+}
+action = {
+name = "Grant exemptions for all our veterans of the war"
+ai_chance = 25
+trigger = { 
+OR = { ai = no
+NOT = {
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571009 #Gerald K. Smith
+} }
+}
+command = { type = money value = -50 }
+command = { type = dissent value = 2 } #not enough for some, too much for others
+command = { type = manpowerpool value = -1 }
+command = { type = relative_manpower value = -2 }
+}
+action = {
+name = "Sorry, but we can't do anything"
+ai_chance = 25
+trigger = { 
+OR = {
+headofstate = 571001 #Long
+headofstate = 571002 #Long
+}
+}
+command = { type = dissent value = 1 } 
+command = { type = manpowerpool value = -4 }
+command = { type = relative_manpower value = -3 }
+}
+action = {
+name = "Send them away empty-handed"
+ai_chance = 75
+trigger = { 
+NOT = {
+headofstate = 571001 #Long
+headofstate = 571002 #Long
+}
+}
+command = { type = dissent value = 1 } 
+command = { type = manpowerpool value = -5 }
+command = { type = relative_manpower value = -4 }
+}
+}
+
+### KKK Protest Southern Reform
+event = {
+id = 81175
+random = no
+country = TEX
+
+trigger = {
+flag = AUS_CIVIL_RIGHTS_1 
+NOT = {
+atwar = TEX
+government = communist
+}
+}
+
+name = "Ku Klux Klan March in Washington"
+desc = "Thousands of robed klansmen and their supporters, some of them veterans of the White Wizards militia during the civil war, marched today in the streets of Washington DC, protesting efforts by the government to implement certain reforms in the South, claiming it would negatively disrupt the current social order and was an infringement on local government."
+style = 2
+picture = "KKK"
+
+date = { day = 29 month = january year = 1940 }
+offset = 87
+deathdate = { day = 29 month = december year = 1956 }
+
+action = {
+name = "Perhaps we have overstepped our bounds."
+ai_chance = 25
+trigger = { 
+NOT = {
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571009 #Gerald K. Smith
+}
+}
+command = { type = domestic which = democratic value = 1 }
+command = { type = domestic which = freedom value = -1 }
+command = { type = domestic which = political_left value = -1 }
+command = { type = money value = -15 }
+command = { type = dissent value = 1 } #reformers unhappy, extremists happy
+#command = { type = clrflag which = AUS_NO_POLL_TAX } #not yet
+command = { type = clrflag which = AUS_CIVIL_RIGHTS_1 }
+}
+action = {
+name = "Back down from reform efforts"
+ai_chance = 80
+trigger = { 
+OR = {
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571009 #Gerald K. Smith
+}
+}
+command = { type = domestic which = democratic value = 1 }
+command = { type = domestic which = freedom value = -1 }
+command = { type = domestic which = political_left value = -1 }
+command = { type = money value = -15 }
+command = { type = dissent value = -1 } #reformers unhappy, extremists happy
+#command = { type = clrflag which = AUS_NO_POLL_TAX } #not yet
+command = { type = clrflag which = AUS_CIVIL_RIGHTS_1 }
+}
+action = {
+name = "Send them away empty-handed"
+ai_chance = 75
+trigger = { 
+NOT = {
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571009 #Gerald K. Smith
+}
+}
+command = { type = dissent value = 1 } #kkk unhappy
+command = { type = manpowerpool value = -5 }
+}
+action = {
+name = "Send them away empty-handed"
+ai_chance = 20
+trigger = { 
+OR = {
+headofgovernment = 571011 #William Pelley
+headofgovernment = 571009 #Gerald K. Smith
+}
+}
+command = { type = dissent value = 2 } #kkk unhappy
+command = { type = manpowerpool value = -5 }
+}
+}
+
+### Fate of the AUS Youth Foundation
+event = {
+id = 81176
+random = no
+country = TEX
+trigger = {
+event = 81153
+flag = AUS_YOUTH
+OR = {
+headofstate = 571001
+headofstate = 571002
+}
+}
+
+name = "Fate of the AUS Youth Foundation"
+desc = "With Pelley's failed attempt to kill Long and take over the American Union State, the Youth Foundation he helped form has come under close scrutiny, as it seems apparent now that this would have been the main base of his future support. Should we reorganize the program to be more loyal to the current leadership, or instead scale back or even completely dissolve the foundation as a state-run program?"
+style = 2
+picture = "TEX Youth"
+
+date = { day = 1 month = november year = 1940 }
+offset = 25
+deathdate = { day = 29 month = december year = 1942 }
+
+action_a = {
+name = "Reorganize and replace unthrustworthy leadership"
+ai_chance = 50
+command = { type = dissent value = 2 }
+command = { type = domestic which = freedom value = -1 }
+command = { type = money value = -50 }
+command = { type = relative_manpower value = -1 }
+}
+
+action_a = {
+name = "Scale back the size and scope of the organization"
+ai_chance = 25
+command = { type = dissent value = 1 }
+command = { type = money value = -20 }
+command = { type = relative_manpower value = -3 }
+}
+
+action_c = {
+name = "The state needs no official youth program!"
+ai_chance = 25
+command = { type = dissent value = -1 }
+command = { type = domestic which = freedom value = 1 }
+command = { type = relative_manpower value = -4 }
+command = { type = clrflag which = AUS_YOUTH }
+}
+}
+
+### Ingalls Shipbuilding
+event = {
+id = 81177
+random = no
+country = TEX
+#Triggered by 91723
+
+name = "Ingalls Shipbuilding"
+
+desc = "The primary submarine contractor of the old government, the Electric Boat Company, changed hands unexpectedly during the war, scattering important personel and putting their facilities out of use. Thus our new facilities for submarine design are situated closer to our base of support, boosting efficiency."
+style = 2
+picture = "usa_sub_launch"
+
+action = {
+name = "Excellent"
+command = { type = waketeam which = 13810 when = 1 } #Ingalls Shipbuilding
+#command = { type = free_money value = 5 } #way too much
+#command = { type = free_supplies value = 6 }
+command = { trigger = { control = { province = 1944 data = TEX } } type = construct which = naval_base where = 1944 value = 1 } #Pascagoula, MS
+command = { type = build_time which = battlecruiser when = on_upgrade value = -2 where = relative } 
+command = { type = build_time which = heavy_cruiser when = on_upgrade value = -2 where = relative } 
+command = { type = build_time which = submarine when = on_upgrade value = -2 where = relative }
+command = { trigger = { ai = yes } type = build_division which = heavy_cruiser when = -1 value = naval_torpedoes_l }
+command = { trigger = { ai = yes } type = build_division which = submarine when = -1 value = naval_torpedoes_s }
+}
+}
+
+### Newport News Shipbuilding
+event = {
+id = 81178
+random = no
+country = CSA
+#Triggered by 91723
+
+name = "Newport News Shipbuilding"
+desc = "The Newport News shipyards had been badly damaged in the fighting that took place across Virginia during the civil war, but our work in restoring the facilities there appears that it will even yield improvements in production efficiency when compared to pre-war figures."
+style = 2
+picture = "newport_news_uss_ranger"
+
+action = {
+name = "Excellent"
+command = { type = waketeam which = 13811 when = 1 } #Newport News Shipbuilding
+#command = { trigger = { not = { event = 81177 } } type = free_money value = 5 } #way too much
+#command = { trigger = { event = 81177 } type = free_money value = 7 }
+#command = { trigger = { not = { event = 81177 } } type = free_supplies value = 6 }
+#command = { trigger = { event = 81177 } type = free_supplies value = 9 }
+command = { trigger = { control = { province = 1812 data = TEX } } type = construct which = naval_base where = 1812 value = 1 } #Newport News, VA
+command = { type = build_time which = battleship when = on_upgrade value = -2 where = relative }
+command = { type = build_time which = carrier when = on_upgrade value = -2 where = relative }
+command = { type = build_time which = light_cruiser when = on_upgrade value = -2 where = relative } 
+command = { trigger = { ai = yes } type = build_division which = carrier when = -1 value = cag }
+}
+}

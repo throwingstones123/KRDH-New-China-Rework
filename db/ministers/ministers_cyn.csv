@@ -1,0 +1,56 @@
+CYN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+501001;Head of State;Tang Jiyao;1920;1964;1999;FA;Die-hard Reformer;High;Tang Jiyao;x
+501002;Head of Government;Tang Jiyao;1920;1964;1999;FA;Old General;High;Tang Jiyao;x
+501003;Foreign Minister;Zhou Zhirou;1936;1964;1999;FA;Apologetic Clerk;High;M501003;x
+501004;Minister of Armament;Liu Wenhui;1936;1964;1999;FA;Battle Fleet Proponent;Medium;M501004;x
+501005;Minister of Security;Ding Zhipan;1936;1964;1999;FA;Crime Fighter;Medium;M501005;x
+501006;Head of Military Intelligence;Mi Zaiming;1936;1964;1999;FA;Political Specialist;Medium;M501006;x
+501007;Chief of Staff;Long Yun;1936;1964;1999;FA;School of Psychology;Medium;M750056;x
+501008;Chief of Army;Zhu De;1936;1964;1999;FA;Guns and Butter Doctrine;Low;Zhu De;x
+501009;Chief of Navy;Lu Han;1936;1964;1999;FA;Open Seas Doctrine;Medium;M750055;x
+501010;Chief of Air Force;Lu Han;1936;1964;1999;FA;Carpet Bombing Doctrine;Medium;M750055;x
+501011;Head of State;Long Yun;1936;1964;1999;FA;Die-hard Reformer;High;M750056;x
+501012;Head of Government;Long Yun;1936;1964;1999;FA;Political Protege;High;M750056;x
+501017;Chief of Staff;Chen Geng;1936;1964;1999;SL;School of Fire Support;Medium;CYN_geng;x
+501018;Chief of Army;Chen Geng;1936;1964;1999;SL;Static Defence Doctrine;Medium;CYN_geng;x
+501019;Head of State;Zhu De;1936;1964;1999;SC;Popular Figurehead;Medium;Zhu De;x
+501020;Head of Government;Zhu De;1936;1964;1999;SC;Old General;Medium;M51007;x
+501021;Head of State;Wu Peifu;1920;1934;1935;PA;Die-hard Reformer;High;kaiserreich wupufei;x
+501022;Head of Government;Wu Peifu;1920;1934;1935;PA;Old General;High;kaiserreich wupufei;x
+501023;Chief of Staff;Tang Jiyao;1936;1964;1999;FA;School of Mass Combat;High;Tang Jiyao;X
+501024;Chief of Army;Long Yun;1936;1964;1999;PA;Guns and Butter Doctrine;Medium;M750056;X
+501025;Head of State;Lu Han;1936;1964;1999;FA;Resigned Generalissimo;Medium;M750055;x
+501026;Head of Government;Lu Han;1936;1964;1999;FA;Old General;Medium;M750055;x
+501027;Head of State;Hu Ruoyu;1936;1964;1999;SC;Popular Figurehead;Medium;CYN_hu;x
+501028;Head of Government;Hu Ruoyu;1936;1964;1999;SC;Naive Optimist;Medium;CYN_hu;
+501029;Minister of Armament;Hu Ruoyu;1936;1964;1999;SC;Corrupt Kleptocrat;Medium;CYN_hu;
+501030;Chief of Army;Hu Ruoyu;1936;1964;1999;SC;Static Defence Doctrine;Medium;CYN_hu;
+501031;Minister of Security;Zhu De;1939;1964;1999;PA;Crooked Kleptocrat;Low;M51007;x
+501032;Minister of Security;Zhou Xing;1936;1964;1999;PA;Crime Fighter;Medium;M51030;x
+501033;Minister of Armament;He Yingqin;1936;1964;1999;SC;Infantry Proponent;Medium;M52058;X
+501034;Chief of Army;He Yingqin;1936;1964;1999;SC;Elastic Defence Doctrine;High;M52058;X
+501035;Head of Military Intelligence;Liu Xianshi;1936;1964;1999;PA;Dismal Enigma;Very High;Liu Xianshi;X
+501036;Minister of Security;Gu Zhenglun;1936;1964;1999;PA;Crime Fighter;Very High;M52067;X
+501037;Head of Military Intelligence;Li Liejun;1936;1964;1999;SC;Logistics Specialist;Very High;Li Liejun;X
+501038;Head of State;Li Liejun;1936;1964;1999;SC;Resigned Generalissimo;Very High;Li Liejun;X
+501039;Chief of Staff;Li Liejun;1936;1964;1999;SC;School of Fire Support;Very High;Li Liejun;X
+501040;Chief of Army;Li Liejun;1936;1964;1999;SC;Guns and Butter Doctrine;Very High;Li Liejun;X
+501041;Chief of Staff;Liu Bocheng;1936;1964;1999;SC;School of Fire Support;High;Liu Bocheng;X
+501042;Chief of Army;Li Mi;1936;1964;1999;SC;Elastic Defence Doctrine;High;CHILimi;X
+501043;Chief of Staff;Zhang Zhizhong;1936;1964;1999;SC;School of Defence;Medium;Zhang Zhizhong;X
+501044;Head of Military Intelligence;Zhang Zhizhong;1936;1964;1999;SC;Political Specialist;Medium;Zhang Zhizhong;X
+501045;Minister of Security;Li Mi;1940;1970;1999;PA;Efficient Sociopath;Very High;Li Mi;X
+501046;Head of State;Gu Pinzhen;1920;1964;1999;PA;Popular Figurehead;Very High;Gu Pinzhen;X
+501047;Chief of Army;Gu Pinzhen;1936;1970;1999;PA;Elastic Defence Doctrine;Very High;Gu Pinzhen;X
+501048;Head of Government;Gu Pinzhen;1936;1964;1999;PA;Ambitious Union Boss;Very High;Gu Pinzhen;X
+501049;Chief of Air Force;Yan Yuncong;1944;1970;1999;PA;Carpet Bombing Doctrine;Very High;Yan Yuncong;X
+501050;Minister of Security;Gu Zhenglun;1936;1970;1999;PA;Secret Police Chief;High;CHIZhenglun;X
+501051;Minister of Armament;Yang Hongguang;1936;1964;1999;FA;Infantry Proponent;Medium;Yang Hongguang;X
+501052;Chief of Air Force;Liu Peiquan;1936;1970;1999;PA;Air Superiority Doctrine;High;Liu Peiquan;X
+501053;Chief of Army;Fan Shisheng;1936;1970;1999;PA;Static Defence Doctrine;Very High;Fan Shisheng;X
+501054;Head of Military Intelligence;Zhang Chong;1936;1970;1999;PA;Naval Intelligence Specialist;Medium;Zhang Chong;X
+501055;Chief of Navy;Zhang Chong;1936;1970;1999;FA;Base Control Doctrine;Medium;Zhang Chong;X
+501056;Foreign Minister;Zhang Weihan;1936;1964;1999;PA;Apologetic Clerk;Medium;Zhang Weihan;X
+501057;Foreign Minister;Yang Ximin;1936;1970;1999;PA;General Staffer;High;Yang Ximin;X
+501058;Head of Military Intelligence;Yang Ximin;1936;1970;1999;PA;Dismal Enigma;Very High;Yang Ximin;X
+501059;Head of Military Intelligence;Liu Xianshi;1936;1964;1999;PA;Dismal Enigma;Very High;Liu Xianshi;X

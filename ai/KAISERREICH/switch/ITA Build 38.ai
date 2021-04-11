@@ -1,0 +1,49 @@
+#Italy 1938 Build Order
+
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 		= 360 
+	max_batch_war 			= 180 
+	max_batch_home_front 	= 180
+
+	#### Divisions etc...
+	infantry 		= 30
+	cavalry 		= 6
+	motorized 		= 8
+	mechanized 		= 0
+	light_armor 	= 6
+	armor 			= 0
+	paratrooper 	= 0
+	marine 			= 0
+	bergsjaeger 	= 8
+	garrison		= 2
+   	hq 				= 5
+	militia 		= 0
+	d_01			= 0
+#				65 %
+	interceptor 		= 6
+	multi_role 			= 2
+	cas 				= 0
+	strategic_bomber 	= 0
+	tactical_bomber 	= 4
+	naval_bomber 		= 2
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#				14 %
+	battleship 			= 0
+	carrier 			= 0
+	escort_carrier		= 0
+	destroyer 			= 8
+	light_cruiser 		= 5
+	heavy_cruiser 		= 3
+	battlecruiser 		= 0
+	submarine 			= 3
+	nuclear_submarine 	= 0
+	transports 			= 2
+#				21 %
+
+}

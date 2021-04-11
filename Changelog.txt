@@ -1,0 +1,7 @@
+Kaiserreich for Darkest Hour
+
+Update 1.9.3
+
+Changelog
+
+* Fixed L Inf and AT terrain/weather modifiers being accidentally removed
