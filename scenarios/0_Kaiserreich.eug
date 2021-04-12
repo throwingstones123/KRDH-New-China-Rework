@@ -18,11 +18,11 @@ header = {
   PAK        = { }
   PRK        = { }
   SAF        = { }
-  HOL        = { }
+  MAN        = { }
   CSX        = { }
-  OTT        = { }
-  EGY        = { }
-  PER        = { }
+  CGX        = { }
+  CHC        = { }
+  CYN        = { }
 }
 globaldata = {
   startdate = { year = 1936 month = january day = 0 }
@@ -543,4 +543,7 @@ include = "scenarios/kaiserreich/mongolia.inc"
 include = "scenarios/kaiserreich/treatyports.inc"
 include = "scenarios/kaiserreich/philippines.inc"
 include = "scenarios/kaiserreich/siam.inc"
+include = "scenarios/kaiserreich/Xinjiang.inc"
+include = "scenarios/kaiserreich/sichuan.inc"
+include = "scenarios/kaiserreich/shanxi.inc"
 include = "db\events kaiserreich.txt"
