@@ -348,6 +348,8 @@ capital = 1369
 }
 
 
+
+
 CHC = { #shangqing tianguo
 date = { day = 1 month = january year = 1936 }
 expirydate = { day = 29 month = december year = 1967 }
@@ -2376,127 +2378,6 @@ U53 = { #  Socialist Republic of Persia
 	capital =  1095
 	revolt = no 
 } 
-
-U64 = { #Sichuan
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1297  # Chengdu 
-}
-extra = { 
- 1292 1261 1296 1298 1267 1302 1299
-}
-capital = 1297
-}
-
-U66 = { #Anqing
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1344 #Anqing
-}
-extra = { 
- 1340 1350 1342 1351 
-}
-capital = 1344  
-}
-
-U74 = { #Shanxi
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1252 #Taiyuan
-}
-extra = { 
- 1255 1251 1259 1260 1254 1253
-}
-capital = 1252 
-}
-
-U87 = { #Left KMT
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1352 #Nanchang
-}
-extra = { 
- 1349 1359 1360 1354
-}
-capital = 1352
-}
-
-
-UPE = { #East Turkestan
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1279 #Kashgar
-}
-extra = { 
- 1274
-}
-capital = 1279
-}
-
-UCH = { #Lianguang Clique
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1369 #Guangzhou
-}
-extra = { 
- 1381 1376 1382 1379 1374 1380 1378 1383 1377 1368 1373 1370 1375
-}
-capital = 1369 #Guangzhou
-}
-
-
-U67 = { #Hunan Clique 
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1308 #Changsha
-}
-extra = { 
- 1313 1310 1309 1312 1307 1301 
-}
-capital = 1308  
-}
-
-U68 = { #Kumul Khanate  
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1277 #Qumul
-}
-
-capital = 1277
-}
-
-U69 = { #Guangxi
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1378 #Guilin
-}
-extra = { 
- 1382 1379 1374 1383 1377 1381 1376 1380 
-}
-capital = 1378
-}
-
-U70 = { #New Guangxi  
-date = { day = 1 month = january year = 1936 }
-expirydate = { day = 29 month = december year = 1967 }
-minimum = {
- 1381 #Bose
-}
-extra = { 
- 1376 
-}
-capital = 1381 
-}
-
 
 VEN = {
 	date = { day = 1 month = january year = 1936 }

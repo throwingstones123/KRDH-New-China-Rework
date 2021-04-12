@@ -17,6 +17,8 @@ style = 2
 
 action_a = {
 name = "Don't tread on me!"
+command = { type = set_domestic which = democratic value = 5 }
+command = { type = set_domestic which = political_left value = 3 }
 command = { type = set_relation which = CAN value = 150 }
 command = { type = set_relation which = USA value = 150 }
 command = { type = set_relation which = CAL value = 150 }
@@ -41,6 +43,7 @@ command = { type = add_corps which = "Army Of The Rio Grande" value = land where
 command = { type = add_division which = "1st Texas Citizens Militia" value = Militia when = 4 }
 command = { type = add_corps which = "Army Of The Panhandle" value = land where = 1906 }
 command = { type = add_division which = "2nd Texas Citizens Militia" value = Militia when = 4 }
+command = { type = war which = MEX }
 }
 }
 
@@ -439,6 +442,7 @@ action_a = {
 ai_chance = 40
 name = "Give up now and cut our losses"
 command = { type = dissent value = 5 }
+command = { type = setflag which = U51_LIB }
 command = { type = peace which = U51 value = 0 }
 command = { type = peace which = CAL value = 0 }
 command = { type = peace which = CAN value = 0 }
@@ -550,8 +554,9 @@ action_a = {
 ai_chance = 95
 name = "Let us end this war to avoid futher bloodshed!"
 #command = { type = trigger which = 184009 }
-command = { type = dissent value = -3 }
+#command = { type = dissent value = -3 }
 command = { type = dissent value = 5 }
+command = { type = setflag which = U51_LIB }
 command = { type = peace which = U51 value = 0 }
 command = { type = peace which = CAL value = 0 }
 command = { type = peace which = CAN value = 0 }
@@ -633,17 +638,18 @@ ai_chance = 50
 name = "We do not fear the Entente"
 command = { type = dissent value = 5 }
 command = { type = relation which = CAN value = -75 }
-command = { type = trigger which = 11800273 }
+#command = { type = trigger which = 11800273 }
 }
 action_b = {
 ai_chance = 50
 name = "Back down"
 command = { type = dissent value = 5 }
 command = { type = relation which = CAN value = 75 }
+command = { type = setflag which = U51_LIB }
 command = { type = peace which = U51 value = 0 }
 command = { type = peace which = CAL value = 0 }
 command = { type = peace which = CAN value = 0 }
-command = { type = trigger which = 11800274 }
+#command = { type = trigger which = 11800274 }
 command = { type = secedeprovince which = U51 value = 1921 }
 command = { type = secedeprovince which = U51 value = 1920 }
 command = { type = secedeprovince which = U51 value = 1927 }
@@ -778,6 +784,7 @@ ai_chance = 50
 name = "Yes, it should represent our 'newcomers'"
 command = { type = flag_ext where = U51 which = "_grt" }
 command = { type = dissent value = -1 }
+command = { type = setflag which = tex_beacon }
 }
 
 action_b = {
@@ -793,12 +800,11 @@ random = no
 country = U51
 
 trigger = {
-flag = ne_nationalism
-flag = ne_beacon
+flag = tex_beacon
 }
 
 name = "Establishing Escape Routes"
-desc = "The a group of politicians around Texas have begun work on legislation that will establish a network of escape routes into Texas. A way for refugees from the CSA, AUS, and MacArthur's America to escape and reach Texas.Among the possible immediate benefits to this would be more volunteers for Texas's growing Military."
+desc = "The a group of politicians around Texas have begun work on legislation that will establish a network of escape routes into Texas. A way for refugees from the CSA, AUS, and MacArthur's America to escape and reach Texas. Among the possible immediate benefits to this would be more volunteers for Texas' growing military."
 style = 2
 
 date = { day = 1 month = January year = 1937 }
@@ -811,7 +817,7 @@ ai_chance = 67
 command = { type = dissent value = -1 }
 command = { type = money value = -150 }
 command = { type = supplies value = -500 }
-command = { type = setflag which = underground_railroad }
+command = { type = setflag which = underground_railroad_tex }
 }
 
 action_b = {
@@ -832,7 +838,7 @@ random = no
 country = U51
 
 trigger = {
-flag = underground_railroad
+flag = underground_railroad_tex
 exists = CSA
 }
 
@@ -863,7 +869,7 @@ random = no
 country = U51
 
 trigger = {
-flag = underground_railroad
+flag = underground_railroad_tex
 flag = ACW_junta
 exists = USA
 }
@@ -895,7 +901,7 @@ random = no
 country = U51
 
 trigger = {
-flag = underground_railroad
+flag = underground_railroad_tex
 exists = TEX
 }
 
@@ -928,7 +934,16 @@ random = no
 country = U51
 
 trigger = {
-flag = U51_LIB
+OR = {
+	flag = U51_LIB #set by negotiated peace events
+	AND = { #Texas goes for total victory
+		atwar = no
+		OR = {
+			NOT = { exists = MEX }
+			puppet = { country = MEX country = U51 }
+			}
+		}
+	}
 }
 
 name = "To Lead Texas"

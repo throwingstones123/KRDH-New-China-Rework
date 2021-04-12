@@ -97,7 +97,6 @@ turkestan.csv
 La Plata.csv
 laos.csv
 latvia.csv
-lianguang.csv
 leaders_u00.csv
 leaders_u02.csv
 leaders_u20.csv
@@ -194,15 +193,6 @@ u45.csv
 u49.csv
 u51.csv
 u53.csv
-u64.csv
-u66.csv
-u67.csv
-u68.csv
-u69.csv
-u70.csv
-u74.csv
-uch.csv
-upe.csv
 ukraine.csv
 unionmali.csv
 United Kingdom.csv

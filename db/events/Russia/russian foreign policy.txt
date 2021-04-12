@@ -2135,11 +2135,28 @@ command = { type = sleepminister which = 527049 }
 command = { type = sleepminister which = 522011 }
 command = { type = sleepminister which = 527035 }
 command = { type = sleepminister which = 527033 }
-command = { type = wakeminister which = 4440 }
-command = { type = wakeminister which = 4441 }
-command = { type = wakeminister which = 4442 }
-command = { type = wakeminister which = 4443 }
-command = { type = wakeminister which = 4444 }
+command = { type = waketeam which = 7249 when = 1 } #Mikhail Diterikhs
+command = { type = wakeminister which = 4600 }
+command = { type = wakeminister which = 4601 }
+command = { type = wakeminister which = 4602 }
+command = { type = wakeminister which = 4603 }
+command = { type = wakeminister which = 4604 }
+command = { type = wakeminister which = 4605 }
+command = { type = wakeminister which = 4606 }
+command = { type = wakeminister which = 4607 }
+command = { type = wakeminister which = 4608 }
+command = { type = wakeminister which = 4609 }
+command = { type = wakeminister which = 4610 }
+command = { type = wakeminister which = 4611 }
+command = { type = wakeminister which = 4612 }
+command = { type = wakeminister which = 4613 }
+command = { type = wakeminister which = 4614 }
+command = { type = wakeminister which = 4615 }
+command = { type = wakeminister which = 4616 }
+command = { type = wakeminister which = 4617 }
+command = { type = wakeminister which = 4618 }
+command = { type = wakeminister which = 4619 }
+command = { type = wakeminister which = 4620 }
 command = { type = wakeleader which = 500860 }
 command = { type = wakeleader which = 500861 }
 command = { type = wakeleader which = 500862 }
@@ -2166,7 +2183,9 @@ command = { type = wakeleader which = 500882 }
 command = { type = wakeleader which = 500883 }
 command = { type = wakeleader which = 500884 }
 command = { type = wakeleader which = 500885 }
-command = { type = waketeam which = 7249 when = 1 } #Mikhail Diterikhs
+command = { type = wakeleader which = 500886 }
+command = { type = wakeleader which = 500887 }
+command = { type = wakeleader which = 500888 }
 command = { type = clrflag  which = SIB_PANIC }
 }
 
@@ -2463,11 +2482,28 @@ command = { type = addcore which = 1190 }
 command = { type = addcore which = 1185 }
 command = { type = trigger which = 750079 }
 command = { type = headofgovernment which = 4198 }
-command = { type = wakeminister which = 4440 }
-command = { type = wakeminister which = 4441 }
-command = { type = wakeminister which = 4442 }
-command = { type = wakeminister which = 4443 }
-command = { type = wakeminister which = 4444 }
+command = { type = waketeam which = 7249 when = 1 } #Mikhail Diterikhs
+command = { type = wakeminister which = 4600 }
+command = { type = wakeminister which = 4601 }
+command = { type = wakeminister which = 4602 }
+command = { type = wakeminister which = 4603 }
+command = { type = wakeminister which = 4604 }
+command = { type = wakeminister which = 4605 }
+command = { type = wakeminister which = 4606 }
+command = { type = wakeminister which = 4607 }
+command = { type = wakeminister which = 4608 }
+command = { type = wakeminister which = 4609 }
+command = { type = wakeminister which = 4610 }
+command = { type = wakeminister which = 4611 }
+command = { type = wakeminister which = 4612 }
+command = { type = wakeminister which = 4613 }
+command = { type = wakeminister which = 4614 }
+command = { type = wakeminister which = 4615 }
+command = { type = wakeminister which = 4616 }
+command = { type = wakeminister which = 4617 }
+command = { type = wakeminister which = 4618 }
+command = { type = wakeminister which = 4619 }
+command = { type = wakeminister which = 4620 }
 command = { type = wakeleader which = 500860 }
 command = { type = wakeleader which = 500861 }
 command = { type = wakeleader which = 500862 }
@@ -2494,7 +2530,9 @@ command = { type = wakeleader which = 500882 }
 command = { type = wakeleader which = 500883 }
 command = { type = wakeleader which = 500884 }
 command = { type = wakeleader which = 500885 }
-command = { type = waketeam which = 7249 when = 1 } #Mikhail Diterikhs
+command = { type = wakeleader which = 500886 }
+command = { type = wakeleader which = 500887 }
+command = { type = wakeleader which = 500888 }
 }
 
 action_b = {
@@ -2702,8 +2740,8 @@ command = { type = money value = -500    }
 command = { type = relation which = JAP value = -70 }
 command = { type = construct which = ic where = 1191 value = -2 }
 command = { type = dissent value = 2 }
-command = { type = sleepevent which = 750081 }
-command = { type = sleepevent which = 750082 }
+#command = { type = sleepevent which = 750081 }
+#command = { type = sleepevent which = 750082 }
 }
 
 action_b = {
@@ -2723,8 +2761,8 @@ command = { type = supplies value = -1500 }
 command = { type = money value = -300  }
 #command = { trigger = { country = RUS } type = waketeam which = 7217 } #Dalzavod
 #command = { trigger = { country = SOV } type = waketeam which = 3717 } #Dalzavod
-command = { type = sleepevent which = 750081 }
-command = { type = sleepevent which = 750082 }
+#command = { type = sleepevent which = 750081 }
+#command = { type = sleepevent which = 750082 }
 command = { type = relation which = JAP value = -50 }
 }
 
@@ -2734,8 +2772,8 @@ name = "Sell off Transamur's navy and convert the harbour for civilian purposes.
 command = { type = dissent value = -5 }
 command = { type = construct which = ic where = 1191 value = 2 }
 command = { type = belligerence which = RUS value = -5 }
-command = { type = sleepevent which = 750081 }
-command = { type = sleepevent which = 750082 }
+#command = { type = sleepevent which = 750081 }
+#command = { type = sleepevent which = 750082 }
 command = { type = relation which = JAP value = 50 }
 }
 
@@ -2744,8 +2782,8 @@ ai_chance =  0
 name = "Sell off Transamur's navy and keep the money."
 command = { type = belligerence which = RUS value = -5 }
 command = { type = money value = 500  }
-command = { type = sleepevent which = 750081 }
-command = { type = sleepevent which = 750082 }
+#command = { type = sleepevent which = 750081 }
+#command = { type = sleepevent which = 750082 }
 command = { type = relation which = JAP value = 50 }
 }
 }
@@ -5342,15 +5380,17 @@ command = { type = addcore which = 245 }
 command = { type = addcore which = 249 }
 command = { type = addcore which = 601 }
 command = { type = addcore which = 587 }
-command = { type = wakeminister which = 4450 }
-command = { type = wakeminister which = 4451 }
-command = { type = wakeminister which = 4452 }
-command = { type = wakeminister which = 4453 }
-command = { type = wakeminister which = 4454 }
-command = { type = wakeminister which = 4455 }
-command = { type = wakeminister which = 4456 }
-command = { type = wakeminister which = 4457 }
-command = { type = wakeminister which = 4458 }
+command = { type = wakeminister which = 4650 }
+command = { type = wakeminister which = 4651 }
+command = { type = wakeminister which = 4652 }
+command = { type = wakeminister which = 4653 }
+command = { type = wakeminister which = 4654 }
+command = { type = wakeminister which = 4655 }
+command = { type = wakeminister which = 4656 }
+command = { type = wakeminister which = 4657 }
+command = { type = wakeminister which = 4658 }
+command = { type = wakeminister which = 4659 }
+command = { type = wakeminister which = 4660 }
 command = { type = wakeleader which = 500915 }
 command = { type = wakeleader which = 500916 }
 command = { type = wakeleader which = 500917 }
@@ -6022,17 +6062,12 @@ war = { country = RUS country = AZB }
 exists = SOV
 ispuppet = AZB
 ispuppet = RUS
-
 }
 owned = { province = 704 data = RUS }
 owned = { province = 713 data = AZB }
-
-
-
 }
 
 decision_trigger = {
-
 }
 
 trigger = {
@@ -6047,12 +6082,10 @@ war = { country = RUS country = AZB }
 exists = SOV
 ispuppet = AZB
 ispuppet = RUS
-
 }
 owned = { province = 704 data = RUS }
 owned = { province = 713 data = AZB }
 }
-
 
 name = "The Baku Oil Fields"
 desc = "EVT_9993_DESC"
@@ -6080,6 +6113,7 @@ command = { type = supplies value = -2000 }
 command = { type = money value = -500  }
 command = { type = guarantee which = RUS where = AZB }
 command = { type = oilpool value = 2000  }
+command = { type = trigger which = 750848 } #new, prevent event chain from ending
 }
 
 action = {
@@ -6117,11 +6151,7 @@ name = "We need neither oil nor entanglements in the Caucasus!"
 trigger = { NOT = { flag = RUS_EXP } }
 command = { type = domestic which = interventionism value = -1 }
 }
-
 }
-
-
-
 
 
 event = {
@@ -6130,12 +6160,10 @@ random = no
 country = AZB
 style = 2
 
-
 name = "Russian Investment"
 desc = "The Russian Government has purchased a massive stake in the Baku Oil Concern and are planning on administering, securing and building up large portions of our oil fields themselves. This would mean that we would lose control over much of our government but would at least present us with a powerful patron."
 
 picture = "politics2"
-
 
 action_a = {
 ai_chance =  70
@@ -6160,8 +6188,8 @@ command = { type = dissent value = -5 }
 command = { type = relation which = RUS value = -100 }
 command = { type = trigger which = 902010 }
 }
-
 }
+
 
 event = {
 id = 902010
@@ -6192,7 +6220,6 @@ ai_chance = 1
 name = "Back down."
 command = { type = dissent value = 2 }
 command = { type = relation which = AZB value = 20 }
-
 }
 }
 
@@ -6206,12 +6233,10 @@ style = 2
 name = "The Azeris agree!"
 desc = "Azerbaijan has accepted our purchase of a majority stake in their state oil industry. This gives us a large enough foothold to either totally dominate the economy and government of the country or attempt to begin plans to reincorporate them into Russia."
 
-
 action_a = {
 ai_chance =  40
 name = "Establish control over the Azeri economy."
-command = { type = oilpool value = 5000  }
-command = { type = free_oil }
+command = { type = oilpool value = 5000 }
 command = { type = make_puppet which = AZB }
 command = { type = dissent value = -5 }
 }
@@ -6222,22 +6247,21 @@ trigger = {
 flag = RUS_EXP
 }
 name = "Start to plan on how best to incorporate Azerbaijan into Russia!"
-command = { type = oilpool value = 5000  }
+command = { type = oilpool value = 5000 }
 command = { type = make_puppet which = AZB }
 command = { type = belligerence which = RUS value = 10 }
 command = { type = addclaim which = 712 }
 command = { type = addclaim which = 713 }
 command = { type = dissent value = 5 }
 }
-
 }
+
 
 event = {
 id = 902022
 random = no
 country = RUS
 style = 2
-
 
 trigger = {
 flag = RUS_EXP
@@ -6247,7 +6271,6 @@ puppet = { country = AZB country = RUS }
 name = "Azerbaijani Autonomy"
 desc = "With Russian domination over Azerbaijan stable some members of our goverment think that the time has come for the integration of Azerbaijan into the growing Russian empire. It would be quite easy to pass a series of laws which would ensure that the region is more firmly integrated into Russia."
 picture = "azarbaijan_petroleum"
-
 
 date = { day = 1 month = january year = 1936 }
 offset = 300
@@ -6267,7 +6290,6 @@ ai_chance = 1
 name = "Azerbaijan must remain autonomous."
 command = { type = domestic which = interventionism value = -1   }
 }
-
 }
 
 
@@ -6789,11 +6811,11 @@ control = { province = 636 data = RUS }
 owned = { province = 617 data = RUS }
 owned = { province = 636 data = RUS }
 NOT = {
-exists = UKR
-core = { province = 617 data = RUS }
-ideology = nazi
-ideology = fascist
-}
+	exists = UKR
+	core = { province = 617 data = RUS }
+	ideology = nazi
+	ideology = fascist
+	}
 }
 
 name = "Fate of the Ukraine"
@@ -7046,12 +7068,13 @@ control = { province = 636 data = RUS }
 owned = { province = 617 data = RUS }
 owned = { province = 636 data = RUS }
 NOT = {
-exists = UKR
-}
+	exists = UKR
+	core = { province = 617 data = RUS }
+	}
 OR = {
-ideology = nazi
-ideology = fascist
-}
+	ideology = nazi
+	ideology = fascist
+	}
 }
 
 name = "Fate of the Ukraine"
@@ -7519,15 +7542,17 @@ command = { type = addcore which = 587 }
 command = { type = industrial_modifier which = total value = 1 }
 command = { type = dissent value = -5 }
 command = { type = clrflag which = UKR_MRI }
-command = { type = wakeminister which = 4450 }
-command = { type = wakeminister which = 4451 }
-command = { type = wakeminister which = 4452 }
-command = { type = wakeminister which = 4453 }
-command = { type = wakeminister which = 4454 }
-command = { type = wakeminister which = 4455 }
-command = { type = wakeminister which = 4456 }
-command = { type = wakeminister which = 4457 }
-command = { type = wakeminister which = 4458 }
+command = { type = wakeminister which = 4650 }
+command = { type = wakeminister which = 4651 }
+command = { type = wakeminister which = 4652 }
+command = { type = wakeminister which = 4653 }
+command = { type = wakeminister which = 4654 }
+command = { type = wakeminister which = 4655 }
+command = { type = wakeminister which = 4656 }
+command = { type = wakeminister which = 4657 }
+command = { type = wakeminister which = 4658 }
+command = { type = wakeminister which = 4659 }
+command = { type = wakeminister which = 4660 }
 command = { type = wakeleader which = 500915 }
 command = { type = wakeleader which = 500916 }
 command = { type = wakeleader which = 500917 }
@@ -7652,15 +7677,17 @@ command = { type = 	province_revoltrisk which = 613 value = -30 }
 command = { type = 	province_revoltrisk which = 244 value = -30 }
 command = { type = 	province_revoltrisk which = 245 value = -30 }
 command = { type = 	province_revoltrisk which = 249 value = -30 }
-command = { type = wakeminister which = 4450 }
-command = { type = wakeminister which = 4451 }
-command = { type = wakeminister which = 4452 }
-command = { type = wakeminister which = 4453 }
-command = { type = wakeminister which = 4454 }
-command = { type = wakeminister which = 4455 }
-command = { type = wakeminister which = 4456 }
-command = { type = wakeminister which = 4457 }
-command = { type = wakeminister which = 4458 }
+command = { type = wakeminister which = 4650 }
+command = { type = wakeminister which = 4651 }
+command = { type = wakeminister which = 4652 }
+command = { type = wakeminister which = 4653 }
+command = { type = wakeminister which = 4654 }
+command = { type = wakeminister which = 4655 }
+command = { type = wakeminister which = 4656 }
+command = { type = wakeminister which = 4657 }
+command = { type = wakeminister which = 4658 }
+command = { type = wakeminister which = 4659 }
+command = { type = wakeminister which = 4660 }
 command = { type = wakeleader which = 500915 }
 command = { type = wakeleader which = 500916 }
 command = { type = wakeleader which = 500917 }
@@ -12250,62 +12277,66 @@ decision_picture = "decision_status_geo"
 decision = {
 exists = GEO
 OR = {
-flag = RUS_DKC
-flag = RUS_ETC
-}
+	flag = RUS_DKC
+	flag = RUS_ETC
+	}
 NOT = { war = { country = RUS country = GEO } }
 NOT = { puppet = { country = GEO country = RUS  } }
 NOT = { alliance = { country = RUS country = GEO } }
 NOT = {
-atwar = RUS
-exists = SOV
-exists = TRA
-flag = RUS_ISO
-ispuppet = GEO
-ispuppet = RUS
-}
+	atwar = RUS
+	exists = SOV
+	exists = TRA
+	flag = RUS_ISO
+	ispuppet = GEO
+	ispuppet = RUS
+	}
 OR = {
-flag = RUS_REAL
-flag = RUS_EXP
-}
+	flag = RUS_REAL
+	flag = RUS_EXP
+	}
 }
 decision_trigger = {
-control = { province = 572 data = RUS }
-control = { province = 553 data = RUS }
-control = { province = 663 data = RUS }
-control = { province = 691 data = -3 }
-control = { province = 702 data = -3 }
+	control = { province = 572 data = RUS }
+	control = { province = 553 data = RUS }
+	control = { province = 663 data = RUS }
+	control = { province = 691 data = -3 }
+OR = {
+	control = { province = 702 data = -3 }
+	control = { province = 702 data = GEO }
+	}
 }
 
 trigger = {
 exists = GEO
 OR = {
-flag = RUS_DKC
-flag = RUS_ETC
-}
+	flag = RUS_DKC
+	flag = RUS_ETC
+	}
 NOT = { war = { country = RUS country = GEO } }
 NOT = { puppet = { country = GEO country = RUS  } }
 NOT = { alliance = { country = RUS country = GEO } }
 NOT = {
-atwar = RUS
-exists = SOV
-exists = TRA
-flag = RUS_ISO
-ispuppet = GEO
-ispuppet = RUS
-}
+	atwar = RUS
+	exists = SOV
+	exists = TRA
+	flag = RUS_ISO
+	ispuppet = GEO
+	ispuppet = RUS
+	}
 control = { province = 572 data = RUS }
 control = { province = 553 data = RUS }
 control = { province = 663 data = RUS }
 control = { province = 691 data = -3 }
-control = { province = 702 data = -3 }
 OR = {
-flag = RUS_REAL
-flag = RUS_EXP
+	control = { province = 702 data = -3 }
+	control = { province = 702 data = GEO }
+	}
+OR = {
+	flag = RUS_REAL
+	flag = RUS_EXP
+	}
 }
-}
-
-
 
 name = "The Georgian Question"
 desc = "Now that the Don-Kuban Union no longer exists we must choose our stance towards the independent state of Georgia. We can either try to bring them into the fold using the direct threat of military power or via covert operations using existing pro-monarchist resistance groups. What shall we do?"
@@ -13770,15 +13801,17 @@ command = { type = industrial_modifier which = total value = 1 }
 command = { type = dissent value = 10 }
 command = { type = sleepevent which = 771067 }
 command = { type = sleepevent which = 771068 }
-command = { type = wakeminister which = 4450 }
-command = { type = wakeminister which = 4451 }
-command = { type = wakeminister which = 4452 }
-command = { type = wakeminister which = 4453 }
-command = { type = wakeminister which = 4454 }
-command = { type = wakeminister which = 4455 }
-command = { type = wakeminister which = 4456 }
-command = { type = wakeminister which = 4457 }
-command = { type = wakeminister which = 4458 }
+command = { type = wakeminister which = 4650 }
+command = { type = wakeminister which = 4651 }
+command = { type = wakeminister which = 4652 }
+command = { type = wakeminister which = 4653 }
+command = { type = wakeminister which = 4654 }
+command = { type = wakeminister which = 4655 }
+command = { type = wakeminister which = 4656 }
+command = { type = wakeminister which = 4657 }
+command = { type = wakeminister which = 4658 }
+command = { type = wakeminister which = 4659 }
+command = { type = wakeminister which = 4660 }
 command = { type = wakeleader which = 500915 }
 command = { type = wakeleader which = 500916 }
 command = { type = wakeleader which = 500917 }
@@ -14323,6 +14356,8 @@ name = " Integrate Malorossia!"
 ai_chance = 90
 command = { type = inherit which = UKR  }
 command = { type = waketeam which = 7233 when = 1 } #Kharkovsky Parovozostroitelny Zavod
+command = { type = addcore which = 587 }
+command = { type = addcore which = 601 }
 command = { type = addcore which = 638 }
 command = { type = addcore which = 639 }
 command = { type = addcore which = 640 }
@@ -14376,15 +14411,17 @@ command = { type = add_division value = infantry when = 9 }
 command = { type = add_division value = infantry when = 9 }
 command = { type = add_division value = infantry when = 9 }
 command = { type = belligerence which = RUS value = 3  }
-command = { type = wakeminister which = 4450 }
-command = { type = wakeminister which = 4451 }
-command = { type = wakeminister which = 4452 }
-command = { type = wakeminister which = 4453 }
-command = { type = wakeminister which = 4454 }
-command = { type = wakeminister which = 4455 }
-command = { type = wakeminister which = 4456 }
-command = { type = wakeminister which = 4457 }
-command = { type = wakeminister which = 4458 }
+command = { type = wakeminister which = 4650 }
+command = { type = wakeminister which = 4651 }
+command = { type = wakeminister which = 4652 }
+command = { type = wakeminister which = 4653 }
+command = { type = wakeminister which = 4654 }
+command = { type = wakeminister which = 4655 }
+command = { type = wakeminister which = 4656 }
+command = { type = wakeminister which = 4657 }
+command = { type = wakeminister which = 4658 }
+command = { type = wakeminister which = 4659 }
+command = { type = wakeminister which = 4660 }
 command = { type = wakeleader which = 500915 }
 command = { type = wakeleader which = 500916 }
 command = { type = wakeleader which = 500917 }
@@ -16853,11 +16890,28 @@ command = { type = addcore which = 1190 }
 command = { type = addcore which = 1185 }
 command = { type = inherit which = PRI  }
 command = { type = dissent value = 2 } ## Reflects difficulty of integrating Transamur, which was independent for some time....
-command = { type = wakeminister which = 4440 }
-command = { type = wakeminister which = 4441 }
-command = { type = wakeminister which = 4442 }
-command = { type = wakeminister which = 4443 }
-command = { type = wakeminister which = 4444 }
+command = { type = waketeam which = 7249 when = 1 } #Mikhail Diterikhs
+command = { type = wakeminister which = 4600 }
+command = { type = wakeminister which = 4601 }
+command = { type = wakeminister which = 4602 }
+command = { type = wakeminister which = 4603 }
+command = { type = wakeminister which = 4604 }
+command = { type = wakeminister which = 4605 }
+command = { type = wakeminister which = 4606 }
+command = { type = wakeminister which = 4607 }
+command = { type = wakeminister which = 4608 }
+command = { type = wakeminister which = 4609 }
+command = { type = wakeminister which = 4610 }
+command = { type = wakeminister which = 4611 }
+command = { type = wakeminister which = 4612 }
+command = { type = wakeminister which = 4613 }
+command = { type = wakeminister which = 4614 }
+command = { type = wakeminister which = 4615 }
+command = { type = wakeminister which = 4616 }
+command = { type = wakeminister which = 4617 }
+command = { type = wakeminister which = 4618 }
+command = { type = wakeminister which = 4619 }
+command = { type = wakeminister which = 4620 }
 command = { type = wakeleader which = 500860 }
 command = { type = wakeleader which = 500861 }
 command = { type = wakeleader which = 500862 }
@@ -16884,7 +16938,9 @@ command = { type = wakeleader which = 500882 }
 command = { type = wakeleader which = 500883 }
 command = { type = wakeleader which = 500884 }
 command = { type = wakeleader which = 500885 }
-command = { type = waketeam which = 7249 when = 1 } #Mikhail Diterikhs
+command = { type = wakeleader which = 500886 }
+command = { type = wakeleader which = 500887 }
+command = { type = wakeleader which = 500888 }
 }
 
 action_b = {

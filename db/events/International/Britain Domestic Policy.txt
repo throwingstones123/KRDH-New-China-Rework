@@ -49,7 +49,7 @@
 #
 ### Dictatorship and British Civil War
 #
-# 213034 : ENG : A Cold, Wet Day for Eric Blair
+# 214034 : ENG : A Cold, Wet Day for Eric Blair
 # 213035 : ENG : What now?
 #
 # 214036 : U07 : We have risen against the Syndicalists!
@@ -1672,7 +1672,7 @@ trigger = {
 flag = POSTWAR_CONGRESS_UNDERWAY
 flag = ENG_MOSLEY
 NOT = { flag = MOSLEY_GENSEC }
-event = 214027
+event = 214026
 }
 
 date = { day = 1 month = january year = 1936 }
@@ -1745,7 +1745,7 @@ style = 2
 trigger = {
 flag = POSTWAR_CONGRESS_UNDERWAY
 flag = ENG_KENNEY
-event = 214027
+event = 214026
 }
 
 date = { day = 1 month = january year = 1936 }
@@ -1835,7 +1835,7 @@ ai_chance = 20
 command = { type = headofstate which = 1204 }
 command = { type = headofgovernment which = 1247 }
 command = { type = set_domestic which = political_left value = 9 }
-command = { type = set_domestic which = democratic value = -9 }
+command = { type = set_domestic which = democratic value = 1 }
 command = { type = clrflag which = POSTWAR_CONGRESS_UNDERWAY }
 command = { type = local_clrflag which = UoB_autonomist }
 command = { type = local_setflag which = UoB_maximist_tuc }
@@ -2108,7 +2108,7 @@ command = { type = headofstate which = 1204 }
 command = { type = headofgovernment which = 1247 }
 command = { type = dissent value = 10 }
 command = { type = set_domestic which = political_left value = 9 }
-command = { type = set_domestic which = democratic value = -9 }
+command = { type = set_domestic which = democratic value = 1 }
 command = { type = clrflag which = POSTWAR_CONGRESS_UNDERWAY }
 command = { type = clrflag which = POSTWAR_CONGRESS_UNDERWAY }
 command = { type = local_clrflag which = UoB_federationist }
@@ -2241,7 +2241,7 @@ action_a = {
 name = "Civilians? Pah! Though this socialism thing is growing on me"
 ai_chance = 5
 command = { type = set_domestic which = political_left value = 9 }
-command = { type = set_domestic which = democratic value = -7 }
+command = { type = set_domestic which = democratic value = 3 }
 command = { type = dissent value = 20 }
 }
 
@@ -2481,7 +2481,7 @@ name = "God save the King!"
 command = { type = inherit which = ENG }
 command = { type = dissent value = -20 }
 command = { type = clrflag which = BRITISH_CIVIL_WAR }
-command = { type = trigger which = 830160 } #liberation of UK chain
+command = { type = trigger which = 114002 } #liberation of UK chain
 }
 }
 
@@ -2547,7 +2547,7 @@ command = { type = headofstate which = 1255 }
 command = { type = headofgovernment which = 1247 }
 command = { type = dissent value = 10 }
 command = { type = set_domestic which = political_left value = 9 }
-command = { type = set_domestic which = democratic value = -8 }
+command = { type = set_domestic which = democratic value = 2 }
 command = { type = local_setflag which = UoB_maximist_tuc }
 }
 
@@ -2597,7 +2597,7 @@ name = "The traitors will be imprisoned for life"
 ai_chance = 30
 command = { type = dissent value = 2 }
 command = { type = set_domestic which = political_left value = 9 }
-command = { type = set_domestic which = democratic value = -9 }
+command = { type = set_domestic which = democratic value = 1 }
 command = { type = clrflag which = BRITISH_POST_CIVIL_WAR_RECONSTRUCTION }
 }
 
@@ -3848,7 +3848,7 @@ command = { type = headofstate which = 1204 }
 command = { type = headofgovernment which = 1247 }
 command = { type = dissent value = 10 }
 command = { type = set_domestic which = political_left value = 9 }
-command = { type = set_domestic which = democratic value = -9 }
+command = { type = set_domestic which = democratic value = 1 }
 command = { type = clrflag which = POSTWAR_CONGRESS_UNDERWAY_PWH }
 command = { type = local_clrflag which = UoB_federationist }
 command = { type = local_setflag which = UoB_maximist_tuc }
@@ -3863,5 +3863,31 @@ command = { type = dissent value = 2 }
 command = { type = clrflag which = POSTWAR_CONGRESS_UNDERWAY_PWH }
 command = { type = local_clrflag which = UoB_federationist }
 command = { type = local_setflag which = UoB_congregationalist }
+}
+}
+
+## FLAG CHANGING EVENT
+
+event = {
+id = 214070
+random = no
+country = ENG
+style = 2
+
+name = "The Question of the Union Jack" 
+desc = "As the TUC Congress draws near, public debates surrounding Britain's national flag have flared up once again. A majority of Brits agree that the Union Jack canton stands for the old royalist regime and that it should be replaced with a more revolutionary and republican flag." 
+picture = "tuc1"
+
+date = { day = 0 month = july year = 1936 }
+
+action_a = {
+name = "Raise the scarlet standard high!"
+command = { type = flag_ext where = ENG which = "_tri" }
+command = { type = dissent value = -2 }
+}
+
+action_a = {
+name = "We must focus on policies,not public squabbling."
+command = { type = dissent value = 3 }
 }
 }

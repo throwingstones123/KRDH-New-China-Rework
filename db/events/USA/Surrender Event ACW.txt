@@ -2909,6 +2909,7 @@ flag = END_ACW
 NOT = {
 war = { country = CAL  country = TEX }
 war = { country = TEX country = CAN }
+ispuppet = TEX
 }
 flag = ACW_CAN_SEIZE_ALASKA
 owned = { province = 2142 data = CAN }
@@ -3208,6 +3209,7 @@ flag = ACW_CAN_SEIZE_ALASKA
 NOT = {
 alliance = { country = USA country = CAN }
 war = { country = USA country = CAN }
+ispuppet = USA
 }
 }
 
@@ -3631,9 +3633,9 @@ command = { type = secedeprovince which = USA value = 1919 }
 command = { type = secedeprovince which = USA value = 1924 }
 command = { type = secedeprovince which = USA value = 1927 }
 command = { type = secedeprovince which = USA value = 1923 }
-command = { type = secedeprovince which = USA value = 1901 }
-command = { type = secedeprovince which = USA value = 1900 }
-command = { type = secedeprovince which = USA value = 1902 }
+command = { trigger = { NOT = { event = 903965 } } type = secedeprovince which = USA value = 1901 } #Treaty of Saramento
+command = { trigger = { NOT = { event = 903965 } } type = secedeprovince which = USA value = 1900 } #Treaty of Saramento
+command = { trigger = { NOT = { event = 903965 } } type = secedeprovince which = USA value = 1902 } #Treaty of Saramento
 command = { type = secedeprovince which = USA value = 1904 }
 command = { type = secedeprovince which = USA value = 1903 }
 command = { type = secedeprovince which = USA value = 1905 }
@@ -3665,10 +3667,10 @@ command = { type = secedeprovince which = USA value = 1868 }
 command = { type = secedeprovince which = USA value = 1858 }
 command = { type = secedeprovince which = USA value = 1907 }
 command = { type = secedeprovince which = USA value = 1908 }
-command = { type = secedeprovince which = USA value = 1896 }
-command = { type = secedeprovince which = USA value = 1898 }
-command = { type = secedeprovince which = USA value = 1897 }
-command = { type = secedeprovince which = USA value = 1899 }
+command = { trigger = { NOT = { event = 903965 } } type = secedeprovince which = USA value = 1896 } #Treaty of Saramento
+command = { trigger = { NOT = { event = 903965 } } type = secedeprovince which = USA value = 1898 } #Treaty of Saramento
+command = { trigger = { NOT = { event = 903965 } } type = secedeprovince which = USA value = 1897 } #Treaty of Saramento
+command = { trigger = { NOT = { event = 903965 } } type = secedeprovince which = USA value = 1899 } #Treaty of Saramento
 command = { type = secedeprovince which = USA value = 1909 }
 command = { type = secedeprovince which = USA value = 1832 }
 command = { type = secedeprovince which = USA value = 1841 }

@@ -34,6 +34,8 @@ ai = "kaiserreich\Sicilies.ai"
 	energy	=	1000   metal	= 1000		rare_materials =	500	oil =	500	supplies =	500
 	money = 50      transports = 50
 
+	free = { ic = 5 } #temporary, remove with Italy rework
+
     ownedprovinces =      {
 	418 415 420 423 421 427 424 426 422 428 425 431 432 433 430 417
 	 }
@@ -125,6 +127,7 @@ relation = {   tag =  	JAP	value = 		-20	   }
 7290 7300 7310 #CAS
 
 #Land Doctrines
+14000 14010 #Improved Weltkrieg Hospital
 6500 6510 6530 6580 6600 6610 6620 6630 6640 6650 6660 6670 6680 6540 6910 # Great War Land Doctrines (entente)
 6010 6020 # Superior Firepower
 
@@ -143,9 +146,11 @@ relation = {   tag =  	JAP	value = 		-20	   }
 
 #Naval Doctrines
 8010 8020 8030 8040 8050 8060 8070 8080
+82300 # Amphibious Warfare
 82500 # Naval Logistics
 8500 8510 8520 8550 8560 8570 # Naval Interdiction
 8600 8610 # Trade Interdiction Submarine
+8100 8110 8120 8150 8160 #Convoy Navigation
 }
 
 #########  OOB (...)
