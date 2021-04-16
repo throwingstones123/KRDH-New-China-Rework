@@ -19,6 +19,16 @@ country = {
 
 #### cabinet
 
+	headofstate = { type = 9 id = 504008 } #Ma Fuxiang
+	headofgovernment = { type = 9 id = 504012 } #Ma Hongbin
+	foreignminister = { type = 9 id = 504044 } #Ma Liangjun
+	armamentminister = { type = 9 id = 504046 } #Ma Fuchen
+	ministerofsecurity = { type = 9 id = 504003 } #Ma Lin
+	ministerofintelligence = { type = 9 id = 504072 } #Zhang Peiyuan
+	chiefofstaff = { type = 9 id = 504018 } #Ma Hongkui
+	chiefofarmy = { type = 9 id = 504076 } #Ma Biao
+	chiefofair = { type = 9 id = 504023 } #Ma Bufang
+
 #### Resource Reserves
 
 SpyInfo  = {  country = "CXB" NumberOfSpies = 2  } 
@@ -34,6 +44,8 @@ SpyInfo  = {  country = "CXB" NumberOfSpies = 2  }
 	money		= 50
 
 	capital = 1284 # Xining 
+	free = { ic = 8 oil = 0 energy = 0 metal = 0 rare_materials = 0 money = 0 manpower = 0 } #new Mar2020
+
 	manpower = 200
 	dissent = 25
 
