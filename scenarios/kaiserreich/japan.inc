@@ -55,7 +55,7 @@ headofgovernment = { type = 9 id = 55602 }
      # Sakhalin 
      1363 1229 1222 
      #Japan in China    
-     1216 1235 1236 1240  
+       
 }
 
 
@@ -68,7 +68,7 @@ controlledprovinces = {
      1363 1229 1222 
  
      #Japan in China    
-     1216 1235 1236 1240  
+       
 
 	  }
     nationalprovinces =   {
@@ -260,7 +260,7 @@ deactivate = { 6210 6570 6010 6560 6390 }
 	landunit = {
 	id = { type = 13016 id = 506 }
 	name = "Dai-2 'Sendai' Shidan"
-	location = 1236
+	location = 1221
 
 		division = {
 		id = { type = 13016 id = 507 }
@@ -357,7 +357,7 @@ deactivate = { 6210 6570 6010 6560 6390 }
 	landunit = {
 	id = { type = 13016 id = 518 }
 	name = "Dai-8 'Hirosaki' Shidan"
-	location = 1216
+	location = 1554
 
 		division = {
 		id = { type = 13016 id = 519 }
