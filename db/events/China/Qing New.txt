@@ -505,7 +505,7 @@ command = { type = relation which = GER value = -20 }
 
 action_c = {
 ai_chance = 30
-name = "The fate of the LEP is of no concern to us"
+name = "The fate of the League is of no concern to us"
 command = { type = dissent value = 15 } #EXTREMELY unpopular
 command = { type = setflag which = CSX_LEP_REF }
 command = { type = setflag which = CSX_LEP_ZHL }
@@ -1370,21 +1370,4 @@ command = { type = set_domestic which = democratic value = 3 }
 command = { type = set_domestic which = political_left value = 2 }
 }
 }
-
-
-event = {
-id = 150061 #NOTE - this event is temporary. The warlords who back certain factions will receive a notification of the Beijing Coup, and have the option to get involved. If they do, their faction will appear. The default is Pujie's Manchu Party, as Yan Xishan can be overthrown by Feng Yuxiang and Zhang Tianran may not come to power in Shandong.
-country = CHC
-style = 2
-picture = "Feng_yuxiang_addresses_troops"
-
-name = "The Christian Marshal addresses the Guominjun!"
-desc = "Men, I hereby declare Puyi to be a bitch boy." #With the Zhili clique ejected we must now re-establish our government. Several candidates and ideas are proposed. The Emperor's brother, Aisin-Gioro Pujie, leads the Manchu party, who advocate the creation of a Prussian-style constitutional government, where the Emperor oversees and can dismiss the Assembly at will. The nationalist Young China Party, historically backed by warlord Yan Xishan, promote a  radical nationalist government aimed a curbing foreign influence (although they acknowledge the Manchu monarchy's legitimacy). The New Chinese Empire Reform Association (NCERA) enjoys a lot of support with the common people, but is rumored to be under the influence of Zhang Tianran Yiguando movement in Shandong.
-
-action_a = {
-name = "Inspiring."
-command = { type = dissent value = -5 } 
-}
-}
-
 

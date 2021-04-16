@@ -361,7 +361,7 @@ picture = "China_rally"
 action_a = {
 trigger = { 
 NOT = {
-flag = LKMT_Wang
+headofstate = 1250041
 }
 }
 name = "Wang Jingwei has proven his dedication more than once"
@@ -372,7 +372,7 @@ command = { type = local_clrflag which = LKMT_Congress1 }
 
 action_b = {
 trigger = { 
-flag = LKMT_Wang
+headofstate = 1250041
 }
 name = "Wang Jingwei nominates his Reorganizationist ally, Chen Gongbo"
 ai_chance = 40
@@ -388,13 +388,10 @@ command = { type = local_clrflag which = LKMT_Congress1 }
 }
 
 action_d = {
-trigger = { 
-OR = {
-flag = LKMT_Soong
-flag = LKMT_Wang
+trigger = {
+NOT = { headofstate = 1250001 }
 }
-}
-name = "Sun Fo, son of the Guofu, offers his moderation"
+name = "Sun Fo, son of the Gúofù, offers his moderation"
 ai_chance = 20
 command = { type = headofgovernment which = 1250040 }
 command = { type = local_clrflag which = LKMT_Congress1 }
@@ -803,7 +800,7 @@ command = { }
 
 event = {
 id = 1949018
-picture = "Chinese_Fighting" #TEMP 
+picture = "ccip_Fortified-Nanjing" 
 country = U87
 style = 2
 
@@ -845,7 +842,7 @@ offset = 7
 deathdate = { day = 1 month = december year = 1960 }
 
 name = "Wuhan taken" #TEMP 
-desc = "The National Revolutionary Army has liberated the city of Hankow! At last,  the three cities of Wuhan is free from Warlord occupation!"
+desc = "The National Revolutionary Army has liberated the city of Hankow! At last, the three cities of Wuhan is free from Warlord occupation!"
 
 action_a = {
 ai_chance = 50
@@ -859,7 +856,78 @@ command = { }
 }
 }
 
-##
+#### Dealing with Liangguang ####
 
+##Wang may be able to pursue an alliance with Chen, while Soong Qingling and Sun Fo will have a harder time negotiating with the estranged governor of Liangguang.
+
+event = {
+id = 1949020
+random = no
+country = U87
+
+trigger = {
+exists = UCH
+flag = Liangguang_Fed 
+flag = LKMT_Wang 
+NOT = {
+atwar = UCH
+atwar = U87 #neither tag will want to get involved in each others' ongoing conflict
+exists = CGX #Nanjing must be dealt with first
+event = 152038 
+event = 152066
+event = 152040
+event = 152041
+event = 152054
+event = 152062
+event = 152064
+event = 152065 #basically anything that can remove Chen Jiongming from power; more on this later 
+} 
+}
+
+name = "Dealing with the Liangguang Clique"
+desc = "TEMP" #Something regarding the tumultuous relationship between Chen Jiongming and the KMT, but that Wang Jingwei may be the key to improving relations 
+style = 2
+picture = "mayfourthdouble" #TEMP 
+
+date = { day = 0 month = january year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
+
+action_a = {
+ai_chance = 50
+name = "The friendship between Chen Jiongming and us might yet be mended"
+command = { type = setflag which = Wang_Chen } 
+command = { type = setflag which = LKMT_Liangguang } 
+command = { type = dissent value = -2 }
+command = { type = relation which = UCH value = 25 }
+}
+
+action_b = {
+trigger = { ai = no } 
+ai_chance = 20
+name = "If Chen Jiongming is to atone for his transgressions, he must submit to us"
+command = { type = dissent value = -5 }
+command = { type = setflag which = LKMT_Chen_Submit } 
+command = { type = setflag which = LKMT_Liangguang } 
+command = { type = relation which = UCH value = -25 }
+}
+
+action_b = {
+ai_chance = 29 
+name = "We have shared enemies - propose a temporary alliance with Liangguang"
+command = { type = dissent value = -5 }
+command = { type = setflag which = LKMT_Chen_Temp } 
+command = { type = setflag which = LKMT_Liangguang } 
+}
+
+action_d = {
+ai_chance = 1
+name = "Chen Jiongming and his Federalists are all traitors to the national Revolution!"
+command = { type = dissent value = 2 }
+command = { type = setflag which = LKMT_Liangguang } 
+command = { type = setflag which = LKMT_Liangguang_Invade } 
+command = { type = relation which = UCH value = -100 }
+}
+}
 
 

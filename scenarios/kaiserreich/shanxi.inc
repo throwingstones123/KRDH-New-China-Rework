@@ -22,6 +22,7 @@
 	money                  = 50 
 	capital                = 1252 # Taiyuan 
 	manpower               = 173 
+	flag_ext = _qing
    policy = 
    {  date              = {  year = 0 month = january day = 0  } 
      democratic        = 3 

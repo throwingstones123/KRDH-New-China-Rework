@@ -514,7 +514,7 @@ command = { type = add_division which = "Guangxi Cavalry 1" value = cavalry when
 command = { type = supplies value = 120 }
 command = { type = manpowerpool value = 30 }
 command = { type = set_domestic which = democratic value = 2 }
-command = { type = set_domestic which = political_left value = 2 }
+command = { type = set_domestic which = political_left value = 3 }
 command = { type = 	access which = UCH } 
 command = { type = relation which = UCH value = 50 }
 }
@@ -792,10 +792,11 @@ command = { type = addcore which = 1368 }
 command = { type = addcore which = 1373 }
 command = { type = addcore which = 1370 }
 command = { type = addcore which = 1375 }
-
+command = { type = clrflag which = Liangguang_Fed } 
 }
 
 action_b = {
+trigger = { NOT = { event = 152068 } } 
 name = "Establish Chen Mingshu as a puppet governor of Guangdong" 
 ai_chance = 20
 command = { type = addcore which = 1378 } #Guilin
@@ -824,7 +825,7 @@ command = { type = make_puppet which = UCH }
 }
 
 event = {
-id = 152066 
+id = 152066 #bruh moment 
 random = no
 country = UCH 
 style = 2
@@ -852,6 +853,7 @@ command = { type = add_division which = "2. Bubing Shi" value = infantry when = 
 command = { type = alliance which = U70 } 
 command = { type = supplies value = 150 }
 command = { type = manpowerpool value = 100 }
+command = { type = clrflag which = Liangguang_Fed } 
 }
 }
 
@@ -896,8 +898,12 @@ style = 2
 save_date = yes
 
 name = "KMT Seizes Guangzhou"#KMT Seizes Guangzhou
-desc = "EVT_152028_DESC"#Early in the morning, under the cover of the general mobilization against Guangxi, armed members of the KMT began seizing key buildings around the city, including the Guangdong University and the Provincial Assembly Building. Soon, Chen Mingshu announced the formation of the Guangdong People's Government, the deposition of Chen Jiongming, and a call for peace with Guangxi province.\n\nAs expected, Chen Jiongming announced that, while he refused to recognize the new government, he refused to allow the city to suffer unnecessary and destruction. He and his close supporters left for Hong Kong later that day, leaving the city in the hands of the Nationalist Party.
+desc = "EVT_152028_DESC"#Early in the morning, under the cover of the general mobilization against Guangxi, armed members of the KMT began seizing key buildings around the city, including the Guangdong University and the Provincial Assembly Building. Soon, Chen Mingshu announced the formation of the Guangdong People's Government, the deposition of Chen Jiongming, and a call for peace with Guangxi province.\n\nAs expected, Chen Jiongming announced that, while he refused to recognize the new government, he refused to allow the city to suffer unnecessary bloodshed and destruction. He and his close supporters left for Hong Kong later that day, leaving the city in the hands of the Nationalist Party.
 picture = "ccip_fjsoviet"
+
+date = { day = 0 month = november year = 1936 }
+offset = 1
+deathdate = { day = 29 month = december year = 1963 }
 
 action = {
 name = "Bloodshed avoided."#Bloodshed avoided.
@@ -911,7 +917,8 @@ command = { type = headofgovernment which = 65346 } #Ye Ju
 command = { type = sleepevent which = 152037 } 
 command = { type = trigger which = 152041 }
 command = { type = trigger which = 152042 }
-command = { trigger = { OR = { exists = U70 exists = U87 } } type = event which = 152043 where = UCH when = 7 } }
+command = { trigger = { OR = { exists = U70 exists = U87 } } type = event which = 152043 where = UCH when = 7 }
+command = { type = clrflag which = Liangguang_Fed } 
 }
 }
 
@@ -1003,7 +1010,7 @@ action_a = {
 ai_chance = 60
 name = "We should see what they have to offer"
 command = { type = dissent value = -2 } 
-command = { type = event which = 152045 where = UCH when = 1 }
+command = { type = event which = 152045 where = UCH when = 3 }
 command = { type = relation which = U87 value = -25 }
 }
 
@@ -1032,14 +1039,8 @@ command = { type = dissent value = -2 }
 command = { type = trigger which = 152046 }
 }
 
-action_b = {
-ai_chance = 10
-name = "Offer to submit and become a protectorate of New Guangxi clique" 
-command = { type = dissent value = 15 } 
-command = { type = trigger which = 152047 }
-}
 
-action_c = {
+action_b = {
 trigger = { ai = no } 
 ai_chance = 100
 name = "Propose a joint government out of Guangzhou" 
@@ -1088,7 +1089,7 @@ action_a = {
 ai_chance = 70
 name = "Sounds like a plan"
 command = { type = make_puppet which = UCH }
-command = { type = trigger which = 152038  }
+command = { type = trigger which = 152066  }
 }
 
 action_b = {
@@ -1136,7 +1137,7 @@ desc = "Chen Mingshu has thrown our demands back in our faces, saying he will ne
 picture = "ccip_fjsoviet"
 
 action_a = { 
-ai_chance = 100
+ai_chance = 70
 name = "Then they have chosen death!"
 command = { type = war which = UCH }
 }
@@ -1145,6 +1146,56 @@ action_b = {
 ai_chance = 0
 name = "These negotiations were pointless anyway" 
 command = { type = dissent value = 5 }
+}
+
+action_c = { 
+ai_chance = 30
+name = "Attempt to launch a coup in Canton" 
+command = { type = dissent value = 2 }
+command = { type = event which = 152067 where = UCH when = 1 }
+}
+}
+
+event = {
+id = 152067 #numbering got weird 
+random = no
+country = UCH 
+style = 2
+
+name = "New Guangxi attempts a coup in Canton!"
+desc = "Chen Jitang's forces have attempted to launch a coup in the wake of our failed negotiations. They are attempting to seize control!"
+picture = "ccip_natarmy"
+
+action_a = { 
+trigger = { ai = yes } 
+ai_chance = 50
+name = "Chen Mingshu is forced from office!"
+command = { type = trigger which = 152068 }
+command = { type = dissent value = 15 }
+}
+
+action_b = { 
+ai_chance = 50
+name = "Resist them!" 
+command = { type = dissent value = 5 }
+command = { type = war which = U70 }
+}
+}
+
+event = {
+id = 152068
+random = no
+country = U70
+style = 2
+save_date = yes
+
+name = "Guangzhou is ours"
+desc = "Canton has fallen to Chen Jitang's forces; we are in total control of the city. Guangdong is as good as ours"
+picture = "Chinese Infantry2"
+
+action_a = {
+name = "That was easy" 
+command = { type = inherit which = UCH } 
 }
 }
 
@@ -1251,6 +1302,7 @@ ai_chance = 30
 name = "The entourage is gunned down."#The entourage is gunned down.
 command = { type = event which = 152054 where = UCH when = 1 }
 command = { type = sleepminister which = 65321 }
+command = { type = clrflag which = Liangguang_Fed } 
 }
 
 action = {
@@ -1494,9 +1546,10 @@ name = "Guangxi Clique is calling the shots now"#Guangxi's power grows.
 command = { type = name where = UCH which = "Guangxi Clique" }
 command = { type = flag_ext where = UCH which = "_gx" }
 command = { type = set_domestic which = democratic value = 2 }
-command = { type = set_domestic which = political_left value = 2 }
+command = { type = set_domestic which = political_left value = 3 }
 command = { type = headofstate which = 65363 }
 command = { type = headofgovernment which = 65364 }
+command = { type = clrflag which = Liangguang_Fed } 
 }
 }
 
@@ -1576,6 +1629,7 @@ command = { type = addcore which = 1377 } #Yulin
 command = { type = addcore which = 1381 } #Bose
 command = { type = addcore which = 1376 } #Debao 
 command = { type = addcore which = 1380 } #Liuzhou
+command = { type = clrflag which = Liangguang_Fed } 
 }
 }
 
@@ -1586,8 +1640,7 @@ country = UCH
 style = 2
 save_date = yes
 
-trigger = { 
-OR = { exists = U70 exists = U87 }
+trigger = {
 event = 152054 
 event = 152057
 headofstate = 65360 #Chen Mingshu
@@ -1617,7 +1670,8 @@ command = { type = addcore which = 1377 } #Yulin
 command = { type = addcore which = 1381 } #Bose
 command = { type = addcore which = 1376 } #Debao 
 command = { type = addcore which = 1380 } #Liuzhou
-command = { type = event which = 152043 where = UCH when = 7 }
+command = { trigger = { OR = { exists = U70 exists = U87 } } type = event which = 152043 where = UCH when = 7 }
+command = { type = clrflag which = Liangguang_Fed } 
 }
 }
 

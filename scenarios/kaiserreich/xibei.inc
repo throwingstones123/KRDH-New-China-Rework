@@ -4,6 +4,7 @@
 country = {
     tag = CXB  
 	ai = "kaiserreich\Xibei San Ma.ai"
+	flag_ext = _qing
 	
 	policy = {
 		date = { year = 0 month = january day = 0 }

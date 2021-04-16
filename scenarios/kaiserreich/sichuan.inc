@@ -17,6 +17,7 @@
 	capital                = 1297 # Chengdu 
 	manpower               = 0 
 	dissent                = 40 
+	flag_ext = _qing
    policy = 
    {  date              = {  year = 0 month = january day = 0  } 
      democratic        = 3 
