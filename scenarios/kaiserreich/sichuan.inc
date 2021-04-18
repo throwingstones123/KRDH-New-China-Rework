@@ -28,9 +28,9 @@
      defense_lobby     = 2 
      interventionism   = 1 
     } 
-   nationalprovinces      = {  1297 1292 1261 1296 1298 1302 1299 1291 } 
-   ownedprovinces         = {  1297 1292 1261 1296 1298 1302 1299 1291 } 
-   controlledprovinces    = {  1297 1292 1261 1296 1298 1302 1299 1291 } 
+   nationalprovinces      = {  1297 1293 1292 1261 1296 1298 1302 1299 1291 } 
+   ownedprovinces         = {  1297 1293 1292 1261 1296 1298 1302 1299 1291 } 
+   controlledprovinces    = {  1297 1293 1292 1261 1296 1298 1302 1299 1291 } 
 	#Yunnan
    techapps = { 
 	
