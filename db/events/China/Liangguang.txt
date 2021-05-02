@@ -919,6 +919,7 @@ command = { type = trigger which = 152041 }
 command = { type = trigger which = 152042 }
 command = { trigger = { OR = { exists = U70 exists = U87 } } type = event which = 152043 where = UCH when = 7 }
 command = { type = clrflag which = Liangguang_Fed } 
+command = { type = leave_alliance when = 1 }
 }
 }
 
@@ -1388,13 +1389,16 @@ deathdate = { day = 29 month = december year = 1963 }
 action_a = {
 ai_chance = 80
 name = "It's war with Guangdong!" 
+command = { type = leave_alliance when = 1 }
 command = { type = war which = UCH }
 command = { type = trigger which = 152057 }
+
 }
 
 action = {
 ai_chance = 20
 name = "Offer a half hearted apology" 
+command = { type = leave_alliance when = 1 }
 command = { type = event which = 152058 where = UCH when = 2 }
 }
 }
@@ -1466,6 +1470,7 @@ command = { type = trigger which = 152060 }
 action_b = { 
 ai_chance = 90
 name = "Never! War with Guangdong!" 
+command = { type = leave_alliance when = 1 }
 command = { type = war which = UCH }
 command = { type = trigger which = 152057 }
 }

@@ -12,8 +12,8 @@ ispuppet = U87
 }
 }
 
-name = "The Third National Congress of the Chinese Kuomintang"
-desc = "TEMP"
+name = "Third Plenary Session of the Restored Central Committee"
+desc = "EVT_1949000_DESC"
 style = 2
 picture = "mayfourthkmt"
 
@@ -23,7 +23,7 @@ deathdate = { day = 29 month = december year = 1963 }
 
 action_a = {
 name = "The Three Principles we use to found our Party, and our Republic!" #TEMP 
-command = { type = local_setflag which = LKMT_Congress1 } #for later CSP event 
+command = { type = local_setflag which = LKMT_Congress1 } 
 }
 }
 
@@ -903,25 +903,15 @@ command = { type = relation which = UCH value = 25 }
 }
 
 action_b = {
-trigger = { ai = no } 
-ai_chance = 20
-name = "If Chen Jiongming is to atone for his transgressions, he must submit to us"
-command = { type = dissent value = -5 }
-command = { type = setflag which = LKMT_Chen_Submit } 
-command = { type = setflag which = LKMT_Liangguang } 
-command = { type = relation which = UCH value = -25 }
-}
-
-action_b = {
-ai_chance = 29 
+ai_chance = 40
 name = "We have shared enemies - propose a temporary alliance with Liangguang"
 command = { type = dissent value = -5 }
 command = { type = setflag which = LKMT_Chen_Temp } 
 command = { type = setflag which = LKMT_Liangguang } 
 }
 
-action_d = {
-ai_chance = 1
+action_c = {
+ai_chance = 10
 name = "Chen Jiongming and his Federalists are all traitors to the national Revolution!"
 command = { type = dissent value = 2 }
 command = { type = setflag which = LKMT_Liangguang } 
@@ -929,5 +919,6 @@ command = { type = setflag which = LKMT_Liangguang_Invade }
 command = { type = relation which = UCH value = -100 }
 }
 }
+
 
 
