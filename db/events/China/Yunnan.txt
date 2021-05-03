@@ -1,0 +1,142 @@
+###################
+## YUNNAN CLIQUE ## BY ASHTAKX
+###################
+
+event = {
+	id = 166000
+	random = no
+	country = CYN
+
+	name = "Status of the Yunnan Clique"
+	desc = "EVT_166000_DESC"
+	style = 2
+	picture = "Republican China"
+
+	date = { day = 5 month = january year = 1936 } 
+
+	action = {
+		name = "Republicanism lives on here!"
+		command = { }
+	}
+}
+
+event = {
+	id = 166001
+	random = no
+	country = CYN
+
+	name = "Black Monday hits Yunnan!"
+	desc = "EVT_166001_DESC"
+	style = 2
+	picture = "Berlin stock exchange"
+
+	date = { day = 7 month = february year = 1936 }
+
+	action = {
+		name = "There might be oppoturnities in this..."
+		command = { type = industrial_modifier which = total value = -25 }
+		command = { type = money value = -175 }
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 166002
+	random = no
+	country = CYN
+
+	name = "Death of Hu Hanmin"
+	desc = "EVT_166002_DESC"
+	style = 2
+	picture = "HH_Funeral"
+
+	date = { day = 12 month = may year = 1936 }
+
+	action = {
+		name = "Two down,one to go"
+		command = { }
+	}
+}
+
+event = {
+	id = 166003
+	random = no
+	country = CYN
+      
+	name = "The New Guangxi Clique assumes provisional leadership"
+	desc = "EVT_166003_DESC"
+	style = 2
+	picture = "NGC"
+
+	date = { day = 1 month = july year = 1936 }
+
+	action = {
+		name = "We must be wary of Li..."
+		command = { }
+	}
+}
+
+event = {
+	id = 166004
+	random = no
+	country = CYN
+      
+	name = "20 Years since Cai E's death"
+	desc = "EVT_166004_DESC"
+	style = 2
+	picture = "CaiE"
+
+	date = { day = 8 month = november year = 1936 }
+
+	action = {
+		name = "Remember the National Protection War!,Fight on!"
+		command = { }
+	}
+}
+
+event = {
+	id = 166005
+	random = no
+	country = CYN
+      
+	name = "20 Years since Cai E's death"
+	desc = "EVT_166005_DESC"
+	style = 2
+	picture = "CaiE"
+
+	date = { day = 8 month = november year = 1936 }
+
+	action = {
+		name = "Remember the National Protection War!,Fight on!"
+		command = { }
+	}
+}
+
+event = {
+	id = 166006
+	random = no
+	country = CYN
+
+	name = "The Economic Crisis in Yunnan"
+	desc = "EVT_166006_DESC"
+	style = 2
+	picture = "Chinese Workforce"
+
+	date = { day = 1 month = march year = 1936 }
+
+	action = {
+		name = "Miao's plan will bring Yunnan to the modern age"
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = money value = -150 }
+		command = { type = dissent value = 5 }
+		command = { type = local_setflag which = ECO_MY }
+	}
+	
+	action = {
+		name = "We must keep the army happy,and the money flowing."
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = money value = -100 }
+		command = { type = dissent value = -3 }
+		command = { type = local_setflag which = ECO_LC }
+	}
+}

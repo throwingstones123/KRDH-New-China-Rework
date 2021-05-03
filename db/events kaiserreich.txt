@@ -99,6 +99,7 @@ event = "db\events\China\Fengtian.txt"
 event = "db\events\China\LEP.txt"
 event = "db\events\China\Liangguang.txt"
 event = "db\events\China\LKMT2.txt"
+event = "db\events\China\Yunnan.txt"
 
 ###########
 #### India
