@@ -12,7 +12,7 @@ trigger = {
 
 name = "EVT_152000_NAME"
 desc = "EVT_152000_DESC"
-picture = "china"
+picture = "ZhiGong"
 
 date = { day = 0 month = january year = 1936 }
 offset = 1
@@ -43,7 +43,7 @@ save_date = yes
 
 name = "Briefly Introducing Liangguang"
 desc = "EVT_152001_DESC"#Liangguang, or Two Guangs, is a geographical term representing the provinces of Guangxi in the west and Guangdong in the east. The Viceroyalty of Liangguang was first created during the Ming Dynasty, but would be dissolved and reformed numerous times until its final dissolution in 1911. Its official name was the lengthy "Governor-General, Commander and Quartermaster, Supervisor of Waterways, and Inspector-General of the Two Expanses (Guangs) and Surrounding Areas.Guangdong province is one of the most wealthy and developed parts of China, with Guangzhou rivaling Shanghai, Nanjing, and Beijing. However, its recent history is marred with warfare and destruction, with the province losing Hong Kong, Macau, and Guangzhouwan to Western imperialists in the 19th century, while the Xinhai Revolution eventually brought further ruin by numerous wars between warlords and the turbulent rule of the Kuomintang. Since the failure of the Northern Expedition in 1926, the province has been governed Chen Jiongming and has seen a remarkable recovery and growth, developing a young provincial democracy in the process.\n\nGuangxi, meanwhile, has been ruled by Lu Rongting, who is seen as the quintessential warlord. The province has been highly militarized and its soldiers are well-known across China to be some of the best. However, this high level of militarization has been costly, and the wealthier Guangdong has been essentially keeping the Guangxi Army afloat, creating an interdependent relationship between the two provinces as Guangxi troops often supplement the smaller Guangdong Army.
-picture = "china"
+picture = "ZhiGong"
 
 action = {
 name = "Governor Chen will see us through"
@@ -247,7 +247,6 @@ style = 2
 save_date = yes
 
 trigger = {
-random = 15
 OR = {
 war = { country = USA country = TEX }
 war = { country = USA country = CSA }
@@ -1547,7 +1546,7 @@ name = "Guangxi Clique rises again"
 desc = "We have successfully established our regime over all of Liangguang."
 
 action = {
-name = "Guangxi Clique is calling the shots now"#Guangxi's power grows.
+name = "The Guangxi Clique is calling the shots now"#Guangxi's power grows.
 command = { type = name where = UCH which = "Guangxi Clique" }
 command = { type = flag_ext where = UCH which = "_gx" }
 command = { type = set_domestic which = democratic value = 2 }
@@ -1577,7 +1576,7 @@ exists = U69
 
 name = "Chen Jiongming Secures Liangguang"#Chen Jiongming Secures Liangguang
 desc = "EVT_152036_DESC"#Despite internal opposition and the revolt of the Guangxi Clique, Chen Jiongming has remained at the head of Liangguang. With his rule and popularity more secure than ever, he will have the ability to push further towards his ideals should the situation in the rest of the region allow it: A federal and truly democratic China.
-picture = "china_rally"
+picture = "ZhiGong"
 
 date = { day = 0 month = november year = 1936 }
 offset = 1

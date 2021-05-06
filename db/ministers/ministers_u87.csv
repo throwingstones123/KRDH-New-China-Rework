@@ -13,10 +13,10 @@ U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1250154;Head of Government;Chen Geng;1936;1970;1999;LE;Happy Amateur;High;CYN_geng;X
 1250553;Head of Government;Shao Shiping;1936;1970;1999;LE;Reformist Soldierhog;High;Shao_Shiping;X
 12500164;Chief of Army;Chen Geng;1936;1970;1999;LE;Elastic Defence Doctrine;High;CYN_geng;X
-12500166;Chief of Staff;Chen Geng;1936;1970;1999;LE;School of Fire Support;;CYN_geng;X
+12500166;Chief of Staff;Chen Geng;1936;1970;1999;LE;School of Fire Support;High;CYN_geng;X
 12500536;Chief of Staff;Jiang Xianyun;1936;1970;1999;LE;Commando Doctrine Staff;High;Jiang_Xianyun;X
 12500167;Head of Government;Zhou Fohai;1933;1964;1999;LWR;Political Protege;Very High;8142;X
-12500212;Minister of Armament;Chen Gongbo;1936;1970;1999;LWR;Mixed Economy;;M52014;X
+12500212;Minister of Armament;Chen Gongbo;1936;1970;1999;LWR;Mixed Economy;High;M52014;X
 12500213;Chief of Navy;Chen Jiliang;1936;1970;1999;LWR;Decisive Naval Battle Doctrine;High;M52103;X
 12500544;Chief of Navy;Lin Zun;1936;1970;1999;LWR;Indirect Approach Doctrine;High;Lin_Zun;X
 12500550;Chief of Navy;Pan Wenzhi;1936;1970;1999;LWR;Base Control Doctrine;High;Pan_Wenzhi;X
@@ -31,13 +31,12 @@ U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 12500498;Head of Government;Li Liejun;1936;1970;1999;SL;Old General;High;Li Liejun;X
 12500499;Head of Military Intelligence;Li Liejun;1936;1970;1999;SL;Logistics Specialist;High;Li Liejun;X
 12500547;Head of Military Intelligence;Mao Renfeng;1936;1970;1999;ST;Logistics Specialist;High;M52080;X
-12500548;Minister of Security;Mao Renfeng;1936;1970;1999;ST;Secret Police Chief;;M52080;X
+12500548;Minister of Security;Mao Renfeng;1936;1970;1999;ST;Secret Police Chief;High;M52080;X
 12500500;Chief of Staff;Li Liejun;1936;1970;1999;SL;School of Fire Support;High;Li Liejun;X
 12500501;Chief of Army;Li Liejun;1936;1970;1999;SL;Guns and Butter Doctrine;High;Li Liejun;X
 12500502;Chief of Army;Liao Yaoxiang;1936;1970;1999;LWR;Guns and Butter Doctrine;High;L50195;X
-12500503ft;Liao Zhongkai;1936;1970;1999;LWR;Silent Workhorse;High;CHIZhongkai;X
+12500503;Minister of Armament;Liao Zhongkai;1936;1970;1999;LWR;Silent Workhorse;High;CHIZhongkai;X
 12500539;Head of Government;Li Fuchun;1936;1970;1999;LWR;Silent Workhorse;High;Li_Fuchun;X
-12500504;Minister of Armament;Liao Zhongkai;1936;1970;1999;LWR;Resource Industrialist;High;CHIZhongkai;X
 12500566;Minister of Armament;Zeng Zhongming;1936;1970;1999;LWR;Resource Industrialist;High;Zeng_Zhongming;X
 12500552;Minister of Armament;Ruan Xiaoxian;1936;1970;1999;LWR;Industrialiser;High;Ruan_Xiaoxian;X
 12500505;Head of Government;Wang Shijie;1936;1970;1999;SL;Happy Amateur;High;Wang Shijie;X

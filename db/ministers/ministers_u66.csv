@@ -1,6 +1,6 @@
 U66;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-66301;Head of State;Chen Tiaoyuan;1936;1970;1999;FA;Ruthless Powermonger;High;Chen Diaoyuan;X
+66301;Head of State;Chen Tiaoyuan;1936;1970;1999;FA;Ruthless Powermonger;High;Chen_Tiaoyuan;X
 66302;Foreign Minister;Chen Lu;1936;1970;1999;SC;Apologetic Clerk;High;Chen Lu;X
 66303;Head of Military Intelligence;Chen Tiaoyuan;1936;1970;1999;SC;Political Specialist;High;Chen_Tiaoyuan;X
 66304;Chief of Air Force;Choi Yong duk;1936;1970;1999;PA;Naval Aviation Doctrine;High;Choi_Yong-duk;X
@@ -16,28 +16,29 @@ U66;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 66315;Minister of Armament;Lu Gongwang;1936;1970;1999;PA;Military Entrepreneur;High;Lu_Gongwang;X
 66316;Chief of Army;Ma Baohang;1936;1970;1999;PA;Armoured Spearhead Doctrine;High;Ma Baohang;X
 66317;Chief of Staff;Ma Xiangbin;1936;1970;1999;PA;School of Defence;High;Ma_Xiangbin;X
-66318;Chief of Air Force;Chen Qixia;1936;1970;1999;FA;Vertical Envelopment Doctrine;;Chen Qixia;X
+66318;Chief of Air Force;Chen Qixia;1936;1970;1999;FA;Vertical Envelopment Doctrine;High;Chen Qixia;X
 66319;Minister of Armament;Leng Yu;1936;1970;1999;PA;Bank President;High;Leng_Yu;X
-66320;Chief of Army;Chen Yi;1936;1970;1999;SC;Armoured Spearhead Doctrine;;Chen_yi;X
-66321;Chief of Army;Qian Zongze;1936;1970;1999;PA;Guns and Butter Doctrine;;Qian Zongze;X
-66322;Minister of Armament;Qian Zongze;1936;1970;1999;PA;Military Entrepreneur;;Qian Zongze;X
-66323;Head of Government;Shangguan Yunxiang;1936;1970;1999;FA;Flamboyant Tough Guy;;Shangguan_Yunxiang;X
-66324;Minister of Security;Shi Liangcai;1936;1970;1999;SC;Media Magnate;;Shi_Liangcai;X
-66325;Chief of Staff;Wang Geng;1936;1970;1999;FA;School of Manoeuvre;;Wang Geng;X
-66326;Head of Government;Wang Pu;1936;1970;1999;FA;Silent Workhorse;;Wang_Pu;X
-66327;Chief of Navy;Wu Shouting;1936;1970;1999;PA;Decisive Naval Battle Doctrine;;Wu Shouting;X
-66328;Minister of Armament;Wei Yanshou;1936;1970;1999;SC;Industrial Chemist;;Wei_Yanshou;X
-66329;Foreign Minister;Wu Yinchan;1936;1970;1999;SC;Great Compromiser;;Wu_Yinchan;X
-66330;Chief of Navy;Wu Zhennan;1936;1970;1999;SC;Decisive Naval Battle Doctrine;;Wu Zhennan;X
-66331;Minister of Armament;Wu Zhuozhi;1936;1970;1999;ML;Theoretical Scientist;;Wu_Zhuozhi;X
-66332;Minister of Security;Xia Chao;1936;1970;1999;FA;Secret Police Chief;;Xia_Chao;X
-66333;Head of Military Intelligence;Xia Chao;1936;1970;1999;FA;Logistics Specialist;;Xia_Chao;X
-66334;Chief of Air Force;Xu Hansheng;1936;1970;1999;PA;Carpet Bombing Doctrine;;Xu Huansheng;X
-66335;Chief of Air Force;Xu Peigen;1936;1970;1999;PA;Aviation Organizer;;Xu Peigen;X
-66336;Chief of Army;Xu Peigen;1936;1970;1999;PA;Static Defence Doctrine;;Xu Peigen;X
-66337;Chief of Army;Zhang Daohong;1936;1970;1999;PA;Commando Doctrine Army;;Zhang_Daohong;X
-66338;Chief of Army;Zhang Pei;1936;1970;1999;PA;Commando Doctrine Army;;Zhang Pei;X
-66339;Chief of Navy;Zhang Quan;1936;1970;1999;PA;Commando Doctrine Army;;Zhang_Quan;X
-66340;Chief of Air Force;Zhang Tiqin;1936;1970;1999;PA;Army Aviation Doctrine;;Zhang_Tiqin;X
-66341;Chief of Staff;Zhang Yichun;1936;1970;1999;PA;School of Fire Support;;Zhang_Yichun;X
-66342;Minister of Security;Zhang Yilin;1936;1970;1999;SC;Man of the People;;Zhang_Yilin;X
+66320;Chief of Army;Chen Yi;1936;1970;1999;SC;Armoured Spearhead Doctrine;High;Chen_yi;X
+66321;Chief of Army;Qian Zongze;1936;1970;1999;PA;Guns and Butter Doctrine;High;Qian Zongze;X
+66322;Minister of Armament;Qian Zongze;1936;1970;1999;PA;Military Entrepreneur;High;Qian Zongze;X
+66323;Head of Government;Shangguan Yunxiang;1936;1970;1999;FA;Flamboyant Tough Guy;High;Shangguan_Yunxiang;X
+66324;Minister of Security;Shi Liangcai;1936;1970;1999;SC;Media Magnate;High;Shi_Liangcai;X
+66325;Chief of Staff;Wang Geng;1936;1970;1999;FA;School of Manoeuvre;High;Wang Geng;X
+66326;Head of Government;Wang Pu;1936;1970;1999;FA;Silent Workhorse;High;Wang_Pu;X
+66327;Chief of Navy;Wu Shouting;1936;1970;1999;PA;Decisive Naval Battle Doctrine;High;Wu Shouting;X
+66328;Minister of Armament;Wei Yanshou;1936;1970;1999;SC;Industrial Chemist;High;Wei_Yanshou;X
+66329;Foreign Minister;Wu Yinchan;1936;1970;1999;SC;Great Compromiser;High;Wu_Yinchan;X
+66330;Chief of Navy;Wu Zhennan;1936;1970;1999;SC;Decisive Naval Battle Doctrine;High;Wu Zhennan;X
+66331;Minister of Armament;Wu Zhuozhi;1936;1970;1999;ML;Theoretical Scientist;High;Wu_Zhuozhi;X
+66332;Minister of Security;Xia Chao;1936;1970;1999;FA;Secret Police Chief;High;Xia_Chao;X
+66333;Head of Military Intelligence;Xia Chao;1936;1970;1999;FA;Logistics Specialist;High;Xia_Chao;X
+66334;Chief of Air Force;Xu Hansheng;1936;1970;1999;PA;Carpet Bombing Doctrine;High;Xu Huansheng;X
+66335;Chief of Air Force;Xu Peigen;1936;1970;1999;PA;Aviation Organizer;High;Xu Peigen;X
+66336;Chief of Army;Xu Peigen;1936;1970;1999;PA;Static Defence Doctrine;High;Xu Peigen;X
+66337;Chief of Army;Zhang Daohong;1936;1970;1999;PA;Commando Doctrine Army;High;Zhang_Daohong;X
+66338;Chief of Army;Zhang Pei;1936;1970;1999;PA;Commando Doctrine Army;High;Zhang Pei;X
+66339;Chief of Navy;Zhang Quan;1936;1970;1999;PA;Commando Doctrine Army;High;Zhang_Quan;X
+66340;Chief of Air Force;Zhang Tiqin;1936;1970;1999;PA;Army Aviation Doctrine;High;Zhang_Tiqin;X
+66341;Chief of Staff;Zhang Yichun;1936;1970;1999;PA;School of Fire Support;High;Zhang_Yichun;X
+66342;Minister of Security;Zhang Yilin;1936;1970;1999;SC;Man of the People;High;Zhang_Yilin;X
+
