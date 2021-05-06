@@ -679,8 +679,8 @@ name = "The Beijing Coup"
 desc = "EVT_150017_DESC" #The time has come for us to consider the future of China. We cannot sit idly by as our state is torn apart before our eyes. The Manchus are growing more bold, in their attempts to restore their Empire as it was, and threaten to throw us back into that ignorant and decrepit age before the Xinhai Revolution. Rival warlords plot to overthrow our government, using the Reform parties and the Emperor as pawns to get more control for themselves. We cannot sit idly by as our state, the bulwark against ignorance and anarchy, is torn apart by these internal enemies. If we are to survive the coming years, we may need to do so without the Manchus, and establish a strong, modern Republic that will unite China and resist any further foreign domination. Wu Peifu considers his options; troops loyal to the Zhili clique are forming up in Beijing for what may be the Revolution to save China.
 
 action_a = {
-ai_chance = 85
-name = "Wu Peifu purges the Manchus from the Forbidden City and founds a Republic!"
+ai_chance = 99
+name = "Wu Peifu purges the Manchus from the Forbidden City and restores the Republic!"
 command = { type = dissent value = 5 }
 command = { type = headofstate which = 503024 }
 command = { type = headofgovernment which = 503015 }
@@ -722,7 +722,7 @@ command = { type = setflag which = CSX_ZHL_REP }
 }
 
 action_b = {
-ai_chance = 10
+ai_chance = 1
 name = "A counter-coup removes the Zhili from power - Puyi is restored!"
 command = { type = dissent value = 10 } 
 command = { type = headofstate which = 503001 }
@@ -753,7 +753,7 @@ command = { type = sleepevent which = 150016 }
 }
 
 action_c = {
-ai_chance = 5
+ai_chance = 0
 name = "It is best to continue the current system"
 command = { type = dissent value = -5 } 
 command = { type = clrflag which = CSX_Speech_ZHL  }
@@ -861,8 +861,8 @@ name = "The Beijing Coup"
 desc = "EVT_150018_DESC" #We have waited long enough. The years since the Shanghai Conference have only revealed the inadequacies and shortcomings of the Zhili clique to us. For far too long have the people languished without proper direction, while kleptocrats have dominated the Empire. That ends today. Today a group of noble putschists, supported in Peking by their Reformist allies, and outside the city by pro-coup National Army forces and loyal Warlord troops, are forming up to depose the Zhili from the government. Gunfire has erupted in the outskirts of the city, as Zhili and pro-coup forces battle for control of the capital. Puyi and his brother Pujie sit and wait to be collected from the Forbidden City, to await the victor. 
 
 action_a = {
-ai_chance = 85
-name = "The Coup succeeds - Puyi is restored to the throne!"
+ai_chance = 99
+name = "The Coup succeeds - Puyi's authority is restored!"
 command = { type = dissent value = 5 } 
 command = { type = headofstate which = 503001 }
 command = { type = headofgovernment which = 503018 }
@@ -893,7 +893,7 @@ command = { type = sleepevent which = 150017 }
 }
 
 action_b = {
-ai_chance = 10
+ai_chance = 1
 name = "The coup fails, and a counter-coup evicts the Manchus from the Forbidden City!"
 command = { type = dissent value = 5 }
 command = { type = headofstate which = 503024 }
@@ -936,7 +936,7 @@ command = { type = sleepevent which = 150017 }
 }
 
 action_c = {
-ai_chance = 5
+ai_chance = 0
 name = "It is best to continue the current system"
 command = { type = dissent value = -5 } 
 command = { type = clrflag which = CSX_Speech_ZHL  }
