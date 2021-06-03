@@ -40,7 +40,7 @@ globaldata = {
   }
   alliance = {
     id          = { type = 15000 id = 4 }
-    participant = { JAP PRI }
+    participant = { JAP PRI MAN }
   }
   treaty = {
     id             = { type = 16384 id = 2 }

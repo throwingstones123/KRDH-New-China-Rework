@@ -5,7 +5,7 @@ country = {
     tag = MAN  
 
         ai = "kaiserreich\Fengtian.ai"
-	puppet = JAP
+	 
 
 	policy = {
         date = { year = 0 month = january day = 0 }

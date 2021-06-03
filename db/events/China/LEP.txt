@@ -65,7 +65,7 @@ desc = "The AOG has approached Sun Chuanfang about purchasing several 'strugglin
 
 action_a = {
 name = "It's an offer we can't refuse!"
-ai_chance = 99
+ai_chance = 100
 command = { type = setflag which = CGX_Railway_Buy }
 command = { type = money value = 300 }
 command = { type = dissent value = 15 }
@@ -75,7 +75,7 @@ command = { type = construct which = infrastructure where = -1 value = 3 }
 }
 
 action_b = {
-ai_chance = 1
+ai_chance = 0
 name = "We need those lines in Chinese hands"
 command = { type = setflag which = CGX_Railway_No } #This will need to become its own route 
 command = { type = relation which = GER value = -10 }
@@ -106,13 +106,13 @@ desc = "We are receiving reports across the entire LEP that demonstrations are b
 
 action_a = {
 name = "Suppress these riots!"
-ai_chance = 80
+ai_chance = 100
 command = { type = dissent value = 10 }
 command = { type = manpowerpool value = -3 } #Crackdown
 }
 
 action_b = {
-ai_chance = 20
+ai_chance = 0
 name = "Discuss the matter with local administrators to quell the outrage"
 command = { type = setflag which = CGX_Chen_Sun } #for future use?
 command = { type = relation which = GER value = -5 }
@@ -171,13 +171,13 @@ desc = "AOG officials have approached Sun Chuanfang demanding answers for the in
 
 action_a = {
 name = "Concede to the AOG and cooperate to bring the perpetrators to justice"
-ai_chance = 90
+ai_chance = 100
 command = { type = dissent value = 10 }
 command = { type = manpowerpool value = -1 } #Crackdown
 }
 
 action_b = {
-ai_chance = 10
+ai_chance = 0
 name = "Rebuke the AOG - we can handle our own affairs"
 command = { type = setflag which = Sun_AOGKill } #for future use?
 command = { type = relation which = GER value = -5 }
@@ -369,7 +369,6 @@ deathdate = { day = 29 month = december year = 1938 }
 action_a = {
 name = "Chen's words are dangerous...for him"
 command = { type = dissent value = 2 }
-command = { type = event which = 140011 where = U66 when = 2  }
 }
 }
 
@@ -380,8 +379,12 @@ picture = "Chinese Calvary"
 style = 2
 
 trigger = {
-event = 90520
+event = 140010
 }
+
+date = { day = 0 month = february year = 1936 }
+offset =  2
+deathdate = { day = 29 month = december year = 1938 }
 
 name = "Down with the Nanjing"
 desc = "Qi Xieyuan's actions are intolerable, and he threatens to drag us into more humiliation. To save the Zhili, we must end his regime - down with the Nanjing Clique!"
@@ -470,16 +473,8 @@ country = UCH
 picture = "Chinese Calvary2"
 style = 2
 
-trigger = {
-event = 90520
-}
-
 name = "The Liangguang Clique"
-desc = "The Liangguang clique declares it independence - Federalists rule!"
-
-date = { day = 0 month = february year = 1936 }
-offset = 10
-deathdate = { day = 29 month = december year = 1938 }
+desc = "The Liangguang clique declares its independence - Federalists rule!"
 
 action_a = {
 name = "Hopefully we can make our dreams a reality"
@@ -556,16 +551,9 @@ country = U67
 picture = "Chinese Calvary2"
 style = 2
 
-trigger = {
-event = 90520
-}
-
 name = "Independent Hunan"
-desc = "Hunan has seceded. No one cares, probably"
+desc = "Hunan has seceded. Revolutionary Buddhism!"
 
-date = { day = 0 month = february year = 1936 }
-offset = 10
-deathdate = { day = 29 month = december year = 1938 }
 
 action_a = {
 name = "I hear the food's great"
@@ -633,16 +621,8 @@ country = U87
 picture = "Chinese Calvary2"
 style = 2
 
-trigger = {
-event = 90520
-}
-
 name = "The KMT rises again"
 desc = "The Left-Kuomintang has emerged in Jiangxi-Fujian"
-
-date = { day = 0 month = february year = 1936 }
-offset = 10
-deathdate = { day = 29 month = december year = 1938 }
 
 action_a = {
 name = "Three Principles forever!"

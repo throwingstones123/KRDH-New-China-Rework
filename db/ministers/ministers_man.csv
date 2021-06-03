@@ -7,9 +7,9 @@ MAN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 58007;Chief of Staff;Wu Junsheng;1936;1964;1999;FA;School of Mass Combat;High;Kaiserreich Wu Junsheng;x
 58008;Chief of Army;Zhang Zongchang;1936;1964;1999;FA;Elastic Defence Doctrine;High;Kaiserreich Zhang Zongchang;x
 58009;Chief of Navy;Yin Tsuo-chien;1938;1964;1999;FA;Base Control Doctrine;Medium;M58062;x
-58010;Chief of Air Force;Zhang Xueliang;1936;1964;1999;FA;Army Aviation Doctrine;Very High;Zhang Xueliang;x
-58012;Head of State;Zhang Xueliang;1936;1964;1999;FA;Resigned Generalissimo;Very High;Zhang Xueliang;x
-58014;Head of Government;Zhang Xueliang;1936;1964;1999;FA;Flamboyant Tough Guy;Very High;Zhang Xueliang;x
+58010;Chief of Air Force;Zhang Xueliang;1936;1964;1999;FA;Army Aviation Doctrine;Very High;Zhang Xueliang3;x
+58012;Head of State;Zhang Xueliang;1936;1964;1999;FA;Resigned Generalissimo;Very High;Zhang Xueliang3;x
+58014;Head of Government;Zhang Xueliang;1936;1964;1999;FA;Flamboyant Tough Guy;Very High;Zhang Xueliang3;x
 58015;Head of Government;Zhang Zongchang;1924;1964;1999;FA;Silent Workhorse;High;Kaiserreich Zhang Zongchang;x
 58017;Head of Government;Zhang Zuolin;1936;1964;1999;FA;Old General;Very High;Zhang Zuolin;x
 58018;Foreign Minister;Li Shao-keng;1936;1964;1999;FA;Iron Fisted Brute;Medium;M58004;x
@@ -17,7 +17,7 @@ MAN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 58020;Minister of Armament;Lo Tsang-yin;1938;1964;1999;PA;Administrative Genius;Very High;M58034;x
 58021;Minister of Armament;Liou Tcheng-fou;1937;1964;1999;FA;Battle Fleet Proponent;Medium;M58014;x
 58022;Minister of Armament;Liu Feng Shih;1936;1964;1999;FA;Laissez-Faire Capitalist;Medium;Kaiserreich Liu Feng Shih;x
-58023;Minister of Armament;Zhang Xueliang;1936;1964;1999;FA;air to ground proponent;Very High;Zhang Xueliang;x
+58023;Minister of Armament;Zhang Xueliang;1936;1964;1999;FA;air to ground proponent;Very High;Zhang Xueliang3;x
 58024;Minister of Armament;Tang Yulin;1938;1964;1999;FA;Corrupt Kleptocrat;Medium;Kaiserreich Tang Yulin;x
 58025;Minister of Security;Tang Juwu;1936;1964;1999;FA;Man of the People;High;Kaiserreich Tang Juwu;x
 58026;Minister of Security;Li Zhaolin;1937;1964;1999;FA;Efficient Sociopath;Medium;Kaiserreich Li Zhaolin;x
@@ -29,7 +29,7 @@ MAN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 58032;Chief of Staff;Zhang Zuolin;1936;1964;1999;FA;School of Fire Support;Very High;Zhang Zuolin;x
 58033;Chief of Staff;Zhang Zongchang;1939;1964;1999;FA;School of Defence;High;Kaiserreich Zhang Zongchang;x
 58036;Chief of Army;Feng Yuxiang;1936;1964;1999;FA;Static Defence Doctrine;Medium;kaiserreich Feng Yuhsiang;x
-58034;Chief of Staff;Zhang Xueliang;1936;1964;1999;FA;School of Psychology;Very High;Zhang Xueliang;x
+58034;Chief of Staff;Zhang Xueliang;1936;1964;1999;FA;School of Psychology;Very High;Zhang Xueliang3;x
 58037;Chief of Army;Ma Zhanshan;1936;1964;1999;FA;Elastic Defence Doctrine;High;Kaiserreich Ma Zhanshan;x
 58038;Chief of Army;Tang Juwu;1939;1964;1999;FA;Decisive Battle Doctrine;Medium;Kaiserreich Tang Juwu;x
 58039;Chief of Navy;Liou Tcheng-fou;1936;1964;1999;FA;Open Seas Doctrine;Medium;M58014;x
