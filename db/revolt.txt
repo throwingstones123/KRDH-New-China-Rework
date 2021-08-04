@@ -1852,6 +1852,17 @@ UZB = {
 	capital =  1103
 }
 
+URO = {
+	date = { day = 1 month = january year = 1936 }
+	expirydate = { day = 29 month = december year = 1967 }
+	
+	minimum = { 400 }
+	
+	extra = { 394 405 401 395 393 404 403 406 }
+	
+	capital = 400
+}
+
 U00 = { #Polish - Lithuanian Commonwealth
 	date = { day = 1 month = january year = 1936 }
 	expirydate = { day = 29 month = december year = 1967 }

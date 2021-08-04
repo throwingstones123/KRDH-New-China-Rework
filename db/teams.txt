@@ -201,6 +201,7 @@ teams_U52.csv
 teams_U53.csv
 teams_U87.csv
 teams_ukr.csv
+teams_uro.csv
 teams_uru.csv
 teams_usa.csv
 teams_uzb.csv
