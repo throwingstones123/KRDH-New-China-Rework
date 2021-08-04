@@ -1,5 +1,5 @@
-U67;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;x
-;Replacements;;;;;;;;;x
+U67;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
 1150001;Head of State;Cheng Qian;1936;1964;1999;SD;Resigned Generalissimo;High;CHICheng Qian;X
 1150002;Head of Government;Cheng Qian;1936;1964;1999;SD;Old General;Medium;CHICheng Qian;X
 1150003;Foreign Minister;Zhang Guotao;1936;1964;1999;SC;Biased Intellectual;Medium;2337;X
@@ -8,7 +8,27 @@ U67;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1150006;Head of Military Intelligence;Zhang Guotao;1936;1964;1999;SC;Political Specialist;Medium;2337;X
 1150007;Chief of Staff;He Long;1936;1964;1999;SC;School of Manoeuvre;Medium;9219;X
 1150008;Chief of Army;Ye Ting;1936;1964;1999;SC;Decisive Battle Doctrine;Medium;9220;X
-1150009;Chief of Navy;Under Army Command;1936;1964;1999;PA;decisive naval battle doctrine;Very High;unknownminister;x
+1150009;Chief of Navy;Under Army Command;1936;1964;1999;PA;Decisive Naval Battle Doctrine;Very High;unknownminister;X
 1150010;Chief of Air Force;Ye Ting;1936;1964;1999;SC;Carpet Bombing Doctrine;Medium;9220;X
-1150011;Head of State;Tang Shengzhi;1936;1964;1999;NS;powerhungry demagogue;High;L50280;x
-1150012;Head of Government;Tang Shengzhi;1936;1964;1999;NS;old general;High;L50280;x
+1150011;Head of State;Tang Shengzhi;1936;1964;1999;NS;Powerhungry Demagogue;High;L50280;X
+1150012;Head of Government;Tang Shengzhi;1936;1964;1999;NS;Old General;High;L50280;X
+1150013;Minister of Armament;Ren Kainan;1936;1958;1999;ML;Administrative Genius;High;U67_Ren_Kainan;X
+1150014;Minister of Security;Yu Yi;1920;1938;1999;SL;Silent Lawyer;High;U67_Yu_Yi;X
+1150015;Chief of Staff;Li Pinxian;1927;1987;1999;SC;School of Mass Combat;High;L50182;X
+1150016;Head of State;He Jian;1927;1987;1999;PA;Ruthless Powermonger;High;U67_He_Jian;X
+1150017;Head of Government;He Jian;1927;1987;1999;PA;Backroom Backstabber;High;U67_He_Jian;X
+1150018;Chief of Army;He Jian;1927;1987;1999;PA;Counter-Insurgency Doctrine;High;U67_He_Jian;X
+1150019;Chief of Staff;Wang Donyuan;1927;1987;1999;SC;School of Fire Support;High;L50324;X
+1150020;Minister of Security;Wang Donyuan;1927;1987;1999;SC;Crime Fighter;High;L50324;X
+1150021;Head of Military Intelligence;He Yaozu;1926;1961;1999;PA;Industrial Specialist;High;L50096;X
+1150022;Chief of Staff;He Yaozu;1926;1961;1999;PA;School of Psychology;High;L50096;X
+1150023;Minister of Armament;He Yaozu;1926;1961;1999;PA;Military Entrepreneur;High;L50096;X
+1150024;Head of State;Zeng Zhongseng;1932;1964;1999;LE;Syndicalist Demagogue;High;U67_Zeng_Zhongseng;X
+1150025;Chief of Staff;Zeng Zhongseng;1932;1964;1999;LE;School of Mass Combat;High;U67_Zeng_Zhongseng;X
+1150026;Foreign Minister;Wang Dazhen;1926;1947;1999;SC;Ideological Crusader;High;U67_Wang_Dazhen;X
+1150027;Head of Government;Zhou Weiyin;1926;1949;1999;SL;Old General;High;U67_Zhou_Weiyin;X
+1150031;Minister of Security;Zhang Huizhan;1921;1964;1999;SL;Crime Fighter;High;U67_Zhang_Huizhan;X
+1150032;Chief of Staff;Liao Yaoxiang;1921;1964;1999;PA;School of Manoeuvre;High;U67_Liao_Yaoxiang;X
+1150028;Minister of Armament;Liu Tingfang;1931;1964;1999;ML;Bank President;High;U67_Liu_Tingfang;X
+1150029;Minister of Armament;Zhang Boyi;1931;1964;1999;SC;Balanced Budget Economy;High;U67_Zhang_Boyi;X
+1150030;Head of Government;Zhang Boyi;1931;1964;1999;SC;Silent Workhorse;High;U67_Zhang_Boyi;X
