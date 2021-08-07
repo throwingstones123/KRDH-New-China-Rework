@@ -198,6 +198,16 @@ ministers_U49.csv
 ministers_U51.csv
 ministers_U52.csv
 ministers_U53.csv
+ministers_U64.csv
+ministers_U74.csv
+ministers_U87.csv
+ministers_UCH.csv
+ministers_UPE.csv
+ministers_U66.csv
+ministers_U67.csv
+ministers_U68.csv
+ministers_U69.csv
+ministers_U70.csv
 ministers_ukr.csv
 ministers_uro.csv
 ministers_uru.csv
