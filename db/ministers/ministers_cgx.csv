@@ -1,6 +1,5 @@
 CGX;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-502084;Chief of Navy;Su Zushan;1920;1964;1999;FA;Indirect Approach Doctrine;Very High;Su Zushan;X
 502001;Head of State;Sun Chuanfang;1920;1964;1999;FA;Barking Buffoon;Very High;Sun Chuanfang;X
 502002;Head of Government;Sun Chuanfang;1920;1964;1999;FA;Flamboyant Tough Guy;Very High;Sun Chuanfang;X
 502094;Chief of Army;Sun Chuanfang;1920;1964;1999;FA;Elastic Defence Doctrine;Very High;Sun Chuanfang;X
@@ -22,14 +21,6 @@ CGX;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 502026;Chief of Navy;Ren Yuandao;1930;1964;1999;FA;Open Seas Doctrine;Medium;M52019;X
 502027;Chief of Air Force;Chen Changchu;1930;1964;1999;FA;Army Aviation Doctrine;Medium;M52020;X
 502028;Minister of Armament;Zhou Fohai;1936;1964;1999;FA;Resource Industrialist;High;Zhou Fohai;X
-502087;Chief of Staff;Wan Hongtu ;1936;1964;1999;PA;School of Defence;High;Wan Hongtu ;X
-502086;Minister of Armament;Wan Hongtu ;1936;1964;1999;PA;Military Entrepreneur;High;Wan Hongtu ;X
-502088;Chief of Army;Chen Dengke;1936;1964;1999;PA;Guns and Butter Doctrine;High;Chen Dengke;X
-502089;Minister of Security;Zhao Zhengping;1936;1946;1999;PA;Media Magnate;High;Zhao Zhengping;X
-502090;Chief of Staff;Jin Zhenzhong;1936;1964;1999;FA;School of Psychology;High;Jin Zhenzhong;X
-502091;Minister of Security;Jin Zhenzhong;1936;1964;1999;FA;Health and Safety;High;Jin Zhenzhong;X
-502092;Chief of Army;Chen Tiaoyuan;1936;1964;1999;PA;Doctrine of Autonomy;High;Chen_Tiaoyuan;X
-502093;Minister of Security;Chen Tiaoyuan;1936;1964;1999;PA;Crime Fighter;High;Chen_Tiaoyuan;X
 502029;Foreign Minister;Wang Kemin;1936;1964;1999;FA;Apologetic Clerk;Medium;Kaiserreich Wang Kemin;X
 502030;Head of Military Intelligence;Han Mudi;1936;1964;1999;PA;Technical Specialist;High;Kaiserreich Han Mudi;X
 502033;Minister of Armament;Feng Ru;1936;1964;1999;PA;Air Superiority Proponent;Medium;M750060;X
@@ -71,9 +62,6 @@ CGX;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 502069;Chief of Navy;Xu Zushan;1936;1964;1999;PA;Indirect Approach Doctrine;High;Xu Zushan;X
 502070;Chief of Navy;Yang Shuzhuang;1936;1964;1999;PA;Base Control Doctrine;High;Yang Shuzhuang;X
 502071;Head of Government;Yang Wenkai;1920;1964;1999;PA;Silent Workhorse;Very High;Yang Wenkai;X
-502081;Minister of Armament;Yang Wenkai;1920;1964;1999;PA;Military Entrepreneur;Very High;Yang Wenkai;X
-502082;Minister of Armament;Ding Wenjiang;1920;1964;1999;SC;Construction Magnate;Very High;Ding Wenjiang;X
-502083;Head of Military Intelligence;Ding Wenjiang;1920;1964;1999;SC;Technical Specialist;Very High;Ding Wenjiang;X
 502072;Minister of Armament;Yin Ruli;1936;1940;1999;PA;Bank President;High;Yin Ruli;X
 502073;Minister of Security;Yin Ruli;1936;1940;1999;PA;Silent Lawyer;High;Yin Ruli;X
 502074;Foreign Minister;Yuan Guanlan;1936;1940;1999;PA;Biased Intellectual;High;Yuan Guanlan;X
@@ -83,3 +71,22 @@ CGX;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 502078;Minister of Armament;Zhang Xinyi;1936;1964;1999;PA;Administrative Genius;High;Zhang Xinyi;X
 502079;Chief of Army;Zhou Fengqi;1936;1964;1999;FA;Decisive Battle Doctrine;High;Zhou Fengqi;X
 502080;Minister of Security;Zhou Fengqi;1936;1964;1999;FA;Prince of Terror;High;Zhou Fengqi;X
+502081;Minister of Armament;Yang Wenkai;1920;1964;1999;PA;Military Entrepreneur;Very High;Yang Wenkai;X
+502082;Minister of Armament;Ding Wenjiang;1920;1964;1999;SC;Construction Magnate;Very High;Ding Wenjiang;X
+502083;Head of Military Intelligence;Ding Wenjiang;1920;1964;1999;SC;Technical Specialist;Very High;Ding Wenjiang;X
+502084;Chief of Navy;Su Zushan;1920;1964;1999;FA;Indirect Approach Doctrine;Very High;Su Zushan;X
+502086;Minister of Armament;Wan Hongtu ;1936;1964;1999;PA;Military Entrepreneur;High;Wan Hongtu ;X
+502087;Chief of Staff;Wan Hongtu ;1936;1964;1999;PA;School of Defence;High;Wan Hongtu ;X
+502088;Chief of Army;Chen Dengke;1936;1964;1999;PA;Guns and Butter Doctrine;High;Chen Dengke;X
+502089;Minister of Security;Zhao Zhengping;1936;1946;1999;PA;Media Magnate;High;Zhao Zhengping;X
+502090;Chief of Staff;Jin Zhenzhong;1936;1964;1999;FA;School of Psychology;High;Jin Zhenzhong;X
+502091;Minister of Security;Jin Zhenzhong;1936;1964;1999;FA;Health and Safety;High;Jin Zhenzhong;X
+502092;Chief of Army;Chen Tiaoyuan;1936;1964;1999;PA;Doctrine of Autonomy;High;Chen_Tiaoyuan;X
+502093;Minister of Security;Chen Tiaoyuan;1936;1964;1999;PA;Crime Fighter;High;Chen_Tiaoyuan;X
+502095;Chief of Staff;Pei Changhui;1936;1970;1999;FA;School of Psychology;High;CGX_Pei_Changhui;X
+502096;Head of Military Intelligence;Pei Changhui;1936;1970;1999;FA;Industrial Specialist;High;CGX_Pei_Changhui;X
+502097;Minister of Security;Guo Zhen;1926;1950;1999;PA;Crime Fighter;High;Guo Zhen;X
+502098;Chief of Staff;Guo Zhen;1926;1950;1999;PA;School of Defence;High;Guo Zhen;X
+502099;Minister of Armament;Feng Gengguang;1926;1950;1999;PA;Bank President;High;CGX_Feng_Gengguang;X
+502100;Minister of Armament;Yin Tong;1926;1950;1999;FA;Construction Magnate;High;CGX_Yin_Tong;X
+502101;Head of Military Intelligence;Yin Tong;1926;1950;1999;FA;Technical Specialist;High;CGX_Yin_Tong;X
