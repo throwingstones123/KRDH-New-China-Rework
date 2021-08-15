@@ -3,25 +3,32 @@
 ###################
 
 event = {
-	id = 166000
+	id = 166001
 	random = no
 	country = CYN
-
-	name = "Status of the Yunnan Clique"
-	desc = "EVT_166000_DESC"
+     
+     
+     trigger = { event = 140020 }
+	 
+	 
+	name = "The Silence of the Jiang"
+	desc = "As war rages on in the Eastern provinces, naval traffic down the Yangtze has whittled down to only a quarter of what it was before the collapse of the League. Yunnan, being a landlocked and mountainous province relies heavily on this river to hold its fledgling economy together, especially the lucrative opium trade that has funded the province for many years. If peace does not arrive in the East and the flow of trade restored, the worst may have yet to come to Yunnan and her people."
 	style = 2
-	picture = "Republican China"
+	picture = "Yangtze_Incident"
 
-	date = { day = 5 month = january year = 1936 } 
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1937 }
 
 	action = {
-		name = "Republicanism lives on here!"
-		command = { }
+		name = "Will we see Shanghai goods coming here ever again?"
+	    command = { type = industrial_modifier which = total value = -5 }
+		command = { type = money value = -100 }
 	}
 }
 
 event = {
-	id = 166001
+	id = 166002
 	random = no
 	country = CYN
 
@@ -34,14 +41,704 @@ event = {
 
 	action = {
 		name = "There might be oppoturnities in this..."
-		command = { type = industrial_modifier which = total value = -25 }
+		command = { type = industrial_modifier which = total value = -15 }
 		command = { type = money value = -175 }
 		command = { type = dissent value = 15 }
 	}
 }
 
 event = {
-	id = 166002
+	id = 166003
+	random = no
+	country = CYN
+     
+	 decision = { event = 166001 }
+
+     decision_trigger = {
+     money = 25
+     }
+
+     trigger = { event = 166001 money = 25 }
+	
+	name = "The Economic Crisis in Yunnan"
+	desc = "EVT_166006_DESC"
+	style = 2
+	picture = "Chinese Workforce"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+	trigger = { NOT = { event = 166005 } }
+		name = "Yunnan must become an industrial powerhouse!"
+		command = { type = money value = -50 }
+		command = { type = local_setflag which = MYT_IND }
+	}
+	
+	action = {
+		name = "The Opium..uh,agriculture sector must recover!"
+		command = { type = money value = -25 }
+		command = { type = local_setflag which = MYT_AGR }
+	}
+}
+
+#####################
+## ECONOMIC EVENTS ##
+#####################
+
+event = {
+	id = 166004
+	random = no
+	country = CYN
+	save_date = yes
+     
+     trigger = { local_flag = MYT_IND }
+	
+	name = "Reorganizing the Geiju Mining Facilities"
+	desc = "EVT_166004_DESC"#The entire process of production in Geiju, our key tin-producing area, is still half-feudal and technologically backward. From extracting the tin to processing it, one would not be blamed if they thought they had been in the 18th century. Such practices as processing the harvested tin by grinding through crude methods and using indentured child labor, combined with the disorganized nature of having hundreds of companies competing together severely hampers output. Miao Yuntai aims to address these issues by centralization and using Yunnan Tin Company to standardize new refining and mining practices, which would help increase efficiency and raise the quality of our tin to international standards. By raising the quality of our tin, we would be able to directly sold our tin in the international market and bypass the derogatory label of 'Chinese tin' that had hampered our tin prices for so long.
+	style = 2
+	picture = "mines2"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 25
+     deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = "Let's raise the quality of our tin."
+		command = { type = money value = -60 }
+}
+}
+
+event = {
+	id = 166005
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = { event = { id = 166004 days = 5 } }
+	
+	name = "The Yunnan Tin Refinery."
+	desc = "EVT_166005_DESC"#After months of construction, the first modern tin refinery in Yunnan is finished. With an annual capacity of 2,000 tons, this refinery promises to lower the costs of refining, raise the quality of our tin and free us from the consortium of the A.O.G, who has served as the middlemen and mooched off our rightful tin revenue for too long.
+	style = 2
+	picture = "Factory"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = "Our tin,our money"
+		command = { type = add_prov_resource which = 1388 value = 20 where = metal  }
+		command = { type = event which = 166006 where = CYN when = 5 }
+}
+}
+
+event = {
+	id = 166006
+	random = no
+	country = CYN
+    save_date = yes
+	persistent = yes
+	
+	name = "The Industrial Giant of the Southwest"
+	desc = "EVT_166006_DESC"#With the Gejiu refinery finished and processing, we have noticed a noticeable bump in our tin revenue. This is proof of Miao's capability as an industrialist, which is why he has recently been appointed as Yunnan's minister of armaments. Our new minister for armaments has presented a few more of his proposals to industrialize and modernize Yunnan. He pointed out the poor state of the Kunming-Guizhou and Kunming-Haiphong railways, which if continued to be left in such a state may prove disastrous in times of urgency. However, we can also opt for public works projects like a hydroelectric dam, renovating our industrial facilities and urban centers. The final plan presented by Miao is his currency and banking reform plan, which he aims to achieve by reorganizing the Fu-Dian Bank. Prioritizing the bank's reorganization may also help to shorten the time for our other industrial projects if we were to carry them out later.
+	style = 2
+	picture = "industry"
+
+	action = {
+	trigger = { NOT = { local_flag = CYN_BANK } }
+		name = "We must have a steady cash flow, initiate the FuDian Reorganization plan!"
+		command = { type = money value = -50 }
+		command = { type = event which = 166007 where = CYN when = 5 }
+}
+
+	action = {
+	trigger = { NOT = { local_flag = CYN_RAIL } }
+		name = "The railways should have priority."
+		command = { type = money value = -50 }
+		command = { type = event which = 166010 where = CYN when = 5 }
+}
+
+	action = {
+	trigger = { NOT = { local_flag = CYN_INFRA } }
+		name = "We must build up Yunnan's infrastructure!"
+		command = { type = money value = -50 }
+		command = { type = event which = 166013 where = CYN when = 5 }
+}
+
+    action = {
+    trigger = { local_flag = CYN_BANK local_flag = CYN_RAIL local_flag = CYN_INFRA NOT =  { local_flag = CYN_COT local_flag = CYN_RICE local_flag = CYN_OPM } }
+
+		name = "We've finished our industrial projects, on to agriculture!"
+		command = { type = local_setflag which = MYT_AGR }
+		command = { type = local_clrflag which = MYT_IND }
+}
+
+    action = {
+        trigger = { local_flag = CYN_COT local_flag = CYN_RICE local_flag = CYN_OPM local_flag = CYN_BANK local_flag = CYN_RAIL local_flag = CYN_INFRA }
+		name = "We've accomplished all of our economic reforms!"
+		command = { type = money value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = dissent value = -5 }
+		command = { type = local_clrflag which = CYN_COT }
+		command = { type = local_clrflag which = CYN_RICE }
+		command = { type = local_clrflag which = CYN_OPM }
+		command = { type = local_clrflag which = CYN_BANK }
+		command = { type = local_clrflag which = CYN_RAIL }
+		command = { type = local_clrflag which = CYN_INFRA }
+}
+}
+
+event = {
+	id = 166007
+	random = no
+	country = CYN
+    save_date = yes
+	
+	name = "Initial Currency Reforms"
+	desc = "EVT_166007_DESC"#The Yunnanese provincial dollar has been inflated to such a rate that it is no longer feasible to recover from. The dollar, already suffering from an inadequate silver reserve and overprinting was rocked to the core when Black Monday hits Yunnan. One of the most glaring consequences of this hyperinflation is that the cost of living in Kunming is now several times higher than that of Tianjin. Therefore, Miao Yuntai has set out to introduce reforms in fiscal control and foreign exchange, along with a new Yunnanese dollar. It is hoped that these measures will help regain financial confidence in our provincial dollar and ease our budgets.
+	style = 2
+	picture = "Fudianbanknote"
+
+	action = {
+		name = "New,shiny papers!"
+		command = { type = money value = 100 }
+}
+}
+
+event = {
+	id = 166008
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = {  event = { id = 166007 days = 5 } }
+	
+	name = "The Reorganizaiton of The Fudian Bank"
+	desc = "EVT_166008_DESC"#While confidence in the Yunnanese dollar has been restored, there is still an urgent need for us to reform the New Fudian Bank's administration. The bank is still underprepared to deal with the ever-changing landscape of war in China, and soon maybe the world. This is partly due to the local-focused nature of the bank when it was initially established, which can no longer cope with the province's needs. A total reorganization of the bank's staff and structure, combined with the re-establishment of branches in other provinces will help to ease these difficulties.
+	style = 2
+	picture = "Fudianbanknote"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "We must keep the books balanced"
+		command = { type = free_money value = 2 }
+}
+}
+
+event = {
+	id = 166009
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = { event = { id = 166008 days = 5 } }
+	
+	name = "The Bank of the Southwest"
+	desc = "EVT_166009_DESC"#After much effort was spent in reorganizing the bank, our financial situation has finally stabilized. It is now time to look to new opportunities and investors. Miao Yuntai plans to issue a new set of one-month bonds that will allow us to get the money we need for our reforms and put money in the pockets of our investors. We've also been able re-established contact with other Fudian branches in Shanghai and Guangxi, whom we've not heard from since the collapse of the League.
+	style = 2
+	picture = "Bank of Ireland"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "There is money to be made,and kept."
+		command = { type = trade which = UCH where = CYN money = 15 }
+		command = { type = trade which = U64 where = CYN money = 15 }
+		command = { type = trade which = U69 where = CYN money = 15 }
+		command = { type = trade which = U67 where = CYN money = 15 }
+		command = { type = local_setflag which = CYN_BANK }
+		command = { type = event which = 166006 where = CYN when = 1 }
+}
+}
+
+event = {
+	id = 166010
+	random = no
+	country = CYN
+    save_date = yes
+	
+	name = "The Yunnan-Guizhou Railways."
+	desc = "EVT_166010_DESC"#Although Yunnan and Guizhou have been together for nearly a decade now, the railway links between them are still sparse and poorly maintained. This lack of modern railways has hampered Guizhou's development, as they suffer from a lack of reforms and communications with Kunming.  This could have further implications if we're suddenly invaded from the East. Therefore, it is essential to build up modern railways for Guizhou, which would assist us with modernization and allow for rapid mobilization if war breaks out.
+	style = 2
+	picture = "KM-HPrailway"
+
+	action = {
+		name = "Let's link our provinces up"
+		command = { type = money value = -50 }
+		command = { type = construct which = infrastructure where = 1303 value = 20 }
+        command = { type = construct which = infrastructure where = 1305 value = 20 }
+}
+}
+
+event = {
+	id = 166011
+	random = no
+	country = CYN
+    save_date = yes
+	
+	trigger = {  event = { id = 166010 days = 5 } }
+	
+	name = "The Yunnan-Haiphong Railways."
+	desc = "EVT_166011_DESC"#The Yunnan-Haiphong Railways represents a vital link to the outside world for Yunnan. From Haiphong, foreign capital and trade flow upwards to our isolated corner of China. However, it has nearly two decades since its initial construction, which means we must consider renovating the railines least they deteriorate
+	style = 2
+	picture = "KM-HPrailway"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "Let's link our provinces up"
+		command = { type = money value = -50 }
+		command = { type = construct which = infrastructure where = 1388 value = 20 }
+        command = { type = construct which = infrastructure where = 1386 value = 20 }
+}
+}
+
+event = {
+	id = 166012
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = { event = { id = 166011 days = 5 } }
+	
+	name = "The Kunming-Rangoon Railways"
+	desc = "EVT_166012_DESC"#Kunming's authority in the border regions has never been quite secured. This is most evident in provinces like Baoshan and Dali, where ethnic minorities like the Bai have lived in autonomous communities for centuries. However, there is now a chance for us to enforce our rule over them. An interesting proposal for a Burma-Yunnan Railway has resurfaced, which will link Rangoon with Kunming. This will grant us access to our respective markets and resources, as well as the power to enforce authority in our shared borders.
+	style = 2
+	picture = "KM-HPrailway"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "We musn't upset the balance of power"
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = CYN_RAIL }
+		command = { type = event which = 166006 where = CYN when = 1 }
+}
+
+action = {
+		name = "Time to reign them in and make some cash!"
+		command = { type = money value = -100 }
+		command = { type = dissent value = 5 }
+		command = { type = free_ic value = 1 }
+		command = { type = trade which = BUR where = CYN supplies = 50 }
+		command = { type = trade which = CYN where = BUR money = 5 }
+		command = { type = construct which = infrastructure where = 1385 value = 20 }
+		command = { type = construct which = infrastructure where = 1387 value = 10 }
+        command = { type = construct which = infrastructure where = 1389 value = 10 }
+		command = { type = 	province_revoltrisk which = 1389 value = 5 }
+		command = { type = 	province_revoltrisk which = 1387 value = 5 }
+		command = { type = local_setflag which = CYN_RAIL }
+		command = { type = event which = 166006 where = CYN when = 1 }
+}
+}
+
+event = {
+	id = 166013
+	random = no
+	country = CYN
+    save_date = yes
+	
+	name = "Fumin Hydroelectric Power Station"
+	desc = "EVT_166013_DESC"#Yunnan was the first province to establish a hydroelectric power station when the Yaolong Electric Light Company was set up in 1908. However, the station could only provide enough power to light Kunming, and its output was unreliable. Because of this, we've outlined a new plan to construct a hydroelectric dam in Fumin country. Once completed, the dam's electricity output will not only be enough to provide consistent power to our factories but to our citizenry as well. However, some have argued against its construction, saying that the dam's projected output will far exceed any demands and would consume too many resources. While some of this is true, it would be better to have a plentiful reserve of energy which we could sell to other provinces to cover the costs.
+	style = 2
+	picture = "yamuna_dam"
+
+	action = {
+		name = "Onwards!"
+		command = { type = money value = -50 }
+		command = { type = add_prov_resource which = 1303 value = 6 where = energy  }
+}
+}
+
+event = {
+	id = 166014
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = {  event = { id = 166013 days = 5 } }
+	
+	name = "Industrial Modernization"
+	desc = "EVT_166014_DESC"#While Yunnan boasts a semi-decent set of factories, the machines that power them are long past their prime. Therefore, Miao Yuntai has asked for permission to visit the Shanghai legation to inspect and purchase new machinery for our factories. While it would not be cheap to purchase and ship industrial equipment from Shanghai, it would significantly increase our industrial output in the long run.
+	style = 2
+	picture = "MiaoYuntai"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "It will be worth it in the end,hopefully..."
+		command = { type = money value = -50 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = free_ic value = 2 }
+}
+}
+
+event = {
+	id = 166015
+	random = no
+	country = CYN
+    save_date = yes
+	 
+	 trigger = {  event = { id = 166014 days = 5 } }
+	
+	name = "Municipal Construction"
+	desc = "EVT_166015_DESC"#Thanks to our investment in the hydroelectric dam and new industrial equipment, Yunnan has begun to shed the skin of economic backwardness it once had. However, Yunnan is still in need of reconstruction to be comparable to the level of development of provinces like Guangdong or Shanxi. Therefore, we've contracted the new Kunming Cement Company to redesign many urban centers across Yunnan, including Kunming. Once the redesign of these cities is finished, there will no doubts about Yunnan's status as a 'Model Province'.
+	style = 2
+	picture = "Kunming_Aerial"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "We shall stand proud among the provinces"
+		command = { type = money value = -50 }
+		command = { type = construct which = ic where = 1390 value = 2 }
+		command = { type = construct which = infrastructure where = 1390 value = 20 }
+		command = { type = construct which = ic where = 1305 value = 1 }
+		command = { type = construct which = ic where = 1385 value = 1 }
+		command = { type = local_setflag which = CYN_INFRA }
+		command = { type = event which = 166006 where = CYN when = 1 }
+}
+}
+
+event = {
+	id = 166020
+	random = no
+	country = CYN
+	save_date = yes
+     
+     trigger = { local_flag = MYT_AGR }
+	
+	name = "The Land Survey completed"
+	desc = "EVT_166020_DESC"#After months of surveying, our land assessment project is complete. As expected, much land in Yunnan has been laid to waste as farmers go bankrupt from the opium price drop. This has caused mass panic among landlords and farmers alike, which provides us with a unique opportunity. Now that they are desperate for help, we can push for mechanization of farming practices and a revamp of the land bureaucracy, which has long resisted any of our efforts to centralize land administration. 
+	style = 2
+	picture = "agreforma"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "To the fields!"
+		command = { type = money value = -50 }
+		command = { type = event which = 166021 where = CYN when = 5 }
+}
+}
+
+event = {
+	id = 166021
+	random = no
+	country = CYN
+    save_date = yes
+	persistent = yes
+	
+	name = "Revitalizing the fields"
+	desc = "EVT_166021_DESC"#Now supplied with the latest figures from the countryside, we can formally start Yunnan's journey towards agricultural recovery. Question is, what shall we focus on first?. Cotton has been gaining traction recently as the crop of choice for our farmers, though there are also urgent calls from our ministers to support subsistence farming, which stems from worries of a famine breaking out like the one in Sichuan. On the other hand, our army pleads for us to restore opium farming, which would bring in the most revenue and secure funding for them.
+	style = 2
+	picture = "agrireform"
+
+	action = {
+	trigger = { NOT = { local_flag = CYN_COT } }
+		name = "Cotton shall lead the way."
+		command = { type = event which = 166022 where = CYN when = 5 }
+}
+
+action = {
+    trigger = { NOT = { local_flag = CYN_RICE } }
+		name = "Our people shall never go hungry!"
+		command = { type = event which = 166024 where = CYN when = 5 }
+}
+
+action = {
+    trigger = { NOT = { local_flag = CYN_OPM } }
+		name = "Opium will bring not only cash but also influence for Yunnan."
+		command = { type = event which = 166026 where = CYN when = 5 }
+}
+
+action = {
+        trigger = { local_flag = CYN_COT local_flag = CYN_RICE local_flag = CYN_OPM NOT =  { local_flag = CYN_BANK local_flag = CYN_RAIL local_flag = CYN_INFRA } }
+		name = "We've finished our agriculture reforms, on to industrial reforms!"
+		command = { type = local_setflag which = MYT_IND }
+		command = { type = local_clrflag which = MYT_AGR }
+}
+
+action = {
+        trigger = { local_flag = CYN_COT local_flag = CYN_RICE local_flag = CYN_OPM local_flag = CYN_BANK local_flag = CYN_RAIL local_flag = CYN_INFRA }
+		name = "We've accomplished all of our economic reforms!"
+		command = { type = money value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = dissent value = -5 }
+		command = { type = local_clrflag which = CYN_COT }
+		command = { type = local_clrflag which = CYN_RICE }
+		command = { type = local_clrflag which = CYN_OPM }
+		command = { type = local_clrflag which = CYN_BANK }
+		command = { type = local_clrflag which = CYN_RAIL }
+		command = { type = local_clrflag which = CYN_INFRA }
+}
+}
+
+event = {
+	id = 166022
+	random = no
+	country = CYN
+    save_date = yes
+		
+	name = "The Rebirth of the Cotton Fields."
+	desc = "EVT_166022_DESC"#Thanks to our new initiative to subsidize cotton farming, there has been a great leap in the amount of land used to cultivate cotton in Yunnan. However, there remains the problem of a lack of any modern mills to process the harvested cotton.  Miao Yuntai plans to address this by constructing a new weaving mill with machinery bought from Shanghai.
+	style = 2
+	picture = "CYNCotton"
+
+	action = {
+		name = "Raise the cotton mill!"
+		command = { type = money value = -50 }
+}
+}
+
+event = {
+	id = 166023
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = { event = { id = 166022 days = 5 } }
+	
+	name = "The Yunnan Cotton Mill"
+	desc = "EVT_166023_DESC"#After many months of construction, our weaving mill is now finished and operational. This marks the rebirth of the Yunnanese cotton industry, which has long been deprecated by the opium trade. What's more, textile merchants from nearby provinces have also flocked to Yunnan to operate and employ the services of our new mill, bringing us an extra source of cash.
+	style = 2
+	picture = "CYNCotton"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "Splendid!"
+		command = { type = free_ic value = 1 }
+		command = { type = free_supplies value = 1 }
+		command = { type = free_money value = 1 }
+		command = { type = local_setflag which = CYN_COT }
+		command = { type = event which = 166021 where = CYN when = 1 }	
+}
+}
+
+event = {
+	id = 166024
+	random = no
+	country = CYN
+    save_date = yes
+	
+	name = "The Rice of Yunnan"
+	desc = "EVT_166024_DESC"#In the twilight years of the Qing Dynasty, when the opium suppression campaigns were still ongoing, Yunnanese farmers had cultivated wheat and beans in quantity. However, with the breakdown of central authority following the Xinhai Revolution, our farmers had quickly turned opium for personal gains. This lack of subsistence farming had almost led to disaster when famine-struck Sichuan stopped exporting their crops over to Yunnan, resulting in several weeks of food shortages in Kunming. To ensure Yunnan's self-sufficiency in food, great subsidies will be handed out to any farmers who cultivate subsistence crops. What's more, we will also send farming experts to teach new farming practices and assist farmers with mechanization.
+	style = 2
+	picture = "CYN_Peasants"
+
+	action = {
+		name = "To the new frontiers!"
+		command = { type = free_supplies value = 2 }
+}
+}
+
+event = {
+	id = 166025
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = { event = { id = 166024 days = 5 } }
+	
+	name = "The New Reserves."
+	desc = "EVT_166025_DESC"#The farming incursions were a resounding success!. Though some landlords and ultra-conservative farmers resist any approaches by our advisors, the majority accepted our assistance. The first report shows great increases in our wheat, beans, and rice yield, with some areas yielding twice as much produce as initially expected. Our warehouses are overloaded with grain and stock, which some fear may go to waste if stored for too long. Therefore, plans are being made to export our excess produce to other provinces, bringing us an extra source of revenue.
+
+	style = 2
+	picture = "CYN_Peasants"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		name = "Let us relieve Sichuan's peoples"
+		trigger = {
+		exists = U64
+		NOT = {
+		war = { country = CYN country = U64}
+		}
+		}
+		command = { type = trade which = CYN where = U64 supplies = 5 }
+		command = { type = money value = 20 }
+        command = { type = local_setflag which = CYN_RICE }
+		command = { type = event which = 166021 where = CYN when = 1 }	
+}
+
+	action = {
+		name = "Guangxi would appreciate some produce other than opium from us"
+		trigger = {
+		exists = U69
+		NOT = {
+		war = { country = CYN country = U69 }
+		}
+		}
+		command = { type = trade which = CYN where = U69 supplies = 5 }
+		command = { type = money value = 20 }
+		command = { type = local_setflag which = CYN_RICE }
+		command = { type = event which = 166021 where = CYN when = 1 }	
+		
+}
+
+	action = {
+		name = "Guangdong is the place to go if we want good prices"
+		trigger = {
+		exists = UCH
+		NOT = {
+		war = { country = CYN country = UCH }
+		}
+		}
+		command = { type = trade which = CYN where = U64 supplies = 5 }
+		command = { type = money value = 20 } 
+		command = { type = local_setflag which = CYN_RICE }
+		command = { type = event which = 166021 where = CYN when = 1 }	
+}
+
+	action = {
+		name = "Hunan will appreciate our grain"
+		trigger = {
+		exists = U67
+		NOT = {
+		war = { country = CYN country = U67 }
+		}
+		}
+		command = { type = trade which = CYN where = U67 supplies = 5 }
+		command = { type = money value = 20 } 
+		command = { type = local_setflag which = CYN_RICE }
+		command = { type = event which = 166021 where = CYN when = 1 }	
+}
+
+	action = {
+		name = "No, we must keep a big reserve of food for Yunnan"
+		command = { type = supplies value = 200 } 
+}
+}
+
+event = {
+	id = 166026
+	random = no
+	country = CYN
+    save_date = yes
+	
+	name = "The Armed Poppies"
+	desc = "EVT_166026_DESC"#Our farmers need little instruction in how to cultivate opium, as we expect they know even more than we do in opium cultivation. However, they currently have no markets to export their produce to, as war rages outside the borders of Yunnan. Therefore, our Opium Suppression Bureau chief has suggested that we provide armed protection to caravans that are transporting our opium to nearby provinces, especially ones that are controlled by our enemies.
+	style = 2
+	picture = "opium_field"
+
+	action = {
+		name = "A deadly crop, a high price"
+		command = { type = money value = 120 }
+		command = { type = dissent value = 3 }
+}
+}
+
+event = {
+	id = 166027
+	random = no
+	country = CYN
+	
+     trigger = { event = { id = 166026 days = 5 } }
+	
+	name = "Resurgent Opium farms"
+	desc = "EVT_166027_DESC"#As the demand for opium is once again available, many of our farmers have immediately jumped to farming it. While the restored revenue is welcomed, we must also not let opium cultivation return to its pre-Black Monday levels to ensure the healthy development of Yunnan. We have entrusted this task to the Opium Suppression Bureau, though they have demanded that we grant them generous funds to subsidize other crops.
+
+	style = 2
+	picture = "opium_field"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = "Give them enough money to manage things"
+		command = { type = local_setflag which = OPM_OVL }
+		command = { type = money value = -50 }
+}
+
+action = {
+		name = "Eh,it won't be necessary"
+		command = { type = local_setflag which = OPM_CON }
+		command = { type = dissent value = 3 }
+}
+}
+
+event = {
+	id = 166028
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = { local_flag = OPM_OVL event = { id = 166026 days = 5 } }
+	
+	name = "Excessive opium farming reported!"
+	desc = "EVT_166028_DESC"#Unsurprisingly, without any help from the government to subsidize the farming of other crops, the majority of Yunnan's farmers have returned to farming opium. It will now be much harder to initiate agriculture reforms, as our farmers are now content with cultivating opium alone. This will also do significant damage to any previous projects that we have initiated.
+
+	style = 2
+	picture = "opium_field"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = "Damn those poppies!"
+		command = { type = money value = -50 }
+		command = { type = dissent value = 5 }
+		command = { type = industrial_modifier which = total value = -3 }
+		command = { type = local_setflag which = CYN_OPM }
+		command = { type = local_clrflag which = OPM_OVL }
+		command = { type = event which = 166021 where = CYN when = 1 }	
+} 
+}
+
+event = {
+	id = 166029
+	random = no
+	country = CYN
+    save_date = yes
+	
+     trigger = { local_flag = OPM_CON event = { id = 166026 days = 5 } }
+	
+	name = "Opium farming contained"
+	desc = "EVT_166029_DESC"#Thanks to the efforts of our Opium Suppression Bureau, Opium cultivation in Yunnan has been contained to acceptable amounts of land. This will help ensure the stable development of agriculture within Yunnan, where we might one day be free from the toxic effects of that devilish plant. In addition to that, the Bureau has also strengthened its grip on large opium farms, bringing in even more tax revenue to us
+
+	style = 2
+	picture = "opium_field"
+
+	 date = { day = 1 month = january year = 1936 }
+     offset = 5
+     deathdate = { day = 29 month = december year = 1960 }
+
+	action = {
+		name = "One day,we will be free of opium..."
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = CYN_OPM }
+		command = { type = local_clrflag which = OPM_CON }
+		command = { type = event which = 166021 where = CYN when = 1 }	
+}
+}
+
+event = {
+	id = 166100
 	random = no
 	country = CYN
 
@@ -59,7 +756,7 @@ event = {
 }
 
 event = {
-	id = 166003
+	id = 166101
 	random = no
 	country = CYN
       
@@ -77,7 +774,7 @@ event = {
 }
 
 event = {
-	id = 166004
+	id = 166102
 	random = no
 	country = CYN
       
@@ -95,7 +792,7 @@ event = {
 }
 
 event = {
-	id = 166005
+	id = 166103
 	random = no
 	country = CYN
       
@@ -111,32 +808,4 @@ event = {
 		command = { }
 	}
 }
-
-event = {
-	id = 166006
-	random = no
-	country = CYN
-
-	name = "The Economic Crisis in Yunnan"
-	desc = "EVT_166006_DESC"
-	style = 2
-	picture = "Chinese Workforce"
-
-	date = { day = 1 month = march year = 1936 }
-
-	action = {
-		name = "Miao's plan will bring Yunnan to the modern age"
-		command = { type = industrial_modifier which = total value = 5 }
-		command = { type = money value = -150 }
-		command = { type = dissent value = 5 }
-		command = { type = local_setflag which = ECO_MY }
-	}
-	
-	action = {
-		name = "We must keep the army happy,and the money flowing."
-		command = { type = industrial_modifier which = total value = 10 }
-		command = { type = money value = -100 }
-		command = { type = dissent value = -3 }
-		command = { type = local_setflag which = ECO_LC }
-	}
 }

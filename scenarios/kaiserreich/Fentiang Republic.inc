@@ -19,7 +19,7 @@ country = {
     }
 #### cabinet
 headofstate = { type = 9 id = 58001 }
-headofgovernment = { type = 9 id = 58002 }
+headofgovernment = { type = 9 id = 58014 }
 #### Resource Reserves
 	energy	=	200  metal	=	200	rare_materials =	200	oil =	200	supplies =	300
 	money = 50
@@ -30,15 +30,15 @@ headofgovernment = { type = 9 id = 58002 }
 
 	capital = 	1208
 
-        free = { ic = 8 }
+        free = { ic = 10 }
 
     ownedprovinces =      {
 		1202 1204 1212 1205 1199 1203 1200 1206 1213 1237 1207 1220 1218 
-                1201 1208 1209 1210 1211 1214 1215 1217 1197 1198
+                1201 1208 1209 1210 1211 1214 1215 1217 1197 1198 
 	 }
     controlledprovinces = {
 		1202 1204 1212 1205 1199 1203 1200 1206 1213 1237 1207 1220 1218 
-                1201 1208 1209 1210 1211 1214 1215 1217 1197 1198
+                1201 1208 1209 1210 1211 1214 1215 1217 1197 1198 
 	  }
     nationalprovinces =   {
 		1202 1204 1212 1205 1199 1203 1200 1206 1213 1237 1207 1220 1218 

@@ -58,7 +58,7 @@ SpyInfo  = {  country = "EAF" NumberOfSpies = 2  }
 	}
 
 diplomacy = {
-relation = { tag = CGX value = 100   access = yes	   } 
+relation = { tag = CGX value = 100 guaranteed = { day = 29 month = december year = 1935   }  access = yes	   } 
 relation = { tag = GER value = 60 }
 relation = { tag = AST value = 60 }
 relation = { tag = CAN value = 60 }
