@@ -1,0 +1,686 @@
+####################
+### Fengtien Republic events - redux by Popper 
+### IDs 144000 - 144xxx 
+####################
+
+###Opening Events###
+
+event = {
+id = 144000
+country = MAN
+style = 2
+picture = "Fengtian NE Army"
+
+name = "The Autonomous Three Northeastern Provinces"
+desc = "TEMP"
+
+action_a = {
+name = "The Northeast remains a beacon of hope to China!"
+command = {  }
+}
+}
+
+
+
+### Reacting to the Zhili Crisis ###
+
+event = {
+id = 144005
+country = MAN
+style = 2
+picture = "mayfourth2"
+
+#needs a trigger 
+
+name = "Crisis in the Zhili Clique"
+desc = "TEMP" #TEMP text: It is now plain and obvious to us: The Zhili clique is in crisis. The League of Eight Provinces has collapsed and is in the midst of a chaotic civil war, while the rift between the Northern and Southern Zhili cliques has reached critical levels. We have also received word of a new mass movement that has taken the so-called Empire of the Qing by storm. It is demanding the immediate end of concessions in China and is raising the old Five Colour Flag in protest to foreign imperialism as well as reactionary and decadent elements in Chinese society. Our enemies are in complete disarray: an opportune moment approaches!  
+
+action_a = {
+name = "Our enemies are in complete disarray - an opportune moment approaches!  
+"
+command = {  }
+}
+}
+
+event = {
+id = 144006
+country = MAN
+style = 2
+picture = "Chinese Crossroad" #TEMP 
+
+trigger = {
+event = 144005
+}
+
+name = "Seizing the Initiative" #Probably rename to something out of Art of War 
+desc = "" #Something about choosing to gun it for Beijing 
+
+date = { day = 0 month = january year = 1936 }
+offset = 2
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 70
+name = "We should catch them while they are off balance, without delay"
+command = {  } #Set flag for preparation for war with Qing - earliest January 1938
+}
+
+action_b = {
+ai_chance = 30
+name = "We must first establish a solid foundation for ourselves"
+command = {  } #Sets flag for events for establishing the Fengtian government in Manchuria - earliest date for war January 1939
+}
+}
+
+###Building up for War ###
+
+event = {
+id = 144007
+country = MAN
+style = 2
+picture = "money_devaluation"
+
+name = "Monetary Policy of the Fengtian Government"
+desc = ""
+
+action_a = {
+ai_chance = 50
+name = "Request another Japanese loan"
+command = {  }
+}
+
+action_b = {
+ai_chance = 20
+name = "Raise taxes on soybeans, deeds, and commodities"
+command = {  }
+
+}
+
+action_c = {
+ai_chance = 30
+name = "Print more money and issue bonds"
+command = {  }
+}
+}
+
+
+##Military Buildup
+
+#Mukden Arsenal 
+event = {
+id = 144008
+random = no
+country = MAN 
+style = 2
+decision = {
+and = {
+control = { province = 1208 data = MAN }
+control = { province = 1214 data = MAN }
+event = 144006
+}
+}
+decision_trigger = {
+money = 400
+metal = 600
+NOT = { atwar = MAN }
+}
+trigger = {
+money = 400
+metal = 600
+control = { province = 1208 data = MAN }
+control = { province = 1214 data = MAN }
+event = 144006
+NOT = { atwar = MAN } 
+}
+
+name = "Expanding Mukden Arsenal"
+desc = ""
+picture = "Chinese Anti-Tank"
+
+
+date = { day = 0 month = march year = 1936 }
+offset = 2
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance =  50
+name = "Accept Japanese aid in expanding the arsenal's facilities"
+command = { type = setflag which = Mukden_Arsenal_Exp }
+command = { type = setflag which = Mukden_Arsenal_Japanese_Aid }
+}
+
+action_b = {
+ai_chance =  40
+name = "Try to use our own capital to build the necessary expansions"
+command = { type = setflag which = Mukden_Arsenal_Exp }
+}
+
+
+action_c = {
+ai_chance =  10
+name = "The Arsenal's existing facilities are going to have to do."
+command = { }
+}
+}
+
+event = {
+id = 144009
+country = MAN
+style = 2
+picture = "Chinese Trench" #TEMP 
+
+trigger = {
+event = 144002
+NOT = { flag = Mukden_Arsenal_Japanese_Aid } 
+}
+
+name = "Adopting a new service rifle"
+desc = ""
+
+date = { day = 0 month = january year = 1936 }
+offset = 2
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 50
+name = "Adopt the 6.5mm Arisaka and reconfigure the production lines"
+command = { type = setflag which = Mukden_Arsenal_Japanese_Aid }
+command = {  }
+}
+
+action_b = {
+ai_chance = 50
+name = "Go with the domestic design chambered in 7.92mm"
+command = {  }
+}
+}
+
+event = {
+id = 144010
+country = MAN
+style = 2
+picture = "Chinese Anti-Tank" #TEMP 
+
+decision = {
+event = 144002
+flag = Mukden_Arsenal_Japanese_Aid
+}
+decision_trigger = {
+NOT = { atwar = MAN }
+}
+
+trigger = {
+NOT = { atwar = MAN }
+event = 144002
+flag = Mukden_Arsenal_Japanese_Aid
+}
+
+
+
+name = "License additional Japanese designs?"
+desc = ""
+
+date = { day = 0 month = january year = 1936 }
+offset = 2
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 60
+name = "Yes, these Japanese weapons will help bring us victory"
+command = { type = setflag which = Mukden_Arsenal_Japanese_Aid }
+command = {  }
+}
+
+action_b = {
+ai_chance = 40
+name = "Modernize our existing equipment instead"
+command = {  }
+}
+}
+
+#Armored Corps 
+
+event = {
+id = 144008
+random = no
+country = MAN 
+style = 2
+decision = {
+and = {
+control = { province = 1208 data = MAN }
+control = { province = 1214 data = MAN }
+event = 144006
+}
+}
+decision_trigger = {
+money = 200
+NOT = { atwar = MAN }
+}
+trigger = {
+money = 200
+control = { province = 1208 data = MAN }
+control = { province = 1214 data = MAN }
+event = 144006
+NOT = { atwar = MAN } 
+}
+
+name = "New Tanks for the Armored Corps"
+desc = "" #TEMP 
+picture = "Chinese Armor"
+
+
+date = { day = 0 month = march year = 1936 }
+offset = 2
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance =  50
+name = "Buy new Japanese tanks on credit"
+command = { type = setflag which = Fengtian_Tanks_Credit }
+command = { type = money value = -200 }
+command = { type = free_money value = -5 }
+#blueprint for 1928  
+}
+
+action_b = {
+trigger = { money = 400 } 
+ai_chance =  40
+name = "Buy surplus tanks on the international market"
+command = { type = money value = -400 }
+#blueprint for 1922
+}
+
+action_c = {
+ai_chance =  10
+name = "We cannot afford such an investment right now..."
+command = { }
+}
+}
+
+#save two events for receiving the tanks + blueprints
+
+#Air Force 
+
+event = {
+id = 144011
+random = no
+country = MAN 
+style = 2
+decision = {
+and = {
+control = { province = 1208 data = MAN }
+control = { province = 1214 data = MAN }
+event = 144006
+}
+}
+decision_trigger = {
+money = 300
+AND = { 
+money = 150
+metal = 600
+}
+NOT = { atwar = MAN }
+}
+trigger = {
+OR = {
+money = 300
+AND = { 
+money = 150
+metal = 600
+}
+}
+control = { province = 1208 data = MAN }
+control = { province = 1214 data = MAN }
+event = 144006
+NOT = { atwar = MAN } 
+}
+
+name = "Modernizing our Air Fleet"
+desc = "" #TEMP 
+picture = "sovietairforce" #TEMP 
+
+
+date = { day = 0 month = march year = 1936 }
+offset = 2
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance =  80
+name = "Purchase Japanese aircaft directly"
+#event for receiving shipment 
+command = { type = money value = -300 }
+#blueprint for 1930 Interceptor 
+#receive shipment of 50 Interceptor 1930 
+command = { type = trigger which = 144012 }
+}
+
+action_b = {
+trigger = { metal = 600 } 
+ai_chance =  19
+name = "Buy a few examples and commission an aircraft factory"
+command = { type = money value = -150 }
+command = { type = metal value = -600 }
+#receive 25 planes, but new tech team and 1930 interceptor blueprint
+command = { type = trigger which = 144012 } 
+}
+
+action_c = {
+ai_chance = 1
+name = "We cannot afford such an investment right now..."
+command = { }
+}
+}
+
+event = {
+id = 144012
+random = no
+country = MAN 
+style = 2
+picture = "sovietairforce" #TEMP 
+
+name = "Reorganizing the Air Corps"
+desc = "" #TEMP - Zhang Zuolin has the choice of of letting Hiroshi Miwa or Zhang Xueliang reorganize the air corps. Unlike other decisions, while Hiroshi Miwa is favored by the Concordia Association, he's old guard and Zhang Zuolin trusts him so his hiring is less of a concession. What it really comes down to is what kind of tech team you get: Hiroshi Miwa knows these planes pretty well and will provide boosts to research of aircraft and fighter tactics. Zhang Xueliang on the other hand won't know these specific machines as well, but can whip the corps into shape and focus on doctrine and organization, meaning his tech team helps researching air doctrine faster at the cost of aircraft research 
+
+action_a = {
+ai_chance = 50
+name = "Hiroshi Miwa's expertise will produce many fine aces"
+command = { } 
+#Hiroshi Miwa tech team
+}
+
+action_b = {
+ai_chance = 50
+name = "The Young Marshal's plan will get the corps off the ground" 
+command = { } 
+#Zhang Xueliang air tech team 
+}
+}
+
+#Naval Reorganization
+#Under Construction
+
+###Investing at Home + Promoting Regionalism 
+
+##if you selected to establish yourself at home, you will have the option to invest in the Northeast/Manchuria to build it up, and possibly promote regionalism. Going hard into this route will 
+
+
+#Regional Movements
+
+event = {
+id = 144016
+random = no
+country = MAN 
+style = 2
+picture = "china_recapture" #TEMP 
+
+name = "Wu Junsheng retires"
+desc = ""#Wu Junsheng, longtime governor of Heilongjiang, has announced his retirement from his post. He has been one of Marshal Zhang's most stalwart allies, but age has caught up to him and he has said he would rather look out for his health and spend the rest of his days in peace. After such a bittersweet farewell, we must make an important decision: the new governor of Heilongjiang province. Several candidates have come to our attention. Zhang Jinghui is another of the Old Marhsal's associates and old allies, and his connections to the Concordia Association may help bring Japanese investment to the impoverished province, at the cost of increasing Mantetsu's influence even further in the Northeast. Chang Yinhuai, a close associated of Yang Yuting, promises to put down rebellious elements in the province, but his associations with the ambitious Shikan Clique make his ultimate loyalty questionable. Wan Fulin is also a militia leader, but instead is an associate of the Young Marshal, and while he may seem ineffectual against enemy aggression he could be key in helping consolidate our position in the province and promote modernization. Last but not least is Ma Zhanshan, an ethnic Manchu who has long been a standard bearer of the Old Marshal. While of a mixed reputation among the officers here, he is a personal friend of Zhang Xueliang and has a lot of sway with the local Manchu and Mongol princes - connections that could prove critical down the line. 
+
+date = { day = 5 month = june year = 1937 }
+
+action_a = {
+ai_chance = 25
+name = "Zhang Jinghui will bring much needed investment"
+command = { type = local_setflag which = HEL_ZHANG } #Zhang Jinghui governor; used for checking later
+}
+
+action_b = {
+ai_chance = 25
+name = "Chang Yinhuai will restore order to the province" 
+command = { type = local_setflag which = HEL_CHANG } #Chang Yinhuai governor; used for checking later
+}
+
+action_c = {
+ai_chance = 25
+name = "Wan Fulin will be a modern durban in Heilongjiang"
+command = { type = local_setflag which = HEL_WAN } #Wan Fulin governor; used for checking later
+}
+
+action_d = {
+ai_chance = 25
+name = "Ma Zhanshan will unite the people under our banner" 
+command = { type = local_setflag which = HEL_MA } #Ma Zhanshan governor; used for checking later
+}
+}
+
+event = {
+id = 144017
+random = no
+country = MAN 
+style = 2
+picture = "china_rally" #TEMP 
+
+name = "Jilin Provincial Assembly"
+desc = "" #Jilin province has been a consistent nuisance to our government. It is no secret they resent how much control Fengtian province has over the clique and they have constantly been agitating for greater representation and autonomy. Our setbacks against the Zhili have only emboldened these rebellious dogs, and there is talk now of an independence movement that is gaining traction with the local elites, merchants, and miners. We have also received word that some of its leaders are in contact with Japanese intelligence - possibly  to use Jilin as insurance against us! Now is the time for us to address this issue. Jilin has a provincial assembly, but it is currently dominated by us. Giving them more autonomy and allowing them to choose their own governor may help ease the tension, although they are bound to choose Yu Yuanpu, a noted separatist and enemy of Marshal Zhang. We could strengthen the assembly but ensure the election of one of our own men, Zhang Zuoxiang - the locals will like us less, but it could keep them pacified. We could also forget this matter - let them shout all the want, but show them who's boss in the end. 
+
+date = { day = 0 month = january year = 1937 }
+offset = 30
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 25
+name = "Give the assembly more control and let them choose the governor"
+command = { type = local_setflag which = JIL_IND } #Yu Yuanpu is elected governor 
+}
+
+action_b = {
+ai_chance = 25
+name = "Ensure Zhang Zuoxiang's election - we cannot trust Jilin's choices" 
+command = { type = local_setflag which = JIL_ZHANG } #Chang Yinhuai governor; used for checking later
+}
+
+action_c = {
+ai_chance = 50
+name = "Jilin can complain all they want; Fengtian still rules!"
+#lots of dissent and province revolt risk immediately
+}
+}
+
+#reaching out to Harbin - coming soon! 
+
+event = {
+id = 144019
+random = no
+country = MAN 
+style = 2
+picture = "china_rally" #TEMP 
+
+name = "Reaching out to the Mongol and Manchu princes"
+desc = "" # 
+
+date = { day = 0 month = january year = 1937 }
+offset = 30
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 50
+name = "New advisory bodies will give the princes a voice in the government"
+command = { type = local_setflag which = MAN_PRINCE_BODIES }
+}
+
+action_b = {
+ai_chance = 50
+name = "Who cares what they think?" 
+#Dissent 
+}
+
+action_c = {
+#needs Trigger for Concordia Association 
+ai_chance = 50
+name = "The Concordia Association can break through to the princes!" 
+command = { type = local_setflag which = MAN_PRINCE_CONCORDIA } 
+}
+}
+
+
+##Concordia Association Events 
+
+event = {
+id = 144020
+random = no
+country = MAN 
+style = 2
+picture = "china_rally" #TEMP 
+
+name = "The Concordia Association"
+desc = "" #Needs Desc
+
+date = { day = 4 month = january year = 1937 }
+
+action_a = {
+name = "Cooperation has its benefits..."
+command = { } 
+}
+}
+
+event = {
+id = 144021
+random = no
+country = MAN 
+style = 2
+picture = "japanvschina" #TEMP - will be Propaganda 
+
+name = "Concordia Association's Propaganda Initiative" 
+desc = "The Concordia Association has taken the opportunity during our reforms to start spreading propaganda promoting their platform. Posters have appeared all over Shenyang, Changchun, and Qiqihar encouraging Chinese citizens to cooperate alongside the Japanese in business. It does not take an art connossieur to know these posters came from Dairen and Japan itself. This has gotten the nationalists in a bit of a stir, but these posters are attracting the attention of our citizens with their designs and artwork. Such an initiative could go a long way in smoothing things over with Mantetsu and the Japanese, and cooperation could have economic benefits..." 
+
+date = { day = 0 month = january year = 1937 }
+offset = 30
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 70
+name = "Tear them down; they don't reflect our views at all!"
+command = { type = relation which = JAP value = -5 }
+command = { type = dissent value = -2 }  
+}
+
+action_b = {
+ai_chance = 30
+name = "Permit the CA's activities - this could be useful!" 
+command = { type = relation which = JAP value = 5 }
+command = { type = local_setflag which = MAN_CONCORDIA_PROPAGANDA } 
+}
+}
+
+
+event = {
+id = 144022
+random = no
+country = MAN 
+style = 2
+picture = "japanvschina" #TEMP - will be Propaganda 
+
+trigger = {
+local_flag = MAN_CONCORDIA_PROPAGANDA
+}
+
+name = "Concordia Association promotes Sino-Japanese friendship" 
+desc = "In their latest propaganda blitz, the Concordia Association has been issuing statements, putting up fliers, and spreading the news through the media (including some official channels) about the importance of Sino-Japanese friendship - that China and Japan have a long history of cultural exchange and stand together against European imperialism. The truth is of course more complicated to say the least, but their sway seems to be increasing among the general population." 
+
+date = { day = 0 month = may year = 1937 }
+offset = 30
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 50
+name = "What? We never said that."
+command = { type = relation which = JAP value = -5 }
+command = { type = dissent value = -2 }  
+command = { type = local_clrflag which = MAN_CONCORDIA_PROPAGANDA } 
+}
+
+action_b = {
+ai_chance = 50
+name = "Yes! We should exist in harmony!" 
+command = { type = relation which = JAP value = 5 }
+}
+}
+
+event = {
+id = 144023
+random = no
+country = MAN 
+style = 2
+picture = "japanvschina" #TEMP - will be Propaganda 
+
+trigger = {
+local_flag = MAN_CONCORDIA_PROPAGANDA
+event = 144022
+NOT = { atwar = MAN } 
+}
+
+name = "The Concordia Association calls on us to support the Co-Prosperity Sphere" 
+desc = "The Concordia Association's influence has grown to the point its members now exist throughout our government, across all our territories. Their propaganda can be found at every town and Mantetsu building it seems. The radio waves are filled with pro-Concordia Association propaganda. Now they are taking a stand, and calling on Marshal Zhang to declare for the Co-Prosperity Sphere, and solidify our alliance with Japan." 
+
+date = { day = 0 month = may year = 1937 }
+offset = 30
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 50
+name = "They have gone too far; shut them down!"
+command = { type = relation which = JAP value = -5 }
+command = { type = dissent value = 2 }  
+command = { type = local_clrflag which = MAN_CONCORDIA_PROPAGANDA } 
+}
+
+action_b = {
+ai_chance = 50
+name = "We welcome this idea; we stand together against European Imperialism!" 
+command = { type = relation which = JAP value = 25 }
+command = { type = dissent value = -2 }
+command = { type = local_setflag which = MAN_COPRO } 
+}
+}
+
+event = {
+id = 144024
+random = no
+country = MAN 
+style = 2
+picture = "japanvschina" #TEMP - will be Propaganda 
+
+trigger = {
+local_flag = MAN_CONCORDIA_PROPAGANDA
+puppet = { country = MAN country = JAP  }
+NOT = { atwar = MAN } 
+}
+
+name = "Redefining Five Races Under One Union" 
+desc = "TEMP" 
+
+date = { day = 0 month = may year = 1937 }
+offset = 30
+deathdate = { day = 16 month = november year = 1970 }
+
+action_a = {
+ai_chance = 50
+name = "This is a ridiculous proposal"
+command = { type = relation which = JAP value = -5 }
+command = { type = dissent value = -5 }  
+c
+}
+
+action_b = {
+ai_chance = 50
+name = "This idea better defines the situation up here" 
+command = { type = relation which = JAP value = 5 }
+command = { type = relation which = CSX value = -10 }
+command = { type = relation which = CHC value = -10 }
+command = { type = relation which = U74 value = -10 }
+command = { type = relation which = U66 value = -10 }
+command = { type = dissent value = 15 }
+command = { type = setflag which = MAN_ILLEGITIMATE2 } 
+}
+}
+
+
+
+
+
+
+
+
+
+
+
