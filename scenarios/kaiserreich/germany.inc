@@ -202,7 +202,7 @@ relation = { tag = 	IND   value = -30		   }
 relation = { tag = 	PAK   value = -20		   }
 relation = { tag = 	PHI   value = -40		   }
 relation = { tag = 	SIA   value = -20	           }
-relation = { tag = 	EAF   value = 60        guaranteed = { day = 29 month = december year = 1935   } 	   }
+relation = { tag = 	EAF   value = 60   guaranteed = { day = 29 month = december year = 1933   }     }
 relation = { tag = 	ARG   value = 100	           }
 relation = { tag = 	BOL   value = -40		   }
 relation = { tag = 	BRA   value = -20		   }
@@ -217,7 +217,7 @@ relation = { tag = 	PRU   value = 50		   }
 relation = { tag = 	URU   value = 20		   }
 relation = { tag = 	VEN   value = 10		   }
 relation = { tag = 	USA   value = -40		 }
-relation = { tag = 	CGX   value = 150	access = yes   guaranteed = { day = 29 month = december year = 1933   } 	   }
+relation = { tag = 	CGX   value = 100	}
 relation = { tag = 	CHC   value = -90		   }
 relation = { tag = 	CSX   value = 120	access = yes   guaranteed = { day = 29 month = december year = 1933   } 	   }
 relation = { tag = 	CXB   value = 50		   }
