@@ -873,7 +873,7 @@ event = 152037
 }
 
 name = "Chen Mingshu's Decision"#Chen Mingshu's Decision
-desc = "EVT_152027_DESC"#Up until now, the Productive People's Party, led by Chen Mingshu and representing the majority of members of the Kuomintang in Liangguang, has been collaborating with Chen Jiongming's big-tent republican coalition. The Nationalists were happy to help develop and participate in democratic institutions in order to protect their interests and legacy after the failed Northern Expedition. This was with the long-term goal of peacefully implementing Mínquán, Sun Yat-sen's Principle of popular government. Besides, Chen's Federalists protected them from Zhili and Qing retribution.\n\nLi Zongren's seizure of Guangxi has completely changed the situation. While Chen Mingshu hardly trusts the rightist warlord despite both being members of the KMT, a golden opportunity presents itself: If he could get rid of Chen Jiongming, Liangguang would be secured for the Nationalist Party without bloodshed. He remains hesitant to betray him, however, after over a decade of protection and cooperation. Still, the Party's Central Committee has hatched a plan: Seize key buildings in Guangzhou and force Chen Jiongming, who has strong misgivings about fighting in the city, to surrender.\n\nAll Chen Mingshu has to do is give the order.
+desc = "EVT_152027_DESC"#Up until now, the Productive People's Party, led by Chen Mingshu and representing the majority of former members of the Kuomintang in Liangguang, has been collaborating with Chen Jiongming's big-tent republican coalition. The Nationalists were happy to help develop and participate in democratic institutions in order to protect their interests and legacy after the failed Northern Expedition. This was with the long-term goal of peacefully implementing Mínquán, Sun Yat-sen's Principle of popular government. Besides, Chen's Federalists protected them from Zhili and Qing retribution.\n\nLi Zongren's seizure of Guangxi has completely changed the situation. While Chen Mingshu hardly trusts the rightist warlord despite both being members of the KMT, a golden opportunity presents itself: If he could get rid of Chen Jiongming, Liangguang would be secured for the Nationalist Party without bloodshed. He remains hesitant to betray him, however, after over a decade of protection and cooperation. Still, the Party's Central Committee has hatched a plan: Seize key buildings in Guangzhou and force Chen Jiongming, who has strong misgivings about fighting in the city, to surrender.\n\nAll Chen Mingshu has to do is give the order.
 picture = "china_rally"
 
 action = {
@@ -900,9 +900,6 @@ name = "KMT Seizes Guangzhou"#KMT Seizes Guangzhou
 desc = "EVT_152028_DESC"#Early in the morning, under the cover of the general mobilization against Guangxi, armed members of the KMT began seizing key buildings around the city, including the Guangdong University and the Provincial Assembly Building. Soon, Chen Mingshu announced the formation of the Guangdong People's Government, the deposition of Chen Jiongming, and a call for peace with Guangxi province.\n\nAs expected, Chen Jiongming announced that, while he refused to recognize the new government, he refused to allow the city to suffer unnecessary bloodshed and destruction. He and his close supporters left for Hong Kong later that day, leaving the city in the hands of the Nationalist Party.
 picture = "ccip_fjsoviet"
 
-date = { day = 0 month = november year = 1936 }
-offset = 1
-deathdate = { day = 29 month = december year = 1963 }
 
 action = {
 name = "Bloodshed avoided."#Bloodshed avoided.
