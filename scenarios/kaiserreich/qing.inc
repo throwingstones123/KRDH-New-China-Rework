@@ -7,7 +7,7 @@ country = {
 ai = "kaiserreich\Qing.ai"
 	policy = {
 		date = { year = 0 month = january day = 0 }
-		democratic = 2
+		democratic = 4
 		political_left = 3
 		freedom = 3
 		free_market = 3
@@ -19,10 +19,13 @@ ai = "kaiserreich\Qing.ai"
 
 #### cabinet
 
-        headofstate = { type = 9 id = 503001 }
-	headofgovernment = { type = 9 id = 503002 }
- 	chiefofnavy = { type = 9 id =  503025 }
-
+        headofstate = { type = 9 id = 503001 } #Puyi
+	headofgovernment = { type = 9 id = 503002 } #Cao Kun 
+	ministerofsecurity = { type = 9 id = 978304 } #Xiong Bingqi
+	ministerofintelligence = { type = 9 id = 978306 } #Zhang Qihuang
+	chiefofarmy = { type = 9 id = 503008 } #Wu Peifu
+	chiefofstaff = { type = 9 id = 978268 } #Jiang Baili 
+    chiefofnavy = { type = 9 id = 978124 } #Sa Zhenbing
 #### Resource Reserves
 
         SpyInfo  = {  country = "CSX" NumberOfSpies = 4  } 
@@ -49,19 +52,14 @@ ai = "kaiserreich\Qing.ai"
 		1267 1313 1318
 	  }
     nationalprovinces =   {
-		1321 1323 1247 1334 1342 1345 1343 1337 1333 1335 1246 1251  1242 1254   1332  1252 1253 1248 1249 1250 1327  1243 1244    1329  1330
-                1340 1341 1319 1324 1322 1320 1325 1316 1326 1317 1344 1314 1315 1316 1317 1326
+		1321 1323 1247 1345 1343 1337 1246 1242 1248 1249 1250 1327 1243 1244    
+                1341 1319 1324 1322 1320 1325 1316 1326 1317  1314 1315 1316 1317 1326
 				1267 1313 1318
 	}
     claimedprovinces = {
-                1378 1360 1301 1304 1305 1306 1307 1308 1309 1310 1311 1312 1313 1314 1315 1318 1347 
-                1348 1349 1350 1351 1352 1353 1354 1355 1356 1357 1359 1368 1369 1370 1373 1374 1375 
-                1376 1377 1379 1380 1381 1382 1383 1259 1255 1260 1269 1271 1256 1263 1257 1258 1339 1343
-                1202 1216 1235 1236 1240 1204 1212 1205 1199 1203 1200 1206 1213 1237 1207 1220 1218 
-                1201 1208 1209 1210 1211 1214 1215 1217 1197 1198 1361 1362 1363 1364 1372 1239 1238
-                1268 1270 1264 1272 1265 1266 1283 1284 1285 1273 1279 1280 1281 1277 1274 1275 1282 1276
-                1389 1390 1384 1385 1387 1386 1388 1292 1293 1291 1300 1303 1261 1262 1296 1297 1298 1299 1219
-                1302 1267 1338 1358 1371 1346 1294 1286 1287 1288 1289 1278 1295 1290 1328 1331 1241 1245 1365 1367 
+        	1321 1323 1247 1345 1343 1337 1246 1242 1248 1249 1250 1327  1243 1244    
+                 1341 1319 1324 1322 1320 1325 1316 1326 1317  1314 1315 1316 1317 1326
+				1267 1313 1318
              }
 diplomacy = {
 relation = { tag = EAF value = 60 guaranteed = { day = 29 month = december year = 1935   }  	   } 
@@ -90,8 +88,8 @@ relation = { tag = CXB value = -20   	   }
 
 #Armour & Artillery
 2860 2870 2880 #Basic Armoured Car 
-2290 2300 2310 #Great War Heavy Field Artillery 
-7600 7610 2620 2010 #SW Tank 
+2290 2300 2310 2900 #Improved Weltkrieg Heavy Field Artillery
+7600 7610 2620 2010 2630#Post-War Tank I 
 
 #Naval
 3110 3120 3130 #Light Cruiser
@@ -209,8 +207,8 @@ relation = { tag = CXB value = -20   	   }
 
 		landunit = {
 		location = 1247 # Beiping
-		name = "1. Jun"
-		leader = 503140 # Prince Pujie
+		name = "National Army"
+		leader = 503022 # Wu Peifu
 		id = { type = 22300 id = 18 }
 		
 			division = {
@@ -218,7 +216,8 @@ relation = { tag = CXB value = -20   	   }
 			name = "6. Bubing Shi"
 			type = infantry
 			strength = 100
-			model = 6
+			model = 7
+			extra = artillery brigade_model = 3
 			}
 
 			division = {
@@ -226,7 +225,8 @@ relation = { tag = CXB value = -20   	   }
 			name = "7. Bubing Shi"
 			type = infantry
 			strength = 100
-			model = 6
+			model = 7
+			extra = artillery brigade_model = 3
 			}
 			
 			division = {
@@ -234,7 +234,8 @@ relation = { tag = CXB value = -20   	   }
 			name = "8. Bubing Shi"
 			type = infantry
 			strength = 100
-			model = 6
+			model = 7
+			extra = artillery brigade_model = 3
 			}
 
 			division = {
@@ -242,7 +243,8 @@ relation = { tag = CXB value = -20   	   }
 			name = "9. Bubing Shi"
 			type = infantry
 			strength = 100
-			model = 6
+			model = 7
+			extra = artillery brigade_model = 3
 			}
 		
 			division = {
@@ -251,6 +253,7 @@ relation = { tag = CXB value = -20   	   }
 			type = cavalry
 			strength = 100
 			model = 6
+			extra = armored_car brigade_model = 2
 			}
 		
 			division = {
@@ -258,7 +261,8 @@ relation = { tag = CXB value = -20   	   }
 			name = "10. Bubing Shi"
 			type = infantry
 			strength = 100
-			model = 6
+			model = 7
+			extra = light_armor_brigade brigade_model = 1
 			}
 			}
 
