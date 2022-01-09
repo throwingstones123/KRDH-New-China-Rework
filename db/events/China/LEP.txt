@@ -551,21 +551,24 @@ country = U67
 picture = "Chinese Calvary2"
 style = 2
 
-name = "Independent Hunan"
-desc = "Hunan has seceded. Revolutionary Buddhism!"
+name = "Governor Zhao declares Hunan independent from the League"
+desc = "Governor Zhao Hengti, with approval from the Hunan Provincial Assembly, has declared Hunan independent from Nanjing. Zhao stated that Hunan's participation within the League was due to a personal commitment from him to the deceased League-Marshal Sun Chuanfang. With Sun's passing and the ongoing leadership struggle between Chen Tiaoyuan and Qi Xieyuan, Hunan 'has no further reason to commit itself to the League of Eight Provinces'."
 
 
 action_a = {
-name = "I hear the food's great"
+name = "Long live Hunan!"
 command = { type = add_division value = militia when = 4 } #TEMP
 command = { type = add_division value = militia when = 4 }
 command = { type = add_division value = cavalry when = 6 }
 command = { type = add_division value = infantry when = 8 }
 command = { type = add_division value = infantry when = 8 }
+command = { type = headofstate which = 98018 }
+command = { type = headofgovernment which = 98019 }
 command = { type = supplies value = 100 }
 command = { type = manpowerpool value = 20 }
 }
 }
+
 
 event = {
 id = 140016
