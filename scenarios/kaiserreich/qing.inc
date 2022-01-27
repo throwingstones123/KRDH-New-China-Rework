@@ -178,7 +178,7 @@ relation = { tag = CXB value = -20   	   }
 			}
 
 		landunit = {
-		location = 1239 # Hohhot
+		location = 1245 # Hohhot
 		name = "3. Jun"
 		### leader = # Fu Zuoyi
 		id = { type = 22300 id = 13 }
@@ -192,7 +192,7 @@ relation = { tag = CXB value = -20   	   }
 			}
 
 		landunit = {
-		location = 1239 # Hohhot
+		location = 1245 # Hohhot
 		name = "2. Jun"
 		id = { type = 22300 id = 16 }
 			
@@ -293,7 +293,7 @@ relation = { tag = CXB value = -20   	   }
 			}
 
 		landunit = {
-		location = 1238 # Jinan
+		location = 1236 # Chengde
 		name = "8. Jun"
 		### leader = # Han Fuqu
 		id = { type = 22300 id = 30 }

@@ -156,16 +156,16 @@ blueprints = {
    chiefofair             = {  type = 9 id = 605010  } 
    # ###### 
    # SHANXI Land 1904 OOB 
-   # TYPE: 2230000 
+   # TYPE: 24501 
    # ###### 
    landunit = 
    {  location = 1252 # Taiyuan
      name     = "19th Corps" 
      # leader =  
-     id       = {  type = 2230000 id = 1  } 
+     id       = {  type = 24501 id = 1  } 
      Division = 
      {  experience = 30 
-       id         = {  type = 2230000 id = 2  } 
+       id         = {  type = 24501 id = 2  } 
        name       = "70th Division" 
        type     = infantry 
        strength   = 60
@@ -173,7 +173,7 @@ blueprints = {
       }
       Division = 
      {  experience = 30 
-       id         = {  type = 2230000 id = 3  } 
+       id         = {  type = 24501 id = 3  } 
        name       = "72nd Division" 
        type     = infantry 
        strength   = 60
@@ -184,10 +184,10 @@ blueprints = {
    {  location = 1252 # Taiyuan
      name     = "33rd Corps" 
      # leader =  
-     id       = {  type = 2230000 id = 4  } 
+     id       = {  type = 24501 id = 4  } 
      Division = 
      {  experience = 30 
-       id         = {  type = 2230000 id = 5  } 
+       id         = {  type = 24501 id = 5  } 
        name       = "69th Division" 
        type     = infantry 
        strength   = 60
@@ -195,7 +195,7 @@ blueprints = {
       }
       Division = 
      {  experience = 30 
-       id         = {  type = 2230000 id = 6  } 
+       id         = {  type = 24501 id = 6  } 
        name       = "71st Division" 
        type     = infantry 
        strength   = 60
@@ -206,10 +206,10 @@ blueprints = {
    {  location = 1252 # Taiyuan
      name     = "34th Corps" 
      # leader =  
-     id       = {  type = 2230000 id = 7  } 
+     id       = {  type = 24501 id = 7  } 
      Division = 
      {  experience = 30 
-       id         = {  type = 2230000 id = 8  } 
+       id         = {  type = 24501 id = 8  } 
        name       = "66th Division" 
        type     = infantry 
        strength   = 60
@@ -217,7 +217,7 @@ blueprints = {
       }
       Division = 
      {  experience = 30 
-       id         = {  type = 2230000 id = 9  } 
+       id         = {  type = 24501 id = 9  } 
        name       = "73rd Division" 
        type     = infantry 
        strength   = 60
@@ -228,10 +228,10 @@ blueprints = {
    {  location = 1252 # Taiyuan
      name     = "35th Corps" 
      # leader =  
-     id       = {  type = 2230000 id = 10  } 
+     id       = {  type = 24501 id = 10  } 
      Division = 
      {  experience = 30 
-       id         = {  type = 2230000 id = 11  } 
+       id         = {  type = 24501 id = 11  } 
        name       = "68th Division" 
        type     = infantry 
        strength   = 60
@@ -239,7 +239,7 @@ blueprints = {
       }
       Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 12  } 
+       id         = {  type = 24501 id = 12  } 
        name       = "101st Division" 
        type     = infantry 
        strength   = 60
@@ -250,10 +250,10 @@ blueprints = {
    {  location = 1252 # Taiyuan
      name     = "Shanxi Independent Divisions" 
      # leader =  
-     id       = {  type = 223000 id = 13  } 
+     id       = {  type = 24501 id = 13  } 
      Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 14  } 
+       id         = {  type = 24501 id = 14  } 
        name       = "New 2nd Division" 
        type     = infantry 
        strength   = 60
@@ -261,7 +261,7 @@ blueprints = {
       }
       Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 15  } 
+       id         = {  type = 24501 id = 15  } 
        name       = "1st Cavalry Division" 
        type     = cavalry
        strength   = 33
@@ -269,7 +269,7 @@ blueprints = {
       } 
 	  Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 16  } 
+       id         = {  type = 24501 id = 16  } 
        name       = "2nd Cavalry Division" 
        type     = cavalry
        strength   = 33
@@ -277,7 +277,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 17  } 
+       id         = {  type = 24501 id = 17  } 
        name       = "1st Independent Brigade" 
        type     = infantry 
        strength   = 40
@@ -285,7 +285,7 @@ blueprints = {
       }
 	 Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 18  } 
+       id         = {  type = 24501 id = 18  } 
        name       = "2nd Independent Brigade" 
        type     = infantry 
        strength   = 40
@@ -293,7 +293,7 @@ blueprints = {
       }
 	 Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 19  } 
+       id         = {  type = 24501 id = 19  } 
        name       = "3rd Independent Brigade" 
        type     = infantry 
        strength   = 40
@@ -301,7 +301,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 20  } 
+       id         = {  type = 24501 id = 20  } 
        name       = "7th Independent Brigade" 
        type     = infantry 
        strength   = 40
@@ -309,7 +309,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 223000 id = 21  } 
+       id         = {  type = 24501 id = 21  } 
        name       = "8th Independent Brigade" 
        type     = infantry 
        strength   = 40

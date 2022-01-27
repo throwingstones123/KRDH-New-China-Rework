@@ -514,7 +514,7 @@ relation = { tag = MEN value = -75 }
 		}
 	}
 	landunit = {
-		location = 1305 # Liuzhou
+		location = 1306 # Liuzhou
 		name = "18. Jun"
 		### leader = 50219 # Luo Zhuoying
 		id = { type = 22000 id = 38 }

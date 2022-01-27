@@ -1,6 +1,6 @@
  
  ############################## 
- # Country definition for U74 # 
+ # Country definition for U64 # 
  ############################## 
   
  country = 
@@ -8,11 +8,12 @@
 	intrinsic_gov_type     = paternal_autocrat 
 	extra_tc               = 4 
 	# Resource Reserves 
+	free = { ic = 12 oil = 3 energy = 2 metal = 2 rare_materials = 2 money = 2 manpower = 0 }
 	energy                 = 300
 	metal                  = 150
 	rare_materials         = 75
 	oil                    = 100 
-	supplies               = 100 
+	supplies               = 5000
 	money                  = 50 
 	capital                = 1297 # Chengdu 
 	manpower               = 0 
@@ -34,103 +35,27 @@
 	#Yunnan
    techapps = { 
 	
-	# Manufacturing - Up to 1915
-	5810 5820
-	# Construction Engineering - Up to 1910
-	5800 5080
+#Armour & Artillery
+2860 #AC
+2290 #Light Field Artillery 
 
-	# Crypto - Up to 1922
-	5316 5326
+#Infantry
+1010  1020 1030 1040 1050 1060 #1918 lgt. Infantry Division 
+1910 1920 1930 1940 1950 1960 #Interbellum 1930 Supply 
+13060 13070 13080 1310 1320 1330 1340 #1916 Cavalry Division  
 
-	# Infantry Division
-	1010 1020 1030 1040 1050 1060
-	# Mountain Division
-	1160 1170 1180 1190 1200 1210 1220
-	# Cavalry Division  
-	13060 13070 13080 1310
-	# Engineers
-	1830
-	# Supply 
-	1910 1920 1930 1940 1950
+#Industrial
+5700 #Early Agriculture
+5600 #Medicine
 
-	# Field Artillery 
-	2290 2300 2310 2900 2910
+# Land Doctrines WWI - Entente line
+6500 6510 6530 6580 6600 6610 6620 6630 6640 6650 6660 6670 6680 6540 6910
 
-	# Medicine
-	5600 5610
+#Air Doctrines - ww2 techs
+27480 27490 27500 27510 27520 27530 27540 27550 27570 27580 27590 27600 9030 9020 27560 27460 27470
 
-	# Hospital System
-	14000 14010 14020
-	# Great War Land Doctrines (entente)
-	6500 6510 6530 6580 6600 6610 6680 6620 6630 6640 6650 6660 6670 6540 6910
-
-	# Interceptor Fighter  
-	4500 4510 4520 4530 4540 4550
-	# Multirole Fighter
-	4300 4310 4320 
-	# Tactical Bomber 
-	4600 4610 4620 4630 4120
-	# Strategic Bomber
-	4800 4810
-	# Naval Bomber
-	4700 
-
-	# Air Doctrines - ww2 techs
-	27480 27490 27500 27510 27520 27530 27540 27550 27570 27580 27590 27600 9030 9020 27560 27460 27470 
 	} 
-
-blueprints = {
 	
-	# Infantry
-	1070
-
-	# Mountain
-	1230
-
-	# Cavalry
-	1320 1330 1340 1350
-
-	# Manufacturing
-	5050
-	
-	# Crypto
-	5327
-
-	# Supply
-	1960
-
-	# Tank
-	7600 7610 2620 2010
-	
-	# Armoured Car  
-	2860 2870 2880
-
-	#Manpower Focus
-	6570
-	
-	# Naval Doctrines
-	8010 8020 8050 8060 8070 8080
-	
-	# Destroyers
-	3010 
-	# Light Cruiser 
-	3110 3120
-	# Heavy Cruiser 
-	3210 3220
-	# Troopships
-	3810
-	#Early Torpedoes
-	3720
-	#Early Battleship
-	3410
-	
-	# Naval Bomber
-	4700 
-	# Seaplane
-	4740 4750 4760
-
-}
- inventions = { 3000027 }
    diplomacy = 
    {  relation = {  tag = CHI value = 200  } 
      relation = {  tag = CSX value = 200  } 
@@ -152,20 +77,16 @@ blueprints = {
    chiefofarmy            = {  type = 9 id = 995107 } 
    chiefofnavy            = {  type = 9 id = 995108  } 
    chiefofair             = {  type = 9 id = 995134  } 
-   # ###### 
-   # CHINA 1936 OOB 
-   # Type = 221000
-   # ###### 
-   # Xikang
-   # http://forum.paradoxplaza.com/forum/showthread.php?687389-OOB-and-information-of-China-for-moders&p=15451250&viewfull=1#post15451250
+
+# Deng Xihou ( Baoding Department )
 	landunit = 
    {  location = 1292 # Ya'an
      name     = "24th Corps" 
      # leader =  
-     id       = {  type = 221000 id = 1  } 
+     id       = {  type = 22501 id = 1  } 
      Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 2  } 
+       id         = {  type = 22501 id = 2  } 
        name       = "136th Division" 
        type     = militia 
        strength   = 33
@@ -175,7 +96,7 @@ blueprints = {
       }
       Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 3  } 
+       id         = {  type = 22501 id = 3  } 
        name       = "137th Division" 
        type     = militia
        strength   = 33
@@ -185,7 +106,7 @@ blueprints = {
       } 
      Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 4  } 
+       id         = {  type = 22501 id = 4  } 
        name       = "138th Division" 
        type       = militia
        strength   = 33
@@ -194,15 +115,16 @@ blueprints = {
 	   brigade_model1 = 1
       }
     }
-	#Yunnan
+	# Liu Wenhui ( Baoding Department )
 	landunit = 
    {  location = 1297  # Chengdu
-     name     = "10th Route Army" 
+   id       = {  type = 22501 id = 30  } 
+     name     = "24th Army" 
      # leader =  
-     id       = {  type = 221000 id = 5  } 
+     id       = {  type = 22501 id = 5  } 
      Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 6  } 
+       id         = {  type = 22501 id = 6  } 
        name       = "1st Independent Brigade" 
        type     = infantry
        strength   = 40
@@ -210,7 +132,7 @@ blueprints = {
       }
       Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 7  } 
+       id         = {  type = 22501 id = 7  } 
        name       = "2nd Independent Brigade" 
        type     = infantry
        strength   = 40
@@ -218,7 +140,7 @@ blueprints = {
       } 
      Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 8  } 
+       id         = {  type = 22501 id = 8  } 
        name       = "3rd Independent Brigade" 
        type       = infantry
        strength   = 40
@@ -226,7 +148,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 9  } 
+       id         = {  type = 22501 id = 9  } 
        name       = "5th Independent Brigade" 
        type       = infantry
        strength   = 40
@@ -234,7 +156,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 10  } 
+       id         = {  type = 22501 id = 10  } 
        name       = "7th Independent Brigade" 
        type       = infantry
        strength   = 40
@@ -242,15 +164,31 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 11  } 
+       id         = {  type = 22501 id = 11  } 
        name       = "9th Independent Brigade" 
        type       = infantry
        strength   = 40
        model      = 6
       }
-	  Division = 
+	   Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 12  } 
+       id         = {  type = 22501 id = 12 } 
+       name       = "24th Army HQ" 
+       type       = hq
+       strength   = 40
+       model      = 2
+      }
+    }
+# Liu Xiang ( Industrial Corps )
+		landunit = {     
+		
+     location = 1301  # Fuling
+     name     = "21st Army" 
+	 id       = {  type = 22501 id = 29  } 
+     # leader =  
+     Division = 
+     {  experience = 30 
+       id         = {  type = 22501 id = 13  } 
        name       = "21st Independent Brigade" 
        type       = infantry
        strength   = 40
@@ -258,7 +196,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 13  } 
+       id         = {  type = 22501 id = 14  } 
        name       = "22nd Independent Brigade" 
        type       = infantry
        strength   = 40
@@ -266,7 +204,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 14  } 
+       id         = {  type = 22501 id = 15  } 
        name       = "23rd Independent Brigade" 
        type       = infantry
        strength   = 40
@@ -274,7 +212,7 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 15  } 
+       id         = {  type = 22501 id = 16  } 
        name       = "24th Independent Brigade" 
        type       = infantry
        strength   = 40
@@ -282,28 +220,98 @@ blueprints = {
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 16  } 
+       id         = {  type = 22501 id = 17  } 
        name       = "30th Independent Brigade" 
        type       = infantry
        strength   = 40
        model      = 6
       }
-	  Division = 
+	   Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 17  } 
-       name       = "33rd Independent Brigade" 
+       id         = {  type = 22501 id = 18 } 
+       name       = "21st Army HQ" 
+       type       = hq
+       strength   = 40
+       model      = 2
+      }
+	 }
+# Yang Sen ( Baoding Department )
+	landunit = {     
+     location = 1299  # Chongqing
+     name     = "20th Army" 
+     # leader =  
+	 id       = {  type = 22501 id = 28  } 
+     Division = 
+     {  experience = 30 
+       id         = {  type = 22501 id = 19  } 
+       name       = "21st Independent Brigade" 
+       type       = infantry
+       strength   = 40
+       model      = 6
+      }
+	 }
+	 
+# Tian Songyao ( Baoding Department )
+	landunit = 
+   {  location = 1299  # Chongqing
+     name     = "29th Army" 
+     # leader =  
+     id       = {  type = 22501 id = 27  } 
+     Division = 
+     {  experience = 30 
+       id         = {  type = 22501 id = 20  } 
+       name       = "1st Independent Brigade" 
+       type     = infantry
+       strength   = 40
+       model      = 6
+      }
+      Division = 
+     {  experience = 30 
+       id         = {  type = 22501 id = 21  } 
+       name       = "2nd Independent Brigade" 
+       type     = infantry
+       strength   = 40
+       model      = 6
+      } 
+     Division = 
+     {  experience = 30 
+       id         = {  type = 22501 id = 22 } 
+       name       = "3rd Independent Brigade" 
        type       = infantry
        strength   = 40
        model      = 6
       }
 	  Division = 
      {  experience = 30 
-       id         = {  type = 221000 id = 18 } 
-       name       = "10th Route Army HQ" 
-       type       = hq
+       id         = {  type = 22501 id = 23  } 
+       name       = "5th Independent Brigade" 
+       type       = infantry
        strength   = 40
-       model      = 2
+       model      = 6
       }
-    }
-  }  
- 
+	}
+
+# Deng Xihou ( Baoding Department )
+	landunit = 
+   {  location = 1302  # Daxian
+     name     = "28th Army" 
+     # leader =  
+     id       = {  type = 22501 id = 24  } 
+     Division = 
+     {  experience = 30 
+       id         = {  type = 22501 id = 25 } 
+       name       = "1st Independent Brigade" 
+       type     = infantry
+       strength   = 40
+       model      = 6
+      }
+      Division = 
+     {  experience = 30 
+       id         = {  type = 22501 id = 26  } 
+       name       = "2nd Independent Brigade" 
+       type     = infantry
+       strength   = 40
+       model      = 6
+      } 
+	}
+}	
